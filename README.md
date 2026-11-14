@@ -7,7 +7,7 @@ BabyAI 결과를 DSR·트레이드·드론으로 확대 해석하지 않는다.
 
 ## 고정된 결정
 
-- 과제: `BabyAI-GoToLocal-v0` 하나(8×8 방 하나, 물체 8개, 지시문 36가지). 환경은 수정하지 않는다.
+- 과제: `BabyAI-GoToLocal-v0` 하나(8×8 방 하나, 물체 8개, 지시문 36가지 = 색·종류 18 × 관사 2). 목표는 특정 물체 하나가 아니라 색·종류 조건이다 — 맞는 물체 아무거나 앞에서 바라보면 성공(맞는 것이 2개 이상이면 관사 a). 환경은 수정하지 않는다.
   1단계의 `GoToObj`는 방에 물체가 늘 1개라 지시문을 안 읽어도 풀려서, 학습 전에 바꿨다(2026-11-14, MoKa 확인).
   GoToObj 덤프·보고(`reports/stage1.md`)는 남겨 두고 쓰지 않는다.
 - 봇이 0·1·2 밖의 행동(3·4)을 낸 판은 통째로 학습에서 빼고 몇 판인지 적는다.
@@ -95,6 +95,8 @@ cd /mnt/d/dev/kotlin-prj/baby-ai-laya-probe && HF_HUB_OFFLINE=1 ~/babyai-laya-ve
 
 Windows PowerShell에서 친다면 같은 줄을 `wsl -d Ubuntu -- bash -lc '…'` 안에 넣는다.
 기본은 세 모델이 모두 실패한 12판(A → B → C 순), seed 0 모델, 막힘 탈출 장치 꺼짐.
+12판은 성능을 대표하는 평가 세트가 아니라 반복 실패를 진단하는 사례 모음이다.
+유형: A 현재 입력에 단서가 있는데 잘못 선택 · B 대상이 안 보이는 상태에서 탐색 반복(기억 부족 가능성, 단정 안 함) · C 현재 자료로 원인 미분류.
 `--seeds 10014,10017`로 다른 판, `--window`로 MiniGrid 창도 같이(WSLg에서 열림 확인, 글자 화면만으로도 끝까지 쓸 수 있음).
 기록은 `data/correct_log.jsonl`(git 밖)에 걸음마다 한 줄 이어 붙는다. 평가용 20000~20299는 거부.
 
@@ -131,3 +133,25 @@ Windows PowerShell에서 친다면 같은 줄을 `wsl -d Ubuntu -- bash -lc '…
 ```
 
 `v`는 에이전트(남쪽을 봄). 남쪽을 보면 왼쪽이 동쪽이라 `yellow box: 1 left`가 바로 오른편 칸에 그려진다.
+
+## 게임으로 보기 (`godot/`, Godot 4.7)
+
+글자 화면 대신 그림으로 보는 뷰어 겸 게임. 재학습·평가와는 무관하고, 3단계 모델(seed 0)의 걸음을 다시 보여 줄 뿐이다.
+
+1. 리플레이 내보내기 (WSL, 한 번만): dev seed 10000~10029 + 세 모델 모두 실패한 12판, 모두 35판.
+   ```bash
+   cd /mnt/d/dev/kotlin-prj/baby-ai-laya-probe && HF_HUB_OFFLINE=1 ~/babyai-laya-venv/bin/python -m probe.export_godot
+   ```
+   → `godot/data/episodes.json` (git에 안 넣음)
+2. 실행 (Windows):
+   ```
+   D:\dev\tools\godot\Godot_v4.7.2-stable_win64.exe --path D:\dev\kotlin-prj\baby-ai-laya-probe\godot
+   ```
+
+- **직접 해보기**: 같은 방을 같은 세 가지 행동(←/→ 돌기, ↑ 전진)으로 걸어 본다. V로 보기 방식을 바꾼다: 시야만 → 글만(AI와 같은 조건) → 방 전체. 끝나면 AI·봇 걸음 수와 비교하고, Enter로 같은 판의 AI 관전으로 넘어간다.
+- **AI 관전**: 걸음마다 AI가 받은 글, 세 선택지 점수, 봇의 선택(다르면 주황색)을 보여 준다. 지나간 길과 같은 칸을 3번 이상 밟은 횟수(노란 ×n)를 그린다.
+- 점검: `Godot_v4.7.2-stable_win64_console.exe --headless --path godot -- --selftest` — 내보낸 944걸음을 게임 규칙으로 다시 걸어 위치·결과·입력 글이 Python 쪽과 모두 같은지 확인한다(현재 불일치 0).
+- **교정** (4단계 교정 루프를 게임 안에서): 세 모델이 모두 실패한 12판을 Laya가 **실시간으로** 한 걸음씩 고른다.
+  - Enter = AI대로 · ←/→/↑ = 다른 행동으로 바꿔 한 걸음(교정) · B = 봇 선택 보기 · 1~4 = 이 걸음 메모 · R = 끝까지 AI대로 · N = 다음 판
+  - Laya는 WSL에서 `probe/correct_server.py`(127.0.0.1:18799)로 돈다. 교정 모드에 처음 들어가면 게임이 `probe/run_correct_server.sh`로 직접 켠다(콘솔 창이 하나 뜨고, 모델 읽느라 20~40초). 게임 창을 닫으면 서버도 끈다.
+  - 기록은 글자판 교정 루프와 같은 `data/correct_log.jsonl`, 같은 형식에 `"source": "game"`이 붙는다. 교정은 기록만 하고 학습엔 안 쓴다. 막힘 탈출 장치 꺼짐, 20000~20299 거부.

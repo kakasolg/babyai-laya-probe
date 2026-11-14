@@ -166,7 +166,7 @@ def classify(e: Ep) -> dict:
     """Failure classes (rules fixed before looking at stage-3.5 results):
     A  judgeable from the current input: inside the loop the agent chose forward and did not move
        (a blocker is shown as `1 ahead`), or a matching object is visible in every loop state.
-    B  memory candidate: no matching object is visible in any loop state (and not A).
+    B  searching while the target is not visible (memory shortfall possible, not asserted): no matching object is visible in any loop state (and not A).
        sub: target seen earlier in the episode, or never seen.
     C  the rest (target visible in some loop states, no blocked forward)."""
     seq = [(s["text"], s["policy"]) for s in e.steps]
