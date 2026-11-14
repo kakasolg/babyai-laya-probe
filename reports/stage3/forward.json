@@ -1,0 +1,42 @@
+{
+ "name": "forward",
+ "policy": "forward",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 16,
+  "rate": 0.0533
+ },
+ "target_visible_at_start": {
+  "n": 158,
+  "success": 16,
+  "rate": 0.1013
+ },
+ "target_unseen_at_start": {
+  "n": 142,
+  "success": 0,
+  "rate": 0.0
+ },
+ "two_matching": {
+  "n": 103,
+  "success": 10,
+  "rate": 0.0971
+ },
+ "one_matching": {
+  "n": 197,
+  "success": 6,
+  "rate": 0.0305
+ },
+ "timeouts": 284,
+ "wrong_object_at_end": 89,
+ "mean_steps_success": 1.81,
+ "blocked_forward_share": 0.9713,
+ "actions": {
+  "forward": 18205
+ },
+ "timeout_kinds": {
+  "stuck": 284
+ },
+ "mask_mission": false,
+ "model": null
+}

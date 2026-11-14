@@ -1,0 +1,47 @@
+{
+ "name": "model-s0-masked",
+ "policy": "model",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 2,
+  "rate": 0.0067
+ },
+ "target_visible_at_start": {
+  "n": 158,
+  "success": 2,
+  "rate": 0.0127
+ },
+ "target_unseen_at_start": {
+  "n": 142,
+  "success": 0,
+  "rate": 0.0
+ },
+ "two_matching": {
+  "n": 103,
+  "success": 1,
+  "rate": 0.0097
+ },
+ "one_matching": {
+  "n": 197,
+  "success": 1,
+  "rate": 0.0051
+ },
+ "timeouts": 298,
+ "wrong_object_at_end": 1,
+ "mean_steps_success": 4.0,
+ "blocked_forward_share": 0.0,
+ "actions": {
+  "turn left": 8626,
+  "turn right": 10199,
+  "forward": 255
+ },
+ "timeout_kinds": {
+  "cycle": 293,
+  "wander": 5
+ },
+ "shadow_bot_agree": 0.3384,
+ "shadow_bot_agree_success_eps": 0.625,
+ "mask_mission": true,
+ "model": "/home/moka/babyai-laya-ft/gotolocal-s0"
+}

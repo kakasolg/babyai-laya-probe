@@ -1,0 +1,54 @@
+{
+ "model": "/home/moka/.cache/huggingface/hub/models--convaiinnovations--laya/snapshots/55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+ "steps": 1567,
+ "all": {
+  "n": 1567,
+  "agree": 0.5686
+ },
+ "order_flip_rate": 0.5795,
+ "reversed_order_agree": 0.3484,
+ "by_category": {
+  "target_unseen": {
+   "n": 237,
+   "agree": 0.2743
+  },
+  "distractor_closer": {
+   "n": 849,
+   "agree": 0.5819
+  },
+  "two_matching": {
+   "n": 408,
+   "agree": 0.5588
+  },
+  "two_matching_in_view": {
+   "n": 197,
+   "agree": 0.6041
+  }
+ },
+ "target_visible_unique": {
+  "n": 960,
+  "agree": 0.6302
+ },
+ "confusion_bot_to_model": {
+  "turn left": {
+   "turn left": 90,
+   "forward": 167,
+   "turn right": 34
+  },
+  "turn right": {
+   "turn right": 129,
+   "turn left": 33,
+   "forward": 167
+  },
+  "forward": {
+   "forward": 672,
+   "turn right": 169,
+   "turn left": 106
+  }
+ },
+ "model_choice_share": {
+  "forward": 1006,
+  "turn left": 229,
+  "turn right": 332
+ }
+}

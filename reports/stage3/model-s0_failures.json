@@ -1,0 +1,471 @@
+[
+ {
+  "why": "timeout, target unseen at start",
+  "seed": 10014,
+  "mission": "go to the purple ball",
+  "n_matching": 1,
+  "visible_at_start": false,
+  "timeout": true,
+  "end_front": [
+   "wall",
+   "grey"
+  ],
+  "steps_total": 64,
+  "steps": [
+   {
+    "text": "facing: west\nobjects: none in view\nwalls: 1 ahead, 1 right",
+    "policy": "turn left",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\npurple key: 1 ahead, 2 left\nyellow ball: 2 ahead, 1 left\ngrey box: 1 ahead, 3 left\nred box: 3 ahead, 1 left\nyellow box: 5 ahead, 1 left\nyellow box: 4 ahead, 3 left\npurple ball: 5 ahead, 2 left\nwalls: 6 ahead, 1 right",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: south\npurple key: 2 left\nyellow ball: 1 ahead, 1 left\ngrey box: 3 left\nred box: 2 ahead, 1 left\nyellow box: 4 ahead, 1 left\nyellow box: 3 ahead, 3 left\npurple ball: 4 ahead, 2 left\nwalls: 5 ahead, 1 right",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: south\nyellow ball: 1 left\nred box: 1 ahead, 1 left\nyellow box: 3 ahead, 1 left\nyellow box: 2 ahead, 3 left\npurple ball: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: south\nred box: 1 left\nyellow box: 2 ahead, 1 left\nyellow box: 1 ahead, 3 left\npurple ball: 2 ahead, 2 left\nwalls: 3 ahead, 1 right",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: south\nyellow box: 1 ahead, 1 left\nyellow box: 3 left\npurple ball: 1 ahead, 2 left\nwalls: 2 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\nyellow box: 1 left\npurple ball: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\nyellow box: 1 left\npurple ball: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\nyellow box: 1 left\npurple ball: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\nyellow box: 1 left\npurple ball: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\nyellow box: 1 left\npurple ball: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\nyellow box: 1 left\npurple ball: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\nyellow box: 1 left\npurple ball: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\nyellow box: 1 left\npurple ball: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\nyellow box: 1 left\npurple ball: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\nyellow box: 1 left\npurple ball: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   }
+  ]
+ },
+ {
+  "why": "timeout, target visible at start",
+  "seed": 10026,
+  "mission": "go to the green key",
+  "n_matching": 1,
+  "visible_at_start": true,
+  "timeout": true,
+  "end_front": null,
+  "steps_total": 64,
+  "steps": [
+   {
+    "text": "facing: west\ngreen box: 2 right\nblue box: 2 ahead\nred box: 1 ahead, 2 right\ngreen key: 1 ahead, 3 right\nblue box: 2 ahead, 3 right\nwalls: 4 ahead, 1 left",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: west\nblue box: 1 ahead\nred box: 2 right\ngreen key: 3 right\nblue box: 1 ahead, 3 right\nwalls: 3 ahead, 1 left",
+    "policy": "turn right",
+    "bot": "turn right"
+   },
+   {
+    "text": "facing: north\nblue box: 1 left\nred box: 2 ahead\ngreen box: 2 ahead, 1 right\ngreen key: 3 ahead\ngrey box: 2 ahead, 2 right\nblue box: 3 ahead, 1 left\nblue ball: 2 ahead, 3 right\npurple ball: 4 ahead, 2 right\nwalls: 6 ahead, 3 left",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: north\nred box: 1 ahead\ngreen box: 1 ahead, 1 right\ngreen key: 2 ahead\ngrey box: 1 ahead, 2 right\nblue box: 2 ahead, 1 left\nblue ball: 1 ahead, 3 right\npurple ball: 3 ahead, 2 right\nwalls: 5 ahead, 3 left",
+    "policy": "turn right",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen key: 2 left\ngreen box: 1 ahead, 1 left\ngrey box: 2 ahead, 1 left\nblue ball: 3 ahead, 1 left\npurple ball: 2 ahead, 3 left\nwalls: 4 ahead, 2 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\ngreen box: 1 left\ngrey box: 1 ahead, 1 left\nblue ball: 2 ahead, 1 left\npurple ball: 1 ahead, 3 left\nwalls: 3 ahead, 2 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\ngrey box: 1 left\nblue ball: 1 ahead, 1 left\npurple ball: 3 left\nwalls: 2 ahead, 2 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nblue ball: 1 left\nwalls: 1 ahead, 2 right",
+    "policy": "turn right",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: south\nobjects: none in view\nwalls: 2 ahead, 1 left",
+    "policy": "turn right",
+    "bot": "turn right"
+   },
+   {
+    "text": "facing: west\nblue ball: 1 right\ngrey box: 1 ahead, 1 right\ngreen box: 2 ahead, 1 right\npurple ball: 1 ahead, 3 right\nred box: 3 ahead, 1 right\ngreen key: 3 ahead, 2 right\nblue box: 4 ahead, 1 left\nblue box: 4 ahead, 2 right\nwalls: 6 ahead, 2 left",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: west\ngrey box: 1 right\ngreen box: 1 ahead, 1 right\npurple ball: 3 right\nred box: 2 ahead, 1 right\ngreen key: 2 ahead, 2 right\nblue box: 3 ahead, 1 left\nblue box: 3 ahead, 2 right\nwalls: 5 ahead, 2 left",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: west\ngreen box: 1 right\nred box: 1 ahead, 1 right\ngreen key: 1 ahead, 2 right\nblue box: 2 ahead, 1 left\nblue box: 2 ahead, 2 right\nwalls: 4 ahead, 2 left",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: west\nred box: 1 right\ngreen key: 2 right\nblue box: 1 ahead, 1 left\nblue box: 1 ahead, 2 right\nwalls: 3 ahead, 2 left",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: west\nblue box: 1 left\nblue box: 2 right\nwalls: 2 ahead, 2 left",
+    "policy": "turn right",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: north\nred box: 1 ahead, 1 right\nblue box: 2 ahead\ngreen box: 1 ahead, 2 right\ngreen key: 2 ahead, 1 right\ngrey box: 1 ahead, 3 right\npurple ball: 3 ahead, 3 right\nwalls: 5 ahead, 2 left",
+    "policy": "turn right",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: east\nblue box: 1 right\nblue box: 2 left\nred box: 1 ahead, 1 left\ngreen key: 1 ahead, 2 left\ngreen box: 2 ahead, 1 left\ngrey box: 3 ahead, 1 left\nblue ball: 4 ahead, 1 left\npurple ball: 3 ahead, 3 left\nwalls: 5 ahead, 2 right",
+    "policy": "forward",
+    "bot": "turn left"
+   }
+  ]
+ },
+ {
+  "why": "ended facing a wrong object",
+  "seed": 10016,
+  "mission": "go to a yellow key",
+  "n_matching": 2,
+  "visible_at_start": false,
+  "timeout": true,
+  "end_front": [
+   "box",
+   "green"
+  ],
+  "steps_total": 64,
+  "steps": [
+   {
+    "text": "facing: south\ngreen box: 2 left\nwalls: 1 ahead, 2 right",
+    "policy": "turn left",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 ahead, 1 left\ngreen box: 2 ahead\nyellow ball: 1 ahead, 2 left\nyellow key: 4 ahead\ngreen key: 4 ahead, 1 left\nyellow key: 4 ahead, 2 left\nwalls: 5 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\nred box: 1 left\ngreen box: 1 ahead\nyellow ball: 2 left\nyellow key: 3 ahead\ngreen key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   }
+  ]
+ },
+ {
+  "why": "two matching objects",
+  "seed": 10176,
+  "mission": "go to a green key",
+  "n_matching": 2,
+  "visible_at_start": true,
+  "timeout": true,
+  "end_front": [
+   "wall",
+   "grey"
+  ],
+  "steps_total": 64,
+  "steps": [
+   {
+    "text": "facing: east\npurple key: 2 ahead, 1 left\ngreen key: 2 ahead, 2 left\nwalls: 3 ahead, 1 right",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: east\npurple key: 1 ahead, 1 left\ngreen key: 1 ahead, 2 left\nwalls: 2 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: east\npurple key: 1 left\ngreen key: 2 left\nwalls: 1 ahead, 1 right",
+    "policy": "forward",
+    "bot": "turn left"
+   }
+  ]
+ },
+ {
+  "why": "other failure",
+  "seed": 10015,
+  "mission": "go to the grey ball",
+  "n_matching": 1,
+  "visible_at_start": false,
+  "timeout": true,
+  "end_front": null,
+  "steps_total": 64,
+  "steps": [
+   {
+    "text": "facing: north\npurple ball: 2 ahead\nwalls: 3 ahead, 1 right",
+    "policy": "turn left",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: west\nblue box: 2 left\npurple ball: 2 right\ngrey ball: 3 left\ngreen key: 1 ahead, 2 left\nblue box: 2 ahead, 2 left\ngrey key: 4 ahead, 1 right\ngreen key: 5 ahead\npurple box: 5 ahead, 2 right\nwalls: 6 ahead, 3 right",
+    "policy": "forward",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: west\ngreen key: 2 left\nblue box: 1 ahead, 2 left\ngrey key: 3 ahead, 1 right\ngreen key: 4 ahead\npurple box: 4 ahead, 2 right\nwalls: 5 ahead, 3 right",
+    "policy": "turn right",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: north\npurple ball: 2 ahead, 1 right\ngrey key: 1 ahead, 3 left\nwalls: 3 ahead, 2 right",
+    "policy": "turn left",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: west\ngreen key: 2 left\nblue box: 1 ahead, 2 left\ngrey key: 3 ahead, 1 right\ngreen key: 4 ahead\npurple box: 4 ahead, 2 right\nwalls: 5 ahead, 3 right",
+    "policy": "turn right",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: north\npurple ball: 2 ahead, 1 right\ngrey key: 1 ahead, 3 left\nwalls: 3 ahead, 2 right",
+    "policy": "turn left",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: west\ngreen key: 2 left\nblue box: 1 ahead, 2 left\ngrey key: 3 ahead, 1 right\ngreen key: 4 ahead\npurple box: 4 ahead, 2 right\nwalls: 5 ahead, 3 right",
+    "policy": "turn right",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: north\npurple ball: 2 ahead, 1 right\ngrey key: 1 ahead, 3 left\nwalls: 3 ahead, 2 right",
+    "policy": "turn left",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: west\ngreen key: 2 left\nblue box: 1 ahead, 2 left\ngrey key: 3 ahead, 1 right\ngreen key: 4 ahead\npurple box: 4 ahead, 2 right\nwalls: 5 ahead, 3 right",
+    "policy": "turn right",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: north\npurple ball: 2 ahead, 1 right\ngrey key: 1 ahead, 3 left\nwalls: 3 ahead, 2 right",
+    "policy": "turn left",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: west\ngreen key: 2 left\nblue box: 1 ahead, 2 left\ngrey key: 3 ahead, 1 right\ngreen key: 4 ahead\npurple box: 4 ahead, 2 right\nwalls: 5 ahead, 3 right",
+    "policy": "turn right",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: north\npurple ball: 2 ahead, 1 right\ngrey key: 1 ahead, 3 left\nwalls: 3 ahead, 2 right",
+    "policy": "turn left",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: west\ngreen key: 2 left\nblue box: 1 ahead, 2 left\ngrey key: 3 ahead, 1 right\ngreen key: 4 ahead\npurple box: 4 ahead, 2 right\nwalls: 5 ahead, 3 right",
+    "policy": "turn right",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: north\npurple ball: 2 ahead, 1 right\ngrey key: 1 ahead, 3 left\nwalls: 3 ahead, 2 right",
+    "policy": "turn left",
+    "bot": "turn left"
+   },
+   {
+    "text": "facing: west\ngreen key: 2 left\nblue box: 1 ahead, 2 left\ngrey key: 3 ahead, 1 right\ngreen key: 4 ahead\npurple box: 4 ahead, 2 right\nwalls: 5 ahead, 3 right",
+    "policy": "turn right",
+    "bot": "forward"
+   },
+   {
+    "text": "facing: north\npurple ball: 2 ahead, 1 right\ngrey key: 1 ahead, 3 left\nwalls: 3 ahead, 2 right",
+    "policy": "turn left",
+    "bot": "turn left"
+   }
+  ]
+ }
+]

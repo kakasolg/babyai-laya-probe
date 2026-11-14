@@ -1,0 +1,47 @@
+{
+ "name": "zeroshot",
+ "policy": "model",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 63,
+  "rate": 0.21
+ },
+ "target_visible_at_start": {
+  "n": 158,
+  "success": 51,
+  "rate": 0.3228
+ },
+ "target_unseen_at_start": {
+  "n": 142,
+  "success": 12,
+  "rate": 0.0845
+ },
+ "two_matching": {
+  "n": 103,
+  "success": 27,
+  "rate": 0.2621
+ },
+ "one_matching": {
+  "n": 197,
+  "success": 36,
+  "rate": 0.1827
+ },
+ "timeouts": 237,
+ "wrong_object_at_end": 154,
+ "mean_steps_success": 3.14,
+ "blocked_forward_share": 0.7228,
+ "actions": {
+  "forward": 11560,
+  "turn left": 1840,
+  "turn right": 1966
+ },
+ "timeout_kinds": {
+  "stuck": 180,
+  "cycle": 57
+ },
+ "shadow_bot_agree": 0.0882,
+ "shadow_bot_agree_success_eps": 0.899,
+ "mask_mission": false,
+ "model": "/home/moka/.cache/huggingface/hub/models--convaiinnovations--laya/snapshots/55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851"
+}

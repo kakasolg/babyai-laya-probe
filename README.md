@@ -67,8 +67,15 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
 
 1. (완료) 저장소·재측정·시범 덤프·관측→글·Laya 설치와 형식 확인 — `reports/stage1.md` (GoToObj)
 2. a (완료) GoToLocal로 덤프·통계·표본·dry_run — `reports/stage2a.md`
-   b 최소 미세조정과 걸음 단위 정확도(평가 seed), 순서 뒤집기 민감도
-3. 닫힌 루프: 평가 seed 300판 성공률, 비교 대상 셋과 나란히, 대표 실패 사례
+   b (완료) 최소 미세조정과 걸음 단위 정확도(평가 seed), 순서 뒤집기 민감도 — `reports/stage3.md`
+3. (완료) 닫힌 루프: 평가 seed 300판 성공률, 비교 대상 셋과 나란히, 대표 실패 사례 — `reports/stage3.md`
+   ```bash
+   $PY -m probe.dump_demos --seeds 10000-10299 --out data/gotolocal_eval.jsonl --keep-all
+   $PY -m probe.finetune data/gotolocal_train.jsonl --seed 0          # → ~/babyai-laya-ft/gotolocal-s0
+   $PY -m probe.step_eval data/gotolocal_eval.jsonl --model ~/babyai-laya-ft/gotolocal-s0
+   $PY -m probe.closed_loop --policy random|forward|bot --name <tag>
+   $PY -m probe.closed_loop --policy model --model ~/babyai-laya-ft/gotolocal-s0 [--mask] --name <tag>
+   ```
 4. 한 걸음씩 멈추고 키보드로 모델 선택을 확인·교정하는 루프(교정은 기록만)
 5. 실패하면 작은 비교 하나씩: 입력 정보, 글 표현, 데이터 양, 모델
 

@@ -1,0 +1,42 @@
+{
+ "name": "bot",
+ "policy": "bot",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 300,
+  "rate": 1.0
+ },
+ "target_visible_at_start": {
+  "n": 158,
+  "success": 158,
+  "rate": 1.0
+ },
+ "target_unseen_at_start": {
+  "n": 142,
+  "success": 142,
+  "rate": 1.0
+ },
+ "two_matching": {
+  "n": 103,
+  "success": 103,
+  "rate": 1.0
+ },
+ "one_matching": {
+  "n": 197,
+  "success": 197,
+  "rate": 1.0
+ },
+ "timeouts": 0,
+ "wrong_object_at_end": 0,
+ "mean_steps_success": 5.22,
+ "blocked_forward_share": 0.0,
+ "actions": {
+  "forward": 947,
+  "turn left": 291,
+  "turn right": 329
+ },
+ "timeout_kinds": {},
+ "mask_mission": false,
+ "model": null
+}

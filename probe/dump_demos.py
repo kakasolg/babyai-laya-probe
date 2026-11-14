@@ -59,6 +59,8 @@ def main() -> None:
     ap.add_argument("--env", default=ENV_ID)
     ap.add_argument("--seeds", default="0-999")
     ap.add_argument("--out", default="data/gotolocal_train.jsonl")
+    # Eval seeds keep every episode (MoKa 11-14); only the train dump drops 3/4 episodes.
+    ap.add_argument("--keep-all", action="store_true")
     a = ap.parse_args()
     out = pathlib.Path(a.out)
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -72,14 +74,16 @@ def main() -> None:
             lengths.append(len(acts))
             if any(x not in ACTIONS for x in acts):
                 dropped.append({"seed": seed, "actions": [x for x in acts if x not in ACTIONS]})
-                continue
+                if not a.keep_all:
+                    continue
             for ln in lines:
                 f.write(json.dumps(ln) + "\n")
             n_lines += len(lines)
     summary = {"env": a.env, "seeds": a.seeds, "episodes": len(lengths), "bot_success": len(lengths) - fails,
                "mean_steps": round(sum(lengths) / len(lengths), 2), "max_steps_taken": max(lengths),
-               "actions_used": dict(sorted(all_acts.items())), "dropped_episodes": dropped,
-               "kept_episodes": len(lengths) - len(dropped), "kept_steps": n_lines}
+               "actions_used": dict(sorted(all_acts.items())), "episodes_with_other_actions": dropped,
+               "kept_all": a.keep_all,
+               "kept_episodes": len(lengths) - (0 if a.keep_all else len(dropped)), "kept_steps": n_lines}
     pathlib.Path(str(out) + ".summary.json").write_text(json.dumps(summary, indent=1), encoding="utf-8")
     print(json.dumps(summary))
 

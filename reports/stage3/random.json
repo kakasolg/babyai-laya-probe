@@ -1,0 +1,45 @@
+{
+ "name": "random",
+ "policy": "random",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 135,
+  "rate": 0.45
+ },
+ "target_visible_at_start": {
+  "n": 158,
+  "success": 84,
+  "rate": 0.5316
+ },
+ "target_unseen_at_start": {
+  "n": 142,
+  "success": 51,
+  "rate": 0.3592
+ },
+ "two_matching": {
+  "n": 103,
+  "success": 59,
+  "rate": 0.5728
+ },
+ "one_matching": {
+  "n": 197,
+  "success": 76,
+  "rate": 0.3858
+ },
+ "timeouts": 165,
+ "wrong_object_at_end": 32,
+ "mean_steps_success": 24.32,
+ "blocked_forward_share": 0.1409,
+ "actions": {
+  "forward": 4570,
+  "turn right": 4703,
+  "turn left": 4570
+ },
+ "timeout_kinds": {
+  "wander": 163,
+  "cycle": 2
+ },
+ "mask_mission": false,
+ "model": null
+}
