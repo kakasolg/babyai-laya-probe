@@ -81,7 +81,7 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
    $PY -m probe.closed_loop --policy model --model ~/babyai-laya-ft/gotolocal-s0 [--mask] --name <tag>
    ```
 4. (만듦, MoKa가 돌림) 한 걸음씩 멈추고 키보드로 모델 선택을 확인·교정하는 루프(교정은 기록만) — `reports/stage4.md`, 아래 "교정 루프"
-5. 실패하면 작은 비교 하나씩: 입력 정보, 글 표현, 데이터 양, 모델
+5. 닫힌 루프 세 갈래(Laya · Jev · Gemma 12B)와 "안 해본 행동" 규칙 R — `reports/stage5.md`, 아래 "5단계"
 
 각 단계는 MoKa 확인 뒤 하나씩 진행한다.
 
@@ -155,3 +155,43 @@ Windows PowerShell에서 친다면 같은 줄을 `wsl -d Ubuntu -- bash -lc '…
   - Enter = AI대로 · ←/→/↑ = 다른 행동으로 바꿔 한 걸음(교정) · B = 봇 선택 보기 · 1~4 = 이 걸음 메모 · R = 끝까지 AI대로 · N = 다음 판
   - Laya는 WSL에서 `probe/correct_server.py`(127.0.0.1:18799)로 돈다. 교정 모드에 처음 들어가면 게임이 `probe/run_correct_server.sh`로 직접 켠다(콘솔 창이 하나 뜨고, 모델 읽느라 20~40초). 게임 창을 닫으면 서버도 끈다.
   - 기록은 글자판 교정 루프와 같은 `data/correct_log.jsonl`, 같은 형식에 `"source": "game"`이 붙는다. 교정은 기록만 하고 학습엔 안 쓴다. 막힘 탈출 장치 꺼짐, 20000~20299 거부.
+
+## 5단계 — 학습 없는 모델(Jev·Gemma)에 주는 설명 (확정본, 2026-11-14)
+
+Jev·Gemma를 부르기 전에 확정했다. 결과를 본 뒤 고치지 않는다. 코드의 `probe/stage5.py` `EXPLAIN`과 글자 하나까지 같다.
+두 모델에 같은 글을 준다. Jev는 `instructions`에 이 글, `state`에 상태 글, `criteria`는 `turn left / turn right / forward`(설명 없음).
+Gemma(`gemma4:12b-it-q8_0`)는 이 글 + `[Observation]` 상태 글 + `[Actions]` 1~3 번호 + `Answer with one digit only.`
+상태 글 = Laya가 받는 것 그대로(`mission: …` 줄 + 관측 글). 규약 줄은 `probe/obs_text.py`의 실제 동작에서 옮겼다.
+
+```text
+You control an agent in a grid room. Choose exactly one action using only the
+current observation and the mission.
+
+turn left / turn right: rotate 90 degrees in place, no movement.
+forward: move one cell ahead. It does nothing if that cell holds a wall or an object.
+
+The mission succeeds when an object matching the mission's color and type is in the
+cell directly ahead of the agent. Any matching object counts.
+
+The observation lists only what is inside the agent's limited forward view.
+Cells that are not listed as objects or walls and are in view are empty.
+Anything outside the view is unknown, not empty.
+
+How to read the observation:
+- "facing: east" is the compass direction the agent faces. All other positions are relative to the agent.
+- The view covers the agent's own row and the 6 rows ahead, 3 cells to each side. Cells behind a wall are not seen.
+- "<color> <type>: 2 ahead, 1 left" means that object is 2 cells forward and 1 cell to the left of the agent.
+  A zero part is left out: "3 right" means the same row as the agent, 3 cells to the right.
+- "X: 1 ahead" (no left/right part) means X is in the cell directly in front, so forward is blocked.
+  If X matches the mission, the mission is already met.
+- Objects are listed nearest first. "objects: none in view" means no object is visible.
+- "walls: 4 ahead, 1 left" gives the distance to the nearest wall on the three straight lines from the agent
+  (ahead, left, right); a line with no visible wall is left out, "walls: none in line" if none.
+  "walls: 1 ahead" means a wall is directly in front, so forward is blocked. Walls off these lines are not listed.
+```
+
+```bash
+$PY -m probe.stage5 loop --scorer laya --model ~/babyai-laya-ft/gotolocal-s0 --name laya-s0 [--rule --base reports/stage5/laya-s0.json]
+$PY -m probe.stage5 stepcheck --scorer gemma            # Jev: JEV_MODEL=jev-1.14.0, 키는 환경변수 TYPESAFE_API_KEY
+$PY -m probe.stage5 loop --scorer gemma --name gemma [--rule --base reports/stage5/gemma.json]
+```
