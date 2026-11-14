@@ -1,0 +1,66 @@
+{
+ "model": "/home/moka/babyai-laya-ft/gotolocal-s1",
+ "steps": 1567,
+ "all": {
+  "n": 1567,
+  "agree": 0.9572
+ },
+ "order_flip_rate": 0.0096,
+ "reversed_order_agree": 0.9566,
+ "by_category": {
+  "target_unseen": {
+   "n": 237,
+   "agree": 0.8903
+  },
+  "distractor_closer": {
+   "n": 849,
+   "agree": 0.9541
+  },
+  "two_matching": {
+   "n": 408,
+   "agree": 0.9608
+  },
+  "two_matching_in_view": {
+   "n": 197,
+   "agree": 0.9543
+  }
+ },
+ "bot_action_changed": {
+  "n": 797,
+  "agree": 0.9586
+ },
+ "bot_action_same": {
+  "n": 470,
+  "agree": 0.9468
+ },
+ "first_step": {
+  "n": 300,
+  "agree": 0.97
+ },
+ "target_visible_unique": {
+  "n": 960,
+  "agree": 0.9729
+ },
+ "confusion_bot_to_model": {
+  "turn left": {
+   "turn left": 268,
+   "forward": 13,
+   "turn right": 10
+  },
+  "turn right": {
+   "turn right": 310,
+   "turn left": 6,
+   "forward": 13
+  },
+  "forward": {
+   "forward": 922,
+   "turn right": 17,
+   "turn left": 8
+  }
+ },
+ "model_choice_share": {
+  "forward": 948,
+  "turn left": 282,
+  "turn right": 337
+ }
+}

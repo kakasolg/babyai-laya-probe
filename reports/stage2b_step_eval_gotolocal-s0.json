@@ -25,6 +25,18 @@
    "agree": 0.9645
   }
  },
+ "bot_action_changed": {
+  "n": 797,
+  "agree": 0.9486
+ },
+ "bot_action_same": {
+  "n": 470,
+  "agree": 0.9426
+ },
+ "first_step": {
+  "n": 300,
+  "agree": 0.96
+ },
  "target_visible_unique": {
   "n": 960,
   "agree": 0.9604

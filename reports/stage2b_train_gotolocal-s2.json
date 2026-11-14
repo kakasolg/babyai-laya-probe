@@ -1,0 +1,80 @@
+{
+ "name": "gotolocal-s2",
+ "checkpoint": "/home/moka/babyai-laya-ft/gotolocal-s2",
+ "base": "convaiinnovations/laya@55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+ "rows": 5310,
+ "config": {
+  "epochs": "4",
+  "micro_batch": "8",
+  "grad_accum": "8",
+  "encoder_lr": "2.5e-05",
+  "head_lr": "0.0001",
+  "min_lr": "1e-06",
+  "weight_decay": "0.01",
+  "grad_clip": "1.0",
+  "loss": "rlcd",
+  "rl_samples": "4",
+  "sigma_start": "0.4",
+  "sigma_end": "0.1",
+  "w_sph": "0.75",
+  "w_rps": "1.0",
+  "shuffle_options": "('choice',)",
+  "option_layout": "None",
+  "freeze_encoder": "False",
+  "calib_max": "400",
+  "calib_frac": "0.1",
+  "calib_seed": "20260922",
+  "seed": "2",
+  "max_len": "None",
+  "head_max_len": "None",
+  "amp": "None",
+  "gradient_checkpointing": "None",
+  "log_every": "100",
+  "label_smoothing": "0.0",
+  "text_column": "text",
+  "label_column": "label",
+  "question_id": "label",
+  "instructions": "None",
+  "eval_data": "None",
+  "target_error": "0.1",
+  "min_abstain_n": "10"
+ },
+ "train_minutes": 4.59,
+ "gpu_peak_alloc_gb": 7.76,
+ "gpu_peak_reserved_gb": 8.32,
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "train_items": 4910,
+ "calibration_items": 400,
+ "temperature": [
+  5.0,
+  1.0,
+  1.0
+ ],
+ "epoch_loss": [
+  0.5096211031117971,
+  0.5981524400660466,
+  0.8934652433161834,
+  0.7417924266685094
+ ],
+ "calibration": {
+  "choice": {
+   "items": 400,
+   "temperature": 5.0,
+   "issues": [
+    "the fitted temperature 5 is on the [0.5, 5] clamp"
+   ],
+   "accuracy": 0.9525,
+   "mean_confidence": 0.981023876486914
+  },
+  "score": {
+   "items": 0,
+   "temperature": 1.0,
+   "issues": []
+  },
+  "noul": {
+   "items": 0,
+   "temperature": 1.0,
+   "issues": []
+  }
+ }
+}

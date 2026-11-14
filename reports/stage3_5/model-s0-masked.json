@@ -1,0 +1,4850 @@
+{
+ "name": "model-s0-masked",
+ "policy": "model",
+ "episodes": 300,
+ "skipped": [],
+ "all": {
+  "n": 300,
+  "success": 2,
+  "rate": 0.0067,
+  "within_2x_bot": 1,
+  "rate_2x": 0.0033
+ },
+ "target_visible_at_start": {
+  "n": 158,
+  "success": 2,
+  "rate": 0.0127,
+  "within_2x_bot": 1,
+  "rate_2x": 0.0063
+ },
+ "target_unseen_at_start": {
+  "n": 142,
+  "success": 0,
+  "rate": 0.0,
+  "within_2x_bot": 0,
+  "rate_2x": 0.0
+ },
+ "two_matching": {
+  "n": 103,
+  "success": 1,
+  "rate": 0.0097,
+  "within_2x_bot": 0,
+  "rate_2x": 0.0
+ },
+ "one_matching": {
+  "n": 197,
+  "success": 1,
+  "rate": 0.0051,
+  "within_2x_bot": 1,
+  "rate_2x": 0.0051
+ },
+ "timeouts": 298,
+ "mean_steps_success": 4.0,
+ "blocked_forward_share": 0.0,
+ "actions": {
+  "turn left": 8626,
+  "turn right": 10199,
+  "forward": 255
+ },
+ "per_episode": {
+  "10000": [
+   0,
+   64,
+   1
+  ],
+  "10001": [
+   0,
+   64,
+   6
+  ],
+  "10002": [
+   0,
+   64,
+   3
+  ],
+  "10003": [
+   0,
+   64,
+   7
+  ],
+  "10004": [
+   0,
+   64,
+   5
+  ],
+  "10005": [
+   0,
+   64,
+   4
+  ],
+  "10006": [
+   0,
+   64,
+   5
+  ],
+  "10007": [
+   0,
+   64,
+   3
+  ],
+  "10008": [
+   0,
+   64,
+   4
+  ],
+  "10009": [
+   0,
+   64,
+   3
+  ],
+  "10010": [
+   0,
+   64,
+   3
+  ],
+  "10011": [
+   0,
+   64,
+   3
+  ],
+  "10012": [
+   0,
+   64,
+   8
+  ],
+  "10013": [
+   0,
+   64,
+   6
+  ],
+  "10014": [
+   0,
+   64,
+   9
+  ],
+  "10015": [
+   0,
+   64,
+   11
+  ],
+  "10016": [
+   0,
+   64,
+   11
+  ],
+  "10017": [
+   0,
+   64,
+   13
+  ],
+  "10018": [
+   0,
+   64,
+   5
+  ],
+  "10019": [
+   0,
+   64,
+   6
+  ],
+  "10020": [
+   0,
+   64,
+   4
+  ],
+  "10021": [
+   0,
+   64,
+   11
+  ],
+  "10022": [
+   0,
+   64,
+   7
+  ],
+  "10023": [
+   0,
+   64,
+   12
+  ],
+  "10024": [
+   0,
+   64,
+   4
+  ],
+  "10025": [
+   0,
+   64,
+   6
+  ],
+  "10026": [
+   0,
+   64,
+   14
+  ],
+  "10027": [
+   0,
+   64,
+   5
+  ],
+  "10028": [
+   0,
+   64,
+   4
+  ],
+  "10029": [
+   0,
+   64,
+   8
+  ],
+  "10030": [
+   0,
+   64,
+   9
+  ],
+  "10031": [
+   0,
+   64,
+   5
+  ],
+  "10032": [
+   0,
+   64,
+   4
+  ],
+  "10033": [
+   0,
+   64,
+   4
+  ],
+  "10034": [
+   0,
+   64,
+   3
+  ],
+  "10035": [
+   0,
+   64,
+   8
+  ],
+  "10036": [
+   0,
+   64,
+   5
+  ],
+  "10037": [
+   0,
+   64,
+   5
+  ],
+  "10038": [
+   0,
+   64,
+   1
+  ],
+  "10039": [
+   0,
+   64,
+   4
+  ],
+  "10040": [
+   0,
+   64,
+   3
+  ],
+  "10041": [
+   0,
+   64,
+   5
+  ],
+  "10042": [
+   0,
+   64,
+   6
+  ],
+  "10043": [
+   0,
+   64,
+   6
+  ],
+  "10044": [
+   0,
+   64,
+   2
+  ],
+  "10045": [
+   0,
+   64,
+   2
+  ],
+  "10046": [
+   1,
+   5,
+   2
+  ],
+  "10047": [
+   0,
+   64,
+   8
+  ],
+  "10048": [
+   0,
+   64,
+   3
+  ],
+  "10049": [
+   0,
+   64,
+   3
+  ],
+  "10050": [
+   0,
+   64,
+   2
+  ],
+  "10051": [
+   0,
+   64,
+   8
+  ],
+  "10052": [
+   0,
+   64,
+   6
+  ],
+  "10053": [
+   0,
+   64,
+   5
+  ],
+  "10054": [
+   0,
+   64,
+   6
+  ],
+  "10055": [
+   0,
+   64,
+   2
+  ],
+  "10056": [
+   0,
+   64,
+   2
+  ],
+  "10057": [
+   0,
+   64,
+   9
+  ],
+  "10058": [
+   0,
+   64,
+   5
+  ],
+  "10059": [
+   0,
+   64,
+   4
+  ],
+  "10060": [
+   0,
+   64,
+   2
+  ],
+  "10061": [
+   0,
+   64,
+   7
+  ],
+  "10062": [
+   0,
+   64,
+   5
+  ],
+  "10063": [
+   0,
+   64,
+   3
+  ],
+  "10064": [
+   0,
+   64,
+   4
+  ],
+  "10065": [
+   0,
+   64,
+   6
+  ],
+  "10066": [
+   0,
+   64,
+   2
+  ],
+  "10067": [
+   0,
+   64,
+   4
+  ],
+  "10068": [
+   0,
+   64,
+   3
+  ],
+  "10069": [
+   0,
+   64,
+   4
+  ],
+  "10070": [
+   0,
+   64,
+   7
+  ],
+  "10071": [
+   0,
+   64,
+   5
+  ],
+  "10072": [
+   0,
+   64,
+   5
+  ],
+  "10073": [
+   0,
+   64,
+   5
+  ],
+  "10074": [
+   0,
+   64,
+   3
+  ],
+  "10075": [
+   0,
+   64,
+   2
+  ],
+  "10076": [
+   0,
+   64,
+   5
+  ],
+  "10077": [
+   0,
+   64,
+   5
+  ],
+  "10078": [
+   0,
+   64,
+   3
+  ],
+  "10079": [
+   0,
+   64,
+   3
+  ],
+  "10080": [
+   0,
+   64,
+   9
+  ],
+  "10081": [
+   0,
+   64,
+   2
+  ],
+  "10082": [
+   0,
+   64,
+   9
+  ],
+  "10083": [
+   0,
+   64,
+   5
+  ],
+  "10084": [
+   0,
+   64,
+   2
+  ],
+  "10085": [
+   0,
+   64,
+   4
+  ],
+  "10086": [
+   0,
+   64,
+   8
+  ],
+  "10087": [
+   0,
+   64,
+   5
+  ],
+  "10088": [
+   0,
+   64,
+   5
+  ],
+  "10089": [
+   0,
+   64,
+   3
+  ],
+  "10090": [
+   0,
+   64,
+   7
+  ],
+  "10091": [
+   0,
+   64,
+   5
+  ],
+  "10092": [
+   0,
+   64,
+   7
+  ],
+  "10093": [
+   0,
+   64,
+   3
+  ],
+  "10094": [
+   0,
+   64,
+   9
+  ],
+  "10095": [
+   0,
+   64,
+   3
+  ],
+  "10096": [
+   0,
+   64,
+   2
+  ],
+  "10097": [
+   0,
+   64,
+   3
+  ],
+  "10098": [
+   0,
+   64,
+   6
+  ],
+  "10099": [
+   0,
+   64,
+   3
+  ],
+  "10100": [
+   0,
+   64,
+   5
+  ],
+  "10101": [
+   0,
+   64,
+   2
+  ],
+  "10102": [
+   0,
+   64,
+   3
+  ],
+  "10103": [
+   0,
+   64,
+   2
+  ],
+  "10104": [
+   0,
+   64,
+   4
+  ],
+  "10105": [
+   0,
+   64,
+   6
+  ],
+  "10106": [
+   0,
+   64,
+   6
+  ],
+  "10107": [
+   0,
+   64,
+   5
+  ],
+  "10108": [
+   0,
+   64,
+   4
+  ],
+  "10109": [
+   0,
+   64,
+   2
+  ],
+  "10110": [
+   0,
+   64,
+   3
+  ],
+  "10111": [
+   0,
+   64,
+   2
+  ],
+  "10112": [
+   0,
+   64,
+   5
+  ],
+  "10113": [
+   0,
+   64,
+   10
+  ],
+  "10114": [
+   0,
+   64,
+   2
+  ],
+  "10115": [
+   0,
+   64,
+   2
+  ],
+  "10116": [
+   0,
+   64,
+   3
+  ],
+  "10117": [
+   0,
+   64,
+   2
+  ],
+  "10118": [
+   0,
+   64,
+   3
+  ],
+  "10119": [
+   0,
+   64,
+   3
+  ],
+  "10120": [
+   0,
+   64,
+   5
+  ],
+  "10121": [
+   0,
+   64,
+   7
+  ],
+  "10122": [
+   0,
+   64,
+   19
+  ],
+  "10123": [
+   0,
+   64,
+   3
+  ],
+  "10124": [
+   0,
+   64,
+   8
+  ],
+  "10125": [
+   0,
+   64,
+   8
+  ],
+  "10126": [
+   0,
+   64,
+   3
+  ],
+  "10127": [
+   0,
+   64,
+   7
+  ],
+  "10128": [
+   0,
+   64,
+   8
+  ],
+  "10129": [
+   0,
+   64,
+   2
+  ],
+  "10130": [
+   0,
+   64,
+   4
+  ],
+  "10131": [
+   0,
+   64,
+   7
+  ],
+  "10132": [
+   0,
+   64,
+   3
+  ],
+  "10133": [
+   0,
+   64,
+   3
+  ],
+  "10134": [
+   0,
+   64,
+   6
+  ],
+  "10135": [
+   0,
+   64,
+   7
+  ],
+  "10136": [
+   0,
+   64,
+   2
+  ],
+  "10137": [
+   0,
+   64,
+   8
+  ],
+  "10138": [
+   0,
+   64,
+   7
+  ],
+  "10139": [
+   0,
+   64,
+   3
+  ],
+  "10140": [
+   0,
+   64,
+   11
+  ],
+  "10141": [
+   0,
+   64,
+   4
+  ],
+  "10142": [
+   0,
+   64,
+   4
+  ],
+  "10143": [
+   0,
+   64,
+   3
+  ],
+  "10144": [
+   0,
+   64,
+   8
+  ],
+  "10145": [
+   0,
+   64,
+   4
+  ],
+  "10146": [
+   0,
+   64,
+   9
+  ],
+  "10147": [
+   0,
+   64,
+   2
+  ],
+  "10148": [
+   0,
+   64,
+   9
+  ],
+  "10149": [
+   0,
+   64,
+   12
+  ],
+  "10150": [
+   0,
+   64,
+   4
+  ],
+  "10151": [
+   0,
+   64,
+   11
+  ],
+  "10152": [
+   0,
+   64,
+   6
+  ],
+  "10153": [
+   0,
+   64,
+   4
+  ],
+  "10154": [
+   0,
+   64,
+   8
+  ],
+  "10155": [
+   0,
+   64,
+   5
+  ],
+  "10156": [
+   0,
+   64,
+   1
+  ],
+  "10157": [
+   0,
+   64,
+   11
+  ],
+  "10158": [
+   0,
+   64,
+   5
+  ],
+  "10159": [
+   0,
+   64,
+   1
+  ],
+  "10160": [
+   0,
+   64,
+   2
+  ],
+  "10161": [
+   0,
+   64,
+   2
+  ],
+  "10162": [
+   0,
+   64,
+   4
+  ],
+  "10163": [
+   0,
+   64,
+   2
+  ],
+  "10164": [
+   0,
+   64,
+   7
+  ],
+  "10165": [
+   0,
+   64,
+   3
+  ],
+  "10166": [
+   0,
+   64,
+   9
+  ],
+  "10167": [
+   0,
+   64,
+   3
+  ],
+  "10168": [
+   0,
+   64,
+   14
+  ],
+  "10169": [
+   0,
+   64,
+   9
+  ],
+  "10170": [
+   0,
+   64,
+   9
+  ],
+  "10171": [
+   0,
+   64,
+   5
+  ],
+  "10172": [
+   0,
+   64,
+   3
+  ],
+  "10173": [
+   0,
+   64,
+   6
+  ],
+  "10174": [
+   0,
+   64,
+   10
+  ],
+  "10175": [
+   0,
+   64,
+   5
+  ],
+  "10176": [
+   0,
+   64,
+   5
+  ],
+  "10177": [
+   0,
+   64,
+   3
+  ],
+  "10178": [
+   0,
+   64,
+   4
+  ],
+  "10179": [
+   0,
+   64,
+   6
+  ],
+  "10180": [
+   0,
+   64,
+   4
+  ],
+  "10181": [
+   0,
+   64,
+   7
+  ],
+  "10182": [
+   0,
+   64,
+   6
+  ],
+  "10183": [
+   0,
+   64,
+   5
+  ],
+  "10184": [
+   0,
+   64,
+   7
+  ],
+  "10185": [
+   0,
+   64,
+   4
+  ],
+  "10186": [
+   0,
+   64,
+   2
+  ],
+  "10187": [
+   0,
+   64,
+   9
+  ],
+  "10188": [
+   0,
+   64,
+   7
+  ],
+  "10189": [
+   0,
+   64,
+   10
+  ],
+  "10190": [
+   0,
+   64,
+   2
+  ],
+  "10191": [
+   0,
+   64,
+   6
+  ],
+  "10192": [
+   0,
+   64,
+   6
+  ],
+  "10193": [
+   0,
+   64,
+   6
+  ],
+  "10194": [
+   0,
+   64,
+   3
+  ],
+  "10195": [
+   0,
+   64,
+   8
+  ],
+  "10196": [
+   0,
+   64,
+   3
+  ],
+  "10197": [
+   0,
+   64,
+   3
+  ],
+  "10198": [
+   0,
+   64,
+   2
+  ],
+  "10199": [
+   0,
+   64,
+   4
+  ],
+  "10200": [
+   0,
+   64,
+   8
+  ],
+  "10201": [
+   0,
+   64,
+   6
+  ],
+  "10202": [
+   0,
+   64,
+   6
+  ],
+  "10203": [
+   0,
+   64,
+   3
+  ],
+  "10204": [
+   0,
+   64,
+   6
+  ],
+  "10205": [
+   0,
+   64,
+   3
+  ],
+  "10206": [
+   0,
+   64,
+   1
+  ],
+  "10207": [
+   0,
+   64,
+   3
+  ],
+  "10208": [
+   0,
+   64,
+   3
+  ],
+  "10209": [
+   0,
+   64,
+   6
+  ],
+  "10210": [
+   0,
+   64,
+   2
+  ],
+  "10211": [
+   0,
+   64,
+   5
+  ],
+  "10212": [
+   0,
+   64,
+   3
+  ],
+  "10213": [
+   0,
+   64,
+   14
+  ],
+  "10214": [
+   0,
+   64,
+   1
+  ],
+  "10215": [
+   0,
+   64,
+   4
+  ],
+  "10216": [
+   0,
+   64,
+   5
+  ],
+  "10217": [
+   0,
+   64,
+   3
+  ],
+  "10218": [
+   1,
+   3,
+   3
+  ],
+  "10219": [
+   0,
+   64,
+   4
+  ],
+  "10220": [
+   0,
+   64,
+   4
+  ],
+  "10221": [
+   0,
+   64,
+   6
+  ],
+  "10222": [
+   0,
+   64,
+   3
+  ],
+  "10223": [
+   0,
+   64,
+   8
+  ],
+  "10224": [
+   0,
+   64,
+   9
+  ],
+  "10225": [
+   0,
+   64,
+   4
+  ],
+  "10226": [
+   0,
+   64,
+   5
+  ],
+  "10227": [
+   0,
+   64,
+   7
+  ],
+  "10228": [
+   0,
+   64,
+   8
+  ],
+  "10229": [
+   0,
+   64,
+   3
+  ],
+  "10230": [
+   0,
+   64,
+   2
+  ],
+  "10231": [
+   0,
+   64,
+   1
+  ],
+  "10232": [
+   0,
+   64,
+   8
+  ],
+  "10233": [
+   0,
+   64,
+   6
+  ],
+  "10234": [
+   0,
+   64,
+   5
+  ],
+  "10235": [
+   0,
+   64,
+   9
+  ],
+  "10236": [
+   0,
+   64,
+   11
+  ],
+  "10237": [
+   0,
+   64,
+   5
+  ],
+  "10238": [
+   0,
+   64,
+   4
+  ],
+  "10239": [
+   0,
+   64,
+   3
+  ],
+  "10240": [
+   0,
+   64,
+   6
+  ],
+  "10241": [
+   0,
+   64,
+   12
+  ],
+  "10242": [
+   0,
+   64,
+   12
+  ],
+  "10243": [
+   0,
+   64,
+   7
+  ],
+  "10244": [
+   0,
+   64,
+   1
+  ],
+  "10245": [
+   0,
+   64,
+   4
+  ],
+  "10246": [
+   0,
+   64,
+   3
+  ],
+  "10247": [
+   0,
+   64,
+   7
+  ],
+  "10248": [
+   0,
+   64,
+   3
+  ],
+  "10249": [
+   0,
+   64,
+   7
+  ],
+  "10250": [
+   0,
+   64,
+   9
+  ],
+  "10251": [
+   0,
+   64,
+   7
+  ],
+  "10252": [
+   0,
+   64,
+   2
+  ],
+  "10253": [
+   0,
+   64,
+   7
+  ],
+  "10254": [
+   0,
+   64,
+   2
+  ],
+  "10255": [
+   0,
+   64,
+   2
+  ],
+  "10256": [
+   0,
+   64,
+   8
+  ],
+  "10257": [
+   0,
+   64,
+   5
+  ],
+  "10258": [
+   0,
+   64,
+   6
+  ],
+  "10259": [
+   0,
+   64,
+   12
+  ],
+  "10260": [
+   0,
+   64,
+   5
+  ],
+  "10261": [
+   0,
+   64,
+   10
+  ],
+  "10262": [
+   0,
+   64,
+   2
+  ],
+  "10263": [
+   0,
+   64,
+   4
+  ],
+  "10264": [
+   0,
+   64,
+   3
+  ],
+  "10265": [
+   0,
+   64,
+   5
+  ],
+  "10266": [
+   0,
+   64,
+   6
+  ],
+  "10267": [
+   0,
+   64,
+   14
+  ],
+  "10268": [
+   0,
+   64,
+   3
+  ],
+  "10269": [
+   0,
+   64,
+   5
+  ],
+  "10270": [
+   0,
+   64,
+   5
+  ],
+  "10271": [
+   0,
+   64,
+   5
+  ],
+  "10272": [
+   0,
+   64,
+   2
+  ],
+  "10273": [
+   0,
+   64,
+   4
+  ],
+  "10274": [
+   0,
+   64,
+   2
+  ],
+  "10275": [
+   0,
+   64,
+   5
+  ],
+  "10276": [
+   0,
+   64,
+   4
+  ],
+  "10277": [
+   0,
+   64,
+   11
+  ],
+  "10278": [
+   0,
+   64,
+   4
+  ],
+  "10279": [
+   0,
+   64,
+   3
+  ],
+  "10280": [
+   0,
+   64,
+   6
+  ],
+  "10281": [
+   0,
+   64,
+   3
+  ],
+  "10282": [
+   0,
+   64,
+   7
+  ],
+  "10283": [
+   0,
+   64,
+   7
+  ],
+  "10284": [
+   0,
+   64,
+   2
+  ],
+  "10285": [
+   0,
+   64,
+   6
+  ],
+  "10286": [
+   0,
+   64,
+   3
+  ],
+  "10287": [
+   0,
+   64,
+   9
+  ],
+  "10288": [
+   0,
+   64,
+   2
+  ],
+  "10289": [
+   0,
+   64,
+   11
+  ],
+  "10290": [
+   0,
+   64,
+   8
+  ],
+  "10291": [
+   0,
+   64,
+   2
+  ],
+  "10292": [
+   0,
+   64,
+   2
+  ],
+  "10293": [
+   0,
+   64,
+   7
+  ],
+  "10294": [
+   0,
+   64,
+   4
+  ],
+  "10295": [
+   0,
+   64,
+   4
+  ],
+  "10296": [
+   0,
+   64,
+   6
+  ],
+  "10297": [
+   0,
+   64,
+   7
+  ],
+  "10298": [
+   0,
+   64,
+   2
+  ],
+  "10299": [
+   0,
+   64,
+   3
+  ]
+ },
+ "failure_classes": {
+  "A": 140,
+  "C": 151,
+  "B": 7
+ },
+ "failure_whys": {
+  "A: target visible in every loop state": 140,
+  "C: target visible in some loop states": 151,
+  "B: target never seen": 4,
+  "B: target seen earlier, lost": 3
+ },
+ "failures": [
+  {
+   "seed": 10000,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nred key: 2 left\ngreen ball: 2 ahead\ngrey ball: 1 ahead, 3 left\nwalls: 3 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10001,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\ngreen ball: 3 left\nred box: 1 ahead, 3 left\nred ball: 3 ahead, 1 left\ngreen box: 2 ahead, 3 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10002,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: east\nyellow key: 3 left\ngreen key: 1 ahead, 2 right\nblue key: 2 ahead, 1 right\nred box: 2 ahead, 2 right\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn left",
+   "mission": "go to a yellow key"
+  },
+  {
+   "seed": 10003,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\nred box: 1 ahead, 1 left\nred box: 1 ahead, 1 right\nyellow key: 2 ahead, 2 left\npurple box: 3 ahead, 3 left\nwalls: 5 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a purple box"
+  },
+  {
+   "seed": 10004,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\ngreen key: 3 left\nblue key: 3 ahead, 1 left\npurple key: 2 ahead, 3 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10005,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\ngreen ball: 2 ahead\npurple key: 3 ahead\nred key: 1 ahead, 3 left\nred ball: 3 ahead, 1 left\ngrey box: 3 ahead, 1 right\ngrey ball: 5 ahead, 1 left\nblue ball: 5 ahead, 1 right\nblue ball: 5 ahead, 2 left\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the red key"
+  },
+  {
+   "seed": 10006,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\npurple key: 1 ahead, 3 right\ngrey key: 4 ahead\ngrey box: 3 ahead, 2 right\nred key: 4 ahead, 2 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10007,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nred ball: 1 ahead, 2 left\nblue key: 1 ahead, 2 right\nblue key: 3 ahead, 2 right\nred ball: 5 ahead, 1 left\nblue key: 5 ahead, 1 right\nblue key: 5 ahead, 2 left\nyellow ball: 5 ahead, 2 right\ngreen key: 5 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a blue key"
+  },
+  {
+   "seed": 10008,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: east\ngreen key: 2 left\ngreen box: 1 ahead, 1 left\npurple box: 1 ahead, 1 right\nyellow key: 1 ahead, 2 left\nblue box: 2 ahead, 2 left\npurple key: 3 ahead, 1 left\ngrey box: 3 ahead, 1 right\ngrey box: 3 ahead, 2 right\nwalls: 4 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a grey box"
+  },
+  {
+   "seed": 10009,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nred key: 2 ahead\nyellow box: 3 right\npurple key: 1 ahead, 2 left\ngrey box: 3 ahead, 2 right\npurple key: 4 ahead, 1 left\nyellow key: 4 ahead, 2 left\npurple key: 4 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the yellow box"
+  },
+  {
+   "seed": 10010,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\ngrey key: 3 left\npurple key: 1 ahead, 3 left\nyellow box: 4 ahead\nyellow key: 4 ahead, 2 left\nwalls: 6 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey key"
+  },
+  {
+   "seed": 10011,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nblue key: 2 left\ngreen box: 1 ahead, 1 right\ngreen ball: 1 ahead, 2 left\nyellow ball: 2 ahead, 1 right\nyellow key: 3 ahead\nblue box: 2 ahead, 2 left\nred key: 4 ahead, 3 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10012,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue key: 3 ahead\ngrey box: 2 ahead, 2 left\nyellow key: 3 ahead, 1 right\npurple key: 5 ahead\nred ball: 4 ahead, 2 left\ngreen box: 5 ahead, 2 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the red box"
+  },
+  {
+   "seed": 10013,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\ngrey ball: 2 right\nyellow key: 1 ahead, 1 left\ngreen key: 3 ahead, 1 right\nyellow box: 3 ahead, 2 right\ngreen box: 4 ahead, 1 left\npurple box: 3 ahead, 3 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow box"
+  },
+  {
+   "seed": 10014,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\npurple key: 1 ahead, 2 left\nyellow ball: 2 ahead, 1 left\ngrey box: 1 ahead, 3 left\nred box: 3 ahead, 1 left\nyellow box: 5 ahead, 1 left\nyellow box: 4 ahead, 3 left\npurple ball: 5 ahead, 2 left\nwalls: 6 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple ball"
+  },
+  {
+   "seed": 10015,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\npurple ball: 2 ahead\nwalls: 3 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10016,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\nred box: 1 ahead, 1 left\ngreen box: 2 ahead\nyellow ball: 1 ahead, 2 left\nyellow key: 4 ahead\ngreen key: 4 ahead, 1 left\nyellow key: 4 ahead, 2 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a yellow key"
+  },
+  {
+   "seed": 10017,
+   "class": "B",
+   "why": "target never seen",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nblue key: 3 right\ngreen ball: 1 ahead, 2 right\nred key: 3 ahead, 2 right\ngrey box: 4 ahead, 1 right\nblue key: 4 ahead, 3 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10018,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow ball: 3 right\nred key: 3 ahead, 1 left\nblue ball: 4 ahead, 1 left\nblue ball: 3 ahead, 3 right\ngreen box: 4 ahead, 2 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a blue ball"
+  },
+  {
+   "seed": 10019,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\nblue ball: 2 right\nblue key: 3 ahead, 1 left\nyellow ball: 3 ahead, 2 right\npurple ball: 4 ahead, 1 left\ngreen box: 3 ahead, 3 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a purple ball"
+  },
+  {
+   "seed": 10020,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nred box: 1 ahead, 1 left\nyellow ball: 1 ahead, 3 left\ngreen key: 2 ahead, 2 left\nwalls: 3 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a green key"
+  },
+  {
+   "seed": 10021,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen box: 3 left\nblue box: 3 ahead, 1 left\nred box: 3 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the blue key"
+  },
+  {
+   "seed": 10022,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow key: 1 ahead, 1 right\nblue ball: 3 ahead\nyellow box: 3 ahead, 1 right\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a yellow box"
+  },
+  {
+   "seed": 10023,
+   "class": "B",
+   "why": "target never seen",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue ball: 1 ahead, 1 left\ngreen ball: 3 ahead\npurple box: 3 ahead, 1 right\nred key: 4 ahead, 1 right\nwalls: 5 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10024,
+   "class": "B",
+   "why": "target never seen",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nred key: 2 right\npurple key: 3 ahead, 1 left\ngrey box: 4 ahead\ngreen ball: 3 ahead, 2 right\nyellow box: 4 ahead, 2 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the purple ball"
+  },
+  {
+   "seed": 10025,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 3,
+   "period": 4,
+   "loop_start_text": "facing: north\nblue box: 1 ahead, 2 left\nyellow ball: 1 ahead, 2 right\npurple ball: 2 ahead, 1 right\ngreen box: 2 ahead, 2 left\ngrey box: 2 ahead, 3 left\nwalls: 3 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue box"
+  },
+  {
+   "seed": 10026,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue box: 2 left\ngreen box: 2 ahead\nred box: 2 ahead, 1 left\ngrey box: 2 ahead, 1 right\nblue ball: 2 ahead, 2 right\ngreen key: 3 ahead, 1 left\nblue box: 3 ahead, 2 left\npurple ball: 4 ahead, 1 right\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10027,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 5,
+   "period": 2,
+   "loop_start_text": "facing: east\nblue ball: 1 ahead, 3 left\nred key: 2 ahead, 3 left\nwalls: 3 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a blue ball"
+  },
+  {
+   "seed": 10028,
+   "class": "B",
+   "why": "target seen earlier, lost",
+   "loop_start": 4,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue box: 2 ahead, 1 right\ngreen box: 1 ahead, 3 left\nwalls: 3 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn right",
+   "mission": "go to the red box"
+  },
+  {
+   "seed": 10029,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen ball: 3 ahead\ngreen key: 3 ahead, 1 right\nblue key: 4 ahead\ngrey box: 3 ahead, 2 left\npurple ball: 4 ahead, 1 right\ngreen ball: 5 ahead\npurple ball: 3 ahead, 3 left\ngreen box: 5 ahead, 3 left\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue key"
+  },
+  {
+   "seed": 10030,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue key: 3 left\nyellow ball: 3 ahead, 2 left\ngrey ball: 3 ahead, 3 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10031,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\ngrey key: 2 left\ngrey key: 1 ahead, 1 right\nred ball: 3 right\nyellow ball: 2 ahead, 1 right\nblue ball: 2 ahead, 2 left\nyellow ball: 3 ahead, 1 right\ngrey box: 2 ahead, 3 right\npurple box: 3 ahead, 2 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10032,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\ngreen ball: 2 left\nblue box: 1 ahead, 2 right\ngreen key: 1 ahead, 3 right\nred key: 2 ahead, 3 right\nred box: 4 ahead, 1 left\ngreen ball: 4 ahead, 2 right\ngreen box: 4 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue box"
+  },
+  {
+   "seed": 10033,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 54,
+   "period": null,
+   "loop_start_text": "facing: west\nblue key: 1 ahead, 1 left\ngreen box: 1 ahead, 2 left\nblue ball: 4 ahead\ngreen box: 2 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a yellow box"
+  },
+  {
+   "seed": 10034,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 6,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple box: 1 ahead, 1 left\nred ball: 1 ahead, 1 right\nred ball: 3 ahead\nblue key: 1 ahead, 3 left\npurple key: 2 ahead, 2 left\nyellow ball: 3 ahead, 2 left\npurple ball: 4 ahead, 1 right\ngreen key: 5 ahead, 2 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10035,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: west\nred ball: 2 left\ngreen box: 2 ahead, 1 left\ngreen ball: 2 ahead, 1 right\npurple box: 3 ahead, 1 left\npurple box: 4 ahead\nyellow ball: 2 ahead, 3 left\npurple box: 3 ahead, 2 right\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow ball"
+  },
+  {
+   "seed": 10036,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow key: 2 ahead, 1 left\nred key: 3 ahead\nred key: 1 ahead, 3 right\ngreen box: 2 ahead, 2 left\nred key: 3 ahead, 1 right\npurple box: 4 ahead, 1 right\ngrey box: 3 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green box"
+  },
+  {
+   "seed": 10037,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\ngreen box: 2 ahead, 2 right\nblue key: 3 ahead, 1 right\ngreen ball: 2 ahead, 3 right\nblue ball: 5 ahead\nblue box: 4 ahead, 2 right\nyellow box: 5 ahead, 3 right\nwalls: 6 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10038,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nred key: 2 ahead\npurple box: 2 ahead, 1 left\nwalls: 3 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a red key"
+  },
+  {
+   "seed": 10039,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nred box: 2 ahead\ngreen ball: 2 ahead, 1 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a green ball"
+  },
+  {
+   "seed": 10040,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue ball: 3 ahead\nyellow key: 1 ahead, 3 left\nyellow ball: 4 ahead\nyellow box: 3 ahead, 3 left\ngrey box: 4 ahead, 2 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10041,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue key: 1 ahead, 2 left\nred key: 3 ahead\npurple key: 2 ahead, 3 left\nblue key: 3 ahead, 2 left\nwalls: 4 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn right",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10042,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 6,
+   "period": 2,
+   "loop_start_text": "facing: west\ngreen box: 2 ahead, 1 left\ngreen box: 1 ahead, 3 left\ngrey box: 3 ahead, 1 left\nyellow ball: 3 ahead, 2 left\ngreen key: 3 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow ball"
+  },
+  {
+   "seed": 10043,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow key: 2 left\npurple key: 2 ahead, 1 left\npurple ball: 2 ahead, 1 right\ngrey key: 1 ahead, 3 right\npurple key: 2 ahead, 2 left\ngrey box: 5 ahead, 1 left\nblue key: 5 ahead, 1 right\nblue ball: 4 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue key"
+  },
+  {
+   "seed": 10044,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\npurple box: 1 ahead, 1 left\nred key: 2 ahead\nred ball: 4 ahead\nyellow box: 4 ahead, 1 right\ngrey box: 5 ahead\nred key: 3 ahead, 3 left\npurple box: 4 ahead, 2 left\ngreen key: 4 ahead, 2 right\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a red key"
+  },
+  {
+   "seed": 10045,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\nblue ball: 1 ahead, 1 left\ngrey key: 2 ahead, 1 left\nred ball: 3 ahead\nblue ball: 3 ahead, 1 right\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the green box"
+  },
+  {
+   "seed": 10047,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple key: 2 left\nred ball: 2 ahead\ngrey key: 1 ahead, 2 left\ngreen ball: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10048,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: west\nyellow box: 1 ahead, 1 left\npurple key: 1 ahead, 1 right\nblue box: 2 ahead\nwalls: 3 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a purple box"
+  },
+  {
+   "seed": 10049,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow box: 1 ahead, 1 right\npurple key: 2 ahead\ngreen key: 3 left\npurple box: 1 ahead, 2 left\nblue key: 2 ahead, 2 right\npurple box: 2 ahead, 3 left\ngrey box: 3 ahead, 2 left\ngrey key: 3 ahead, 2 right\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a purple box"
+  },
+  {
+   "seed": 10050,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen key: 2 left\ngrey key: 1 ahead, 1 left\nyellow ball: 1 ahead, 2 right\ngrey ball: 2 ahead, 1 left\nyellow key: 2 ahead, 1 right\ngrey key: 4 ahead\nred ball: 3 ahead, 2 left\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a grey key"
+  },
+  {
+   "seed": 10051,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen box: 2 right\nred box: 2 ahead, 1 right\nblue key: 3 ahead, 1 left\ngreen ball: 4 ahead, 1 right\ngreen ball: 3 ahead, 3 right\nred ball: 5 ahead, 2 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the red ball"
+  },
+  {
+   "seed": 10052,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\ngrey key: 2 right\nblue key: 1 ahead, 1 right\ngrey ball: 2 ahead, 1 left\ngreen ball: 2 ahead, 3 left\ngrey ball: 4 ahead, 2 right\ngreen ball: 4 ahead, 3 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a green ball"
+  },
+  {
+   "seed": 10053,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: east\ngreen key: 2 right\nyellow box: 1 ahead, 1 left\ngrey ball: 1 ahead, 2 right\nyellow key: 2 ahead, 1 left\nyellow box: 2 ahead, 2 right\nblue key: 3 ahead, 1 left\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10054,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\ngrey ball: 2 right\nyellow key: 3 right\nwalls: 4 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the red ball"
+  },
+  {
+   "seed": 10055,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: west\nred ball: 2 left\ngrey box: 2 right\ngrey key: 3 right\ngreen box: 3 ahead\npurple key: 2 ahead, 2 left\nred box: 2 ahead, 2 right\nblue box: 3 ahead, 2 left\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the grey box"
+  },
+  {
+   "seed": 10056,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: west\ngreen box: 2 right\npurple key: 1 ahead, 1 right\npurple ball: 1 ahead, 2 right\ngreen key: 2 ahead, 1 left\ngrey box: 2 ahead, 1 right\npurple key: 1 ahead, 3 left\ngreen key: 2 ahead, 3 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the green box"
+  },
+  {
+   "seed": 10057,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\nred key: 1 ahead, 1 left\ngrey box: 3 ahead\npurple ball: 3 ahead, 2 left\npurple key: 4 ahead, 1 right\ngrey box: 3 ahead, 3 right\ngreen key: 4 ahead, 3 right\nyellow key: 5 ahead, 2 left\ngreen ball: 5 ahead, 2 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10058,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow box: 1 ahead, 2 right\nblue key: 1 ahead, 3 right\ngreen ball: 3 ahead, 1 right\nyellow box: 2 ahead, 3 right\ngrey key: 3 ahead, 2 right\npurple box: 5 ahead, 2 right\nwalls: 6 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10059,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\npurple key: 3 left\ngreen box: 4 ahead\ngreen box: 2 ahead, 3 left\nyellow box: 3 ahead, 2 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey key"
+  },
+  {
+   "seed": 10060,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\ngrey key: 1 ahead, 1 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a grey key"
+  },
+  {
+   "seed": 10061,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\nred key: 1 ahead, 1 right\ngreen ball: 3 right\ngreen box: 3 ahead\ngrey key: 3 ahead, 2 right\npurple key: 4 ahead, 1 left\nyellow ball: 4 ahead, 1 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a grey key"
+  },
+  {
+   "seed": 10062,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow key: 2 ahead\npurple ball: 1 ahead, 2 right\nred ball: 2 ahead, 1 right\npurple ball: 3 ahead, 1 left\ngreen box: 5 ahead, 2 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a red ball"
+  },
+  {
+   "seed": 10063,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nred box: 1 ahead, 1 right\ngrey key: 2 ahead, 1 left\ngreen ball: 4 ahead\ngreen key: 3 ahead, 2 left\nred key: 3 ahead, 3 right\npurple ball: 5 ahead, 1 left\nred key: 4 ahead, 3 right\nblue ball: 5 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the red box"
+  },
+  {
+   "seed": 10064,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\ngreen key: 2 right\npurple key: 3 right\nred box: 1 ahead, 2 left\nred key: 3 ahead, 1 left\npurple key: 3 ahead, 1 right\ngrey key: 4 ahead\ngrey ball: 3 ahead, 2 right\nred key: 4 ahead, 1 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a purple key"
+  },
+  {
+   "seed": 10065,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\ngrey key: 2 ahead, 1 right\ngreen box: 2 ahead, 3 right\nwalls: 6 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10066,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow ball: 2 left\nblue ball: 1 ahead, 1 right\ngreen box: 3 left\nyellow ball: 2 ahead, 1 left\ngreen ball: 5 ahead\nblue key: 3 ahead, 3 left\ngrey ball: 4 ahead, 3 left\nred key: 5 ahead, 2 right\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn left",
+   "mission": "go to a yellow ball"
+  },
+  {
+   "seed": 10067,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nblue ball: 1 ahead, 1 left\ngrey ball: 2 ahead, 1 right\npurple key: 3 ahead, 1 left\nyellow key: 3 ahead, 2 left\npurple ball: 3 ahead, 2 right\nred box: 5 ahead, 1 right\npurple box: 4 ahead, 3 right\ngreen key: 5 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10068,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue box: 1 ahead, 1 left\nred ball: 2 ahead, 3 left\ngrey box: 4 ahead, 1 left\nblue ball: 4 ahead, 2 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10069,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\ngrey ball: 2 right\ngrey box: 1 ahead, 2 right\ngreen key: 4 ahead\npurple ball: 3 ahead, 2 right\nblue ball: 4 ahead, 3 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a green key"
+  },
+  {
+   "seed": 10070,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow ball: 1 ahead, 1 left\npurple ball: 3 right\npurple ball: 1 ahead, 2 left\ngreen box: 2 ahead, 2 left\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10071,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow key: 2 left\ngrey ball: 3 left\nred key: 1 ahead, 2 left\nyellow box: 2 ahead, 1 left\npurple box: 3 ahead, 2 right\nyellow box: 4 ahead, 2 right\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the red key"
+  },
+  {
+   "seed": 10072,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\nred key: 1 ahead, 1 right\npurple ball: 2 ahead, 1 right\nyellow key: 1 ahead, 3 left\nblue key: 3 ahead, 1 left\nred ball: 3 ahead, 2 left\npurple box: 4 ahead, 1 left\nblue key: 4 ahead, 2 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a blue key"
+  },
+  {
+   "seed": 10073,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\ngreen key: 4 ahead\nyellow box: 3 ahead, 2 left\npurple ball: 5 ahead\nred key: 5 ahead, 1 right\nyellow key: 4 ahead, 3 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a yellow box"
+  },
+  {
+   "seed": 10074,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: east\nblue key: 2 ahead\ngrey key: 3 left\ngrey key: 3 ahead, 1 left\nyellow box: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a grey key"
+  },
+  {
+   "seed": 10075,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\ngrey key: 1 ahead, 1 left\nred box: 1 ahead, 3 right\nyellow box: 3 ahead, 1 left\nwalls: 4 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey key"
+  },
+  {
+   "seed": 10076,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple box: 1 ahead, 1 left\nblue ball: 3 right\nred box: 2 ahead, 1 right\npurple box: 1 ahead, 3 right\ngrey ball: 3 ahead, 2 right\ngreen box: 4 ahead, 1 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10077,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: east\nblue ball: 1 ahead, 1 right\nblue key: 3 right\nyellow key: 1 ahead, 2 right\ngrey ball: 2 ahead, 2 left\npurple key: 4 ahead, 1 left\npurple ball: 3 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10078,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: south\nred box: 2 left\nyellow key: 2 ahead, 1 left\nyellow ball: 2 ahead, 2 left\nblue key: 2 ahead, 3 right\nwalls: 3 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a yellow key"
+  },
+  {
+   "seed": 10079,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple key: 2 ahead\nred box: 3 left\nred key: 3 ahead\ngreen ball: 3 ahead, 2 left\ngreen key: 4 ahead, 1 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the blue box"
+  },
+  {
+   "seed": 10080,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue box: 2 right\ngrey ball: 3 ahead\nred ball: 2 ahead, 3 right\ngrey box: 4 ahead, 1 right\nyellow key: 5 ahead, 1 left\nyellow ball: 4 ahead, 3 right\ngrey key: 5 ahead, 2 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey key"
+  },
+  {
+   "seed": 10081,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nblue ball: 1 ahead, 1 left\nred ball: 2 ahead, 1 left\nblue box: 3 ahead\nblue box: 2 ahead, 3 left\ngrey key: 3 ahead, 3 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a blue box"
+  },
+  {
+   "seed": 10082,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nobjects: none in view\nwalls: 3 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the yellow box"
+  },
+  {
+   "seed": 10083,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow ball: 1 ahead, 1 right\nblue ball: 3 right\nblue ball: 1 ahead, 2 right\nyellow box: 3 ahead, 2 right\nred key: 3 ahead, 3 right\nwalls: 4 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a yellow box"
+  },
+  {
+   "seed": 10084,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow box: 2 right\ngrey ball: 1 ahead, 1 right\ngrey ball: 4 ahead\nyellow key: 4 ahead, 1 right\npurple box: 3 ahead, 3 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a grey ball"
+  },
+  {
+   "seed": 10085,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: south\nyellow key: 2 left\nyellow box: 2 right\nyellow ball: 3 right\npurple ball: 3 ahead, 1 right\nyellow box: 2 ahead, 3 right\npurple ball: 3 ahead, 2 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a purple ball"
+  },
+  {
+   "seed": 10086,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\nblue key: 1 ahead, 1 left\ngrey key: 1 ahead, 1 right\npurple ball: 3 right\nred box: 1 ahead, 2 left\nred ball: 2 ahead, 1 left\npurple key: 4 ahead\npurple key: 2 ahead, 3 right\ngreen box: 4 ahead, 2 left\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green box"
+  },
+  {
+   "seed": 10087,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue key: 2 right\npurple ball: 2 ahead, 1 left\nred box: 2 ahead, 1 right\nred box: 2 ahead, 2 left\nyellow ball: 3 ahead, 2 left\nyellow key: 4 ahead, 2 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow ball"
+  },
+  {
+   "seed": 10088,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: east\ngrey ball: 2 ahead\nyellow ball: 2 ahead, 1 left\npurple ball: 2 ahead, 1 right\npurple box: 2 ahead, 2 right\npurple key: 3 ahead, 2 right\nblue key: 3 ahead, 3 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10089,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue ball: 3 right\nyellow box: 2 ahead, 1 left\ngrey ball: 1 ahead, 3 right\nred ball: 2 ahead, 2 right\ngrey ball: 3 ahead, 1 left\nyellow box: 3 ahead, 2 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a yellow box"
+  },
+  {
+   "seed": 10090,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: west\nred key: 1 ahead, 1 left\npurple ball: 1 ahead, 3 left\ngrey box: 2 ahead, 2 left\npurple ball: 3 ahead, 2 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a purple ball"
+  },
+  {
+   "seed": 10091,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nred key: 3 right\nblue box: 2 ahead, 1 right\ngreen key: 1 ahead, 3 right\ngreen ball: 2 ahead, 2 right\npurple key: 4 ahead\nred key: 5 ahead, 3 right\nwalls: 6 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10092,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow box: 1 ahead, 2 left\ngrey key: 1 ahead, 3 left\nblue box: 4 ahead, 3 left\ngreen box: 5 ahead, 2 left\nwalls: 6 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the green box"
+  },
+  {
+   "seed": 10093,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow key: 2 right\ngreen key: 1 ahead, 1 left\npurple key: 2 ahead, 1 left\nyellow ball: 2 ahead, 1 right\npurple key: 2 ahead, 2 right\nyellow ball: 4 ahead\ngreen ball: 4 ahead, 1 left\npurple key: 5 ahead\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the yellow key"
+  },
+  {
+   "seed": 10094,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow ball: 1 ahead, 1 left\nyellow ball: 3 ahead\ngreen box: 1 ahead, 3 left\npurple box: 4 ahead\nyellow ball: 3 ahead, 2 left\ngrey ball: 5 ahead, 2 left\nyellow box: 5 ahead, 3 left\nwalls: 6 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10095,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\npurple ball: 1 ahead, 2 right\nblue key: 3 ahead\ngrey box: 2 ahead, 2 left\ngreen box: 2 ahead, 2 right\nred box: 2 ahead, 3 left\ngreen box: 3 ahead, 2 left\ngreen box: 4 ahead, 2 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple ball"
+  },
+  {
+   "seed": 10096,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\npurple key: 2 left\nyellow key: 1 ahead, 1 left\npurple box: 2 ahead, 2 left\npurple ball: 4 ahead\nblue box: 4 ahead, 1 left\ngreen key: 4 ahead, 2 left\nblue box: 4 ahead, 3 right\nyellow key: 5 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a yellow key"
+  },
+  {
+   "seed": 10097,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: north\ngreen key: 3 left\nblue key: 2 ahead, 1 left\npurple key: 1 ahead, 3 left\ngrey ball: 3 ahead, 2 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a blue key"
+  },
+  {
+   "seed": 10098,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow ball: 2 ahead, 1 right\npurple ball: 2 ahead, 3 left\nwalls: 3 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple ball"
+  },
+  {
+   "seed": 10099,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\ngrey box: 1 ahead, 1 right\nblue key: 3 left\ngrey key: 2 ahead, 1 left\nred key: 4 ahead, 2 left\nwalls: 5 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the blue key"
+  },
+  {
+   "seed": 10100,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\nblue box: 1 ahead, 2 left\nyellow box: 1 ahead, 3 left\nblue box: 2 ahead, 3 left\nred key: 3 ahead, 2 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a red key"
+  },
+  {
+   "seed": 10101,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 54,
+   "period": null,
+   "loop_start_text": "facing: north\ngreen key: 1 left\nblue box: 1 ahead, 1 left\nyellow ball: 2 ahead, 2 right\ngreen key: 2 ahead, 3 right\ngreen key: 3 ahead, 3 right\nwalls: 4 ahead, 2 left",
+   "loop_start_choice": "forward",
+   "loop_start_bot": "turn right",
+   "mission": "go to a yellow ball"
+  },
+  {
+   "seed": 10102,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen ball: 2 ahead, 1 left\nyellow key: 3 ahead, 1 left\nred box: 4 ahead\nblue key: 4 ahead, 2 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a red box"
+  },
+  {
+   "seed": 10103,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: west\ngreen box: 2 left\ngreen ball: 2 right\ngreen key: 3 left\nyellow key: 1 ahead, 2 right\nyellow box: 2 ahead, 2 right\npurple ball: 3 ahead, 1 left\nwalls: 4 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn left",
+   "mission": "go to the green box"
+  },
+  {
+   "seed": 10104,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue box: 3 left\npurple key: 1 ahead, 2 left\npurple key: 2 ahead, 2 left\ngreen ball: 4 ahead\nblue ball: 2 ahead, 3 left\nyellow key: 4 ahead, 1 left\ngreen key: 4 ahead, 1 right\nblue box: 5 ahead, 1 right\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a purple key"
+  },
+  {
+   "seed": 10105,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: west\ngreen ball: 1 ahead, 1 left\nblue box: 3 right\ngreen box: 2 ahead, 1 left\ngrey box: 1 ahead, 3 right\nred ball: 3 ahead, 1 left\npurple ball: 2 ahead, 3 right\npurple box: 3 ahead, 2 left\ngrey box: 4 ahead, 1 left\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the red ball"
+  },
+  {
+   "seed": 10106,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 5,
+   "period": 2,
+   "loop_start_text": "facing: east\nred box: 1 ahead, 1 left\ngreen key: 1 ahead, 1 right\npurple ball: 1 ahead, 2 left\npurple box: 3 ahead, 1 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10107,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\ngreen ball: 2 left\npurple box: 3 ahead\nblue ball: 1 ahead, 3 right\ngreen box: 3 ahead, 1 right\nred key: 5 ahead\nred key: 3 ahead, 3 right\nred ball: 5 ahead, 1 right\nred ball: 5 ahead, 2 left\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green box"
+  },
+  {
+   "seed": 10108,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow ball: 1 ahead, 1 right\nblue box: 1 ahead, 2 right\nblue key: 2 ahead, 1 right\ngrey key: 2 ahead, 2 right\ngrey key: 3 ahead, 1 left\nblue box: 4 ahead\nblue box: 4 ahead, 2 right\nblue key: 5 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a blue box"
+  },
+  {
+   "seed": 10109,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\ngrey box: 1 ahead, 1 right\nblue key: 3 ahead\npurple key: 4 ahead\npurple key: 4 ahead, 2 left\ngrey ball: 5 ahead, 1 right\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey box"
+  },
+  {
+   "seed": 10110,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen box: 2 ahead, 1 left\nyellow key: 2 ahead, 2 right\nyellow ball: 3 ahead, 1 left\ngreen box: 2 ahead, 3 right\npurple ball: 4 ahead, 1 left\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a green box"
+  },
+  {
+   "seed": 10111,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow ball: 1 ahead, 2 left\ngreen key: 1 ahead, 3 left\nwalls: 3 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a grey ball"
+  },
+  {
+   "seed": 10112,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nred ball: 1 ahead, 2 left\ngrey box: 2 ahead, 1 left\nblue ball: 2 ahead, 1 right\ngrey box: 3 ahead, 1 left\ngreen ball: 3 ahead, 1 right\ngrey ball: 4 ahead, 2 right\npurple box: 4 ahead, 3 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10113,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow ball: 2 right\nred box: 3 right\nyellow ball: 1 ahead, 2 right\npurple box: 3 ahead\ngreen key: 4 ahead, 1 left\nyellow ball: 5 ahead\ngrey key: 3 ahead, 3 right\nblue ball: 5 ahead, 1 left\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10114,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow ball: 2 right\nred box: 1 ahead, 1 right\nred ball: 2 ahead, 2 right\nwalls: 3 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the red box"
+  },
+  {
+   "seed": 10115,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow key: 2 left\nblue box: 2 ahead\nblue key: 2 ahead, 1 right\ngrey ball: 3 ahead\nyellow key: 2 ahead, 3 right\nred ball: 3 ahead, 3 right\npurple box: 4 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn left",
+   "mission": "go to a yellow key"
+  },
+  {
+   "seed": 10116,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\ngreen ball: 2 right\npurple box: 2 ahead\ngrey box: 2 ahead, 1 left\nblue box: 2 ahead, 1 right\npurple key: 2 ahead, 3 right\nyellow ball: 3 ahead, 2 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10117,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nred key: 1 ahead, 1 right\ngreen ball: 3 ahead\ngreen key: 4 ahead\ngrey ball: 2 ahead, 3 right\nred key: 4 ahead, 2 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a green ball"
+  },
+  {
+   "seed": 10118,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nred ball: 1 ahead, 2 left\ngreen ball: 2 ahead, 1 right\nyellow ball: 2 ahead, 2 left\nwalls: 3 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a red ball"
+  },
+  {
+   "seed": 10119,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 5,
+   "period": 2,
+   "loop_start_text": "facing: south\npurple ball: 1 ahead, 1 right\npurple box: 1 ahead, 2 left\ngreen box: 2 ahead, 1 left\ngrey ball: 3 ahead\nyellow box: 3 ahead, 1 right\ngreen ball: 2 ahead, 3 left\npurple key: 4 ahead, 2 left\nblue ball: 4 ahead, 3 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10120,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple box: 1 ahead, 1 left\npurple ball: 2 ahead\ngrey key: 2 ahead, 1 left\ngrey key: 3 ahead\nblue key: 2 ahead, 2 left\npurple ball: 3 ahead, 1 right\nwalls: 5 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a blue key"
+  },
+  {
+   "seed": 10121,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen ball: 1 ahead, 1 right\ngrey ball: 3 ahead, 1 left\npurple ball: 2 ahead, 3 left\nyellow box: 3 ahead, 2 left\ngrey ball: 4 ahead, 3 left\nwalls: 5 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10122,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple ball: 2 right\ngrey ball: 1 ahead, 1 right\nred key: 2 ahead, 2 right\ngreen box: 4 ahead\ngrey box: 4 ahead, 1 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey key"
+  },
+  {
+   "seed": 10123,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue key: 1 ahead, 1 left\ngreen box: 3 left\npurple key: 1 ahead, 2 left\nblue ball: 2 ahead, 1 right\ngreen box: 4 ahead\npurple ball: 3 ahead, 2 left\ngreen key: 3 ahead, 3 left\ngreen box: 4 ahead, 2 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a green box"
+  },
+  {
+   "seed": 10124,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\npurple box: 2 right\nyellow ball: 3 right\ngreen ball: 2 ahead, 1 left\nblue ball: 2 ahead, 2 right\nblue ball: 3 ahead, 2 right\ngrey key: 4 ahead, 1 left\ngrey ball: 3 ahead, 3 right\nyellow box: 4 ahead, 2 left\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow box"
+  },
+  {
+   "seed": 10125,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow ball: 2 left\ngrey box: 1 ahead, 1 left\ngreen box: 1 ahead, 3 right\nblue key: 3 ahead, 1 right\nred key: 3 ahead, 2 left\nred ball: 3 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the red ball"
+  },
+  {
+   "seed": 10126,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow box: 1 ahead, 1 left\ngrey box: 3 ahead\ngrey ball: 2 ahead, 2 right\nred box: 3 ahead, 1 right\nred key: 4 ahead, 1 left\ngreen ball: 3 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10127,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\ngrey box: 2 left\nyellow ball: 2 right\ngrey ball: 1 ahead, 1 right\nyellow key: 2 ahead\ngrey key: 3 left\nyellow ball: 3 ahead\nblue key: 3 ahead, 2 left\ngreen ball: 4 ahead, 1 left\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10128,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow box: 2 right\npurple box: 1 ahead, 2 left\nred ball: 2 ahead, 1 left\ngreen box: 3 ahead\nblue box: 3 ahead, 1 right\npurple key: 3 ahead, 2 right\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10129,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: east\nblue ball: 1 ahead, 1 left\ngrey box: 2 ahead, 2 left\nwalls: 3 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10130,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: east\ngreen key: 2 ahead\nyellow key: 2 ahead, 1 left\ngrey ball: 2 ahead, 1 right\ngrey ball: 3 ahead, 2 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a grey ball"
+  },
+  {
+   "seed": 10131,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow box: 2 right\nyellow ball: 2 ahead, 1 left\ngreen box: 3 ahead, 1 right\nwalls: 4 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10132,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nred ball: 2 ahead, 1 left\nblue key: 3 ahead\ngrey ball: 1 ahead, 3 left\nred key: 4 ahead, 2 left\nblue key: 4 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a blue key"
+  },
+  {
+   "seed": 10133,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nred key: 3 left\nred box: 1 ahead, 2 left\nblue key: 2 ahead, 3 left\ngreen box: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10134,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: east\nred ball: 2 ahead\nyellow box: 2 ahead, 1 left\ngrey box: 2 ahead, 3 left\nwalls: 3 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10135,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow box: 1 ahead, 1 right\ngreen key: 2 ahead, 1 right\nred key: 3 ahead, 1 left\nred box: 3 ahead, 1 right\ngrey ball: 3 ahead, 2 right\nyellow box: 3 ahead, 3 right\ngrey key: 4 ahead, 2 left\nyellow box: 5 ahead, 2 left\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10136,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\ngrey box: 1 ahead, 1 left\ngrey ball: 1 ahead, 1 right\nred key: 3 right\nred box: 3 ahead\ngreen ball: 2 ahead, 2 right\nred key: 3 ahead, 1 left\nred ball: 4 ahead\nyellow key: 4 ahead, 1 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10137,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple box: 1 ahead, 1 right\ngrey key: 1 ahead, 2 left\nblue ball: 3 ahead, 1 right\nyellow box: 4 ahead\npurple key: 4 ahead, 1 right\ngreen key: 3 ahead, 3 right\nblue box: 4 ahead, 2 left\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10138,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue ball: 2 ahead\nred box: 2 ahead, 1 left\npurple key: 3 ahead, 3 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10139,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nred ball: 1 ahead, 2 left\npurple key: 2 ahead, 1 left\ngrey ball: 3 ahead, 1 left\ngreen box: 4 ahead, 2 left\nwalls: 6 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a purple key"
+  },
+  {
+   "seed": 10140,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow key: 1 ahead, 2 left\ngreen ball: 1 ahead, 3 left\nyellow key: 2 ahead, 2 left\nwalls: 3 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10141,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\ngrey key: 1 ahead, 1 right\ngreen ball: 1 ahead, 3 left\nblue key: 2 ahead, 2 left\nblue ball: 3 ahead, 1 right\npurple ball: 2 ahead, 3 left\ngrey ball: 4 ahead, 1 right\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10142,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen key: 1 ahead, 1 left\nblue box: 1 ahead, 2 right\ngrey key: 2 ahead, 1 right\nblue ball: 3 ahead, 1 right\nred box: 4 ahead, 1 left\ngreen ball: 4 ahead, 1 right\npurple box: 3 ahead, 3 right\nyellow box: 4 ahead, 2 left\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10143,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen key: 2 right\npurple box: 1 ahead, 1 left\npurple key: 4 ahead, 1 left\nyellow box: 4 ahead, 1 right\nblue box: 4 ahead, 2 right\ngrey box: 4 ahead, 3 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10144,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nred box: 3 right\npurple ball: 2 ahead, 1 right\ngrey key: 3 ahead\nyellow ball: 2 ahead, 2 right\nred key: 3 ahead, 1 right\nred box: 3 ahead, 2 right\nred key: 4 ahead, 3 right\nwalls: 6 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a red key"
+  },
+  {
+   "seed": 10145,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen box: 2 right\npurple box: 1 ahead, 2 left\npurple ball: 2 ahead, 2 left\ngreen ball: 3 ahead, 1 left\nred ball: 2 ahead, 3 right\ngreen box: 3 ahead, 2 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10146,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 4,
+   "period": 2,
+   "loop_start_text": "facing: west\nred ball: 1 ahead, 2 left\nyellow ball: 2 ahead, 1 left\nwalls: 3 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10147,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue ball: 2 ahead, 1 right\ngreen key: 3 ahead\nyellow key: 4 ahead\ngrey key: 2 ahead, 3 right\nyellow ball: 4 ahead, 2 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10148,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: south\npurple key: 2 left\ngreen box: 2 right\nred box: 2 ahead\npurple ball: 1 ahead, 2 right\nyellow ball: 3 ahead\ngreen key: 1 ahead, 3 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10149,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 7,
+   "period": 4,
+   "loop_start_text": "facing: north\nyellow ball: 2 right\ngrey key: 3 left\nred ball: 2 ahead, 1 left\nwalls: 3 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn left",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10150,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\ngreen key: 2 right\ngrey key: 1 ahead, 2 right\npurple key: 2 ahead, 1 right\ngrey ball: 2 ahead, 2 right\ngrey ball: 3 ahead, 1 left\nred key: 2 ahead, 3 right\nblue ball: 4 ahead, 1 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a grey ball"
+  },
+  {
+   "seed": 10151,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen box: 1 ahead, 2 left\npurple key: 2 ahead, 1 left\ngreen key: 3 ahead\npurple box: 2 ahead, 2 left\ngreen box: 3 ahead, 1 left\ngreen ball: 3 ahead, 2 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10152,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow key: 1 ahead, 2 right\nred key: 1 ahead, 3 right\ngrey key: 2 ahead, 2 right\nred box: 3 ahead, 1 left\ngrey ball: 4 ahead, 1 left\nred key: 5 ahead, 1 left\ngrey box: 4 ahead, 3 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a red key"
+  },
+  {
+   "seed": 10153,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\npurple key: 3 left\ngrey box: 1 ahead, 2 left\nred key: 5 ahead\nred ball: 3 ahead, 3 left\nred key: 4 ahead, 3 left\nwalls: 6 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a purple key"
+  },
+  {
+   "seed": 10154,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\ngreen ball: 2 ahead, 1 right\nblue key: 3 ahead, 1 left\ngrey box: 4 ahead\npurple box: 2 ahead, 3 left\npurple ball: 4 ahead, 1 right\npurple ball: 5 ahead\ngrey ball: 3 ahead, 3 left\nblue key: 5 ahead, 1 left\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10155,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow box: 1 ahead, 1 left\npurple key: 2 ahead\ngreen key: 3 left\nblue ball: 1 ahead, 3 left\npurple key: 2 ahead, 3 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a green key"
+  },
+  {
+   "seed": 10156,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\npurple key: 1 ahead, 1 left\ngrey key: 2 ahead\nyellow key: 1 ahead, 2 right\nyellow ball: 4 ahead\ngreen ball: 2 ahead, 3 left\ngreen ball: 4 ahead, 1 left\ngrey box: 4 ahead, 3 left\ngreen key: 5 ahead, 3 left\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey key"
+  },
+  {
+   "seed": 10157,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\ngrey box: 1 ahead, 1 right\nblue ball: 2 ahead\ngrey ball: 1 ahead, 2 left\nblue ball: 1 ahead, 3 left\ngreen ball: 3 ahead, 1 right\nred ball: 5 ahead, 1 right\nyellow box: 5 ahead, 2 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the red ball"
+  },
+  {
+   "seed": 10158,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 7,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow ball: 2 right\nyellow ball: 1 ahead, 1 left\ngrey ball: 2 ahead, 1 right\nred box: 1 ahead, 3 right\nred ball: 3 ahead, 2 right\nred box: 4 ahead, 1 left\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a yellow ball"
+  },
+  {
+   "seed": 10159,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow ball: 2 ahead\nblue key: 3 left\nred ball: 1 ahead, 2 left\ngreen key: 2 ahead, 1 left\ngreen box: 1 ahead, 3 left\nred ball: 3 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow ball"
+  },
+  {
+   "seed": 10160,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nblue box: 2 left\nred box: 2 right\npurple box: 3 ahead\ngrey ball: 2 ahead, 2 left\nred box: 2 ahead, 2 right\ngreen box: 3 ahead, 1 right\nyellow ball: 3 ahead, 2 right\ngrey ball: 4 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a red box"
+  },
+  {
+   "seed": 10161,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\ngreen ball: 1 ahead, 1 right\ngrey ball: 2 ahead, 2 left\npurple ball: 2 ahead, 3 left\nblue box: 3 ahead, 3 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a green ball"
+  },
+  {
+   "seed": 10162,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow key: 3 right\ngrey key: 1 ahead, 2 right\ngrey box: 2 ahead, 1 left\npurple key: 1 ahead, 3 right\ngrey ball: 3 ahead, 1 right\ngrey key: 4 ahead, 1 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10163,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue key: 2 right\ngreen ball: 2 ahead, 1 left\ngrey key: 2 ahead, 2 left\nred key: 2 ahead, 2 right\nwalls: 4 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a blue key"
+  },
+  {
+   "seed": 10164,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: west\nblue ball: 1 ahead, 3 left\npurple ball: 2 ahead, 2 right\ngrey key: 3 ahead, 1 right\nred ball: 3 ahead, 2 left\npurple key: 4 ahead, 1 right\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the yellow ball"
+  },
+  {
+   "seed": 10165,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue key: 1 ahead, 2 left\nred ball: 2 ahead, 1 left\ngreen key: 3 ahead\ngreen key: 2 ahead, 2 right\ngrey key: 3 ahead, 1 left\nblue key: 3 ahead, 2 right\nwalls: 4 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a blue key"
+  },
+  {
+   "seed": 10166,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nblue key: 2 ahead\npurple box: 3 left\nyellow ball: 2 ahead, 1 right\nyellow key: 3 ahead, 2 left\nwalls: 5 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a red key"
+  },
+  {
+   "seed": 10167,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nred ball: 2 left\nblue ball: 3 right\npurple box: 1 ahead, 2 left\nyellow ball: 3 ahead\nred box: 2 ahead, 3 right\ngrey key: 3 ahead, 2 left\ngreen box: 5 ahead, 1 right\npurple ball: 5 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10168,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nblue box: 2 ahead\nyellow ball: 3 left\ngrey box: 1 ahead, 3 left\ngrey box: 2 ahead, 2 left\npurple ball: 4 ahead, 1 left\nyellow box: 4 ahead, 3 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10169,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nred ball: 2 right\ngreen key: 2 ahead\nred box: 3 right\ngreen box: 1 ahead, 3 right\nblue ball: 4 ahead, 1 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the red box"
+  },
+  {
+   "seed": 10170,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nblue key: 2 ahead, 1 right\ngreen ball: 4 ahead\nred box: 3 ahead, 2 left\nyellow ball: 3 ahead, 3 left\nyellow key: 4 ahead, 2 left\nblue box: 5 ahead, 2 left\ngreen key: 5 ahead, 3 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue box"
+  },
+  {
+   "seed": 10171,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nblue key: 1 ahead, 2 left\npurple box: 1 ahead, 3 left\nyellow ball: 2 ahead, 3 left\nblue box: 3 ahead, 3 left\nwalls: 6 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow ball"
+  },
+  {
+   "seed": 10172,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple key: 1 ahead, 2 right\nred ball: 2 ahead, 1 right\nred box: 2 ahead, 2 right\ngrey key: 3 ahead, 1 left\nblue box: 2 ahead, 3 right\nblue box: 4 ahead, 1 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the red ball"
+  },
+  {
+   "seed": 10173,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\nred key: 2 ahead, 1 left\ngreen ball: 3 ahead, 1 left\nblue ball: 3 ahead, 1 right\npurple key: 4 ahead, 1 right\npurple key: 4 ahead, 2 right\ngrey key: 5 ahead, 3 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a purple key"
+  },
+  {
+   "seed": 10174,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple ball: 3 right\nyellow key: 1 ahead, 2 right\npurple key: 4 ahead\nblue ball: 4 ahead, 1 left\ngrey ball: 5 ahead, 1 right\nyellow box: 5 ahead, 2 right\nred box: 5 ahead, 3 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the red box"
+  },
+  {
+   "seed": 10175,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\npurple ball: 1 ahead, 1 left\ngreen key: 1 ahead, 1 right\nyellow box: 1 ahead, 2 left\npurple ball: 2 ahead, 2 left\npurple key: 2 ahead, 2 right\npurple box: 3 ahead, 1 left\ngreen ball: 3 ahead, 2 right\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the grey box"
+  },
+  {
+   "seed": 10176,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\npurple key: 2 ahead, 1 left\ngreen key: 2 ahead, 2 left\nwalls: 3 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a green key"
+  },
+  {
+   "seed": 10177,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen box: 2 right\nred ball: 2 ahead, 1 left\ngrey ball: 3 ahead\nred ball: 3 ahead, 1 right\ngrey box: 4 ahead\nyellow box: 5 ahead\npurple box: 4 ahead, 2 right\ngreen key: 4 ahead, 3 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the green box"
+  },
+  {
+   "seed": 10178,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: north\nred box: 1 ahead, 1 left\nyellow ball: 1 ahead, 1 right\npurple box: 2 ahead, 1 right\ngrey box: 3 ahead, 3 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the grey key"
+  },
+  {
+   "seed": 10179,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nred ball: 2 right\nblue key: 1 ahead, 1 right\nred ball: 1 ahead, 2 right\ngreen key: 1 ahead, 3 right\npurple box: 4 ahead, 2 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10180,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: south\ngrey box: 1 ahead, 1 right\nblue ball: 2 ahead\nred key: 3 right\ngreen key: 3 ahead, 1 right\nyellow ball: 3 ahead, 2 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a yellow ball"
+  },
+  {
+   "seed": 10181,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 4,
+   "period": 2,
+   "loop_start_text": "facing: south\ngrey key: 2 right\ngreen key: 1 ahead, 1 left\nred key: 2 ahead, 1 left\ngreen ball: 2 ahead, 2 left\ngreen key: 2 ahead, 2 right\ngrey ball: 3 ahead, 2 left\nyellow box: 5 ahead, 1 right\ngreen key: 5 ahead, 2 left\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10182,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\ngrey ball: 1 ahead, 1 left\npurple ball: 1 ahead, 2 left\nyellow box: 3 ahead\nblue box: 1 ahead, 3 left\nyellow ball: 3 ahead, 2 left\nred box: 4 ahead, 2 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the blue box"
+  },
+  {
+   "seed": 10183,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple key: 2 ahead, 1 right\nred ball: 2 ahead, 2 left\npurple ball: 4 ahead, 1 right\nyellow box: 3 ahead, 3 left\nred ball: 5 ahead, 1 left\nred ball: 5 ahead, 1 right\nred ball: 5 ahead, 2 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a red ball"
+  },
+  {
+   "seed": 10184,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 4,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow box: 1 ahead, 1 left\ngreen box: 2 ahead, 1 left\nblue ball: 3 ahead, 1 left\nblue ball: 2 ahead, 3 right\ngreen key: 3 ahead, 2 right\nblue ball: 4 ahead, 1 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green box"
+  },
+  {
+   "seed": 10185,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\npurple key: 1 ahead, 1 left\ngrey box: 1 ahead, 1 right\ngrey box: 2 ahead, 2 left\nred box: 2 ahead, 3 left\nwalls: 3 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the blue box"
+  },
+  {
+   "seed": 10186,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nred ball: 2 ahead\npurple key: 1 ahead, 2 left\nblue key: 3 ahead\ngrey ball: 1 ahead, 3 left\ngreen box: 3 ahead, 1 left\npurple key: 2 ahead, 3 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the red ball"
+  },
+  {
+   "seed": 10187,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow box: 2 right\nred box: 1 ahead, 1 left\nblue ball: 1 ahead, 2 right\nblue ball: 3 ahead\npurple box: 4 ahead, 3 right\nyellow key: 5 ahead, 3 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10188,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\npurple ball: 1 ahead, 2 left\nred ball: 3 ahead\nyellow key: 2 ahead, 3 left\npurple key: 3 ahead, 2 left\nblue box: 4 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10189,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow box: 2 ahead\ngrey key: 1 ahead, 2 left\nred ball: 3 ahead, 1 left\npurple key: 4 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10190,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow key: 1 ahead, 2 left\nyellow key: 2 ahead, 2 left\nblue box: 3 ahead, 3 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10191,
+   "class": "B",
+   "why": "target never seen",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nred ball: 1 ahead, 1 right\ngrey box: 1 ahead, 3 right\nred key: 2 ahead, 3 right\nwalls: 4 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10192,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: east\nyellow key: 1 ahead, 1 left\nblue ball: 1 ahead, 1 right\ngreen box: 2 ahead, 1 right\nyellow ball: 2 ahead, 2 left\ngreen ball: 2 ahead, 3 right\nwalls: 3 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10193,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\ngreen box: 4 ahead\nyellow ball: 4 ahead, 2 left\ngrey ball: 4 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10194,
+   "class": "B",
+   "why": "target seen earlier, lost",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: north\ngreen ball: 2 left\npurple key: 1 ahead, 2 right\nblue box: 2 ahead, 1 right\ngrey key: 3 ahead\nyellow ball: 1 ahead, 3 right\nyellow ball: 4 ahead, 2 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey box"
+  },
+  {
+   "seed": 10195,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow key: 3 ahead\ngreen box: 3 ahead, 3 left\nyellow key: 4 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey box"
+  },
+  {
+   "seed": 10196,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nblue key: 2 left\nred key: 2 ahead\ngreen key: 1 ahead, 2 left\nyellow ball: 1 ahead, 2 right\nyellow ball: 2 ahead, 2 right\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a green key"
+  },
+  {
+   "seed": 10197,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow box: 1 ahead, 3 left\ngrey key: 3 ahead, 1 left\nyellow ball: 3 ahead, 2 left\ngrey key: 4 ahead, 1 left\npurple key: 4 ahead, 2 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10198,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\ngrey key: 2 ahead\ngrey key: 1 ahead, 2 left\ngreen key: 2 ahead, 1 right\ngrey key: 3 ahead\ngrey ball: 4 ahead\ngreen key: 3 ahead, 2 left\ngrey ball: 3 ahead, 3 left\nwalls: 5 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a grey key"
+  },
+  {
+   "seed": 10199,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\npurple key: 2 ahead\nblue key: 1 ahead, 3 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10200,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\ngreen box: 3 ahead\ngreen box: 4 ahead\nblue key: 3 ahead, 2 left\ngreen ball: 4 ahead, 1 right\nblue box: 5 ahead, 1 left\npurple ball: 4 ahead, 3 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue box"
+  },
+  {
+   "seed": 10201,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\npurple key: 1 ahead, 1 left\ngrey ball: 3 left\nred ball: 1 ahead, 2 left\nblue box: 2 ahead, 2 left\ngreen key: 3 ahead, 3 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a green key"
+  },
+  {
+   "seed": 10202,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 4,
+   "period": 2,
+   "loop_start_text": "facing: east\ngrey key: 2 ahead, 1 left\ngrey box: 3 ahead\npurple box: 2 ahead, 3 left\npurple ball: 4 ahead, 1 right\nblue ball: 3 ahead, 3 left\nblue key: 4 ahead, 2 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10203,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue box: 2 right\nyellow key: 2 ahead\nyellow ball: 3 ahead\nblue box: 4 ahead, 2 right\nblue box: 4 ahead, 3 right\npurple key: 5 ahead, 2 right\ngreen ball: 5 ahead, 3 right\nwalls: 6 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a blue box"
+  },
+  {
+   "seed": 10204,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\npurple box: 2 ahead, 1 right\nred box: 3 ahead, 1 left\nblue box: 4 ahead, 1 left\ngrey key: 5 ahead\nyellow ball: 3 ahead, 3 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue box"
+  },
+  {
+   "seed": 10205,
+   "class": "B",
+   "why": "target seen earlier, lost",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue ball: 2 right\nyellow box: 2 ahead, 2 left\ngrey box: 4 ahead\nblue box: 3 ahead, 2 right\nblue box: 4 ahead, 1 left\nblue ball: 4 ahead, 3 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn left",
+   "mission": "go to the blue key"
+  },
+  {
+   "seed": 10206,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue key: 2 left\nyellow key: 2 ahead, 1 right\npurple box: 3 ahead, 1 left\nred key: 4 ahead, 1 left\ngreen ball: 3 ahead, 3 right\nblue key: 4 ahead, 2 left\ngrey key: 5 ahead, 1 left\ngreen ball: 5 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn left",
+   "mission": "go to a blue key"
+  },
+  {
+   "seed": 10207,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple ball: 1 ahead, 3 left\nyellow box: 3 ahead, 1 left\ngrey box: 3 ahead, 1 right\ngrey key: 2 ahead, 3 left\npurple ball: 4 ahead, 1 right\nwalls: 5 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10208,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow key: 1 ahead, 2 left\ngrey box: 2 ahead, 1 left\npurple key: 4 ahead\nyellow ball: 3 ahead, 2 left\nred ball: 3 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a yellow key"
+  },
+  {
+   "seed": 10209,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: east\nred box: 1 ahead, 3 right\nyellow box: 2 ahead, 2 right\npurple key: 3 ahead, 1 left\nyellow box: 4 ahead\nred ball: 3 ahead, 2 left\npurple box: 3 ahead, 3 right\ngrey ball: 4 ahead, 2 left\nred ball: 4 ahead, 2 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a red ball"
+  },
+  {
+   "seed": 10210,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow key: 1 ahead, 1 left\npurple box: 1 ahead, 1 right\npurple box: 3 ahead\ngreen key: 2 ahead, 2 right\nyellow key: 4 ahead, 1 right\nyellow key: 3 ahead, 3 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a yellow key"
+  },
+  {
+   "seed": 10211,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen box: 1 ahead, 2 left\nred box: 3 ahead\nyellow ball: 3 ahead, 1 right\ngrey key: 3 ahead, 2 left\nyellow key: 4 ahead, 2 left\ngreen box: 4 ahead, 2 right\ngrey ball: 4 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow ball"
+  },
+  {
+   "seed": 10212,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue ball: 1 ahead, 1 left\nblue box: 1 ahead, 2 left\ngreen key: 3 ahead\nyellow ball: 3 ahead, 1 left\npurple box: 3 ahead, 1 right\nred key: 2 ahead, 3 right\ngreen key: 5 ahead, 1 right\npurple box: 4 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a green key"
+  },
+  {
+   "seed": 10213,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: east\nred box: 3 left\ngrey box: 1 ahead, 3 left\ngreen box: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10214,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue ball: 2 ahead\nblue ball: 1 ahead, 2 left\ngrey key: 2 ahead, 2 left\ngrey box: 3 ahead, 2 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a blue ball"
+  },
+  {
+   "seed": 10215,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow box: 2 right\ngrey ball: 1 ahead, 2 left\ngrey key: 1 ahead, 2 right\ngreen key: 3 ahead\nred key: 1 ahead, 3 right\ngreen key: 4 ahead\nyellow key: 3 ahead, 2 right\ngreen box: 4 ahead, 1 left\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a green key"
+  },
+  {
+   "seed": 10216,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow key: 2 ahead\nyellow key: 3 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10217,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 54,
+   "period": null,
+   "loop_start_text": "facing: south\ngrey key: 1 right\nblue key: 1 ahead, 1 right\nyellow key: 2 ahead, 1 left\nwalls: 3 ahead, 2 right",
+   "loop_start_choice": "forward",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10219,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\ngrey box: 1 ahead, 1 right\nyellow box: 1 ahead, 2 right\ngreen key: 3 ahead\npurple box: 2 ahead, 2 right\npurple ball: 3 ahead, 1 left\nred box: 3 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10220,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow box: 1 ahead, 1 left\nred box: 3 left\nyellow key: 3 ahead\nyellow ball: 1 ahead, 3 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a red box"
+  },
+  {
+   "seed": 10221,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue ball: 2 right\nyellow ball: 1 ahead, 2 left\nred key: 3 ahead\nblue key: 2 ahead, 2 left\nred ball: 4 ahead, 1 left\ngreen key: 4 ahead, 2 right\nyellow ball: 5 ahead, 2 left\nred ball: 5 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue key"
+  },
+  {
+   "seed": 10222,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow box: 3 right\ngrey ball: 1 ahead, 2 right\ngrey key: 2 ahead, 2 right\ngrey key: 3 ahead, 1 left\nred key: 3 ahead, 3 right\nyellow ball: 5 ahead, 1 right\nyellow box: 5 ahead, 2 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10223,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow box: 1 ahead, 2 left\ngreen key: 2 ahead, 1 left\nred box: 4 ahead\ngreen ball: 3 ahead, 3 left\nyellow ball: 4 ahead, 2 left\nblue ball: 5 ahead, 1 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10224,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: south\npurple ball: 1 ahead, 1 left\npurple ball: 1 ahead, 2 right\nyellow ball: 3 ahead\ngrey box: 2 ahead, 2 left\nblue key: 3 ahead, 2 left\nyellow key: 4 ahead, 2 left\ngrey key: 5 ahead, 1 left\nyellow box: 5 ahead, 2 right\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue key"
+  },
+  {
+   "seed": 10225,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow key: 1 ahead, 1 left\nred box: 1 ahead, 1 right\nred ball: 3 left\nred box: 1 ahead, 2 left\nblue box: 1 ahead, 3 left\nred ball: 2 ahead, 2 left\ngreen box: 4 ahead, 2 left\nblue box: 4 ahead, 3 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a red ball"
+  },
+  {
+   "seed": 10226,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow key: 1 ahead, 1 right\nyellow key: 2 ahead, 1 right\npurple ball: 2 ahead, 3 left\ngrey key: 3 ahead, 2 left\nblue key: 4 ahead, 1 left\ngreen ball: 5 ahead\npurple ball: 4 ahead, 3 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a purple ball"
+  },
+  {
+   "seed": 10227,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple box: 3 ahead\nred box: 4 ahead\npurple ball: 2 ahead, 3 right\nblue box: 3 ahead, 2 left\nred box: 4 ahead, 2 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a red box"
+  },
+  {
+   "seed": 10228,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: north\nred key: 2 right\nblue box: 1 ahead, 1 right\ngreen box: 3 ahead, 1 right\ngreen ball: 4 ahead, 1 left\ngreen box: 4 ahead, 2 left\npurple box: 4 ahead, 2 right\ngrey key: 4 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10229,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue key: 3 right\nyellow key: 3 ahead\ngrey box: 2 ahead, 2 right\ngreen key: 2 ahead, 3 right\nyellow key: 3 ahead, 3 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a blue key"
+  },
+  {
+   "seed": 10230,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nblue key: 1 ahead, 1 left\npurple key: 3 ahead\npurple ball: 2 ahead, 2 left\nyellow ball: 2 ahead, 3 left\ngreen key: 5 ahead\nwalls: 6 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue key"
+  },
+  {
+   "seed": 10231,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue key: 1 ahead, 1 left\nblue box: 2 ahead\nblue key: 3 ahead\npurple ball: 3 ahead, 2 left\nred key: 4 ahead, 1 left\npurple key: 4 ahead, 2 left\nblue box: 5 ahead, 3 left\nwalls: 6 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a blue box"
+  },
+  {
+   "seed": 10232,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 6,
+   "period": 2,
+   "loop_start_text": "facing: north\nred ball: 1 ahead, 1 left\ngreen box: 2 ahead, 1 left\nyellow ball: 2 ahead, 2 left\npurple key: 3 ahead, 1 right\nyellow box: 2 ahead, 3 left\nyellow key: 3 ahead, 2 left\nwalls: 5 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the yellow box"
+  },
+  {
+   "seed": 10233,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: south\npurple key: 2 ahead\nblue box: 3 right\nblue key: 1 ahead, 2 left\nblue key: 2 ahead, 3 right\npurple box: 3 ahead, 2 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10234,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\npurple ball: 1 ahead, 1 right\nyellow ball: 1 ahead, 2 right\ngrey key: 2 ahead, 1 left\nblue box: 2 ahead, 1 right\nred key: 5 ahead\npurple box: 5 ahead, 1 left\ngreen key: 4 ahead, 3 right\nyellow box: 5 ahead, 2 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the yellow ball"
+  },
+  {
+   "seed": 10235,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nblue ball: 2 left\ngrey key: 2 right\ngrey key: 2 ahead\ngrey ball: 2 ahead, 1 right\nblue key: 1 ahead, 3 left\npurple ball: 3 ahead, 2 right\ngrey key: 4 ahead, 2 left\npurple box: 5 ahead, 2 left\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10236,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\ngreen key: 1 ahead, 1 left\nyellow box: 2 ahead\npurple ball: 2 ahead, 2 left\nyellow ball: 3 ahead, 1 left\ngreen ball: 3 ahead, 2 left\nyellow key: 4 ahead, 2 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow ball"
+  },
+  {
+   "seed": 10237,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple ball: 2 right\nyellow ball: 1 ahead, 1 right\nred key: 2 ahead, 1 left\nblue box: 2 ahead, 1 right\ngrey ball: 1 ahead, 3 right\ngreen key: 2 ahead, 3 right\ngreen key: 4 ahead, 1 left\nblue ball: 4 ahead, 2 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a green key"
+  },
+  {
+   "seed": 10238,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nred key: 3 ahead\nred ball: 3 ahead, 1 left\nred ball: 3 ahead, 1 right\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the yellow key"
+  },
+  {
+   "seed": 10239,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue box: 2 right\nblue box: 3 ahead, 1 right\nblue ball: 4 ahead\ngreen key: 4 ahead, 1 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10240,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\ngreen ball: 3 right\nred box: 2 ahead, 1 left\nred ball: 3 ahead, 1 left\nyellow ball: 3 ahead, 2 left\nyellow ball: 4 ahead, 1 left\npurple ball: 4 ahead, 1 right\ngrey ball: 3 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10241,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue box: 2 right\nblue ball: 3 ahead\npurple box: 2 ahead, 2 right\nblue ball: 3 ahead, 1 right\ngreen key: 3 ahead, 2 right\ngrey ball: 4 ahead, 1 right\nyellow ball: 5 ahead\nwalls: 6 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10242,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow ball: 2 left\nblue key: 1 ahead, 1 left\npurple key: 1 ahead, 2 right\npurple box: 2 ahead, 1 left\npurple key: 3 ahead\nblue key: 3 ahead, 3 right\ngrey ball: 4 ahead, 2 left\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10243,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\ngreen box: 1 ahead, 1 left\nblue key: 2 ahead, 2 right\nblue box: 3 ahead, 3 right\ngrey box: 4 ahead, 2 right\ngreen ball: 5 ahead, 2 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey box"
+  },
+  {
+   "seed": 10244,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen key: 2 left\ngrey key: 2 ahead\ngrey ball: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey key"
+  },
+  {
+   "seed": 10245,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple ball: 3 left\ngreen ball: 2 ahead, 1 left\ngrey key: 1 ahead, 3 left\nyellow ball: 4 ahead, 1 left\ngrey ball: 4 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a green ball"
+  },
+  {
+   "seed": 10246,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: west\nblue box: 2 ahead\npurple ball: 1 ahead, 2 left\ngreen key: 3 ahead, 2 left\nblue ball: 3 ahead, 3 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a blue box"
+  },
+  {
+   "seed": 10247,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow key: 1 ahead, 2 right\nyellow key: 2 ahead, 1 right\nyellow ball: 4 ahead\nblue box: 2 ahead, 3 right\ngreen box: 4 ahead, 1 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a grey key"
+  },
+  {
+   "seed": 10248,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\ngrey box: 1 ahead, 1 left\ngrey key: 3 ahead\nred ball: 2 ahead, 2 right\ngrey key: 3 ahead, 1 right\nred key: 4 ahead\npurple ball: 5 ahead, 1 right\ngreen box: 4 ahead, 3 right\nred box: 5 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a grey key"
+  },
+  {
+   "seed": 10249,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\ngreen ball: 2 left\ngreen box: 1 ahead, 2 right\nblue key: 2 ahead, 1 right\nyellow key: 3 ahead\ngrey box: 4 ahead\nred ball: 2 ahead, 3 right\ngrey ball: 4 ahead, 1 left\nred box: 5 ahead, 3 right\nwalls: 6 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10250,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple box: 2 right\nred key: 2 ahead\ngreen box: 1 ahead, 2 right\ngreen key: 3 ahead, 1 left\nblue key: 2 ahead, 3 right\ngrey box: 3 ahead, 2 right\npurple ball: 4 ahead, 3 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue key"
+  },
+  {
+   "seed": 10251,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\npurple box: 3 left\npurple ball: 2 ahead, 2 left\nred ball: 4 ahead\ngrey key: 2 ahead, 3 left\npurple key: 5 ahead, 1 left\ngrey ball: 4 ahead, 3 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10252,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue box: 2 left\nred ball: 1 ahead, 1 left\npurple ball: 3 left\nred box: 1 ahead, 2 right\nyellow key: 2 ahead, 2 left\nred ball: 5 ahead\ngreen key: 4 ahead, 3 left\nblue key: 5 ahead, 2 right\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn left",
+   "mission": "go to the blue box"
+  },
+  {
+   "seed": 10253,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: north\npurple key: 1 ahead, 1 left\nyellow key: 1 ahead, 3 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey box"
+  },
+  {
+   "seed": 10254,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\npurple box: 1 ahead, 1 left\nblue key: 2 ahead\nblue box: 2 ahead, 2 left\ngrey key: 5 ahead, 1 left\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a blue key"
+  },
+  {
+   "seed": 10255,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\ngrey ball: 1 ahead, 1 right\ngrey key: 3 right\nyellow box: 2 ahead, 1 right\nred key: 3 ahead, 2 right\npurple box: 4 ahead, 1 right\ngreen box: 4 ahead, 2 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10256,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue box: 1 ahead, 1 right\nyellow key: 3 ahead\nred ball: 3 ahead, 1 left\nred ball: 3 ahead, 1 right\ngrey box: 4 ahead\npurple ball: 3 ahead, 2 right\ngreen box: 4 ahead, 2 right\nred ball: 4 ahead, 3 left\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple ball"
+  },
+  {
+   "seed": 10257,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue ball: 2 left\ngrey box: 1 ahead, 2 right\ngrey box: 1 ahead, 3 right\ngrey box: 2 ahead, 2 left\nyellow ball: 4 ahead, 1 right\ngreen ball: 3 ahead, 3 right\npurple key: 4 ahead, 2 right\nwalls: 5 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a grey box"
+  },
+  {
+   "seed": 10258,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\ngrey key: 3 left\ngrey box: 1 ahead, 2 left\npurple ball: 1 ahead, 2 right\ngreen ball: 2 ahead, 3 left\nyellow ball: 3 ahead, 2 left\nyellow box: 4 ahead, 1 right\npurple box: 4 ahead, 3 left\nyellow ball: 5 ahead, 3 left\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a yellow ball"
+  },
+  {
+   "seed": 10259,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 5,
+   "period": 2,
+   "loop_start_text": "facing: north\nred key: 1 ahead, 1 left\npurple ball: 2 ahead\npurple box: 2 ahead, 1 left\nwalls: 3 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10260,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nred ball: 1 ahead, 2 right\ngreen ball: 3 ahead\ngreen key: 1 ahead, 3 right\ngreen box: 3 ahead, 1 left\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green box"
+  },
+  {
+   "seed": 10261,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\ngreen box: 1 ahead, 1 right\nred box: 3 left\nblue ball: 3 ahead, 1 left\nblue key: 4 ahead\npurple ball: 4 ahead, 1 left\ngrey ball: 4 ahead, 1 right\nyellow key: 5 ahead, 1 left\nred key: 5 ahead, 2 right\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow key"
+  },
+  {
+   "seed": 10262,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: west\ngrey key: 2 right\npurple ball: 1 ahead, 1 left\ngrey box: 3 left\nred box: 2 ahead, 1 left\nred key: 2 ahead, 3 left\nwalls: 3 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the grey key"
+  },
+  {
+   "seed": 10263,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen box: 1 ahead, 1 left\nyellow key: 2 ahead, 1 left\nblue key: 3 ahead\nyellow ball: 1 ahead, 3 right\nyellow box: 3 ahead, 2 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow key"
+  },
+  {
+   "seed": 10264,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue box: 1 ahead, 1 right\nyellow key: 2 ahead, 1 left\nyellow box: 2 ahead, 1 right\npurple ball: 3 ahead, 2 right\npurple key: 4 ahead, 1 left\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow key"
+  },
+  {
+   "seed": 10265,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow box: 2 ahead, 2 left\ngreen key: 3 ahead, 1 left\nyellow key: 4 ahead\npurple key: 5 ahead, 2 left\nwalls: 6 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow box"
+  },
+  {
+   "seed": 10266,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow ball: 2 ahead, 3 right\ngrey ball: 4 ahead, 1 right\nred ball: 3 ahead, 3 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a red key"
+  },
+  {
+   "seed": 10267,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nred box: 3 right\nred key: 1 ahead, 3 right\npurple box: 3 ahead, 1 right\nwalls: 4 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the red ball"
+  },
+  {
+   "seed": 10268,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: south\nblue key: 2 ahead\nyellow box: 1 ahead, 2 left\nyellow key: 2 ahead, 2 right\nblue box: 2 ahead, 3 right\nblue key: 3 ahead, 2 left\npurple ball: 3 ahead, 2 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow box"
+  },
+  {
+   "seed": 10269,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: north\ngreen key: 1 ahead, 1 left\npurple key: 1 ahead, 1 right\ngrey box: 2 ahead, 3 left\ngrey key: 3 ahead, 2 right\nwalls: 4 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to a grey key"
+  },
+  {
+   "seed": 10270,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 4,
+   "period": 4,
+   "loop_start_text": "facing: south\npurple box: 1 ahead, 2 left\ngrey key: 1 ahead, 2 right\nred box: 2 ahead, 1 left\nyellow ball: 2 ahead, 1 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a purple key"
+  },
+  {
+   "seed": 10271,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow box: 2 left\nyellow key: 1 ahead, 1 right\nyellow box: 1 ahead, 2 left\nblue key: 2 ahead, 1 left\ngreen key: 3 ahead, 1 right\ngreen box: 3 ahead, 2 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a yellow box"
+  },
+  {
+   "seed": 10272,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: west\ngrey ball: 2 ahead, 1 right\nblue key: 3 ahead, 2 right\nwalls: 4 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10273,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\ngreen ball: 1 ahead, 2 left\ngrey ball: 3 ahead\nyellow key: 3 ahead, 1 left\nblue ball: 3 ahead, 1 right\nblue key: 4 ahead\nblue key: 3 ahead, 2 left\npurple key: 4 ahead, 3 left\nblue key: 5 ahead, 2 left\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the green ball"
+  },
+  {
+   "seed": 10274,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue ball: 1 ahead, 1 left\npurple ball: 1 ahead, 2 left\ngrey box: 3 ahead, 1 left\nblue key: 3 ahead, 2 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the purple key"
+  },
+  {
+   "seed": 10275,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 5,
+   "period": 2,
+   "loop_start_text": "facing: south\ngreen key: 2 right\ngreen box: 1 ahead, 1 left\ngrey box: 2 ahead, 1 right\npurple box: 3 ahead, 2 left\npurple ball: 4 ahead, 2 right\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to a green key"
+  },
+  {
+   "seed": 10276,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\ngrey key: 1 ahead, 2 left\nblue ball: 2 ahead, 2 left\ngrey ball: 3 ahead, 3 left\nred ball: 4 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the yellow key"
+  },
+  {
+   "seed": 10277,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nblue key: 2 left\nblue key: 2 ahead, 1 left\nwalls: 3 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the grey key"
+  },
+  {
+   "seed": 10278,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\nred key: 2 ahead, 1 left\nred ball: 2 ahead, 2 left\nyellow ball: 3 ahead, 1 left\nred key: 4 ahead, 3 left\npurple key: 5 ahead, 3 left\nwalls: 6 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a red key"
+  },
+  {
+   "seed": 10279,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: south\ngrey box: 2 ahead, 2 left\npurple key: 3 ahead, 1 right\nblue key: 3 ahead, 2 left\nwalls: 4 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a grey box"
+  },
+  {
+   "seed": 10280,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: south\nyellow box: 1 ahead, 1 left\nyellow box: 2 ahead\nred box: 2 ahead, 1 left\ngrey box: 1 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the purple ball"
+  },
+  {
+   "seed": 10281,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nred box: 2 left\nred key: 3 left\nyellow box: 2 ahead, 1 left\nred box: 2 ahead, 1 right\ngrey ball: 1 ahead, 3 left\ngrey key: 2 ahead, 2 right\ngreen ball: 4 ahead, 1 left\ngreen box: 4 ahead, 2 left\nwalls: 5 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the yellow box"
+  },
+  {
+   "seed": 10282,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nblue ball: 2 right\nblue ball: 2 ahead, 1 left\nblue ball: 4 ahead\nred box: 2 ahead, 3 right\nblue box: 4 ahead, 1 left\nyellow ball: 3 ahead, 3 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the red ball"
+  },
+  {
+   "seed": 10283,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow ball: 1 ahead, 1 left\ngrey key: 3 right\nred key: 2 ahead, 2 right\nred key: 3 ahead, 1 left\nblue box: 2 ahead, 3 right\ngrey ball: 5 ahead\ngreen key: 5 ahead, 1 right\nblue key: 4 ahead, 3 right\nwalls: 6 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the green key"
+  },
+  {
+   "seed": 10284,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nred key: 1 ahead, 1 right\ngreen key: 1 ahead, 3 left\ngrey box: 2 ahead, 2 left\ngreen ball: 2 ahead, 2 right\nblue box: 3 ahead, 1 right\nblue ball: 3 ahead, 3 left\nred key: 5 ahead, 2 left\nred key: 5 ahead, 3 left\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to a red key"
+  },
+  {
+   "seed": 10285,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: south\nred key: 2 left\nyellow key: 1 ahead, 3 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the blue box"
+  },
+  {
+   "seed": 10286,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue ball: 1 ahead, 1 right\npurple key: 1 ahead, 2 right\ngrey box: 3 ahead\nred key: 2 ahead, 3 right\nwalls: 5 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the blue ball"
+  },
+  {
+   "seed": 10287,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 4,
+   "period": 2,
+   "loop_start_text": "facing: north\nred key: 2 ahead\npurple ball: 2 ahead, 2 left\nwalls: 3 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple ball"
+  },
+  {
+   "seed": 10288,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: north\nyellow box: 2 left\ngreen key: 1 ahead, 1 left\ngrey box: 2 ahead\ngreen key: 1 ahead, 2 left\nblue key: 2 ahead, 1 left\nred ball: 4 ahead\nblue key: 5 ahead\nyellow box: 4 ahead, 2 right\nwalls: 6 ahead, 3 right",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn left",
+   "mission": "go to a yellow box"
+  },
+  {
+   "seed": 10289,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 2,
+   "period": 2,
+   "loop_start_text": "facing: west\ngreen box: 1 ahead, 1 left\ngreen box: 2 ahead, 1 left\nwalls: 4 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the red box"
+  },
+  {
+   "seed": 10290,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: east\nyellow key: 3 left\nred key: 2 ahead, 1 left\nred ball: 2 ahead, 2 left\ngrey box: 4 ahead\ngrey ball: 3 ahead, 3 left\nred box: 5 ahead, 1 left\nyellow ball: 5 ahead, 1 right\nwalls: 6 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "forward",
+   "mission": "go to the red box"
+  },
+  {
+   "seed": 10291,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: east\nred key: 2 right\nblue key: 1 ahead, 1 left\nred ball: 1 ahead, 2 right\nred ball: 1 ahead, 3 right\ngrey ball: 2 ahead, 2 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the red key"
+  },
+  {
+   "seed": 10292,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 54,
+   "period": null,
+   "loop_start_text": "facing: north\nyellow ball: 1 left\ngrey key: 1 ahead\ngreen box: 2 ahead, 1 left\nwalls: 3 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the red key"
+  },
+  {
+   "seed": 10293,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: west\nyellow ball: 1 ahead, 3 right\nred box: 4 ahead, 1 right\npurple box: 3 ahead, 3 right\nwalls: 6 ahead, 1 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the grey ball"
+  },
+  {
+   "seed": 10294,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 1,
+   "period": 2,
+   "loop_start_text": "facing: north\nblue box: 1 ahead, 1 right\ngrey ball: 2 ahead, 1 left\nblue key: 2 ahead, 1 right\nblue ball: 1 ahead, 3 right\npurple key: 4 ahead, 2 right\nwalls: 5 ahead, 2 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "turn right",
+   "mission": "go to the red ball"
+  },
+  {
+   "seed": 10295,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: east\nred box: 2 ahead, 1 right\nyellow box: 1 ahead, 3 left\nyellow key: 2 ahead, 3 left\nwalls: 3 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the red key"
+  },
+  {
+   "seed": 10296,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 4,
+   "loop_start_text": "facing: north\npurple key: 2 left\ngreen ball: 2 ahead, 1 left\nyellow key: 2 ahead, 2 left\nred ball: 2 ahead, 2 right\npurple box: 3 ahead, 3 right\nwalls: 4 ahead, 3 left",
+   "loop_start_choice": "turn right",
+   "loop_start_bot": "forward",
+   "mission": "go to the purple box"
+  },
+  {
+   "seed": 10297,
+   "class": "A",
+   "why": "target visible in every loop state",
+   "loop_start": 54,
+   "period": null,
+   "loop_start_text": "facing: west\nred key: 1 left\ngrey ball: 1 ahead, 2 right\ngrey key: 1 ahead, 3 right\nblue key: 2 ahead, 2 right\npurple ball: 2 ahead, 3 right\nwalls: 3 ahead, 2 left",
+   "loop_start_choice": "forward",
+   "loop_start_bot": "turn right",
+   "mission": "go to a grey key"
+  },
+  {
+   "seed": 10298,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 3,
+   "period": 2,
+   "loop_start_text": "facing: north\nred box: 3 ahead, 1 left\nred key: 2 ahead, 3 left\nblue key: 4 ahead, 1 left\nwalls: 5 ahead, 1 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to the yellow key"
+  },
+  {
+   "seed": 10299,
+   "class": "C",
+   "why": "target visible in some loop states",
+   "loop_start": 0,
+   "period": 2,
+   "loop_start_text": "facing: north\ngreen box: 1 ahead, 1 left\nred box: 3 left\nred key: 2 ahead, 2 left\nwalls: 3 ahead, 2 right",
+   "loop_start_choice": "turn left",
+   "loop_start_bot": "turn left",
+   "mission": "go to a blue ball"
+  }
+ ],
+ "shadow_bot_agree": 0.3384,
+ "shadow_bot_agree_success_eps": 0.625,
+ "interventions": 0,
+ "episodes_with_intervention": 0,
+ "mask_mission": true,
+ "escape": false,
+ "swap": false,
+ "model": "/home/moka/babyai-laya-ft/gotolocal-s0"
+}

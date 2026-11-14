@@ -1,0 +1,32 @@
+{
+ "episodes": 998,
+ "steps": 5310,
+ "steps_with_prev": 4312,
+ "ambiguity": {
+  "text+mission": {
+   "steps": 5310,
+   "distinct_keys": 5285,
+   "split_step_share": 0.0049,
+   "majority_error": 0.0024
+  },
+  "text+mission+prev_text+prev_action": {
+   "steps": 5310,
+   "distinct_keys": 5305,
+   "split_step_share": 0.0,
+   "majority_error": 0.0
+  }
+ },
+ "same_as_prev_action": {
+  "over_steps_with_prev": 0.3922,
+  "copy_baseline_all_steps_first_counts_wrong": 0.3185
+ },
+ "forward_after_forward": 0.5487,
+ "forward_after_turn": 0.8732,
+ "forward_run_lengths": {
+  "1": 831,
+  "2": 540,
+  "3": 250,
+  "4": 111,
+  "5": 33
+ }
+}

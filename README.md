@@ -17,7 +17,10 @@ BabyAI 결과를 DSR·트레이드·드론으로 확대 해석하지 않는다.
 - 입력: **부분 관측(7×7)** + 방향 + 지시문. 모델과 비교 대상이 같은 정보를 본다. 전체 지도는 쓰지 않는다.
 - 선택지: `turn left`(0) / `turn right`(1) / `forward`(2).
 - 라벨: 전문가 봇(`minigrid.utils.baby_ai_bot.BabyAIBot`) 시범에서만. LLM이 추측한 행동은 정답으로 쓰지 않는다.
-- seed: 학습 0~999, 평가 10000~10299. 섞지 않는다.
+- seed: 학습 0~999, **개발용 평가 10000~10299**, **최종 확인용 20000~20299**. 섞지 않는다.
+  10000~10299는 3단계부터 실패 사례를 보고 방법을 고르는 데 쓰고 있으므로 개발용이다(2026-11-14).
+  20000~20299는 덤프도 평가도 하지 않고 최종 확인 때 한 번만 쓴다(`closed_loop.py`가 거부함).
+- 모든 정책 표에 "봇 걸음 수의 2배 안에 성공한 비율"을 함께 적는다(64걸음 제한이 무작위를 띄우므로).
 - 비교 대상: 무작위, 늘 전진, 전문가 봇.
 - 첫 평가: 닫힌 루프 성공률과 대표 실패 사례. 속도 최적화는 뒤로.
 - 범위 밖: 범용 프레임워크, 강화학습, 음성 입력, 온라인 재학습, 다른 분야 어댑터.
@@ -69,6 +72,7 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
 2. a (완료) GoToLocal로 덤프·통계·표본·dry_run — `reports/stage2a.md`
    b (완료) 최소 미세조정과 걸음 단위 정확도(평가 seed), 순서 뒤집기 민감도 — `reports/stage3.md`
 3. (완료) 닫힌 루프: 평가 seed 300판 성공률, 비교 대상 셋과 나란히, 대표 실패 사례 — `reports/stage3.md`
+   3.5 학습 seed 1·2, 실패 A/B/C, 전진 막힘 탈출 장치(평가만), 지시문 바꿔치기, 시범 분석 — `reports/stage3_5.md`
    ```bash
    $PY -m probe.dump_demos --seeds 10000-10299 --out data/gotolocal_eval.jsonl --keep-all
    $PY -m probe.finetune data/gotolocal_train.jsonl --seed 0          # → ~/babyai-laya-ft/gotolocal-s0

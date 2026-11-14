@@ -27,9 +27,12 @@ def main() -> None:
     texts, missions = [r["text"] for r in rows], [r["mission"] for r in rows]
     fwd = ch.choose_batch(texts, missions)
     rev = ch.choose_batch(texts, missions, choices=list(reversed(CHOICES)))
+    prev = {}
     for r, (c, p), (rc, _) in zip(rows, fwd, rev):
         r["model"], r["rev"], r["top_p"] = c, rc, max(p.values()) if p else None
         r["cat"] = categorize(r)
+        r["prev_bot"] = prev.get(r["seed"])
+        prev[r["seed"]] = r["action_name"]
 
     def acc(sub):
         return {"n": len(sub), "agree": round(sum(r["model"] == r["action_name"] for r in sub) / max(len(sub), 1), 4)}
@@ -39,6 +42,10 @@ def main() -> None:
            "reversed_order_agree": round(sum(r["rev"] == r["action_name"] for r in rows) / len(rows), 4),
            "by_category": {k: acc([r for r in rows if r["cat"][k]]) for k in
                            ("target_unseen", "distractor_closer", "two_matching", "two_matching_in_view")},
+           # stage 3.5 item 7: bot action changes vs. repeats the previous bot action (first steps apart)
+           "bot_action_changed": acc([r for r in rows if r["prev_bot"] is not None and r["prev_bot"] != r["action_name"]]),
+           "bot_action_same": acc([r for r in rows if r["prev_bot"] is not None and r["prev_bot"] == r["action_name"]]),
+           "first_step": acc([r for r in rows if r["prev_bot"] is None]),
            "target_visible_unique": acc([r for r in rows if not r["cat"]["target_unseen"] and not r["cat"]["two_matching"]]),
            "confusion_bot_to_model": {b: dict(collections.Counter(r["model"] for r in rows if r["action_name"] == b))
                                       for b in CHOICES},
