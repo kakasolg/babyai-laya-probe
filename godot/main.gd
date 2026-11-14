@@ -1,27 +1,25 @@
 extends Control
 ## BabyAI GoToLocal viewer/game.
-## "직접 해보기": the player walks the same room with the same three moves the model has.
-## "AI 관전": replays of the fine-tuned Laya model (exported by probe/export_godot.py).
-## "교정": the stage-4 correction loop, live. The model runs in WSL (probe/correct_server.py, started
+## "Play": the player walks the same room with the same three moves the model has.
+## "Watch AI": replays of the fine-tuned Laya model (exported by probe/export_godot.py).
+## "Correct": the stage-4 correction loop, live. The model runs in WSL (probe/correct_server.py, started
 ##         by the game if needed); corrections and memos are logged there, never trained on.
 
 const CELL := 72
 const DIR_VEC := [Vector2i(1, 0), Vector2i(0, 1), Vector2i(-1, 0), Vector2i(0, -1)]
 const DIR_NAME := ["east", "south", "west", "north"]
-const DIR_KO := ["동쪽", "남쪽", "서쪽", "북쪽"]
 const ACTS := ["turn left", "turn right", "forward"]
-const ACT_KO := {"turn left": "왼쪽으로 돌기", "turn right": "오른쪽으로 돌기", "forward": "앞으로 한 칸"}
+const ACT_TXT := {"turn left": "turn left", "turn right": "turn right", "forward": "forward"}
 const COLORS := {
 	"red": Color("#e5484d"), "green": Color("#46a758"), "blue": Color("#3e7bfa"),
 	"purple": Color("#9d5bd2"), "yellow": Color("#f5c518"), "grey": Color("#9aa0a6"),
 }
-const COLOR_KO := {"red": "빨간", "green": "초록", "blue": "파란", "purple": "보라", "yellow": "노란", "grey": "회색"}
-const TYPE_KO := {"ball": "공", "key": "열쇠", "box": "상자"}
-const VIEW_KO := ["글만 보기 (AI와 같은 조건)", "시야만 보기", "방 전체 보기"]
+const VIEW_TXT := ["text only (same as the AI)", "view only", "whole room"]
 
 var episodes: Array = []
 var ep_idx := 0
 var mode := "play"
+var web := OS.has_feature("web")
 var view_mode := 1   # 0 text only, 1 view only, 2 whole room
 
 # play state
@@ -55,7 +53,7 @@ var watch_bar: HBoxContainer
 var key_help: Label
 # fix (correction loop) state
 const SERVER := "http://127.0.0.1:18799"
-const MEMO_KO := {"1": "입력에 답이 있는데 모델이 틀림", "2": "입력에 정보가 없음", "3": "글이 헷갈리게 적힘", "4": "기타"}
+const MEMO_TXT := {"1": "the answer is in the input but the model got it wrong", "2": "the input lacks the information", "3": "the text is confusing", "4": "other"}
 var http: HTTPRequest
 var fix_seeds: Array = []
 var fix_idx := 0
@@ -177,27 +175,28 @@ func _build_ui() -> void:
 	top.position = Vector2(16, 10)
 	top.add_theme_constant_override("separation", 8)
 	add_child(top)
-	btn_play = _btn(top, "직접 해보기", func(): _set_mode("play"))
-	btn_watch = _btn(top, "AI 관전", func(): _set_mode("watch"))
-	btn_fix = _btn(top, "교정", func(): _set_mode("fix"))
+	btn_play = _btn(top, "Play", func(): _set_mode("play"))
+	btn_watch = _btn(top, "Watch AI", func(): _set_mode("watch"))
+	btn_fix = _btn(top, "Correct", func(): _set_mode("fix"))
+	btn_fix.visible = not web
 	top.add_child(VSeparator.new())
-	_btn(top, "◀ 이전 판", func(): _change_ep(-1))
+	_btn(top, "< Prev room", func(): _change_ep(-1))
 	seed_label = Label.new()
 	seed_label.custom_minimum_size = Vector2(300, 0)
 	seed_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	top.add_child(seed_label)
-	_btn(top, "다음 판 ▶", func(): _change_ep(1))
-	_btn(top, "AI가 못 깬 판만 ▶", func(): _next_hard())
+	_btn(top, "Next room >", func(): _change_ep(1))
+	_btn(top, "Next AI failure >", func(): _next_hard())
 	top.add_child(VSeparator.new())
 	btn_view = _btn(top, "", func(): _cycle_view())
-	_btn(top, "다시 시작", func(): _restart())
+	_btn(top, "Restart", func(): _restart())
 
 	var help := Label.new()
 	help.position = Vector2(16, 52)
 	help.size = Vector2(1290, 50)
 	help.add_theme_color_override("font_color", Color("#b8c0cc"))
-	help.text = ("규칙: 지시문에 나온 물건 바로 앞 칸에 서서 그 물건을 바라보면 성공. 64걸음 안에. 한 걸음은 '왼쪽 돌기 / 오른쪽 돌기 / 앞으로 한 칸' 중 하나.\n"
-		+ "AI(Laya)는 그림을 못 본다. 자기 앞쪽 7×7 칸(밝은 칸)을 영어 글로 바꾼 것만 받고, 매 걸음 셋 중 하나를 고른다. 기억도 없다 — 매 걸음 지금 글만 본다.")
+	help.text = ("Rule: succeed by standing right in front of the object named in the mission, facing it, within 64 steps. Each step is one of 'turn left / turn right / forward'.\n"
+		+ "The AI (Laya) never sees the picture, only the 7×7 cells ahead (bright cells) as English text. It picks one of three moves each step and has no memory.")
 	add_child(help)
 
 	board = Control.new()
@@ -209,6 +208,7 @@ func _build_ui() -> void:
 	key_help = Label.new()
 	key_help.position = Vector2(16, 700)
 	key_help.size = Vector2(580, 150)
+	key_help.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	key_help.add_theme_color_override("font_color", Color("#8b95a5"))
 	add_child(key_help)
 
@@ -216,12 +216,12 @@ func _build_ui() -> void:
 	watch_bar.position = Vector2(16, 700)
 	watch_bar.add_theme_constant_override("separation", 8)
 	add_child(watch_bar)
-	_btn(watch_bar, "⏮ 처음", func(): _watch_seek(0))
-	_btn(watch_bar, "◀ 한 걸음", func(): _watch_seek(w_i - 1))
-	btn_run = _btn(watch_bar, "▶ 재생", func(): _toggle_run())
-	_btn(watch_bar, "한 걸음 ▶", func(): _watch_seek(w_i + 1))
-	_btn(watch_bar, "느리게", func(): w_delay = minf(w_delay * 1.5, 3.0); _refresh())
-	_btn(watch_bar, "빠르게", func(): w_delay = maxf(w_delay / 1.5, 0.08); _refresh())
+	_btn(watch_bar, "|< Start", func(): _watch_seek(0))
+	_btn(watch_bar, "< Step", func(): _watch_seek(w_i - 1))
+	btn_run = _btn(watch_bar, "Play", func(): _toggle_run())
+	_btn(watch_bar, "Step >", func(): _watch_seek(w_i + 1))
+	_btn(watch_bar, "Slower", func(): w_delay = minf(w_delay * 1.5, 3.0); _refresh())
+	_btn(watch_bar, "Faster", func(): w_delay = maxf(w_delay / 1.5, 0.08); _refresh())
 	btn_demo = _btn(watch_bar, "", func(): _set_demo(not demo))
 
 	fix_bar = VBoxContainer.new()
@@ -231,22 +231,22 @@ func _build_ui() -> void:
 	var r1 := HBoxContainer.new()
 	r1.add_theme_constant_override("separation", 6)
 	fix_bar.add_child(r1)
-	_btn(r1, "AI대로 (Enter)", func(): _fix_step(""))
-	_btn(r1, "왼쪽 돌기 (A)", func(): _fix_step("turn left"))
-	_btn(r1, "오른쪽 돌기 (D)", func(): _fix_step("turn right"))
-	_btn(r1, "앞으로 (W)", func(): _fix_step("forward"))
-	_btn(r1, "봇 보기 (B)", func(): fix_bot_shown = not fix_bot_shown; _refresh())
+	_btn(r1, "AI's choice (Enter)", func(): _fix_step(""))
+	_btn(r1, "Turn left (A)", func(): _fix_step("turn left"))
+	_btn(r1, "Turn right (D)", func(): _fix_step("turn right"))
+	_btn(r1, "Forward (W)", func(): _fix_step("forward"))
+	_btn(r1, "Show bot (B)", func(): fix_bot_shown = not fix_bot_shown; _refresh())
 	var r2 := HBoxContainer.new()
 	r2.add_theme_constant_override("separation", 6)
 	fix_bar.add_child(r2)
 	for code in ["1", "2", "3", "4"]:
-		_btn(r2, "메모 %s" % code, func(): _fix_set_memo(code))
-	_btn(r2, "끝까지 AI대로 (R)", func(): _fix_set_auto(true))
-	_btn(r2, "다음 판 (N)", func(): _change_ep(1))
+		_btn(r2, "Memo %s" % code, func(): _fix_set_memo(code))
+	_btn(r2, "AI to the end (R)", func(): _fix_set_auto(true))
+	_btn(r2, "Next room (N)", func(): _change_ep(1))
 	var r3 := Label.new()
 	r3.add_theme_color_override("font_color", Color("#8b95a5"))
-	r3.text = ("맞으면 Enter. 아니면 방향키(화면 기준: 그쪽을 보고 있으면 한 칸, 아니면 그쪽으로 돈다) = 교정\n"
-		+ "메모(키 1~4): 1 답이 있는데 틀림 · 2 정보 없음 · 3 글이 헷갈림 · 4 기타")
+	r3.text = ("If the AI is right, press Enter. Otherwise an arrow key (screen-based: one cell if already facing that way, else turn toward it) = correction\n"
+		+ "Memo (keys 1-4): 1 answer in input but wrong · 2 info missing · 3 confusing text · 4 other")
 	fix_bar.add_child(r3)
 
 	var rx := 620.0
@@ -300,6 +300,8 @@ func _ep() -> Dictionary:
 
 
 func _set_mode(m: String) -> void:
+	if m == "fix" and web:
+		return   # the browser build has no inference server (no WSL / Python / localhost)
 	if m != "watch":
 		demo = false
 	mode = m
@@ -354,7 +356,7 @@ func _next_hard() -> void:
 
 func _cycle_view() -> void:
 	if mode == "play":
-		view_mode = (view_mode + 2) % 3   # 시야만 -> 글만 -> 방 전체 -> 시야만
+		view_mode = (view_mode + 2) % 3   # view only -> text only -> whole room -> view only
 	else:
 		view_mode = 1 if view_mode == 2 else 2
 	_refresh()
@@ -482,11 +484,6 @@ func _obs_text(pos: Vector2i, dir: int) -> String:
 	return "\n".join(lines)
 
 
-func _mission_ko() -> String:
-	var t: Dictionary = _ep()["target"]
-	return "%s %s 앞으로 가기" % [COLOR_KO.get(t["color"], t["color"]) + ("색" if t["color"] in ["purple"] else ""), TYPE_KO.get(t["type"], t["type"])]
-
-
 # ---------------------------------------------------------------- input / loop
 
 func _input(event: InputEvent) -> void:
@@ -497,7 +494,7 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		return
 	if k == KEY_TAB:
-		_set_mode({"play": "watch", "watch": "fix", "fix": "play"}[mode])
+		_set_mode({"play": "watch", "watch": "play" if web else "fix", "fix": "play"}[mode])
 	elif k == KEY_PAGEUP or k == KEY_BRACKETLEFT:
 		_change_ep(-1)
 	elif k == KEY_PAGEDOWN or k == KEY_BRACKETRIGHT:
@@ -570,59 +567,59 @@ func _refresh() -> void:
 		_refresh_fix()
 		return
 	if episodes.is_empty():
-		mission_label.text = "godot/data/episodes.json 이 없다 — README의 내보내기 명령을 먼저 실행"
+		mission_label.text = "godot/data/episodes.json is missing: run the export command from the README first"
 		return
 	var e := _ep()
 	btn_play.disabled = mode == "play"
-	btn_view.text = "보기: " + VIEW_KO[view_mode]
+	btn_view.text = "View: " + VIEW_TXT[view_mode]
 	btn_watch.disabled = mode == "watch"
-	btn_view.text = "보기: " + VIEW_KO[view_mode]
-	seed_label.text = "판 %d / %d · seed %d%s" % [ep_idx + 1, episodes.size(), int(e["seed"]),
-		"  ★세 AI 모두 실패한 판" if e["all_models_failed"] else ""]
-	mission_label.text = "지시문: %s   (%s)" % [_mission_ko(), e["mission"]]
+	btn_view.text = "View: " + VIEW_TXT[view_mode]
+	seed_label.text = "Room %d / %d · seed %d%s" % [ep_idx + 1, episodes.size(), int(e["seed"]),
+		"  * all three AIs failed this room" if e["all_models_failed"] else ""]
+	mission_label.text = "Mission: %s" % e["mission"]
 	var ag := _agent()
-	var bot_txt: String = ("%d걸음" % int(e["bot_steps"])) if e["bot_steps"] != null else "못 깸"
-	var ai_txt: String = ("[color=#46a758]성공, %d걸음[/color]" % e["steps"].size()) if e["result"] == "success" \
-		else "[color=#e5484d]실패 — 64걸음을 다 쓰고 못 감[/color]"
+	var bot_txt: String = ("%d steps" % int(e["bot_steps"])) if e["bot_steps"] != null else "failed"
+	var ai_txt: String = ("[color=#46a758]success, %d steps[/color]" % e["steps"].size()) if e["result"] == "success" \
+		else "[color=#e5484d]failed: used all 64 steps[/color]"
 	key_help.visible = mode == "play"
 	watch_bar.visible = mode == "watch"
-	btn_run.text = "⏸ 멈춤" if w_playing else "▶ 재생"
-	btn_demo.text = "연속 관전 끄기" if demo else "연속 관전 (판 자동 넘김)"
+	btn_run.text = "Pause" if w_playing else "Play"
+	btn_demo.text = "Stop auto-watch" if demo else "Auto-watch rooms"
 
 	if mode == "play":
-		var s := "[b]걸음 %d / %d[/b]   바라보는 쪽: %s\n" % [p_steps, int(e["max_steps"]), DIR_KO[ag[1]]]
+		var s := "[b]Step %d / %d[/b]   facing: %s\n" % [p_steps, int(e["max_steps"]), DIR_NAME[ag[1]]]
 		if p_result == "success":
-			s += "[color=#46a758][b]성공![/b][/color] 당신 %d걸음 · AI %s · 봇(정답 교사) %s\n" % [p_steps, ai_txt, bot_txt]
-			s += "Enter를 누르면 같은 판에서 AI가 어떻게 걸었는지 본다."
+			s += "[color=#46a758][b]Success![/b][/color] you %d steps · AI %s · bot (the teacher) %s\n" % [p_steps, ai_txt, bot_txt]
+			s += "Press Enter to see how the AI walked this room."
 		elif p_result == "timeout":
-			s += "[color=#e5484d][b]실패 — 64걸음을 다 썼다.[/b][/color] AI %s · 봇 %s\nEnter: AI는 어땠는지 보기" % [ai_txt, bot_txt]
+			s += "[color=#e5484d][b]Failed: all 64 steps used.[/b][/color] AI %s · bot %s\nEnter: see how the AI did" % [ai_txt, bot_txt]
 		else:
-			s += "보기 방식: [b]%s[/b]  (V 키로 바꿈)\n" % VIEW_KO[view_mode]
+			s += "View: [b]%s[/b]  (V to change)\n" % VIEW_TXT[view_mode]
 			if view_mode == 0:
-				s += "방 그림이 없다. 오른쪽 아래 글만 보고 움직여 본다 — AI가 매 걸음 받는 것이 이것뿐이다."
+				s += "No picture. Move using only the text at the bottom right: it is all the AI gets each step."
 			elif view_mode == 1:
-				s += "어두운 칸은 AI도 못 보는 칸. 하지만 당신은 지나온 길을 기억하고, AI는 기억하지 못한다."
+				s += "Dark cells are outside the AI's view too. But you remember the path you took; the AI does not."
 		info.text = s
-		key_help.text = ("방향키 = 화면 기준: 그쪽을 보고 있으면 한 칸 가고, 아니면 그쪽으로 돈다 (한 번 = 한 걸음)\n"
-			+ "A 왼쪽 돌기 · D 오른쪽 돌기 · W 앞으로 (삼각형 기준)\n"
-			+ "R 다시 시작 · V 보기 방식 바꾸기 · [ ] 판 바꾸기 · Tab AI 관전으로")
-		text_title.text = "AI라면 지금 이 글을 받는다 (지시문 + 앞쪽 7×7을 글로 바꾼 것):"
+		key_help.text = ("Arrow keys are screen-based: one cell if already facing that way, else turn toward it (one press = one step)\n"
+			+ "A turn left · D turn right · W forward (relative to the triangle)\n"
+			+ "R restart · V change view · [ ] change room · Tab watch AI")
+		text_title.text = "What the AI would get now (mission + the 7×7 view as text):"
 		text_box.text = "mission: %s\n%s" % [e["mission"], _obs_text(ag[0], ag[1])]
 	else:
 		var steps: Array = e["steps"]
-		var s2 := "[b]걸음 %d / %d[/b]   이 판 AI 결과: %s · 봇 %s\n" % [w_i, steps.size(), ai_txt, bot_txt]
+		var s2 := "[b]Step %d / %d[/b]   AI result in this room: %s · bot %s\n" % [w_i, steps.size(), ai_txt, bot_txt]
 		if w_i < steps.size():
 			var st: Dictionary = steps[w_i]
 			var same: bool = st["bot"] == st["choice"]
-			s2 += "AI 선택: [b]%s[/b] (%d%%)\n" % [ACT_KO.get(st["choice"], st["choice"]), roundi(float(st["probs"][st["choice"]]) * 100)]
-			s2 += ("봇도 같은 선택: [color=#46a758]%s[/color]" if same else "[color=#f5a524]봇이라면 다르게: %s[/color] ← 여기서 갈린다") % ACT_KO.get(st["bot"], st["bot"])
+			s2 += "AI choice: [b]%s[/b] (%d%%)\n" % [ACT_TXT.get(st["choice"], st["choice"]), roundi(float(st["probs"][st["choice"]]) * 100)]
+			s2 += ("Bot agrees: [color=#46a758]%s[/color]" if same else "[color=#f5a524]The bot would: %s[/color]  <- they split here") % ACT_TXT.get(st["bot"], st["bot"])
 			text_box.text = st["input"]
 		else:
-			s2 += "[b]끝.[/b] " + ("대상 앞에 도착." if e["result"] == "success" else "64걸음 안에 못 갔다. 노란 숫자는 같은 칸을 몇 번 밟았는지 — 같은 자리를 맴돈 흔적.")
+			s2 += "[b]End.[/b] " + ("Reached the target." if e["result"] == "success" else "Did not get there in 64 steps. Yellow numbers count visits to the same cell: signs of going in circles.")
 			text_box.text = ""
-		s2 += "\n속도 %.1f초/걸음 · Space 재생/멈춤 · ←/→ 한 걸음 · V 보기 · Tab 직접 해보기" % w_delay
+		s2 += "\nSpeed %.1f s/step · Space play/pause · Left/Right step · V view · Tab play yourself" % w_delay
 		info.text = s2
-		text_title.text = "AI가 이 걸음에서 받은 글 (이것만 보고 골랐다):"
+		text_title.text = "Text the AI got at this step (it chose from this alone):"
 	board.queue_redraw()
 	bars.queue_redraw()
 
@@ -646,12 +643,12 @@ func _draw_board() -> void:
 
 	if mode == "play" and view_mode == 0:
 		board.draw_rect(Rect2(0, 0, w * CELL, h * CELL), Color("#11141a"))
-		board.draw_string(font, Vector2(40, h * CELL / 2.0 - 10), "그림 없음 — 오른쪽 글만 보고 움직이기",
+		board.draw_string(font, Vector2(40, h * CELL / 2.0 - 10), "No picture: move using only the text on the right",
 			HORIZONTAL_ALIGNMENT_LEFT, -1, 24, Color("#8b95a5"))
-		board.draw_string(font, Vector2(40, h * CELL / 2.0 + 26), "(AI와 같은 조건. 걸음 %d)" % p_steps,
+		board.draw_string(font, Vector2(40, h * CELL / 2.0 + 26), "(same as the AI. step %d)" % p_steps,
 			HORIZONTAL_ALIGNMENT_LEFT, -1, 20, Color("#5d6675"))
 		if p_result != "":
-			board.draw_string(font, Vector2(40, h * CELL / 2.0 + 70), "성공!" if p_result == "success" else "실패",
+			board.draw_string(font, Vector2(40, h * CELL / 2.0 + 70), "Success!" if p_result == "success" else "Failed",
 				HORIZONTAL_ALIGNMENT_LEFT, -1, 36, Color("#46a758") if p_result == "success" else Color("#e5484d"))
 		return
 
@@ -768,19 +765,19 @@ func _draw_bars() -> void:
 			return
 		st = steps[w_i]
 	var font := bars.get_theme_default_font()
-	bars.draw_string(font, Vector2(0, 18), "AI의 세 선택지 점수 (막대가 길수록 그쪽을 믿음)", HORIZONTAL_ALIGNMENT_LEFT, -1, 17, Color("#b8c0cc"))
+	bars.draw_string(font, Vector2(0, 18), "AI scores for the three choices (longer bar = more confident)", HORIZONTAL_ALIGNMENT_LEFT, -1, 17, Color("#b8c0cc"))
 	for i in ACTS.size():
 		var a: String = ACTS[i]
 		var pr: float = float(st["probs"].get(a, 0.0))
 		var y := 34 + i * 44
 		var chosen: bool = a == st["choice"]
-		bars.draw_string(font, Vector2(0, y + 26), ACT_KO[a], HORIZONTAL_ALIGNMENT_LEFT, -1, 19,
+		bars.draw_string(font, Vector2(0, y + 26), ACT_TXT[a], HORIZONTAL_ALIGNMENT_LEFT, -1, 19,
 			Color.WHITE if chosen else Color("#8b95a5"))
 		bars.draw_rect(Rect2(170, y + 6, 380, 28), Color("#1b1f26"))
 		bars.draw_rect(Rect2(170, y + 6, 380 * pr, 28), Color("#ff7a45") if chosen else Color("#4a5260"))
 		bars.draw_string(font, Vector2(560, y + 28), "%d%%" % roundi(pr * 100), HORIZONTAL_ALIGNMENT_LEFT, -1, 19, Color.WHITE)
 		if a == st["bot"] and (mode == "watch" or fix_bot_shown):
-			bars.draw_string(font, Vector2(615, y + 28), "← 봇", HORIZONTAL_ALIGNMENT_LEFT, -1, 17, Color("#46a758"))
+			bars.draw_string(font, Vector2(615, y + 28), "<- bot", HORIZONTAL_ALIGNMENT_LEFT, -1, 17, Color("#46a758"))
 
 
 # ---------------------------------------------------------------- fix (correction loop)
@@ -807,7 +804,7 @@ func _on_http(result: int, code: int, _headers: PackedStringArray, body: PackedB
 		fix_cb.call(null)
 		return
 	if not data.get("ok", false):
-		fix_status = "서버 오류: %s" % data.get("error", "?")
+		fix_status = "Server error: %s" % data.get("error", "?")
 		fix_auto = false
 		_refresh()
 		return
@@ -821,7 +818,7 @@ func _fix_connect() -> void:
 			if server_pid == 0:
 				_start_server()
 			fix_retry = 1.0
-			fix_status = "AI 서버 켜는 중… (Laya 모델을 읽느라 처음엔 20~40초)  %d초" % int(fix_wait)
+			fix_status = "Starting the AI server… (loading Laya takes 20-40 s the first time)  %d s" % int(fix_wait)
 			_refresh()
 			return
 		fix_seeds = d["seeds"]
@@ -844,7 +841,7 @@ func _fix_reset() -> void:
 	fix_auto = false
 	_fix_get("/reset?seed=%d" % int(fix_seeds[fix_idx]["seed"]), func(d):
 		if d == null:
-			fix_status = "AI 서버와 연결이 끊김"
+			fix_status = "Lost connection to the AI server"
 			_refresh()
 			return
 		fix_room = d["room"]
@@ -866,7 +863,7 @@ func _fix_step(action: String) -> void:
 		q += "&memo=" + fix_memo
 	_fix_get(q, func(d):
 		if d == null:
-			fix_status = "AI 서버와 연결이 끊김"
+			fix_status = "Lost connection to the AI server"
 			fix_auto = false
 			_refresh()
 			return
@@ -897,7 +894,7 @@ func _fix_process(delta: float) -> void:
 		fix_wait += delta
 		if fix_retry < 0.0:
 			if fix_wait > 180.0:
-				fix_status = "AI 서버가 안 켜진다. WSL 터미널에서 직접 실행: python -m probe.correct_server"
+				fix_status = "The AI server did not start. Run it in a WSL terminal: python -m probe.correct_server"
 				_refresh()
 			else:
 				_fix_connect()
@@ -937,46 +934,46 @@ func _fix_key(k: int, echo: bool) -> bool:
 func _refresh_fix() -> void:
 	btn_play.disabled = false
 	btn_watch.disabled = false
-	btn_view.text = "보기: " + VIEW_KO[view_mode]
+	btn_view.text = "View: " + VIEW_TXT[view_mode]
 	key_help.visible = false
 	watch_bar.visible = false
 	board.queue_redraw()
 	bars.queue_redraw()
 	if fix_room.is_empty():
-		seed_label.text = "교정 — 연결 중"
-		mission_label.text = "교정 루프"
+		seed_label.text = "Correct: connecting"
+		mission_label.text = "Correction loop"
 		info.text = fix_status
 		text_box.text = ""
 		text_title.text = ""
 		return
 	var st := fix_state
-	seed_label.text = "교정 판 %d / %d · seed %d" % [fix_idx + 1, fix_seeds.size(), int(fix_room["seed"])]
-	mission_label.text = "지시문: %s   (%s)" % [_mission_ko(), fix_room["mission"]]
-	var s := "[b]걸음 %d / %d[/b] · 교정 %d · 메모 %d\n[color=#8b95a5]%s[/color]\n" % [int(st["step"]),
+	seed_label.text = "Correct room %d / %d · seed %d" % [fix_idx + 1, fix_seeds.size(), int(fix_room["seed"])]
+	mission_label.text = "Mission: %s" % fix_room["mission"]
+	var s := "[b]Step %d / %d[/b] · corrections %d · memos %d\n[color=#8b95a5]%s[/color]\n" % [int(st["step"]),
 		int(fix_room["max_steps"]), int(st["corrections"]), int(st["memos"]), fix_room["note"]]
 	if st.get("result") != null:
 		var res: String = st["result"]
-		s += ("[color=#46a758][b]성공![/b][/color]" if res == "success" else "[color=#e5484d][b]실패 — 64걸음을 다 썼다.[/b][/color]")
-		s += "  기록 저장됨 (data/correct_log.jsonl)\n"
+		s += ("[color=#46a758][b]Success![/b][/color]" if res == "success" else "[color=#e5484d][b]Failed: all 64 steps used.[/b][/color]")
+		s += "  log saved (data/correct_log.jsonl)\n"
 		if fix_idx == fix_seeds.size() - 1:
-			s += "[color=#f5c518][b]%d판 모두 끝.[/b][/color] 창을 닫으면 된다 (Enter/N은 처음 판부터 다시)" % fix_seeds.size()
+			s += "[color=#f5c518][b]All %d rooms done.[/b][/color] You can close the window (Enter/N starts over)" % fix_seeds.size()
 		else:
-			s += "Enter 또는 N: 다음 판"
+			s += "Enter or N: next room"
 		text_box.text = ""
 	else:
-		s += "AI가 고른 것: [b]%s[/b] (%d%%)" % [ACT_KO[st["choice"]], roundi(float(st["probs"][st["choice"]]) * 100)]
+		s += "AI chose: [b]%s[/b] (%d%%)" % [ACT_TXT[st["choice"]], roundi(float(st["probs"][st["choice"]]) * 100)]
 		if fix_bot_shown:
 			var same: bool = st["bot"] == st["choice"]
-			s += ("   봇도 같음: [color=#46a758]%s[/color]" if same else "   [color=#f5a524]봇이라면: %s[/color]") % ACT_KO.get(st["bot"], st["bot"])
+			s += ("   bot agrees: [color=#46a758]%s[/color]" if same else "   [color=#f5a524]the bot would: %s[/color]") % ACT_TXT.get(st["bot"], st["bot"])
 		else:
-			s += "   [color=#5d6675](봇 선택은 B)[/color]"
+			s += "   [color=#5d6675](B shows the bot's choice)[/color]"
 		if fix_memo != "":
-			s += "\n이 걸음 메모: [color=#f5c518]%s. %s[/color] (다시 누르면 취소)" % [fix_memo, MEMO_KO[fix_memo]]
+			s += "\nMemo for this step: [color=#f5c518]%s. %s[/color] (press again to cancel)" % [fix_memo, MEMO_TXT[fix_memo]]
 		if fix_auto:
-			s += "\n[color=#f5c518]끝까지 AI대로 진행 중 (R 멈춤)[/color]"
+			s += "\n[color=#f5c518]Running the AI to the end (R stops)[/color]"
 		text_box.text = st["input"]
 	info.text = s
-	text_title.text = "AI가 지금 받은 글 (이것만 보고 골랐다):"
+	text_title.text = "Text the AI got now (it chose from this alone):"
 
 
 func _notification(what: int) -> void:
