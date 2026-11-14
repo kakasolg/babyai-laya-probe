@@ -1,0 +1,170 @@
+{
+ "steps": 4915,
+ "episodes": 1000,
+ "ambiguity": {
+  "image+mission": {
+   "steps": 4915,
+   "distinct_keys": 3429,
+   "split_step_share": 0.0431,
+   "majority_error": 0.0157
+  },
+  "image+direction+mission": {
+   "steps": 4915,
+   "distinct_keys": 4438,
+   "split_step_share": 0.0159,
+   "majority_error": 0.0075
+  },
+  "text+mission": {
+   "steps": 4915,
+   "distinct_keys": 4438,
+   "split_step_share": 0.0159,
+   "majority_error": 0.0075
+  }
+ },
+ "object_not_in_view_share": 0.1795,
+ "object_not_in_view_ambiguity": {
+  "steps": 882,
+  "distinct_keys": 729,
+  "split_step_share": 0.0884,
+  "majority_error": 0.042
+ },
+ "top_split_keys": [
+  {
+   "mission": "go to the blue key",
+   "text": "facing: north\nobjects: none in view\nwalls: 4 ahead, 1 left",
+   "bot_actions": {
+    "turn right": 2,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the grey key",
+   "text": "facing: north\nobjects: none in view\nwalls: 6 ahead, 1 right",
+   "bot_actions": {
+    "forward": 1,
+    "turn left": 2
+   }
+  },
+  {
+   "mission": "go to the grey key",
+   "text": "facing: south\nobjects: none in view\nwalls: 5 ahead, 1 right",
+   "bot_actions": {
+    "turn left": 2,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the blue key",
+   "text": "facing: north\nobjects: none in view\nwalls: 3 ahead, 1 left",
+   "bot_actions": {
+    "forward": 1,
+    "turn right": 2
+   }
+  },
+  {
+   "mission": "go to the blue key",
+   "text": "facing: west\nobjects: none in view\nwalls: 3 ahead, 2 left",
+   "bot_actions": {
+    "turn right": 2,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the blue key",
+   "text": "facing: west\nobjects: none in view\nwalls: 6 ahead, 2 left",
+   "bot_actions": {
+    "turn right": 1,
+    "turn left": 1,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the red ball",
+   "text": "facing: east\nobjects: none in view\nwalls: 2 ahead, 1 right",
+   "bot_actions": {
+    "turn left": 1,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the red box",
+   "text": "facing: west\nobjects: none in view\nwalls: 4 ahead, 1 left",
+   "bot_actions": {
+    "forward": 1,
+    "turn right": 1
+   }
+  }
+ ],
+ "samples": [
+  {
+   "seed": 973,
+   "step": 1,
+   "mission": "go to the blue key",
+   "text": "facing: north\nobjects: none in view\nwalls: 3 ahead, 2 left",
+   "action_name": "turn right"
+  },
+  {
+   "seed": 454,
+   "step": 0,
+   "mission": "go to the blue ball",
+   "text": "facing: east\nobjects: none in view\nwalls: 3 ahead, 2 left",
+   "action_name": "turn right"
+  },
+  {
+   "seed": 870,
+   "step": 0,
+   "mission": "go to the grey ball",
+   "text": "facing: west\nobjects: none in view\nwalls: 5 ahead, 2 right",
+   "action_name": "turn left"
+  },
+  {
+   "seed": 494,
+   "step": 0,
+   "mission": "go to the red ball",
+   "text": "facing: south\nobjects: none in view\nwalls: 1 ahead, 3 left",
+   "action_name": "turn right"
+  },
+  {
+   "seed": 39,
+   "step": 3,
+   "mission": "go to the blue key",
+   "text": "facing: south\nblue key: 2 ahead\nwalls: 3 ahead, 2 right",
+   "action_name": "forward"
+  },
+  {
+   "seed": 261,
+   "step": 5,
+   "mission": "go to the purple ball",
+   "text": "facing: south\npurple ball: 2 right\nwalls: 1 ahead, 3 right",
+   "action_name": "turn right"
+  },
+  {
+   "seed": 984,
+   "step": 5,
+   "mission": "go to the purple box",
+   "text": "facing: south\npurple box: 3 left\nwalls: 2 ahead, 1 right",
+   "action_name": "turn left"
+  },
+  {
+   "seed": 515,
+   "step": 1,
+   "mission": "go to the blue box",
+   "text": "facing: east\nblue box: 4 ahead, 2 left\nwalls: 6 ahead, 2 right",
+   "action_name": "forward"
+  },
+  {
+   "seed": 492,
+   "step": 3,
+   "mission": "go to the purple ball",
+   "text": "facing: north\npurple ball: 3 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "action_name": "forward"
+  },
+  {
+   "seed": 415,
+   "step": 8,
+   "mission": "go to the red ball",
+   "text": "facing: north\nred ball: 3 ahead\nwalls: 5 ahead, 1 right",
+   "action_name": "forward"
+  }
+ ]
+}
