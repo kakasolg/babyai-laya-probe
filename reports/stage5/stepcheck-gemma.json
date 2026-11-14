@@ -1,0 +1,32 @@
+{
+ "scorer": "gemma",
+ "steps": 1567,
+ "all": {
+  "n": 1567,
+  "agree": 0.6688
+ },
+ "target_visible": {
+  "n": 1330,
+  "agree": 0.7406
+ },
+ "target_unseen": {
+  "n": 237,
+  "agree": 0.2658
+ },
+ "order_flip_rate": 0.2189,
+ "format_error_rate": 0.568,
+ "choice_share": {
+  "forward": 979,
+  "turn left": 332,
+  "turn right": 256
+ },
+ "scorer_stats": {
+  "model": "gemma4:12b-it-q8_0",
+  "new_calls": 3126,
+  "reused": 8,
+  "errors_retried": 0,
+  "latency_ms_p50": 1836.3,
+  "latency_ms_p95": 2029.9,
+  "usage_new_calls": {}
+ }
+}

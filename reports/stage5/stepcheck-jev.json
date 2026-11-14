@@ -1,0 +1,35 @@
+{
+ "scorer": "jev",
+ "steps": 1567,
+ "all": {
+  "n": 1567,
+  "agree": 0.6918
+ },
+ "target_visible": {
+  "n": 1330,
+  "agree": 0.712
+ },
+ "target_unseen": {
+  "n": 237,
+  "agree": 0.5781
+ },
+ "order_flip_rate": 0.0964,
+ "format_error_rate": 0.0,
+ "choice_share": {
+  "forward": 637,
+  "turn left": 392,
+  "turn right": 538
+ },
+ "scorer_stats": {
+  "model": "jev-1.14.0",
+  "new_calls": 3126,
+  "reused": 8,
+  "errors_retried": 0,
+  "latency_ms_p50": 196.1,
+  "latency_ms_p95": 328.1,
+  "usage_new_calls": {
+   "input_tokens": 2368588,
+   "output_tokens": 126875
+  }
+ }
+}
