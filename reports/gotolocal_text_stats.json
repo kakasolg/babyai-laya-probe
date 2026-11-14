@@ -1,0 +1,218 @@
+{
+ "steps": 5310,
+ "episodes": 998,
+ "missions": 36,
+ "step_share": {
+  "target_unseen": 0.1734,
+  "distractor_closer": 0.5275,
+  "two_matching": 0.2414,
+  "two_matching_in_view": 0.1188
+ },
+ "episode_share": {
+  "two_matching": 0.3186,
+  "target_unseen_at_start": 0.493
+ },
+ "visible_objects_per_step": {
+  "mean": 4.41,
+  "max": 8
+ },
+ "ambiguity": {
+  "image+mission": {
+   "steps": 5310,
+   "distinct_keys": 5256,
+   "split_step_share": 0.006,
+   "majority_error": 0.003
+  },
+  "text+mission": {
+   "steps": 5310,
+   "distinct_keys": 5285,
+   "split_step_share": 0.0049,
+   "majority_error": 0.0024
+  }
+ },
+ "top_split_keys": [
+  {
+   "mission": "go to the green box",
+   "text": "facing: west\npurple box: 3 ahead, 1 right\ngreen ball: 2 ahead, 3 right\nyellow ball: 3 ahead, 2 right\nblue ball: 5 ahead, 1 right\nwalls: 6 ahead, 1 left",
+   "bot_actions": {
+    "turn right": 1,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the purple ball",
+   "text": "facing: east\npurple box: 2 left\nblue box: 1 ahead, 1 left\nyellow ball: 3 ahead, 2 left\nwalls: 5 ahead, 1 right",
+   "bot_actions": {
+    "turn left": 1,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the green box",
+   "text": "facing: east\ngreen key: 2 left\npurple ball: 1 ahead, 1 left\nblue key: 1 ahead, 3 left\npurple ball: 3 ahead, 2 left\nwalls: 4 ahead, 1 right",
+   "bot_actions": {
+    "turn left": 1,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the grey key",
+   "text": "facing: north\ngreen key: 1 ahead, 1 left\nblue key: 4 ahead\ngreen ball: 5 ahead\ngreen box: 3 ahead, 3 left\ngreen ball: 5 ahead, 1 left\nwalls: 6 ahead, 2 right",
+   "bot_actions": {
+    "turn right": 1,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the green key",
+   "text": "facing: east\nred ball: 1 ahead, 2 right\npurple key: 2 ahead, 2 right\ngrey key: 4 ahead\nblue box: 5 ahead, 1 left\ngrey box: 5 ahead, 1 right\nwalls: 6 ahead, 2 left",
+   "bot_actions": {
+    "turn left": 1,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the red ball",
+   "text": "facing: north\ngrey box: 3 left\nblue key: 1 ahead, 2 left\ngreen box: 2 ahead, 1 left\nred box: 2 ahead, 1 right\nblue box: 4 ahead, 1 right\nyellow box: 5 ahead, 1 right\nwalls: 6 ahead, 2 right",
+   "bot_actions": {
+    "turn left": 1,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the grey box",
+   "text": "facing: north\nblue key: 2 left\nblue key: 2 ahead, 1 left\nred box: 2 ahead, 3 left\nyellow box: 3 ahead, 2 left\nwalls: 5 ahead, 2 right",
+   "bot_actions": {
+    "turn left": 1,
+    "forward": 1
+   }
+  },
+  {
+   "mission": "go to the green key",
+   "text": "facing: east\nblue box: 1 ahead, 1 left\ngrey ball: 3 ahead\npurple key: 2 ahead, 3 right\ngrey ball: 4 ahead, 3 right\nwalls: 5 ahead, 2 left",
+   "bot_actions": {
+    "turn left": 1,
+    "forward": 1
+   }
+  }
+ ],
+ "samples": [
+  {
+   "seed": 941,
+   "step": 0,
+   "mission": "go to a yellow ball",
+   "n_matching": 2,
+   "text": "facing: south\ngrey ball: 1 ahead, 1 left\nyellow box: 2 ahead, 2 left\nwalls: 4 ahead, 1 right",
+   "action_name": "turn left",
+   "cats": [
+    "target_unseen"
+   ]
+  },
+  {
+   "seed": 462,
+   "step": 0,
+   "mission": "go to the red ball",
+   "n_matching": 1,
+   "text": "facing: west\ngreen box: 2 left\nwalls: 1 ahead, 3 right",
+   "action_name": "turn right",
+   "cats": [
+    "target_unseen"
+   ]
+  },
+  {
+   "seed": 861,
+   "step": 1,
+   "mission": "go to the purple ball",
+   "n_matching": 1,
+   "text": "facing: west\npurple box: 3 right\nred ball: 5 ahead\nwalls: 6 ahead, 1 left",
+   "action_name": "forward",
+   "cats": [
+    "target_unseen"
+   ]
+  },
+  {
+   "seed": 597,
+   "step": 5,
+   "mission": "go to a grey key",
+   "n_matching": 3,
+   "text": "facing: north\npurple box: 1 left\nblue box: 1 ahead, 1 left\npurple ball: 3 left\ngrey key: 3 ahead, 3 left\nwalls: 4 ahead, 1 right",
+   "action_name": "forward",
+   "cats": [
+    "distractor_closer"
+   ]
+  },
+  {
+   "seed": 66,
+   "step": 3,
+   "mission": "go to the purple box",
+   "n_matching": 1,
+   "text": "facing: north\nred ball: 1 right\ngreen ball: 1 ahead, 1 left\npurple box: 1 ahead, 3 right\nwalls: 3 ahead, 2 left",
+   "action_name": "forward",
+   "cats": [
+    "distractor_closer"
+   ]
+  },
+  {
+   "seed": 384,
+   "step": 1,
+   "mission": "go to the green ball",
+   "n_matching": 1,
+   "text": "facing: east\nyellow key: 2 left\nyellow box: 2 ahead, 1 left\nyellow ball: 1 ahead, 3 right\nblue ball: 2 ahead, 3 right\nyellow key: 4 ahead, 1 left\ngrey key: 5 ahead, 1 left\ngreen ball: 5 ahead, 1 right\nblue ball: 5 ahead, 2 right\nwalls: 6 ahead, 3 left",
+   "action_name": "forward",
+   "cats": [
+    "distractor_closer"
+   ]
+  },
+  {
+   "seed": 875,
+   "step": 1,
+   "mission": "go to a red key",
+   "n_matching": 2,
+   "text": "facing: south\npurple ball: 1 ahead, 1 right\ngrey ball: 1 ahead, 2 right\nred key: 3 ahead\nred key: 3 ahead, 2 right\nwalls: 4 ahead, 1 left",
+   "action_name": "forward",
+   "cats": [
+    "distractor_closer",
+    "two_matching_in_view"
+   ]
+  },
+  {
+   "seed": 815,
+   "step": 9,
+   "mission": "go to a yellow key",
+   "n_matching": 2,
+   "text": "facing: east\npurple ball: 1 left\nyellow key: 1 ahead, 1 left\npurple key: 1 ahead, 2 right\nyellow key: 1 ahead, 3 left\nwalls: 2 ahead, 3 right",
+   "action_name": "forward",
+   "cats": [
+    "distractor_closer",
+    "two_matching_in_view"
+   ]
+  },
+  {
+   "seed": 627,
+   "step": 0,
+   "mission": "go to a blue box",
+   "n_matching": 2,
+   "text": "facing: north\nred ball: 2 right\npurple ball: 3 right\nred ball: 3 ahead, 3 right\nwalls: 4 ahead, 1 left",
+   "action_name": "turn right",
+   "cats": [
+    "target_unseen"
+   ]
+  },
+  {
+   "seed": 477,
+   "step": 4,
+   "mission": "go to the yellow box",
+   "n_matching": 1,
+   "text": "facing: north\nred box: 1 ahead\ngreen ball: 1 ahead, 1 left\nblue ball: 3 left\nblue key: 1 ahead, 2 right\nyellow box: 2 ahead, 1 left\nwalls: 3 ahead, 3 right",
+   "action_name": "turn left",
+   "cats": [
+    "distractor_closer"
+   ]
+  }
+ ],
+ "tokens_text_only": {
+  "tokenizer": "/home/moka/.cache/huggingface/hub/models--convaiinnovations--laya/snapshots/55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851/tokenizer",
+  "median": 47.0,
+  "max": 86
+ }
+}

@@ -7,7 +7,13 @@ BabyAI 결과를 DSR·트레이드·드론으로 확대 해석하지 않는다.
 
 ## 고정된 결정
 
-- 과제: `BabyAI-GoToObj-v0` 하나. 환경은 수정하지 않는다.
+- 과제: `BabyAI-GoToLocal-v0` 하나(8×8 방 하나, 물체 8개, 지시문 36가지). 환경은 수정하지 않는다.
+  1단계의 `GoToObj`는 방에 물체가 늘 1개라 지시문을 안 읽어도 풀려서, 학습 전에 바꿨다(2026-11-14, MoKa 확인).
+  GoToObj 덤프·보고(`reports/stage1.md`)는 남겨 두고 쓰지 않는다.
+- 봇이 0·1·2 밖의 행동(3·4)을 낸 판은 통째로 학습에서 빼고 몇 판인지 적는다.
+- 체크포인트: english `convaiinnovations/laya` 고정 리비전 `55cf4c4`, 별칭이 아니라 경로를 직접 넘긴다.
+- 주 지표: 닫힌 루프 성공률. 맞는 물체가 2개 이상인 판(약 32 %)은 어느 쪽에 가도 성공이지만 봇은 하나만 골라서,
+  걸음 단위 정확도는 낮게 나올 수 있다.
 - 입력: **부분 관측(7×7)** + 방향 + 지시문. 모델과 비교 대상이 같은 정보를 본다. 전체 지도는 쓰지 않는다.
 - 선택지: `turn left`(0) / `turn right`(1) / `forward`(2).
 - 라벨: 전문가 봇(`minigrid.utils.baby_ai_bot.BabyAIBot`) 시범에서만. LLM이 추측한 행동은 정답으로 쓰지 않는다.
@@ -30,7 +36,9 @@ walls: 3 ahead, 2 right
 - 1줄: `facing: east|south|west|north` (`obs["direction"]`).
 - 벽이 아닌 물체마다 한 줄, 가까운 것부터: `<색> <종류>: N ahead, M left|right`. 0인 쪽은 뺀다.
   `1 ahead` = 바로 앞 칸(GoTo 성공 위치).
-- **대상이 시야에 없을 때**: 물체 줄 대신 `objects: none in view`.
+- **대상이 시야에 없을 때**: 대상 줄이 없을 뿐 따로 표시하지 않는다(어느 줄이 대상인지 글에 적지 않음 — 지시문과 맞춰 보는 건 모델 몫).
+  물체가 하나도 안 보이면 `objects: none in view`.
+- 같은 색·종류 물체가 여럿 보이면 각각 한 줄.
 - **벽**: 에이전트에서 곧게 뻗은 세 줄(앞·왼쪽·오른쪽)에서 가장 가까운 벽 칸까지 거리만:
   `walls: 3 ahead, 2 left`. 벽이 안 보이는 줄은 빼고, 셋 다 없으면 `walls: none in line`.
   모서리·대각선 쪽 벽은 적지 않는다.
@@ -47,18 +55,19 @@ uv venv ~/babyai-laya-venv --python 3.12
 VIRTUAL_ENV=~/babyai-laya-venv uv pip install -r requirements.txt
 cd /mnt/d/dev/kotlin-prj/baby-ai-laya-probe
 PY=~/babyai-laya-venv/bin/python
-$PY -m probe.measure_env                                   # 클라우드 숫자 재측정 → reports/env_check.json
-$PY -m probe.dump_demos --seeds 0-999 --out data/demos_train.jsonl
-$PY -m probe.text_stats data/demos_train.jsonl             # 갈림 비율·표본 → reports/text_stats.json
-$PY -m probe.laya_dryrun data/demos_train.jsonl            # Laya 형식 검사·토큰 길이(학습 없음, 가중치 안 받음)
+$PY -m probe.measure_env                                   # 1단계: 클라우드 숫자 재측정 → reports/env_check.json
+$PY -m probe.dump_demos --seeds 0-999 --out data/gotolocal_train.jsonl   # + .summary.json (봇 성공·뺀 판)
+$PY -m probe.text_stats data/gotolocal_train.jsonl --tokenizer <체크포인트>/tokenizer
+$PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사·토큰 길이(학습 없음, 가중치 안 받음)
 ```
 
 `data/`(시범 덤프)·체크포인트는 git에 넣지 않는다. 덤프는 seed로 다시 만든다.
 
 ## 단계
 
-1. (완료) 저장소·재측정·시범 덤프·관측→글·Laya 설치와 형식 확인 — `reports/stage1.md`
-2. 최소 미세조정과 걸음 단위 정확도(평가 seed)
+1. (완료) 저장소·재측정·시범 덤프·관측→글·Laya 설치와 형식 확인 — `reports/stage1.md` (GoToObj)
+2. a (완료) GoToLocal로 덤프·통계·표본·dry_run — `reports/stage2a.md`
+   b 최소 미세조정과 걸음 단위 정확도(평가 seed), 순서 뒤집기 민감도
 3. 닫힌 루프: 평가 seed 300판 성공률, 비교 대상 셋과 나란히, 대표 실패 사례
 4. 한 걸음씩 멈추고 키보드로 모델 선택을 확인·교정하는 루프(교정은 기록만)
 5. 실패하면 작은 비교 하나씩: 입력 정보, 글 표현, 데이터 양, 모델
