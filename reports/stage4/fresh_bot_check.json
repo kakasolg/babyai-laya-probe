@@ -1,0 +1,95 @@
+{
+ "seeds": [
+  10014,
+  10016,
+  10122,
+  10149,
+  10220,
+  10015,
+  10017,
+  10023,
+  10024,
+  10164,
+  10026,
+  10242
+ ],
+ "steps_checked": 768,
+ "bot_finishes": 676,
+ "rate": 0.8802,
+ "bot_finishes_full_budget": 768,
+ "rate_full_budget": 1.0,
+ "per_seed": {
+  "10014": {
+   "steps": 64,
+   "bot_finishes": 58,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  },
+  "10016": {
+   "steps": 64,
+   "bot_finishes": 55,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  },
+  "10122": {
+   "steps": 64,
+   "bot_finishes": 58,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  },
+  "10149": {
+   "steps": 64,
+   "bot_finishes": 55,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  },
+  "10220": {
+   "steps": 64,
+   "bot_finishes": 64,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  },
+  "10015": {
+   "steps": 64,
+   "bot_finishes": 52,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  },
+  "10017": {
+   "steps": 64,
+   "bot_finishes": 52,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  },
+  "10023": {
+   "steps": 64,
+   "bot_finishes": 53,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  },
+  "10024": {
+   "steps": 64,
+   "bot_finishes": 61,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  },
+  "10164": {
+   "steps": 64,
+   "bot_finishes": 58,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  },
+  "10026": {
+   "steps": 64,
+   "bot_finishes": 53,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  },
+  "10242": {
+   "steps": 64,
+   "bot_finishes": 57,
+   "bot_finishes_full_budget": 64,
+   "model_result": "timeout"
+  }
+ }
+}

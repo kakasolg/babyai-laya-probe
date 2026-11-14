@@ -80,7 +80,54 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
    $PY -m probe.closed_loop --policy random|forward|bot --name <tag>
    $PY -m probe.closed_loop --policy model --model ~/babyai-laya-ft/gotolocal-s0 [--mask] --name <tag>
    ```
-4. 한 걸음씩 멈추고 키보드로 모델 선택을 확인·교정하는 루프(교정은 기록만)
+4. (만듦, MoKa가 돌림) 한 걸음씩 멈추고 키보드로 모델 선택을 확인·교정하는 루프(교정은 기록만) — `reports/stage4.md`, 아래 "교정 루프"
 5. 실패하면 작은 비교 하나씩: 입력 정보, 글 표현, 데이터 양, 모델
 
 각 단계는 MoKa 확인 뒤 하나씩 진행한다.
+
+## 교정 루프 (4단계) — MoKa가 칠 명령
+
+**WSL Ubuntu 터미널**에서 친다(venv를 따로 켤 필요 없이 venv의 python을 바로 부름):
+
+```bash
+cd /mnt/d/dev/kotlin-prj/baby-ai-laya-probe && HF_HUB_OFFLINE=1 ~/babyai-laya-venv/bin/python -m probe.correct_loop
+```
+
+Windows PowerShell에서 친다면 같은 줄을 `wsl -d Ubuntu -- bash -lc '…'` 안에 넣는다.
+기본은 세 모델이 모두 실패한 12판(A → B → C 순), seed 0 모델, 막힘 탈출 장치 꺼짐.
+`--seeds 10014,10017`로 다른 판, `--window`로 MiniGrid 창도 같이(WSLg에서 열림 확인, 글자 화면만으로도 끝까지 쓸 수 있음).
+기록은 `data/correct_log.jsonl`(git 밖)에 걸음마다 한 줄 이어 붙는다. 평가용 20000~20299는 거부.
+
+| 입력 (치고 Enter) | 하는 일 |
+|---|---|
+| (그냥 Enter) | 모델 선택대로 한 걸음 |
+| `a` / `d` / `w` | 왼쪽 돌기 / 오른쪽 돌기 / 전진으로 바꿔 한 걸음 (= 교정, 기록만) |
+| `b` | 봇이 고를 행동 보기 (기본은 숨김) |
+| `m` → `1`~`4` | 이 걸음에 메모: 1 입력에 답이 있는데 모델이 틀림 · 2 입력에 정보가 없음 · 3 글이 헷갈리게 적힘 · 4 기타(한 줄 글) |
+| `r` | 이 판 끝까지 모델대로, 멈추지 않음 |
+| `n` / `q` | 다음 판 / 그만두기 |
+
+화면 예시 (seed 10014, 걸음 6 — 벽에 막혔는데 모델이 전진을 고르는 곳):
+
+```
+걸음 6 / 최대 64   지시문: go to the purple ball
+########################
+### .  .  .  .  Ex . ###
+### .  .  Pk Ex .  . ###
+### .  Yo .  .  .  . ###
+### .  Rx .  .  .  . ###
+### .  .  .  Yx .  . ###
+### v :Yx:Po :  .  . ###
+########################
+범례: R/G/B/P/Y/E = 빨/초/파/보/노/회색, o 공 · k 열쇠 · x 상자, ':' = 모델 시야(7×7) 안, '.' = 시야 밖
+사람은 방 전체를 보지만 모델은 아래 글만 본다:
+  mission: go to the purple ball
+  facing: south
+  yellow box: 1 left
+  purple ball: 2 left
+  walls: 1 ahead, 1 right
+모델 점수: turn left 0.19 · turn right 0.18 · forward 0.63   → 모델 선택: forward
+[Enter 모델대로 | a 왼 d 오 w 전진 | b 봇 | m 메모 | r 끝까지 | n 다음 판 | q 그만] >
+```
+
+`v`는 에이전트(남쪽을 봄). 남쪽을 보면 왼쪽이 동쪽이라 `yellow box: 1 left`가 바로 오른편 칸에 그려진다.
