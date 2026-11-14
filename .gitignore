@@ -6,3 +6,4 @@ checkpoints/
 venv/
 __pycache__/
 *.pyc
+.godot/
