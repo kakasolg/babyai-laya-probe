@@ -16,6 +16,7 @@ extends "res://drive/drive_game.gd"
 ##                             --shot=file.png --scene=stuck|solved [--room=n]   one screenshot
 
 const PACK := "res://data/puzzle_rooms_l1.json"
+const KEEP := "res://data/puzzle_keep_l1.json"      # which pack rooms are played (written by --puzzlefilter)
 const LIMIT := 64
 const LIT_COLORS := [Color("#ffc94d"), Color("#3ddc84"), Color("#5b8cff")]   # levels 1, 2, 3
 const LIT_AT := [0.25, 1.25, 2.25]                                          # seconds after the result when each shows
@@ -48,6 +49,11 @@ func _ready() -> void:
 		_puzzlecheck(int(args["puzzlecheck"]) if args["puzzlecheck"] != "1" else 0)
 		get_tree().quit()
 		return
+	if args.has("puzzlefilter"):
+		_puzzlefilter(int(args["puzzlefilter"]))
+		get_tree().quit()
+		return
+	_apply_keep()
 	_load_progress()
 	_build_buttons()
 	shot_path = args.get("shot", "")
@@ -513,6 +519,60 @@ func _puzzlecheck(n_lit: int) -> void:
 	if FileAccess.file_exists(DriveLog.path):
 		DirAccess.remove_absolute(ProjectSettings.globalize_path(DriveLog.path))
 	DriveLog.path = keep
+
+
+## Only the rooms listed in KEEP are played (pack order kept). No KEEP file = all rooms.
+func _apply_keep() -> void:
+	if not FileAccess.file_exists(KEEP):
+		return
+	var k = JSON.parse_string(FileAccess.get_file_as_string(KEEP))
+	if not (k is Dictionary):
+		return
+	var ids := {}
+	for s in k["keep"]:
+		ids[s] = true
+	pack = pack.filter(func(e): return ids.has(e["seed"]))
+
+
+## MoKa 11-15: stopping with the target only a few moves away makes people angry, not curious. Replays each room's
+## stored answer with the game's rule code and keeps a room only when, at every stop, the target is more than
+## `near` moves away (fewest turn/forward moves until it is directly ahead). Writes KEEP.
+func _puzzlefilter(near: int) -> void:
+	saving = false
+	var keep_path := DriveLog.path
+	DriveLog.path = "user://puzzlefilter_log.jsonl"
+	var keep: Array = []
+	var dropped: Array = []
+	for i in pack.size():
+		pidx = i
+		_new_room()
+		var sol: Array = room["nudge_solution"]
+		var k := 0
+		var closest := 999
+		while phase == "drive":
+			if state == "auto":
+				_auto_tick()
+			elif k < sol.size():
+				var e := room.duplicate()
+				e["start"] = {"x": pos.x, "y": pos.y, "dir": dir}
+				closest = mini(closest, Rooms.par(e))
+				_nudge(int(sol[k]))
+				k += 1
+			else:
+				break
+		if closest > near:
+			keep.append(room["seed"])
+		else:
+			dropped.append(room["seed"])
+	var out := {"what": "puzzle rooms played: at every stop on the stored answer the target is more than `near` moves away",
+		"near": near, "pack": PACK, "kept": keep.size(), "dropped": dropped.size(), "keep": keep}
+	var f := FileAccess.open(ProjectSettings.globalize_path(KEEP), FileAccess.WRITE)
+	f.store_string(JSON.stringify(out))
+	f.close()
+	print("puzzlefilter: near %d -> kept %d, dropped %d of %d" % [near, keep.size(), dropped.size(), pack.size()])
+	if FileAccess.file_exists(DriveLog.path):
+		DirAccess.remove_absolute(ProjectSettings.globalize_path(DriveLog.path))
+	DriveLog.path = keep_path
 
 
 ## From (p, h) with a clean record, does this autopilot get there alone under rules 1, 2, 5, 6?

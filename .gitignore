@@ -17,3 +17,4 @@ __pycache__/
 .godot/
 # the puzzle rooms for the drive screen — see godot/drive/PUZZLE.md
 !godot/data/puzzle_rooms_l1.json
+!godot/data/puzzle_keep_l1.json
