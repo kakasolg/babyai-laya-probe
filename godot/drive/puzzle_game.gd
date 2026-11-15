@@ -33,6 +33,8 @@ var result := ""
 var lit_t := 0.0
 var lit_share := [0.0, 0.0, 0.0]
 var move_rects := {}         # action -> Rect2 of its marker while stopped
+var sparks: Array = []       # rising sparks over the matching objects
+var spark_t := 0.0
 var saving := true           # off for checks and screenshots
 
 
@@ -227,6 +229,20 @@ func _process(delta: float) -> void:
 	super._process(delta)
 	if phase == "result":
 		lit_t += delta
+	# a slow drift of sparks above every matching object, so the goal is seen on the board, not only in the badge
+	spark_t += delta
+	while spark_t > 0.09 and not room.is_empty():
+		spark_t -= 0.09
+		var ps: Array = room["target"]["positions"]
+		var t: Array = ps[rng.randi() % ps.size()]
+		var c := _px(Vector2(int(t[0]), int(t[1])))
+		sparks.append({"p": c + Vector2(rng.randf_range(-0.3, 0.3) * CELL, rng.randf_range(0.0, 0.25) * CELL),
+			"v": Vector2(rng.randf_range(-6, 6), -rng.randf_range(18, 34)), "life": rng.randf_range(1.0, 1.8),
+			"max": 1.8, "r": rng.randf_range(1.5, 3.0)})
+	for s in sparks:
+		s["p"] += s["v"] * delta
+		s["life"] -= delta
+	sparks = sparks.filter(func(s): return s["life"] > 0.0)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -273,12 +289,28 @@ func _result_go() -> void:
 
 func _draw_room() -> void:
 	super._draw_room()
+	_draw_goal()
 	if phase == "result" and result == "success":
 		_draw_lit()
 		_draw_car()
 	move_rects.clear()
 	if phase == "drive" and state == "stuck" and glide_t >= 1.0:
 		_draw_moves()
+
+
+## Every matching object: a tinted floor, a slow breathing ring in its colour, and the sparks from _process.
+func _draw_goal() -> void:
+	var col: Color = COLORS.get(room["target"]["color"], Color.WHITE)
+	var pulse := 0.5 + 0.5 * sin(clock * 3.0)
+	for t in room["target"]["positions"]:
+		var cell := Vector2(int(t[0]), int(t[1]))
+		var c := _px(cell)
+		draw_rect(Rect2(BOARD + cell * CELL, Vector2(CELL, CELL)).grow(-1.5), Color(col, 0.10 + 0.06 * pulse))
+		_glow(c, CELL * 0.3, col, 0.6 + 0.6 * pulse)
+		draw_arc(c, CELL * (0.40 + 0.05 * pulse), 0, TAU, 40, Color(col, 0.35 + 0.4 * pulse), 2.5, true)
+	for s in sparks:
+		var a: float = clampf(s["life"] / 0.6, 0.0, 1.0) * clampf((float(s["max"]) - s["life"]) / 0.3, 0.0, 1.0)
+		draw_circle(s["p"], s["r"], Color(col.lightened(0.3), 0.8 * a))
 
 
 ## Bit h of lit[level][(y-1)*6 + (x-1)]: from (x, y) facing h that level's autopilot gets there alone.
@@ -333,47 +365,54 @@ func _draw_moves() -> void:
 
 func _draw_hud() -> void:
 	var font := get_theme_default_font()
-	var badge := Rect2(32, 22, 76, 76)
-	_round(badge, Color("#161b25"), Color("#2c3546"))
-	_draw_object(room["target"]["type"], COLORS.get(room["target"]["color"], Color.WHITE), badge.get_center(), 76)
+	# the goal, top centre: the first thing the eye meets, breathing in its own colour like the objects on the board
+	var gcol: Color = COLORS.get(room["target"]["color"], Color.WHITE)
+	var pulse := 0.5 + 0.5 * sin(clock * 3.0)
+	var card := Rect2(W / 2.0 - 46, 8, 92, 92)
+	_glow(card.get_center(), 34, gcol, 0.7 + 0.5 * pulse)
+	_round(card, Color("#141a25"), Color(gcol, 0.5 + 0.4 * pulse), 16)
+	_draw_object(room["target"]["type"], gcol, card.get_center(), 88)
 	var n: int = room["target"]["positions"].size()
 	if n > 1:
 		for i in n:
-			draw_circle(Vector2(badge.position.x + 10 + i * 10, badge.end.y + 10), 3.0, C_MUTED)
-	# which puzzle, and the most stars it has had
-	draw_string(font, Vector2(150, 54), "%d" % (pidx + 1), HORIZONTAL_ALIGNMENT_LEFT, -1, 30, C_TEXT)
-	draw_string(font, Vector2(150, 80), "/ %d" % pack.size(), HORIZONTAL_ALIGNMENT_LEFT, -1, 15, C_MUTED)
-	var had := int(best.get(String(room["seed"]), 0))
-	for i in 3:
-		_star(Vector2(160 + i * 22, 104), 8, C_STUCK if i < had else Color("#2c3546"))
-	# the indicator (top centre)
-	var ic := Vector2(W / 2.0, 56)
-	if phase == "result" or phase == "win" or phase == "fail":
-		for i in 3:
-			_star(ic + Vector2((i - 1) * 54, 0), 22, C_STUCK if i < stars else Color("#2c3546"), true)
-	else:
+			draw_circle(Vector2(card.get_center().x - (n - 1) * 6.0 + i * 12.0, card.end.y - 9), 3.0, Color(gcol, 0.8))
+	# left of the goal: who is driving (or, after the room, nothing)
+	var ic := Vector2(W / 2.0 - 104, 54)
+	if phase == "drive":
 		var col := _state_color()
 		var k := 1.0
 		if state == "stuck":
 			k = 0.6 + 0.4 * (0.5 + 0.5 * sin(clock * 7.0))
-		_glow(ic, 24, col, 1.4 * k)
-		draw_circle(ic, 24, Color(col, 0.18 * k))
-		draw_arc(ic, 24, 0, TAU, 40, Color(col, k), 3.0)
+		_glow(ic, 22, col, 1.4 * k)
+		draw_circle(ic, 22, Color(col, 0.18 * k))
+		draw_arc(ic, 22, 0, TAU, 40, Color(col, k), 3.0)
 		if state == "auto":
 			_chevrons(ic, col)
 		else:
-			_wheel(ic, 13, col)
-	# the driver's moves so far against the fewest: one slot per move of nudge_par, filled as they are used
+			_wheel(ic, 12, col)
+	# right of the goal: the driver's moves against the fewest (one slot per move of nudge_par), then the stars
 	var par := int(room["nudge_par"])
 	var slots := maxi(par, nudges)
-	for i in slots:
-		var c := Vector2(W / 2.0 - (slots - 1) * 11.0 + i * 22.0, 100)
-		if i < nudges:
-			draw_circle(c, 6.0, C_MANUAL if i < par else C_STUCK)
-		else:
-			draw_arc(c, 6.0, 0, TAU, 16, Color(C_MANUAL, 0.45), 1.5)
-	# turns used of the 64
-	draw_string(font, Vector2(150, 140), "%d / %d" % [turns, LIMIT], HORIZONTAL_ALIGNMENT_LEFT, -1, 15, C_MUTED)
+	var x0 := W / 2.0 + 82
+	if phase == "result" or phase == "win" or phase == "fail":
+		for i in 3:
+			_star(Vector2(x0 + 10 + i * 46, 46), 19, C_STUCK if i < stars else Color("#2c3546"), true)
+		for i in slots:
+			draw_circle(Vector2(x0 + 2 + i * 16, 84), 4.5, C_MANUAL if i < par else C_STUCK)
+	else:
+		for i in slots:
+			var c := Vector2(x0 + i * 24, 54)
+			if i < nudges:
+				draw_circle(c, 7.0, C_MANUAL if i < par else C_STUCK)
+			else:
+				draw_arc(c, 7.0, 0, TAU, 16, Color(C_MANUAL, 0.5), 1.5)
+	# top left: which puzzle, the most stars it has had, turns used of the 64
+	draw_string(font, Vector2(36, 54), "%d" % (pidx + 1), HORIZONTAL_ALIGNMENT_LEFT, -1, 30, C_TEXT)
+	draw_string(font, Vector2(36, 80), "/ %d" % pack.size(), HORIZONTAL_ALIGNMENT_LEFT, -1, 15, C_MUTED)
+	var had := int(best.get(String(room["seed"]), 0))
+	for i in 3:
+		_star(Vector2(44 + i * 22, 104), 8, C_STUCK if i < had else Color("#2c3546"))
+	draw_string(font, Vector2(36, 140), "%d / %d" % [turns, LIMIT], HORIZONTAL_ALIGNMENT_LEFT, -1, 15, C_MUTED)
 	# the lit share per level, shown as each level's light comes on
 	if phase == "result" and result == "success":
 		for lv in 3:
