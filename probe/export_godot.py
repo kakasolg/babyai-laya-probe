@@ -46,10 +46,25 @@ def room(u) -> dict:
             "max_steps": u.max_steps}
 
 
+def public_model_id(path: str) -> str:
+    """Checkpoint identifier for the published recording: the last two path parts, never a local absolute path.
+    ~/babyai-laya-ft/gotolocal-s0 -> babyai-laya-ft/gotolocal-s0"""
+    parts = [p for p in os.path.normpath(os.path.expanduser(path)).replace("\\", "/").split("/") if p not in ("", ".", "~")]
+    return "/".join(parts[-2:])
+
+
+def recording_json(model_id: str, episodes: list) -> str:
+    """The exact text written to the recording file (godot/data/episodes.json is published with the web build)."""
+    if os.path.isabs(model_id) or model_id.startswith("~") or ":" in model_id:
+        raise ValueError(f"model id must not be a local path: {model_id!r}")
+    return json.dumps({"model": model_id, "env": ENV_ID, "episodes": episodes}, ensure_ascii=False)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--seeds", default=None, help="comma list; default = 10000-10029 + the 12 all-model failures")
     ap.add_argument("--model", default=os.path.expanduser("~/babyai-laya-ft/gotolocal-s0"))
+    ap.add_argument("--model-id", default=None, help="identifier written to the file (default: last two parts of --model)")
     ap.add_argument("--out", default="godot/data/episodes.json")
     a = ap.parse_args()
     seeds = [int(s) for s in a.seeds.split(",")] if a.seeds else sorted(set(range(10000, 10030)) | set(default_seeds()))
@@ -79,7 +94,7 @@ def main() -> None:
         print(seed, ep["result"], len(ep["steps"]), "bot", ep["bot_steps"], flush=True)
     out = pathlib.Path(a.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps({"model": a.model, "env": ENV_ID, "episodes": episodes}, ensure_ascii=False), encoding="utf-8")
+    out.write_text(recording_json(a.model_id or public_model_id(a.model), episodes), encoding="utf-8")
     print("wrote", out, len(episodes))
 
 

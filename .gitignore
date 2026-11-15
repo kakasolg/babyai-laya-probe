@@ -1,4 +1,9 @@
 data/
+# the cleaned public replay for the Godot game and its provenance note (everything else in data/ stays out)
+!godot/data/
+godot/data/*
+!godot/data/episodes.json
+!godot/data/PROVENANCE.md
 runs/
 checkpoints/
 *.safetensors

@@ -1,7 +1,7 @@
 extends Control
 ## BabyAI GoToLocal viewer/game.
 ## "Play": the player walks the same room with the same three moves the model has.
-## "Watch AI": replays of the fine-tuned Laya model (exported by probe/export_godot.py).
+## "Watch Laya": replays of the fine-tuned Laya model (exported by probe/export_godot.py).
 ## "Correct": the stage-4 correction loop, live. The model runs in WSL (probe/correct_server.py, started
 ##         by the game if needed); corrections and memos are logged there, never trained on.
 
@@ -14,12 +14,23 @@ const COLORS := {
 	"red": Color("#e5484d"), "green": Color("#46a758"), "blue": Color("#3e7bfa"),
 	"purple": Color("#9d5bd2"), "yellow": Color("#f5c518"), "grey": Color("#9aa0a6"),
 }
-const VIEW_TXT := ["text only (same as the AI)", "view only", "whole room"]
+const VIEW_TXT := ["text only (same as the AI)", "AI's view", "whole room"]
+# keyboard hint badges under the board; arrow keys are drawn, not typed (the web default font has no arrow glyphs)
+const ARROW_KEYS := {"up": Vector2(0, -1), "down": Vector2(0, 1), "left": Vector2(-1, 0), "right": Vector2(1, 0)}
+const HINT_Y_PLAY := 702.0
+const HINT_Y_WATCH := 748.0
+const VIEW_MENU := ["View: text only", "View: AI's view", "View: whole room"]   # same order as VIEW_TXT
+const UI_TEXT := Color("#d6dbe3")
+const UI_MUTED := Color("#8b95a5")
+const UI_KEY_BG := Color("#242830")
+const UI_KEY_BORDER := Color("#4A5260")
 
 var episodes: Array = []
 var ep_idx := 0
 var mode := "play"
 var web := OS.has_feature("web")
+const STUCK_SEED := 10014
+const STUCK_STEP := 6
 var view_mode := 1   # 0 text only, 1 view only, 2 whole room
 
 # play state
@@ -45,12 +56,17 @@ var info: RichTextLabel
 var text_box: RichTextLabel
 var text_title: Label
 var seed_label: Label
+var seed_sub: Label
+var fail_tag: Control
 var btn_play: Button
 var btn_watch: Button
-var btn_view: Button
+var btn_view: OptionButton
 var btn_run: Button
 var watch_bar: HBoxContainer
-var key_help: Label
+var key_hints: VBoxContainer
+var hint_ctx := ""
+var key_font: FontVariation
+var start_screen: Control
 # fix (correction loop) state
 const SERVER := "http://127.0.0.1:18799"
 const MEMO_TXT := {"1": "the answer is in the input but the model got it wrong", "2": "the input lacks the information", "3": "the text is confusing", "4": "other"}
@@ -107,6 +123,8 @@ func _ready() -> void:
 		_selftest()
 		get_tree().quit()
 		return
+	# the start screen only on a plain launch; scripted runs (seed/mode/shot/demo...) go straight in
+	start_screen.visible = args.is_empty()
 	_refresh()
 
 
@@ -171,28 +189,10 @@ func _build_ui() -> void:
 	var mono := SystemFont.new()
 	mono.font_names = PackedStringArray(["D2Coding", "Consolas", "Malgun Gothic"])
 
-	var top := HBoxContainer.new()
-	top.position = Vector2(16, 10)
-	top.add_theme_constant_override("separation", 8)
-	add_child(top)
-	btn_play = _btn(top, "Play", func(): _set_mode("play"))
-	btn_watch = _btn(top, "Watch AI", func(): _set_mode("watch"))
-	btn_fix = _btn(top, "Correct", func(): _set_mode("fix"))
-	btn_fix.visible = not web
-	top.add_child(VSeparator.new())
-	_btn(top, "< Prev room", func(): _change_ep(-1))
-	seed_label = Label.new()
-	seed_label.custom_minimum_size = Vector2(300, 0)
-	seed_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	top.add_child(seed_label)
-	_btn(top, "Next room >", func(): _change_ep(1))
-	_btn(top, "Next AI failure >", func(): _next_hard())
-	top.add_child(VSeparator.new())
-	btn_view = _btn(top, "", func(): _cycle_view())
-	_btn(top, "Restart", func(): _restart())
+	_build_top_bar()
 
 	var help := Label.new()
-	help.position = Vector2(16, 52)
+	help.position = Vector2(16, 58)
 	help.size = Vector2(1290, 50)
 	help.add_theme_color_override("font_color", Color("#b8c0cc"))
 	help.text = ("Rule: succeed by standing right in front of the object named in the mission, facing it, within 64 steps. Each step is one of 'turn left / turn right / forward'.\n"
@@ -205,24 +205,33 @@ func _build_ui() -> void:
 	board.draw.connect(_draw_board)
 	add_child(board)
 
-	key_help = Label.new()
-	key_help.position = Vector2(16, 700)
-	key_help.size = Vector2(580, 150)
-	key_help.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	key_help.add_theme_color_override("font_color", Color("#8b95a5"))
-	add_child(key_help)
+	key_font = FontVariation.new()
+	key_font.base_font = ThemeDB.fallback_font
+	key_font.variation_embolden = 0.7
+	key_hints = VBoxContainer.new()
+	key_hints.position = Vector2(16, HINT_Y_PLAY)
+	key_hints.add_theme_constant_override("separation", 10)
+	add_child(key_hints)
 
 	watch_bar = HBoxContainer.new()
 	watch_bar.position = Vector2(16, 700)
-	watch_bar.add_theme_constant_override("separation", 8)
+	watch_bar.add_theme_constant_override("separation", 6)
 	add_child(watch_bar)
-	_btn(watch_bar, "|< Start", func(): _watch_seek(0))
+	_btn(watch_bar, "Start", func(): _watch_seek(0))
 	_btn(watch_bar, "< Step", func(): _watch_seek(w_i - 1))
 	btn_run = _btn(watch_bar, "Play", func(): _toggle_run())
 	_btn(watch_bar, "Step >", func(): _watch_seek(w_i + 1))
 	_btn(watch_bar, "Slower", func(): w_delay = minf(w_delay * 1.5, 3.0); _refresh())
 	_btn(watch_bar, "Faster", func(): w_delay = maxf(w_delay / 1.5, 0.08); _refresh())
-	btn_demo = _btn(watch_bar, "", func(): _set_demo(not demo))
+	btn_demo = _btn(watch_bar, "Auto-watch", func(): _set_demo(not demo))
+	btn_demo.toggle_mode = true
+	for b in watch_bar.get_children():
+		_style_btn(b, UI_KEY_BG, UI_KEY_BORDER, UI_TEXT)
+		for st in ["normal", "hover", "pressed", "hover_pressed", "disabled"]:
+			var s: StyleBoxFlat = b.get_theme_stylebox(st)
+			s.content_margin_left = 8
+			s.content_margin_right = 8
+	_style_toggle_on(btn_demo)
 
 	fix_bar = VBoxContainer.new()
 	fix_bar.position = Vector2(16, 696)
@@ -290,6 +299,243 @@ func _build_ui() -> void:
 	text_box.add_theme_stylebox_override("normal", sb)
 	add_child(text_box)
 
+	_build_start_screen()
+
+
+## Top bar: mode switch | room navigator + failure tag | spacer | actions.
+func _build_top_bar() -> void:
+	var top := HBoxContainer.new()
+	top.position = Vector2(16, 8)
+	top.custom_minimum_size = Vector2(1288, 44)
+	top.add_theme_constant_override("separation", 12)
+	add_child(top)
+
+	# mode switch: one segment lit at a time (ButtonGroup), instead of greyed-out "disabled" buttons
+	var seg := PanelContainer.new()
+	var seg_sb := _box(Color("#0d0f13"), Color("#2d3440"), 8)
+	seg_sb.set_content_margin_all(3)
+	seg.add_theme_stylebox_override("panel", seg_sb)
+	top.add_child(seg)
+	var seg_row := HBoxContainer.new()
+	seg_row.add_theme_constant_override("separation", 2)
+	seg.add_child(seg_row)
+	var group := ButtonGroup.new()
+	btn_play = _mode_btn(seg_row, group, "Play yourself", "play")
+	btn_watch = _mode_btn(seg_row, group, "Watch Laya", "watch")
+	btn_fix = _mode_btn(seg_row, group, "Correct", "fix")
+	btn_fix.visible = not web
+
+	# room navigator: < Room n of N / seed > in one box
+	var nav := PanelContainer.new()
+	var nav_sb := _box(Color("#1b1f26"), Color("#2d3440"), 8)
+	nav_sb.set_content_margin_all(4)
+	nav.add_theme_stylebox_override("panel", nav_sb)
+	top.add_child(nav)
+	var nav_row := HBoxContainer.new()
+	nav_row.add_theme_constant_override("separation", 8)
+	nav.add_child(nav_row)
+	_chevron_btn(nav_row, -1, func(): _change_ep(-1))
+	var labels := VBoxContainer.new()
+	labels.add_theme_constant_override("separation", -2)
+	labels.custom_minimum_size = Vector2(150, 0)
+	nav_row.add_child(labels)
+	seed_label = Label.new()
+	seed_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	seed_label.add_theme_color_override("font_color", Color.WHITE)
+	labels.add_child(seed_label)
+	seed_sub = Label.new()
+	seed_sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	seed_sub.add_theme_color_override("font_color", UI_MUTED)
+	seed_sub.add_theme_font_size_override("font_size", 12)
+	labels.add_child(seed_sub)
+	_chevron_btn(nav_row, 1, func(): _change_ep(1))
+
+	fail_tag = PanelContainer.new()
+	var tag_sb := _box(Color("#3a1d1f"), Color("#3a1d1f"), 6)
+	tag_sb.content_margin_left = 8
+	tag_sb.content_margin_right = 8
+	fail_tag.add_theme_stylebox_override("panel", tag_sb)
+	var tag := Label.new()
+	tag.text = "All 3 AIs failed"
+	tag.add_theme_color_override("font_color", Color("#f09595"))
+	tag.add_theme_font_size_override("font_size", 14)
+	fail_tag.add_child(tag)
+	top.add_child(fail_tag)
+
+	var spacer := Control.new()
+	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	top.add_child(spacer)
+
+	_style_btn(_btn(top, "Next failure", func(): _next_hard()), UI_KEY_BG, UI_KEY_BORDER, UI_TEXT)
+	_style_btn(_btn(top, "Stuck example", func(): _stuck_example()), Color("#2a1a14"), Color("#b5532a"), Color("#f0997b"))
+	btn_view = OptionButton.new()
+	btn_view.focus_mode = Control.FOCUS_NONE
+	for t in VIEW_MENU:
+		btn_view.add_item(t)
+	btn_view.item_selected.connect(func(i: int): view_mode = i; _refresh())
+	_style_btn(btn_view, UI_KEY_BG, UI_KEY_BORDER, UI_TEXT)
+	top.add_child(btn_view)
+	_style_btn(_btn(top, "Restart", func(): _restart()), UI_KEY_BG, UI_KEY_BORDER, UI_TEXT)
+	if web:
+		# engine license and third-party notices, shipped next to index.html in the web package
+		var lic := LinkButton.new()
+		lic.text = "Licenses"
+		lic.focus_mode = Control.FOCUS_NONE
+		lic.underline = LinkButton.UNDERLINE_MODE_ALWAYS
+		lic.add_theme_color_override("font_color", UI_MUTED)
+		lic.add_theme_color_override("font_hover_color", UI_TEXT)
+		lic.pressed.connect(func(): OS.shell_open("licenses.txt"))
+		top.add_child(lic)
+	for c in top.get_children():
+		(c as Control).size_flags_vertical = Control.SIZE_SHRINK_CENTER
+
+
+func _box(bg: Color, border: Color, radius := 6, bw := 1) -> StyleBoxFlat:
+	var sb := StyleBoxFlat.new()
+	sb.bg_color = bg
+	sb.border_color = border
+	sb.set_border_width_all(bw)
+	sb.set_corner_radius_all(radius)
+	sb.content_margin_left = 10
+	sb.content_margin_right = 10
+	sb.content_margin_top = 5
+	sb.content_margin_bottom = 5
+	return sb
+
+
+## Bordered button with hover/pressed states, so it reads as clickable (the default theme looks like plain text here).
+func _style_btn(b: Button, bg: Color, border: Color, fg: Color) -> void:
+	b.add_theme_stylebox_override("normal", _box(bg, border))
+	b.add_theme_stylebox_override("hover", _box(bg.lightened(0.08), border.lightened(0.25)))
+	b.add_theme_stylebox_override("pressed", _box(bg.darkened(0.25), border))
+	b.add_theme_stylebox_override("hover_pressed", _box(bg.darkened(0.25), border))
+	b.add_theme_stylebox_override("disabled", _box(bg, border))
+	b.add_theme_color_override("font_color", fg)
+	b.add_theme_color_override("font_hover_color", fg.lightened(0.3))
+	b.add_theme_color_override("font_pressed_color", fg)
+	b.add_theme_color_override("font_hover_pressed_color", fg)
+
+
+## A toggle that is on shows the same green as the lit mode segment.
+func _style_toggle_on(b: Button) -> void:
+	var on := Color("#2f7d4f")
+	for st in ["pressed", "hover_pressed"]:
+		var s := _box(on, on.lightened(0.2))
+		s.content_margin_left = 8
+		s.content_margin_right = 8
+		b.add_theme_stylebox_override(st, s)
+	b.add_theme_color_override("font_pressed_color", Color.WHITE)
+	b.add_theme_color_override("font_hover_pressed_color", Color.WHITE)
+
+
+func _mode_btn(parent: Node, group: ButtonGroup, label: String, m: String) -> Button:
+	var b := _btn(parent, label, func():
+		if mode != m:
+			_set_mode(m))
+	b.toggle_mode = true
+	b.button_group = group
+	var on := Color("#2f7d4f")
+	b.add_theme_stylebox_override("normal", _box(Color(0, 0, 0, 0), Color(0, 0, 0, 0), 6, 0))
+	b.add_theme_stylebox_override("hover", _box(Color("#1b1f26"), Color(0, 0, 0, 0), 6, 0))
+	b.add_theme_stylebox_override("pressed", _box(on, on, 6, 0))
+	b.add_theme_stylebox_override("hover_pressed", _box(on.lightened(0.08), on, 6, 0))
+	b.add_theme_color_override("font_color", Color("#9aa3b0"))
+	b.add_theme_color_override("font_hover_color", UI_TEXT)
+	b.add_theme_color_override("font_pressed_color", Color.WHITE)
+	b.add_theme_color_override("font_hover_pressed_color", Color.WHITE)
+	return b
+
+
+## Square keycap-style button with a drawn chevron (the web default font has no arrow glyphs).
+func _chevron_btn(parent: Node, dir: int, cb: Callable) -> Button:
+	var b := _btn(parent, "", cb)
+	b.custom_minimum_size = Vector2(30, 30)
+	b.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	_style_btn(b, UI_KEY_BG, UI_KEY_BORDER, UI_TEXT)
+	b.draw.connect(func():
+		var m := b.size / 2.0
+		var dx := 4.0 * dir
+		b.draw_polyline(PackedVector2Array([m + Vector2(-dx, -6), m + Vector2(dx, 0), m + Vector2(-dx, 6)]), Color.WHITE, 2.0, true))
+	return b
+
+
+func _sync_top_bar() -> void:
+	btn_play.set_pressed_no_signal(mode == "play")
+	btn_watch.set_pressed_no_signal(mode == "watch")
+	btn_fix.set_pressed_no_signal(mode == "fix")
+	btn_view.select(view_mode)
+	btn_view.set_item_disabled(0, mode != "play")   # watch/correct show the room, never text only
+
+
+func _build_start_screen() -> void:
+	start_screen = ColorRect.new()
+	(start_screen as ColorRect).color = Color(0.06, 0.07, 0.09, 0.96)
+	start_screen.position = Vector2.ZERO
+	start_screen.size = Vector2(1320, 860)
+	start_screen.mouse_filter = Control.MOUSE_FILTER_STOP
+	start_screen.visible = false
+	add_child(start_screen)
+
+	var col := VBoxContainer.new()
+	col.position = Vector2(160, 170)
+	col.size = Vector2(1000, 520)
+	col.alignment = BoxContainer.ALIGNMENT_CENTER
+	col.add_theme_constant_override("separation", 22)
+	start_screen.add_child(col)
+
+	var title := Label.new()
+	title.text = "BabyAI Laya: an AI in the room"
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.add_theme_font_size_override("font_size", 40)
+	col.add_child(title)
+
+	var sub := Label.new()
+	sub.text = "Reach the object named in the mission with three moves: turn left, turn right, forward."
+	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sub.add_theme_color_override("font_color", Color("#b8c0cc"))
+	sub.add_theme_font_size_override("font_size", 20)
+	col.add_child(sub)
+
+	var row := HBoxContainer.new()
+	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	row.add_theme_constant_override("separation", 40)
+	col.add_child(row)
+	_start_choice(row, "Try it yourself", "Walk the room with the keyboard.", Color("#2f7d4f"),
+		func(): _leave_start(); _set_mode("play"))
+	_start_choice(row, "See Laya get stuck", "Replay a recorded failure: it keeps\nwalking forward into a wall.", Color("#b5532a"),
+		func(): _leave_start(); _stuck_example())
+
+	var note := Label.new()
+	note.text = "Laya's walks are recorded playback, not live inference. You can switch at any time with the buttons at the top."
+	note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	note.add_theme_color_override("font_color", Color("#8b95a5"))
+	note.add_theme_font_size_override("font_size", 16)
+	col.add_child(note)
+
+
+func _start_choice(parent: Node, label: String, desc: String, bg: Color, cb: Callable) -> void:
+	var box := VBoxContainer.new()
+	box.add_theme_constant_override("separation", 10)
+	parent.add_child(box)
+	var b := _btn(box, label, cb)
+	b.custom_minimum_size = Vector2(400, 120)
+	b.add_theme_font_size_override("font_size", 30)
+	for state in ["normal", "hover", "pressed"]:
+		var st := StyleBoxFlat.new()
+		st.bg_color = bg.lightened(0.15) if state == "hover" else (bg.darkened(0.15) if state == "pressed" else bg)
+		st.set_corner_radius_all(10)
+		b.add_theme_stylebox_override(state, st)
+	var d := Label.new()
+	d.text = desc
+	d.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	d.add_theme_color_override("font_color", Color("#b8c0cc"))
+	d.add_theme_font_size_override("font_size", 18)
+	box.add_child(d)
+
+
+func _leave_start() -> void:
+	start_screen.visible = false
+
 
 # ---------------------------------------------------------------- state
 
@@ -340,6 +586,16 @@ func _change_ep(d: int) -> void:
 		return
 	ep_idx = posmod(ep_idx + d, episodes.size())
 	_restart()
+
+
+## Seed 10014, step 6: the recorded AI keeps pushing forward into a wall (stage 3/4 reports).
+func _stuck_example() -> void:
+	for i in episodes.size():
+		if int(episodes[i]["seed"]) == STUCK_SEED:
+			ep_idx = i
+			_set_mode("watch")
+			_watch_seek(STUCK_STEP)
+			return
 
 
 func _next_hard() -> void:
@@ -490,6 +746,9 @@ func _input(event: InputEvent) -> void:
 	if not (event is InputEventKey and event.pressed):
 		return
 	var k: int = event.keycode
+	if start_screen.visible:
+		get_viewport().set_input_as_handled()
+		return
 	if mode == "fix" and _fix_key(k, event.echo):
 		get_viewport().set_input_as_handled()
 		return
@@ -561,7 +820,6 @@ func _process(delta: float) -> void:
 # ---------------------------------------------------------------- refresh text
 
 func _refresh() -> void:
-	btn_fix.disabled = mode == "fix"
 	fix_bar.visible = mode == "fix"
 	if mode == "fix":
 		_refresh_fix()
@@ -570,26 +828,24 @@ func _refresh() -> void:
 		mission_label.text = "godot/data/episodes.json is missing: run the export command from the README first"
 		return
 	var e := _ep()
-	btn_play.disabled = mode == "play"
-	btn_view.text = "View: " + VIEW_TXT[view_mode]
-	btn_watch.disabled = mode == "watch"
-	btn_view.text = "View: " + VIEW_TXT[view_mode]
-	seed_label.text = "Room %d / %d · seed %d%s" % [ep_idx + 1, episodes.size(), int(e["seed"]),
-		"  * all three AIs failed this room" if e["all_models_failed"] else ""]
+	_sync_top_bar()
+	seed_label.text = "Room %d of %d" % [ep_idx + 1, episodes.size()]
+	seed_sub.text = "seed %d" % int(e["seed"])
+	fail_tag.visible = bool(e["all_models_failed"])
 	mission_label.text = "Mission: %s" % e["mission"]
 	var ag := _agent()
 	var bot_txt: String = ("%d steps" % int(e["bot_steps"])) if e["bot_steps"] != null else "failed"
 	var ai_txt: String = ("[color=#46a758]success, %d steps[/color]" % e["steps"].size()) if e["result"] == "success" \
 		else "[color=#e5484d]failed: used all 64 steps[/color]"
-	key_help.visible = mode == "play"
 	watch_bar.visible = mode == "watch"
+	_refresh_hints()
 	btn_run.text = "Pause" if w_playing else "Play"
-	btn_demo.text = "Stop auto-watch" if demo else "Auto-watch rooms"
+	btn_demo.set_pressed_no_signal(demo)
 
 	if mode == "play":
 		var s := "[b]Step %d / %d[/b]   facing: %s\n" % [p_steps, int(e["max_steps"]), DIR_NAME[ag[1]]]
 		if p_result == "success":
-			s += "[color=#46a758][b]Success![/b][/color] you %d steps · AI %s · bot (the teacher) %s\n" % [p_steps, ai_txt, bot_txt]
+			s += "[color=#46a758][b]Success![/b][/color] you %d steps · AI %s · expert bot %s\n" % [p_steps, ai_txt, bot_txt]
 			s += "Press Enter to see how the AI walked this room."
 		elif p_result == "timeout":
 			s += "[color=#e5484d][b]Failed: all 64 steps used.[/b][/color] AI %s · bot %s\nEnter: see how the AI did" % [ai_txt, bot_txt]
@@ -600,28 +856,130 @@ func _refresh() -> void:
 			elif view_mode == 1:
 				s += "Dark cells are outside the AI's view too. But you remember the path you took; the AI does not."
 		info.text = s
-		key_help.text = ("Arrow keys are screen-based: one cell if already facing that way, else turn toward it (one press = one step)\n"
-			+ "A turn left · D turn right · W forward (relative to the triangle)\n"
-			+ "R restart · V change view · [ ] change room · Tab watch AI")
 		text_title.text = "What the AI would get now (mission + the 7×7 view as text):"
 		text_box.text = "mission: %s\n%s" % [e["mission"], _obs_text(ag[0], ag[1])]
 	else:
 		var steps: Array = e["steps"]
-		var s2 := "[b]Step %d / %d[/b]   AI result in this room: %s · bot %s\n" % [w_i, steps.size(), ai_txt, bot_txt]
+		var s2 := "[color=#f5c518][b]Recorded Laya playback—not live inference.[/b][/color]\n"
+		s2 += "[b]Step %d / %d[/b]   AI result in this room: %s · expert bot %s\n" % [w_i, steps.size(), ai_txt, bot_txt]
 		if w_i < steps.size():
 			var st: Dictionary = steps[w_i]
 			var same: bool = st["bot"] == st["choice"]
 			s2 += "AI choice: [b]%s[/b] (%d%%)\n" % [ACT_TXT.get(st["choice"], st["choice"]), roundi(float(st["probs"][st["choice"]]) * 100)]
-			s2 += ("Bot agrees: [color=#46a758]%s[/color]" if same else "[color=#f5a524]The bot would: %s[/color]  <- they split here") % ACT_TXT.get(st["bot"], st["bot"])
+			s2 += ("Expert bot also: [color=#46a758]%s[/color]" if same else "[color=#f5a524]Expert bot (one valid route): %s[/color]  <- they differ here") % ACT_TXT.get(st["bot"], st["bot"])
 			text_box.text = st["input"]
 		else:
 			s2 += "[b]End.[/b] " + ("Reached the target." if e["result"] == "success" else "Did not get there in 64 steps. Yellow numbers count visits to the same cell: signs of going in circles.")
 			text_box.text = ""
-		s2 += "\nSpeed %.1f s/step · Space play/pause · Left/Right step · V view · Tab play yourself" % w_delay
+		s2 += "\nSpeed %.1f s/step" % w_delay
 		info.text = s2
 		text_title.text = "Text the AI got at this step (it chose from this alone):"
 	board.queue_redraw()
 	bars.queue_redraw()
+
+
+# ---------------------------------------------------------------- keyboard hints
+
+## Rebuilds the keycap rows only when the context changes (mode, or a finished play room).
+func _refresh_hints() -> void:
+	key_hints.visible = mode == "play" or mode == "watch"
+	key_hints.position = Vector2(16, HINT_Y_WATCH if mode == "watch" else HINT_Y_PLAY)
+	var ctx := mode + ":" + (p_result if mode == "play" else "")
+	if ctx == hint_ctx:
+		return
+	hint_ctx = ctx
+	for c in key_hints.get_children():
+		key_hints.remove_child(c)
+		c.queue_free()
+	if not key_hints.visible:
+		return
+	var r1 := _hint_row()
+	var r2 := _hint_row()
+	if mode == "play":
+		_hint(r1, ["up", "down", "left", "right"], "Move / Turn (screen)")
+		_hint_sep(r1)
+		_hint(r1, ["W"], "Forward")
+		_hint(r1, ["A"], "Left")
+		_hint(r1, ["D"], "Right")
+		_hint(r2, ["V"], "View mode")
+		_hint_sep(r2)
+		_hint(r2, ["R"], "Restart")
+		_hint_sep(r2)
+		_hint(r2, ["Tab"], "Watch Laya")
+		if p_result != "":
+			_hint(_hint_row(), ["Enter"], "Watch Laya's replay", COLORS["green"] if p_result == "success" else Color(0, 0, 0, 0))
+	else:
+		_hint(r1, ["Space"], "Play / Pause")
+		_hint_sep(r1)
+		_hint(r1, ["left", "right"], "Step back / forward")
+		_hint(r2, ["V"], "View mode")
+		_hint_sep(r2)
+		_hint(r2, ["Tab"], "Play yourself")
+
+
+func _hint_row() -> HBoxContainer:
+	var r := HBoxContainer.new()
+	r.add_theme_constant_override("separation", 12)
+	key_hints.add_child(r)
+	return r
+
+
+func _hint_sep(row: HBoxContainer) -> void:
+	var s := VSeparator.new()
+	s.custom_minimum_size = Vector2(0, 26)
+	row.add_child(s)
+
+
+## Keycaps followed by a short label; a visible `accent` turns the whole hint into a highlighted badge.
+func _hint(row: HBoxContainer, keys: Array, label: String, accent := Color(0, 0, 0, 0)) -> void:
+	var on := accent.a > 0.0
+	var h := HBoxContainer.new()
+	h.add_theme_constant_override("separation", 4)
+	row.add_child(h)
+	for k in keys:
+		h.add_child(_keycap(k, accent))
+	var gap := Control.new()
+	gap.custom_minimum_size = Vector2(4, 0)
+	h.add_child(gap)
+	var l := Label.new()
+	l.text = label
+	l.add_theme_font_size_override("font_size", 17)
+	l.add_theme_color_override("font_color", accent if on else Color("#B0B8C4"))
+	if on:
+		l.add_theme_font_override("font", key_font)
+	h.add_child(l)
+
+
+func _keycap(key: String, accent: Color) -> PanelContainer:
+	var on := accent.a > 0.0
+	var p := PanelContainer.new()
+	var sb := StyleBoxFlat.new()
+	sb.bg_color = Color("#1d3326") if on else Color("#242830")
+	sb.border_color = accent if on else Color("#4A5260")
+	sb.set_border_width_all(2 if on else 1)
+	sb.set_corner_radius_all(5)
+	sb.content_margin_left = 6
+	sb.content_margin_right = 6
+	sb.content_margin_top = 2
+	sb.content_margin_bottom = 2
+	p.add_theme_stylebox_override("panel", sb)
+	if ARROW_KEYS.has(key):
+		var c := Control.new()
+		c.custom_minimum_size = Vector2(10, 24)
+		var d: Vector2 = ARROW_KEYS[key]
+		c.draw.connect(func():
+			var m := c.size / 2.0
+			var n := Vector2(-d.y, d.x)
+			c.draw_colored_polygon(PackedVector2Array([m + d * 6.0, m - d * 4.0 + n * 5.0, m - d * 4.0 - n * 5.0]), Color.WHITE))
+		p.add_child(c)
+	else:
+		var l := Label.new()
+		l.text = key
+		l.add_theme_font_override("font", key_font)
+		l.add_theme_font_size_override("font_size", 16)
+		l.add_theme_color_override("font_color", accent if on else Color("#FFFFFF"))
+		p.add_child(l)
+	return p
 
 
 # ---------------------------------------------------------------- drawing
@@ -777,13 +1135,13 @@ func _draw_bars() -> void:
 		bars.draw_rect(Rect2(170, y + 6, 380 * pr, 28), Color("#ff7a45") if chosen else Color("#4a5260"))
 		bars.draw_string(font, Vector2(560, y + 28), "%d%%" % roundi(pr * 100), HORIZONTAL_ALIGNMENT_LEFT, -1, 19, Color.WHITE)
 		if a == st["bot"] and (mode == "watch" or fix_bot_shown):
-			bars.draw_string(font, Vector2(615, y + 28), "<- bot", HORIZONTAL_ALIGNMENT_LEFT, -1, 17, Color("#46a758"))
+			bars.draw_string(font, Vector2(615, y + 28), "<- expert", HORIZONTAL_ALIGNMENT_LEFT, -1, 17, Color("#46a758"))
 
 
 # ---------------------------------------------------------------- fix (correction loop)
 
 func _fix_get(path: String, cb: Callable) -> void:
-	if fix_busy:
+	if fix_busy or web:   # web: never call the local inference server
 		return
 	fix_busy = true
 	fix_cb = cb
@@ -827,6 +1185,8 @@ func _fix_connect() -> void:
 
 
 func _start_server() -> void:
+	if web:   # no processes in the browser build
+		return
 	var root := ProjectSettings.globalize_path("res://").trim_suffix("/").get_base_dir()   # repo root (Windows)
 	var wsl_root := "/mnt/%s%s" % [root.substr(0, 1).to_lower(), root.substr(2).replace("\\", "/")]
 	# no spaces in any argument: Windows command-line quoting of a multi-word "bash -c" string was unreliable
@@ -932,11 +1292,11 @@ func _fix_key(k: int, echo: bool) -> bool:
 
 
 func _refresh_fix() -> void:
-	btn_play.disabled = false
-	btn_watch.disabled = false
-	btn_view.text = "View: " + VIEW_TXT[view_mode]
-	key_help.visible = false
+	_sync_top_bar()
+	fail_tag.visible = false
+	seed_sub.text = ""
 	watch_bar.visible = false
+	_refresh_hints()
 	board.queue_redraw()
 	bars.queue_redraw()
 	if fix_room.is_empty():
@@ -947,7 +1307,8 @@ func _refresh_fix() -> void:
 		text_title.text = ""
 		return
 	var st := fix_state
-	seed_label.text = "Correct room %d / %d · seed %d" % [fix_idx + 1, fix_seeds.size(), int(fix_room["seed"])]
+	seed_label.text = "Correct room %d of %d" % [fix_idx + 1, fix_seeds.size()]
+	seed_sub.text = "seed %d" % int(fix_room["seed"])
 	mission_label.text = "Mission: %s" % fix_room["mission"]
 	var s := "[b]Step %d / %d[/b] · corrections %d · memos %d\n[color=#8b95a5]%s[/color]\n" % [int(st["step"]),
 		int(fix_room["max_steps"]), int(st["corrections"]), int(st["memos"]), fix_room["note"]]

@@ -143,10 +143,16 @@ Windows PowerShell에서 친다면 같은 줄을 `wsl -d Ubuntu -- bash -lc '…
    cd /mnt/d/dev/kotlin-prj/baby-ai-laya-probe && HF_HUB_OFFLINE=1 ~/babyai-laya-venv/bin/python -m probe.export_godot
    ```
    → `godot/data/episodes.json` (git에 안 넣음)
+   - 만들려면 WSL venv(`~/babyai-laya-venv`: minigrid 3.2.0, laya 0.4.31), 저장소 밖 체크포인트 `~/babyai-laya-ft/gotolocal-s0`, GPU가 필요하다.
+     체크포인트가 없는 곳에선 다시 만들 수 없다.
 2. 실행 (Windows):
    ```
    D:\dev\tools\godot\Godot_v4.7.2-stable_win64.exe --path D:\dev\kotlin-prj\baby-ai-laya-probe\godot
    ```
+
+게임 화면 글은 영어다(2026-11-14, 웹 빌드에서 한글 글꼴이 깨져서 바꿨고 **데스크톱도 같이 바뀜**). 아래의 모드 이름은 화면 위쪽 스위치에서 Play yourself / Watch Laya / Correct.
+그냥 실행하면 첫 화면에서 "Try it yourself"(직접 해보기)와 "See Laya get stuck"(아래 실패 장면) 중 하나를 고른다. 명령줄 인자(`--seed` 등)를 주면 첫 화면을 건너뛴다.
+"Stuck example" 버튼은 seed 10014 걸음 6(모델이 벽 앞에서 전진을 반복하기 시작하는 곳)의 기록 재생으로 바로 간다.
 
 - **직접 해보기**: 같은 방을 같은 세 가지 행동(←/→ 돌기, ↑ 전진)으로 걸어 본다. V로 보기 방식을 바꾼다: 시야만 → 글만(AI와 같은 조건) → 방 전체. 끝나면 AI·봇 걸음 수와 비교하고, Enter로 같은 판의 AI 관전으로 넘어간다.
 - **AI 관전**: 걸음마다 AI가 받은 글, 세 선택지 점수, 봇의 선택(다르면 주황색)을 보여 준다. 지나간 길과 같은 칸을 3번 이상 밟은 횟수(노란 ×n)를 그린다.
@@ -195,3 +201,16 @@ $PY -m probe.stage5 loop --scorer laya --model ~/babyai-laya-ft/gotolocal-s0 --n
 $PY -m probe.stage5 stepcheck --scorer gemma            # Jev: JEV_MODEL=jev-1.14.0, 키는 환경변수 TYPESAFE_API_KEY
 $PY -m probe.stage5 loop --scorer gemma --name gemma [--rule --base reports/stage5/gemma.json]
 ```
+
+## 게임 웹 빌드
+
+- 2026-11-14 itch.io에 공개: https://mokaflow.itch.io/babyai-laya-an-ai-in-the-room (HTML, 1320×860, 업로드는 아래 ZIP을 손으로).
+- 범위: Play yourself + 기록된 Laya 재생(Watch Laya)만. 웹에선 Correct(교정) 모드가 숨겨지고 들어갈 수 없다 — 추론 서버(WSL·Python·GPU)가 브라우저에 없다.
+- 프리셋 `godot/export_presets.cfg`: Web, 스레드 없음(교차 출처 격리 헤더 불필요), `data/*.json` 포함. Godot 4.7.2 공식 export templates의 web 템플릿이 필요하다.
+- 내보내기: `Godot_v4.7.2-stable_win64_console.exe --headless --path godot --export-release "Web" <빌드 폴더>/index.html`
+- 확인한 대상은 데스크톱 키보드·마우스(Chromium 계열). 모바일은 아직 지원하지 않는다.
+- 엔진 라이선스 고지: `Godot_v4.7.2-stable_win64_console.exe --headless --script tools/gen_godot_licenses.gd -- <빌드 폴더>/licenses.txt`
+  (게임의 웹 전용 "Licenses" 버튼이 같은 폴더의 `licenses.txt`를 연다). itch.io ZIP = 빌드 폴더의 파일 10개를 폴더 없이 그대로.
+- 웹 빌드에서 막아 둔 것: Correct 모드 진입, 프로세스 실행(`_start_server`), 로컬 추론 서버 요청(`_fix_get`) — 모두 `web` 검사로 빠져나간다.
+- 기록 데이터 `godot/data/episodes.json`과 출처 `godot/data/PROVENANCE.md`만 git에 들어간다(나머지 `data/`는 제외).
+  `probe/export_godot.py`는 파일에 로컬 경로 대신 체크포인트 이름(`babyai-laya-ft/gotolocal-s0`)을 쓴다.
