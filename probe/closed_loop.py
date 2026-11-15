@@ -274,10 +274,9 @@ def main() -> None:
     ap.add_argument("--swap", action="store_true", help="swap the instruction to another unique object")
     ap.add_argument("--name", required=True)
     ap.add_argument("--seeds", default="10000-10299")
-    ap.add_argument("--use-final-seeds", action="store_true", help="stage 6 only: allow 20000-20299")
     ap.add_argument("--out", default="reports/stage3_5")
     a = ap.parse_args()
-    seeds = list(guarded_seeds(a.seeds, a.use_final_seeds))
+    seeds = list(guarded_seeds(a.seeds))
     eps, skipped = run(a.policy, seeds, a.model, a.mask, a.escape, a.swap)
     res = summarize(eps, a.policy, a.name, skipped)
     res.update({"mask_mission": a.mask, "escape": a.escape, "swap": a.swap if not res.get("swap") else res["swap"],

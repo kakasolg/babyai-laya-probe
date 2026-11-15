@@ -30,11 +30,11 @@ def seed_range(s: str) -> range:
     return range(int(lo), int(hi) + 1)
 
 
-def guarded_seeds(s: str, use_final: bool = False) -> range:
-    """Seeds 20000-20299 only with the explicit stage-6 flag (board 11-15: one final run, then locked again)."""
+def guarded_seeds(s: str) -> range:
+    """20000-20299 were used once for the stage-6 final check (11-15) and are locked again; never reopen."""
     r = seed_range(s)
-    if any(x in FINAL_SEEDS for x in r) and not use_final:
-        raise SystemExit("20000-20299 are reserved for the final check (README)")
+    if any(x in FINAL_SEEDS for x in r):
+        raise SystemExit("20000-20299 were used for the final check on 11-15 and are locked (README)")
     return r
 
 
@@ -72,9 +72,8 @@ def main() -> None:
     ap.add_argument("--out", default="data/gotolocal_train.jsonl")
     # Eval seeds keep every episode (MoKa 11-14); only the train dump drops 3/4 episodes.
     ap.add_argument("--keep-all", action="store_true")
-    ap.add_argument("--use-final-seeds", action="store_true", help="stage 6 only: allow 20000-20299")
     a = ap.parse_args()
-    seeds = guarded_seeds(a.seeds, a.use_final_seeds)
+    seeds = guarded_seeds(a.seeds)
     out = pathlib.Path(a.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     n_lines = fails = 0
