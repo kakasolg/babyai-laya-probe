@@ -1,0 +1,36 @@
+{
+ "level1": {
+  "demo_episodes": 998,
+  "demo_seeds": "0-999",
+  "ch": 16,
+  "hid": 64,
+  "parameters": 66787,
+  "dev_10000_10299_autopilot_alone_solved": 199,
+  "fresh_41000_41299_autopilot_alone_solved": 197,
+  "mirror_same_action_of_80": 80
+ },
+ "level2": {
+  "demo_episodes": 2994,
+  "demo_seeds": "0-2999",
+  "ch": 16,
+  "hid": 64,
+  "parameters": 66787,
+  "dev_10000_10299_autopilot_alone_solved": 263,
+  "fresh_41000_41299_autopilot_alone_solved": 265,
+  "mirror_same_action_of_80": 80
+ },
+ "level3": {
+  "demo_episodes": 9976,
+  "demo_seeds": "0-9999",
+  "ch": 16,
+  "hid": 64,
+  "parameters": 66787,
+  "dev_10000_10299_autopilot_alone_solved": 289,
+  "fresh_41000_41299_autopilot_alone_solved": 284,
+  "mirror_same_action_of_80": 80
+ },
+ "view_mirror_vs_reference": {
+  "states": 13440,
+  "mismatches": 0
+ }
+}

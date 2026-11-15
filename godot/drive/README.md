@@ -1,0 +1,119 @@
+# drive — 반자동 자율주행 게임의 엔진 부분
+
+2026-11-15 [cloud]. **화면·조작은 아직 없다.** 여기 있는 것은 게임이 불러 쓸 부품 네 개와 점검 스크립트다.
+[cloud]는 Godot을 실행하지 못해 **이 GDScript는 한 번도 돌려 보지 않았다.** 같은 계산을 한 줄씩 옮긴 Python
+(`tools/small_policy/gd_mirror.py`)이 기준 값과 맞는 것까지만 확인했다. 먼저 아래 "점검"을 돌려 달라.
+
+## MoKa가 정한 게임의 모습 (2026-11-15)
+
+- 방향키대로 움직인다. 특정 키를 누르면 **자율주행**한다.
+- 자율주행이 막히거나 사용자가 원하면 넘겨받고, 다시 자율주행을 켤 수 있다.
+- 성공하면 특수 효과로 성공했다고 느끼게 하고, **자동으로 다음 판**으로 넘어간다.
+- **35턴 이상 걸려 성공했거나 실패한 판**은 모아 두고 나중에 다시 플레이할 수 있게 한다.
+- 게임 안에서 일일이 설명하지 않는다. 설명은 GitHub에 둔다.
+- **반자동 자율주행차 같은 느낌.** 더 게임답게 만들어 거부감이 없게.
+- 사용자가 직접 운전한 것도 저장한다 — 이유는 몰라도 "이렇게 했다"는 기록.
+
+## 부품
+
+| 파일 | 하는 일 |
+|---|---|
+| `autopilot.gd` | 자율주행. `load_level(1~3)`, `decide(room, pos, dir)` → `{action, scores, stuck}`, `peek(...)`(기억을 건드리지 않고 "모델이라면 무엇을"), `forget()` |
+| `rooms.gd` | 새 방 만들기 `make(rng, 8, 8, id)` — `episodes.json`과 같은 사전 모양이라 `main.gd`의 `_is_wall` · `_obj_at` · `_is_target` · `_obs_text`가 그대로 통한다. `par(room)` = 최소 턴 수 |
+| `drivelog.gd` | 운전 기록(`user://drive_log.jsonl`, 방마다 한 줄)과 정비소(`user://garage.json`). `belongs_in_garage(result, turns)` = 35턴 규칙 |
+| `selftest_drive.gd` | 헤드리스 점검 |
+| `../data/policy_l1~3.json` | 모델 가중치(각 약 0.7 MB). `../data/*_test.json`, `drive_view_test.json`은 점검용 |
+
+자율주행은 **Laya가 아니다.** 파라미터 66,787개짜리 작은 합성곱망이 MiniGrid 전문가 봇의 시범을 따라 배운 것이고,
+앞쪽 7×7칸과 지시문의 색·종류만 본다. 기억이 없다. 게임과 페이지에 Laya라고 적지 않는다(녹화 재생은 계속 Laya다).
+
+### 자율주행 등급
+
+같은 구조를 시범 수만 달리해 학습했다. 숫자는 MiniGrid `GoToLocal`에서 **혼자** 끝낸 판 수(300판, 걸음 제한 64).
+
+| 등급 | 시범 | 개발용 seed 10000~10299 | 새 판 seed 41000~41299 (한 번) | 느낌 |
+|---|---|---|---|---|
+| 1 | 998판 | 199 | 197 (66 %) | 세 판에 한 번 막힌다 |
+| 2 | 2,994판 | 263 | 265 (88 %) | 여덟 판에 한 번 |
+| 3 | 9,976판 | 289 | 284 (95 %) | 스무 판에 한 번 |
+
+- 학습은 등급마다 한 번(seed 0). 다시 학습하면 몇 판씩 달라진다.
+- `rooms.gd`가 만드는 방은 MiniGrid의 방과 똑같지 않다. Python 거울로 만든 방 150개에서 등급 3은 137개를 혼자 풀었다.
+- 반복 끊기 규칙(R-reset)을 붙이면 거의 다 풀려서 운전자가 할 일이 없어진다. **이 게임에서는 규칙을 고치는 데 쓰지 않고,
+  감지에만 쓴다**: 자율주행이 이미 지나온 장면에 다시 서면 `stuck = true`를 돌려주고 멈춘다("운전대를 잡으세요").
+- 넘겨받아 한 걸음만 움직이고 돌려주면 다시 같은 데서 막히는 방이 많다(Python 모의: 등급 1에서 넘겨받은 방당 평균 8번).
+  몇 걸음 직접 몰고 가서 돌려줘야 한다 → 다시 켜는 것은 사용자가 정하는 게 맞다.
+
+### 쓰는 순서 (한 판)
+
+```gdscript
+const Autopilot := preload("res://drive/autopilot.gd")
+const Rooms := preload("res://drive/rooms.gd")
+const DriveLog := preload("res://drive/drivelog.gd")
+
+var ap := Autopilot.new();  ap.load_level(1)
+var rng := RandomNumberGenerator.new();  rng.randomize()
+var room := Rooms.make(rng, 8, 8, "r%d" % n)        # room["par"] = 최소 턴 수
+var log := DriveLog.new();  log.begin(room, ap.level, view_mode)
+ap.forget()
+
+# 자율주행 한 걸음
+var d := ap.decide(room, pos, dir)
+if d["stuck"]:
+    pass        # 움직이지 말고 자율주행을 끈다 + 표시등. 그다음 사용자가 움직이면 ap.forget()
+else:
+    # d["action"] 0 왼쪽 돌기 · 1 오른쪽 돌기 · 2 전진 → 기존 _play_act 규칙대로 적용
+    log.step(pos, dir, "auto", d["action"], d["action"], d["scores"], false)
+
+# 사용자가 한 걸음 (자율주행이 꺼져 있을 때)
+var m := ap.peek(room, pos, dir)                     # 화면에는 안 보이게, 모델이라면 무엇을 했을지
+log.step(pos, dir, "driver", user_action, m["action"], m["scores"], alarm_was_on)
+ap.forget()
+
+# 판이 끝나면
+log.end(result, turns, takeovers)
+if DriveLog.belongs_in_garage(result, turns):
+    DriveLog.garage_add(room, result, turns, ap.level)
+```
+
+방 사전은 `main.gd`의 `episodes`에 넣으면 기존 그리기·이동 코드가 그대로 쓴다(`steps`는 빈 배열, `generated: true`).
+
+## [win]이 만들 것 (제안 — 화면은 [win]과 MoKa가 정한다)
+
+1. **드라이브 모드**: 시작하면 바로 방 하나. 방향키(위 = 전진, 좌우 = 제자리 회전) · 자율주행 켜고 끄는 키 하나.
+   자율주행 중 걸음 간격 0.15~0.25 s, 칸에서 칸으로 미끄러지듯.
+2. **표시등 하나**: 자율주행 중 / 넘겨받으세요(`stuck`) / 직접 운전. 글 대신 색과 모양으로.
+3. **전조등 시야를 기본으로**: 방은 어둡고 앞쪽 7×7칸만 밝게(지금의 "AI's view"). 사람과 모델이 같은 것을 보게 된다.
+   `view_mode`는 기록에 남는다.
+4. **지시문은 그림으로**: "go to the red key" 대신 빨간 열쇠 그림 하나.
+5. **성공 효과 → 자동으로 다음 판.** 실패(걸음 제한)도 짧게 표시하고 넘어간다.
+6. **점수**: 넘겨받은 횟수, 자율주행이 움직인 걸음의 비율, 최소 턴(`par`) 대비 턴 수. 10판 묶음 끝에 짧은 결과 카드.
+7. **정비소**: `DriveLog.garage()`의 방을 골라 다시 달린다. 성공하면 `garage_remove`.
+8. **연구용 화면(입력 글, seed, 녹화 재생, 교정)은 "실험실"로 분리**해 기본 화면에서 뺀다.
+9. **기록 내려받기** 버튼 하나(`DriveLog.export_file()`). 기록은 그 기기에만 남고 어디로도 보내지 않는다.
+10. 등급은 처음엔 1. 고르게 할지, 잘하면 올라가게 할지는 정하지 않았다.
+
+## 점검 (먼저 돌려 달라)
+
+```
+Godot_v4.7.2-stable_win64_console.exe --headless --path godot --script res://drive/selftest_drive.gd
+```
+
+기대하는 출력: `view: 150 cases, mismatches 0` · 등급마다 `same action 200/200`, 점수 차 0.001 미만 ·
+`ms per decision`(이 숫자를 알려 달라 — 순수 Python 거울은 걸음당 약 75 ms였다. 웹 빌드에서도 한 번) ·
+만든 방 150개에서 혼자 푼 수(등급 3이 가장 많아야 한다) · 마지막 줄 `drive selftest: OK`.
+문법 오류가 나면 그대로 알려 달라. [cloud]가 실행 없이 쓴 코드다.
+
+## 다시 만들기
+
+`tools/small_policy/export_levels.py <폴더>` — 시범 생성 → 세 등급 학습 → JSON · 점검 파일 쓰기(CPU, 몇 분, torch · minigrid 필요).
+2026-11-15에 다시 돌려 `godot/data/`의 `policy_l1~3.json` · `policy_l1_test.json` · `drive_view_test.json`과
+바이트 단위로 같은 파일이 나오는 것을 확인했다. 결과 숫자는 `tools/small_policy/levels_results.json`.
+
+## 한계
+
+- 8×8 방, 물체 8개(공·상자·열쇠, 여섯 색)에서만 학습하고 쟀다. 다른 크기에서는 성적을 모른다.
+- 봇을 흉내 낸 모델이라 봇보다 잘할 수 없다.
+- 운전 기록에는 사람이 본 것(보기 방식)이 섞인다. 방 전체를 보고 운전한 기록은 모델이 볼 수 없는 정보에 기대고 있을 수 있다.
+- MiniGrid의 라이선스 표기는 두 곳이 다르다: 저장소 `LICENSE` 파일은 Apache License 2.0 전문, `pyproject.toml`과 PyPI 메타데이터는
+  `MIT License`(2026-11-15 확인). `godot/data/PROVENANCE.md`에는 MIT로만 적혀 있다 — 공개 배포물의 표기를 정할 때 같이 봐 달라.
