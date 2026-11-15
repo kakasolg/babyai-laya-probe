@@ -23,7 +23,7 @@ ENV_ID = "BabyAI-GoToLocal-v0"
 
 
 FINAL_SEEDS = range(20000, 20300)
-FINAL_SEEDS_PICKUP = range(30000, 30300)  # board 11-15 stage 8: never before the stage-8d declaration
+FINAL_SEEDS_PICKUP = range(30000, 30300)  # used once for the stage-8d final check (11-15), locked again
 
 
 def seed_range(s: str) -> range:
@@ -31,14 +31,14 @@ def seed_range(s: str) -> range:
     return range(int(lo), int(hi) + 1)
 
 
-def guarded_seeds(s: str, use_final_pickup: bool = False) -> range:
-    """20000-20299 were used once for the stage-6 final check (11-15) and are locked again; never reopen.
-    30000-30299 only with the explicit stage-8d flag (declared in reports/stage8d_prereg.md; one run, then locked)."""
+def guarded_seeds(s: str) -> range:
+    """20000-20299 (stage 6) and 30000-30299 (stage 8d) were each used once for a final check on 11-15 and are
+    locked again; never reopen."""
     r = seed_range(s)
     if any(x in FINAL_SEEDS for x in r):
         raise SystemExit("20000-20299 were used for the final check on 11-15 and are locked (README)")
-    if any(x in FINAL_SEEDS_PICKUP for x in r) and not use_final_pickup:
-        raise SystemExit("30000-30299 are reserved for the PickupDist final check (stage 8d, after a declaration)")
+    if any(x in FINAL_SEEDS_PICKUP for x in r):
+        raise SystemExit("30000-30299 were used for the PickupDist final check on 11-15 and are locked (README)")
     return r
 
 

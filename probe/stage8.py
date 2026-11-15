@@ -37,7 +37,6 @@ from probe.stage8a import ENV, NAME_TO_ACT4, bot_episode, categorize, matches, m
 CH = CHOICES_PICKUP
 OUT = pathlib.Path("reports/stage8")
 DEV = "10000-10299"
-FINAL = "30000-30299"          # stage 8d only (--use-final-seeds), declared in reports/stage8d_prereg.md
 FIXED = {"forward": 0.4, "turn left": 0.3, "turn right": 0.2, "pick up": 0.1}   # model-free control (8a)
 TRAIN_DUMP = "data/pickupdist_train.jsonl"
 ROWS = "data/laya_rows_pickupdist_train_8b.jsonl"
@@ -290,23 +289,23 @@ def main() -> None:
     ap.add_argument("--name", default=None)
     ap.add_argument("--policy", default="none", choices=["none", "reset", "bot", "random", "fixed", "fixed-reset"])
     ap.add_argument("--base", default=None)
-    ap.add_argument("--use-final-seeds", action="store_true", help="stage 8d only: run on 30000-30299")
     a = ap.parse_args()
     model = a.model and os.path.expanduser(a.model)
     if a.mode == "train":
         return train(a.seed)
     if a.mode == "stepeval":
         return stepeval(model, a.name)
-    out = OUT / "final" if a.use_final_seeds else OUT
+    # 8d (30000-30299, reports/stage8/final/) ran once with a --use-final-seeds flag that was removed afterwards
+    out = OUT
     out.mkdir(parents=True, exist_ok=True)
-    seeds = guarded_seeds(FINAL if a.use_final_seeds else DEV, use_final_pickup=a.use_final_seeds)
+    seeds = guarded_seeds(DEV)
     fixed = a.policy.startswith("fixed")
     policy = "reset" if a.policy.endswith("reset") else ("none" if fixed else a.policy)
     scorer = FixedScorer() if fixed else (Scorer(model) if policy in ("none", "reset") else None)
     eps = run_loop(policy, scorer, seeds)
     base = json.load(open(a.base, encoding="utf-8")) if a.base else None
     res = summarize(eps, a.name, policy, base)
-    res["seeds"] = FINAL if a.use_final_seeds else DEV
+    res["seeds"] = DEV
     if model:
         res["model"] = f"babyai-laya-ft/{os.path.basename(model.rstrip('/'))}"
     if fixed:

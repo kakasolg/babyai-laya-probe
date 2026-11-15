@@ -19,7 +19,7 @@ BabyAI 결과를 DSR·트레이드·드론으로 확대 해석하지 않는다.
 - 라벨: 전문가 봇(`minigrid.utils.baby_ai_bot.BabyAIBot`) 시범에서만. LLM이 추측한 행동은 정답으로 쓰지 않는다.
 - seed: 학습 0~999, **개발용 평가 10000~10299**, **최종 확인용 20000~20299**. 섞지 않는다.
   10000~10299는 3단계부터 실패 사례를 보고 방법을 고르는 데 쓰고 있으므로 개발용이다(2026-11-14).
-  **seed 20000~20299는 11-15에 6단계 최종 확인으로 한 번 썼다**(`reports/stage6.md`, 선언은 `reports/stage6_prereg.md`).
+  **seed 20000~20299는 11-15에 6단계 최종 확인으로 한 번 썼다**(`reports/stage6.md`, 선언은 `reports/stage6_prereg.md`). PickupDist의 30000~30299도 같은 날 8d로 한 번 썼다.
   앞으로 방법을 고르는 데 쓰지 않고, 새 최종 확인이 필요하면 새 범위를 정한다. `dump_demos`·`closed_loop`·`stage5`는
   이 범위를 다시 거부한다(실행 때만 쓴 `--use-final-seeds` 플래그는 지웠다).
 - 모든 정책 표에 "봇 걸음 수의 2배 안에 성공한 비율"을 함께 적는다(64걸음 제한이 무작위를 띄우므로).
@@ -87,7 +87,8 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
 6. 최종 확인(seed 20000~20299, 선언 뒤 한 번) — `reports/stage6_prereg.md`, `reports/stage6.md`
 7. GoToLocal 한 장 정리 — **`reports/summary_gotolocal.md`** (처음 읽는 사람은 여기부터)
 8. 다음 과제 `BabyAI-PickupDist-v0`(선택지에 `pick up` 추가) — 8a 살펴보기(학습 없음): `reports/stage8a.md`, `python -m probe.stage8a`.
-   seed: 학습 0~999, 개발용 10000~10299, 최종 30000~30299(8d 선언 전엔 거부).
+   seed: 학습 0~999, 개발용 10000~10299, 최종 30000~30299.
+   **seed 30000~30299는 11-15에 8d 최종 확인으로 한 번 썼다**(`reports/stage8d.md`, 선언은 `reports/stage8d_prereg.md`). 다시 거부한다.
    8b 학습 · 8c 닫힌 루프(개발용 300판): `reports/stage8.md`. WSL에서
    `python -m probe.stage8 train --seed 0` → `stepeval --model ~/babyai-laya-ft/pickupdist-s0 --name s0`
    → `loop --policy none|reset|bot|random --model … --name laya-s0 [--base reports/stage8/laya-s0.json]`.

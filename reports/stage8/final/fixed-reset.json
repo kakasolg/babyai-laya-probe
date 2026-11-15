@@ -1,0 +1,2264 @@
+{
+ "name": "fixed-reset",
+ "policy": "reset",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 9,
+  "within_2x_bot": 0
+ },
+ "timeout": 261,
+ "wrong_pickup": 30,
+ "target_visible_at_start": {
+  "n": 177,
+  "success": 9,
+  "within_2x_bot": 0
+ },
+ "target_unseen_at_start": {
+  "n": 123,
+  "success": 0,
+  "within_2x_bot": 0
+ },
+ "mission_kind": {
+  "color only": {
+   "n": 110,
+   "success": 6,
+   "within_2x_bot": 0
+  },
+  "type only": {
+   "n": 80,
+   "success": 3,
+   "within_2x_bot": 0
+  },
+  "both": {
+   "n": 110,
+   "success": 0,
+   "within_2x_bot": 0
+  }
+ },
+ "grey_wall_episodes": {
+  "n": 17,
+  "success": 1,
+  "within_2x_bot": 0
+ },
+ "mean_steps_success": 39.78,
+ "bot_mean_steps_same_eps": 2.78,
+ "steps_sum_all": 14617,
+ "steps_sum_without_wrong_pickup": 13147,
+ "pickup_choices": {
+  "nothing ahead": 108,
+  "wrong object": 30,
+  "matching": 9,
+  "while carrying": 11
+ },
+ "episodes_with_other_actions": [],
+ "per_episode": {
+  "30000": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 20,
+   "wrong_step": null
+  },
+  "30001": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30002": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30003": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30004": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30005": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30006": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 28,
+   "wrong_step": 47
+  },
+  "30007": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30008": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 20,
+   "wrong_step": 32
+  },
+  "30009": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30010": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30011": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30012": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30013": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 12,
+   "wrong_step": null
+  },
+  "30014": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 21,
+   "wrong_step": 41
+  },
+  "30015": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30016": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 18,
+   "wrong_step": 41
+  },
+  "30017": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30018": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30019": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30020": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 20,
+   "wrong_step": 39
+  },
+  "30021": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30022": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30023": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30024": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30025": {
+   "end": "success",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 19,
+   "wrong_step": null
+  },
+  "30026": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30027": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30028": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30029": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30030": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 20,
+   "wrong_step": 48
+  },
+  "30031": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30032": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30033": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30034": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30035": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30036": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30037": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 19,
+   "wrong_step": null
+  },
+  "30038": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 24,
+   "wrong_step": null
+  },
+  "30039": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30040": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30041": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 21,
+   "wrong_step": null
+  },
+  "30042": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30043": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30044": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30045": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 22,
+   "wrong_step": null
+  },
+  "30046": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30047": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30048": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30049": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 23,
+   "wrong_step": null
+  },
+  "30050": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30051": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30052": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30053": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30054": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30055": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 22,
+   "wrong_step": 30
+  },
+  "30056": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30057": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30058": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30059": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30060": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 21,
+   "wrong_step": 36
+  },
+  "30061": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 12,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30062": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30063": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30064": {
+   "end": "success",
+   "steps": 27,
+   "bot": 2,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30065": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30066": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 12,
+   "wrong_step": null
+  },
+  "30067": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 22,
+   "wrong_step": 30
+  },
+  "30068": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30069": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30070": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 18,
+   "wrong_step": null
+  },
+  "30071": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30072": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30073": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 10,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30074": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30075": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30076": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 17,
+   "wrong_step": 41
+  },
+  "30077": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30078": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30079": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30080": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30081": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30082": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30083": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30084": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30085": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30086": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30087": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30088": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30089": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30090": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 18,
+   "wrong_step": null
+  },
+  "30091": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30092": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30093": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30094": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30095": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30096": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30097": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30098": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 18,
+   "wrong_step": 28
+  },
+  "30099": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30100": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30101": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30102": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30103": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30104": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 18,
+   "wrong_step": 37
+  },
+  "30105": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30106": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30107": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30108": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30109": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 25,
+   "wrong_step": 22
+  },
+  "30110": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30111": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30112": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30113": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30114": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30115": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 12,
+   "wrong_step": null
+  },
+  "30116": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 18,
+   "wrong_step": null
+  },
+  "30117": {
+   "end": "success",
+   "steps": 23,
+   "bot": 3,
+   "interventions": 12,
+   "wrong_step": null
+  },
+  "30118": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30119": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30120": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30121": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 12,
+   "wrong_step": null
+  },
+  "30122": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30123": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30124": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30125": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30126": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30127": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 18,
+   "wrong_step": null
+  },
+  "30128": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30129": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30130": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30131": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30132": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 21,
+   "wrong_step": null
+  },
+  "30133": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30134": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 10,
+   "interventions": 22,
+   "wrong_step": 34
+  },
+  "30135": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 10,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30136": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30137": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30138": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 19,
+   "wrong_step": null
+  },
+  "30139": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30140": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30141": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30142": {
+   "end": "success",
+   "steps": 48,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30143": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30144": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30145": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30146": {
+   "end": "success",
+   "steps": 45,
+   "bot": 3,
+   "interventions": 26,
+   "wrong_step": null
+  },
+  "30147": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30148": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 12,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30149": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30150": {
+   "end": "success",
+   "steps": 47,
+   "bot": 2,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30151": {
+   "end": "success",
+   "steps": 45,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30152": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30153": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 12,
+   "wrong_step": null
+  },
+  "30154": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 20,
+   "wrong_step": null
+  },
+  "30155": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30156": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30157": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 18,
+   "wrong_step": null
+  },
+  "30158": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30159": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 16,
+   "wrong_step": 31
+  },
+  "30160": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30161": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 19,
+   "wrong_step": null
+  },
+  "30162": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30163": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30164": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30165": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30166": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30167": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30168": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30169": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30170": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30171": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30172": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 16,
+   "interventions": 25,
+   "wrong_step": 35
+  },
+  "30173": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30174": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 17,
+   "wrong_step": 39
+  },
+  "30175": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30176": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 26,
+   "wrong_step": null
+  },
+  "30177": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30178": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30179": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30180": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30181": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30182": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30183": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30184": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30185": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30186": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 18,
+   "wrong_step": null
+  },
+  "30187": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30188": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 18,
+   "wrong_step": null
+  },
+  "30189": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30190": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30191": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30192": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30193": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 10,
+   "interventions": 16,
+   "wrong_step": 47
+  },
+  "30194": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30195": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30196": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30197": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30198": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30199": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30200": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 16,
+   "wrong_step": 44
+  },
+  "30201": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 20,
+   "wrong_step": null
+  },
+  "30202": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 21,
+   "wrong_step": null
+  },
+  "30203": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30204": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30205": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30206": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 20,
+   "wrong_step": 27
+  },
+  "30207": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30208": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30209": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 24,
+   "wrong_step": 27
+  },
+  "30210": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30211": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 22,
+   "wrong_step": null
+  },
+  "30212": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30213": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30214": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30215": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 25,
+   "wrong_step": null
+  },
+  "30216": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 22,
+   "wrong_step": 26
+  },
+  "30217": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30218": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30219": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 10,
+   "interventions": 12,
+   "wrong_step": null
+  },
+  "30220": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30221": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 17,
+   "wrong_step": 29
+  },
+  "30222": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30223": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 16,
+   "wrong_step": 27
+  },
+  "30224": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30225": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30226": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30227": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 22,
+   "wrong_step": null
+  },
+  "30228": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30229": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30230": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30231": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 17,
+   "wrong_step": 44
+  },
+  "30232": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30233": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30234": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30235": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30236": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 19,
+   "wrong_step": null
+  },
+  "30237": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30238": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30239": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30240": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 12,
+   "wrong_step": null
+  },
+  "30241": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30242": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30243": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 18,
+   "wrong_step": null
+  },
+  "30244": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 17,
+   "wrong_step": 45
+  },
+  "30245": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 12,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30246": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 25,
+   "wrong_step": 21
+  },
+  "30247": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30248": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 12,
+   "wrong_step": null
+  },
+  "30249": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30250": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30251": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30252": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30253": {
+   "end": "success",
+   "steps": 43,
+   "bot": 2,
+   "interventions": 24,
+   "wrong_step": null
+  },
+  "30254": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30255": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30256": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30257": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30258": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30259": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 22,
+   "wrong_step": null
+  },
+  "30260": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 13,
+   "wrong_step": null
+  },
+  "30261": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30262": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30263": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 19,
+   "wrong_step": null
+  },
+  "30264": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30265": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 21,
+   "wrong_step": null
+  },
+  "30266": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30267": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30268": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30269": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 20,
+   "wrong_step": 29
+  },
+  "30270": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30271": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30272": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30273": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 24,
+   "wrong_step": 22
+  },
+  "30274": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 12,
+   "wrong_step": null
+  },
+  "30275": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30276": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30277": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30278": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30279": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 17,
+   "wrong_step": null
+  },
+  "30280": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30281": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30282": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30283": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30284": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 18,
+   "wrong_step": 26
+  },
+  "30285": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30286": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30287": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30288": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 18,
+   "wrong_step": null
+  },
+  "30289": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30290": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30291": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 19,
+   "wrong_step": null
+  },
+  "30292": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30293": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30294": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30295": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 15,
+   "wrong_step": null
+  },
+  "30296": {
+   "end": "success",
+   "steps": 31,
+   "bot": 3,
+   "interventions": 12,
+   "wrong_step": null
+  },
+  "30297": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 16,
+   "wrong_step": null
+  },
+  "30298": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 14,
+   "wrong_step": null
+  },
+  "30299": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 14,
+   "wrong_step": null
+  }
+ },
+ "episodes_with_intervention": 300,
+ "interventions": 4768,
+ "pickup_choices_by_rule": {
+  "nothing ahead": 108,
+  "wrong object": 30,
+  "matching": 9,
+  "while carrying": 11
+ },
+ "vs_no_rule": {
+  "saved": [
+   30025,
+   30064,
+   30117,
+   30142,
+   30146,
+   30150,
+   30151,
+   30253,
+   30296
+  ],
+  "broken": [],
+  "broken_by_rule_chosen_wrong_pickup": []
+ },
+ "representative_failures": [
+  {
+   "seed": 30000,
+   "end": "timeout",
+   "step": 39,
+   "why": "no repeat, last 10",
+   "mission": "pick up the ball",
+   "text": "facing: south\nyellow key: 1 left\nblue box: 1 ahead, 2 left\nwalls: 2 ahead, 3 left, 3 right",
+   "model": "forward",
+   "scores": {
+    "forward": 0.4,
+    "turn left": 0.3,
+    "turn right": 0.2,
+    "pick up": 0.1
+   },
+   "bot": "turn right"
+  },
+  {
+   "seed": 30001,
+   "end": "timeout",
+   "step": 39,
+   "why": "no repeat, last 10",
+   "mission": "pick up the red object",
+   "text": "facing: north\ngreen key: 2 left\ngrey ball: 3 left\nwalls: 1 ahead, 2 right",
+   "model": "forward",
+   "scores": {
+    "forward": 0.4,
+    "turn left": 0.3,
+    "turn right": 0.2,
+    "pick up": 0.1
+   },
+   "bot": "turn left"
+  },
+  {
+   "seed": 30006,
+   "end": "wrong_pickup",
+   "step": 47,
+   "why": "wrong pickup",
+   "mission": "pick up the green key",
+   "text": "facing: west\nyellow key: 1 ahead\npurple key: 1 ahead, 1 left\nblue key: 3 ahead, 1 left\ngreen key: 3 ahead, 3 left\nwalls: 5 ahead, 1 right",
+   "model": "pick up",
+   "scores": {
+    "forward": 0.4,
+    "turn left": 0.3,
+    "turn right": 0.2,
+    "pick up": 0.1
+   },
+   "bot": "turn left"
+  },
+  {
+   "seed": 30008,
+   "end": "wrong_pickup",
+   "step": 32,
+   "why": "wrong pickup",
+   "mission": "pick up the green object",
+   "text": "facing: east\ngrey ball: 1 ahead\npurple box: 1 ahead, 1 left\nyellow ball: 3 ahead\ngreen ball: 4 ahead, 1 left\nwalls: 5 ahead, 1 right",
+   "model": "pick up",
+   "scores": {
+    "forward": 0.4,
+    "turn left": 0.3,
+    "turn right": 0.2,
+    "pick up": 0.1
+   },
+   "bot": "turn left"
+  },
+  {
+   "seed": 30014,
+   "end": "wrong_pickup",
+   "step": 41,
+   "why": "wrong pickup",
+   "mission": "pick up the purple object",
+   "text": "facing: west\nred key: 1 left\nblue ball: 1 ahead\nwalls: 2 ahead, 1 right",
+   "model": "pick up",
+   "scores": {
+    "forward": 0.4,
+    "turn left": 0.3,
+    "turn right": 0.2,
+    "pick up": 0.1
+   },
+   "bot": "turn left"
+  }
+ ],
+ "seeds": "30000-30299",
+ "model": "none (fixed scores)"
+}
