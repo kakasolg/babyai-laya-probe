@@ -33,7 +33,6 @@ var result := ""
 var lit_t := 0.0
 var lit_share := [0.0, 0.0, 0.0]
 var move_rects := {}         # action -> Rect2 of its marker while stopped
-var halo_tex: GradientTexture2D   # white radial falloff, tinted per draw (made once)
 var saving := true           # off for checks and screenshots
 
 
@@ -283,53 +282,73 @@ func _draw_room() -> void:
 		_draw_moves()
 
 
-## The goal, read like a bonfire in a dark level (Perplexity notes, 11-15): what matters most is a steady shape and a
-## soft pool of light; flicker and sparks are small extras. Per matching object, in this order:
-##   static corner brackets on its cell → a soft ground halo (78 px) → a small hot glow (32 px) → the object again,
-##   crisp on top → three tiny looping sparks that stay inside the cell. Brightness moves only about ±6 %.
+## Where to stand for the goal (Perplexity notes, 11-15): the winning move is "be on a free cell next to the target,
+## facing it", so the hint goes on those cells, not on the target. Each free neighbour gets a dot and a chevron
+## pointing at the target, all in one guide colour; the one the car is on is brighter. Nothing pulses.
+const GUIDE := Color("#9be5ec")
+
+
 func _draw_goal() -> void:
-	if halo_tex == null:
-		var g := Gradient.new()
-		g.offsets = PackedFloat32Array([0.0, 0.35, 0.7, 1.0])
-		g.colors = PackedColorArray([Color(1, 1, 1, 1), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.12), Color(1, 1, 1, 0)])
-		halo_tex = GradientTexture2D.new()
-		halo_tex.width = 128
-		halo_tex.height = 128
-		halo_tex.gradient = g
-		halo_tex.fill = GradientTexture2D.FILL_RADIAL
-		halo_tex.fill_from = Vector2(0.5, 0.5)
-		halo_tex.fill_to = Vector2(1.0, 0.5)
-	var col: Color = COLORS.get(room["target"]["color"], Color.WHITE)
-	var b := _flicker()
-	var kind: String = room["target"]["type"]
+	if phase == "result":
+		if result == "success":
+			_draw_arrival()
+		return
 	for t in room["target"]["positions"]:
-		var cell := Vector2(int(t[0]), int(t[1]))
-		var c := _px(cell)
-		var r := Rect2(BOARD + cell * CELL, Vector2(CELL, CELL)).grow(-9)
-		var bc := Color(col.lightened(0.25), 0.6)
-		for k in 4:
-			var corner := r.position + Vector2(r.size.x * (k % 2), r.size.y * (k / 2))
-			var sx := 1.0 if k % 2 == 0 else -1.0
-			var sy := 1.0 if k / 2 == 0 else -1.0
-			draw_line(corner, corner + Vector2(11 * sx, 0), bc, 2.0)
-			draw_line(corner, corner + Vector2(0, 11 * sy), bc, 2.0)
-		draw_texture_rect(halo_tex, Rect2(c - Vector2(39, 39), Vector2(78, 78)), false,
-			Color(col.lightened(0.15), 0.5 * (1.0 + (b - 1.0) * 0.5)))
-		draw_texture_rect(halo_tex, Rect2(c - Vector2(16, 16), Vector2(32, 32)), false, Color(col.lightened(0.45), 0.4 * b))
-		_draw_object(kind, col, c, CELL)
-		for i in 3:
-			var life := 0.78 + 0.07 * i
-			var u := fposmod(clock / life + i / 3.0, 1.0)
-			var p := c + Vector2(-8.0 + 8.0 * i + 2.0 * sin(u * TAU + i * 2.1), -10.0 - 22.0 * u)
-			var a := smoothstep(0.0, 0.12, u) * (1.0 - smoothstep(0.6, 1.0, u))
-			var sc := Color("#fff1c2").lerp(col.lightened(0.2), u)
-			sc.a = 0.85 * a
-			draw_circle(p, 2.2, sc)
+		var tc := Vector2i(int(t[0]), int(t[1]))
+		for h in 4:
+			var d: Vector2i = DIR_VEC[h]
+			var ac: Vector2i = tc - d
+			if not Rooms.is_free(room, ac.x, ac.y):
+				continue
+			var p := _px(Vector2(ac))
+			var on := ac == pos
+			var a := 0.95 if on else 0.7
+			var dv := Vector2(d)
+			var side := Vector2(-dv.y, dv.x)
+			draw_circle(p, 18.0, Color(GUIDE, 0.16 if on else 0.08))
+			draw_circle(p, 3.0, Color(GUIDE, a))
+			var tip := p + dv * 30.0
+			draw_polyline(PackedVector2Array([tip - dv * 8.0 + side * 8.0, tip, tip - dv * 8.0 - side * 8.0]),
+				Color(GUIDE, a), 3.0, true)
 
 
-## Brightness multiplier, about ±6 %, two slow waves so it never looks like a metronome.
-func _flicker() -> float:
-	return 1.0 + 0.04 * sin(TAU * 0.62 * clock) + 0.02 * sin(TAU * 1.71 * clock + 1.3)
+## Arrival: a short line from the car to the target, then a check mark on the target's top-right corner.
+func _draw_arrival() -> void:
+	var m := _px(Vector2(pos))
+	var f := _px(Vector2(pos + DIR_VEC[dir]))
+	var la := clampf(1.0 - lit_t / 1.2, 0.0, 1.0)
+	if la > 0.0:
+		draw_line(m, m.lerp(f, clampf(lit_t / 0.25, 0.0, 1.0)), Color(GUIDE, 0.9 * la), 4.0, true)
+	var ca := clampf(lit_t / 0.3, 0.0, 1.0)
+	var c := f + Vector2(CELL * 0.34, -CELL * 0.34)
+	draw_circle(c, 12.0, Color(C_AUTO, 0.9 * ca))
+	draw_polyline(PackedVector2Array([c + Vector2(-6, 0), c + Vector2(-2, 4), c + Vector2(6, -4)]),
+		Color("#0a0d14", ca), 3.0, true)
+
+
+## Board objects without the base glow (only the goal guide speaks), with a small contact shadow so they sit on the floor.
+func _draw_object(kind: String, col: Color, m: Vector2, cell: float) -> void:
+	if cell == CELL:
+		var sh := PackedVector2Array()
+		for i in 20:
+			var u := TAU * i / 20.0
+			sh.append(m + Vector2(cos(u) * cell * 0.3, cell * 0.3 + sin(u) * cell * 0.08))
+		draw_colored_polygon(sh, Color(0, 0, 0, 0.45))
+	match kind:
+		"ball":
+			draw_circle(m, cell * 0.28, col)
+			draw_circle(m + Vector2(-cell * 0.08, -cell * 0.08), cell * 0.08, Color(1, 1, 1, 0.35))
+		"box":
+			var r := Rect2(m - Vector2(cell * 0.3, cell * 0.3), Vector2(cell * 0.6, cell * 0.6))
+			draw_rect(r, col.darkened(0.55))
+			draw_rect(r, col, false, maxf(2.0, cell * 0.06))
+			draw_line(r.position + Vector2(0, r.size.y * 0.35), r.position + Vector2(r.size.x, r.size.y * 0.35), col, maxf(1.5, cell * 0.04))
+		"key":
+			draw_circle(m + Vector2(-cell * 0.18, 0), cell * 0.14, col)
+			draw_circle(m + Vector2(-cell * 0.18, 0), cell * 0.06, Color("#1f2532"))
+			draw_rect(Rect2(m + Vector2(-cell * 0.05, -cell * 0.04), Vector2(cell * 0.33, cell * 0.08)), col)
+			draw_rect(Rect2(m + Vector2(cell * 0.16, 0), Vector2(cell * 0.05, cell * 0.13)), col)
+			draw_rect(Rect2(m + Vector2(cell * 0.24, 0), Vector2(cell * 0.05, cell * 0.1)), col)
 
 
 ## Bit h of lit[level][(y-1)*6 + (x-1)]: from (x, y) facing h that level's autopilot gets there alone.
@@ -384,12 +403,10 @@ func _draw_moves() -> void:
 
 func _draw_hud() -> void:
 	var font := get_theme_default_font()
-	# the goal, top centre: the first thing the eye meets, breathing in its own colour like the objects on the board
+	# the goal, top centre: the first thing the eye meets, framed in its own colour
 	var gcol: Color = COLORS.get(room["target"]["color"], Color.WHITE)
-	var fl := _flicker()
 	var card := Rect2(W / 2.0 - 46, 8, 92, 92)
-	_glow(card.get_center(), 34, gcol, 0.9 * fl)
-	_round(card, Color("#141a25"), Color(gcol, 0.75 * fl), 16)
+	_round(card, Color("#141a25"), Color(gcol, 0.75), 16)
 	_draw_object(room["target"]["type"], gcol, card.get_center(), 88)
 	var n: int = room["target"]["positions"].size()
 	if n > 1:
