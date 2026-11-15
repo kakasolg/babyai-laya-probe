@@ -104,13 +104,14 @@ func _user_args() -> Dictionary:
 
 func _build_buttons() -> void:
 	var row := HBoxContainer.new()
-	row.position = Vector2(W - 460, 26)
-	row.size = Vector2(440, 40)
+	row.position = Vector2(W - 560, 26)
+	row.size = Vector2(540, 40)
 	row.alignment = BoxContainer.ALIGNMENT_END
 	row.add_theme_constant_override("separation", 8)
 	add_child(row)
 	btn_level = _button(row, "", func(): _cycle_level())
 	btn_garage = _button(row, "", func(): _toggle_garage())
+	_button(row, "Puzzle", func(): _open_puzzle())
 	_button(row, "Save log", func(): _save_log())
 	_button(row, "Lab", func(): _open_lab())
 	_sync_buttons()
@@ -163,6 +164,11 @@ func _open_lab() -> void:
 	_leave_room()
 	Main.lab = true
 	get_tree().change_scene_to_file("res://main.tscn")
+
+
+func _open_puzzle() -> void:
+	_leave_room()
+	get_tree().change_scene_to_file("res://drive/puzzle.tscn")
 
 
 func _say(t: String) -> void:

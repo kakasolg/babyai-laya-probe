@@ -8,6 +8,8 @@ extends RefCounted
 ##             {"x", "y", "dir", "by": "auto" | "driver", "a": action taken (0 left, 1 right, 2 forward),
 ##              "m": what the autopilot would have done, "s": its three scores, "alarm": the autopilot had stopped itself here,
 ##              "vm": what the driver could see at this step (added 11-15; "view_mode" above is the room's start)}]}
+## Puzzle mode (drive/PUZZLE.md) adds "mode": "puzzle", "nudge_par" (fewest nudges for the room) and "nudges" (how many
+## the driver gave); its driver steps are those nudges. "v" stays 1.
 
 ## Where the files live. Static so a test can point them elsewhere (selftest_drive.gd does) without touching real records.
 static var path := "user://drive_log.jsonl"
@@ -16,9 +18,11 @@ static var garage_path := "user://garage.json"
 var _rec := {}
 
 
-func begin(ep: Dictionary, level: int, view_mode: int) -> void:
+## extra: fields added to the line as they are (puzzle mode: "mode": "puzzle", "nudge_par").
+func begin(ep: Dictionary, level: int, view_mode: int, extra := {}) -> void:
 	_rec = {"v": 1, "when": int(Time.get_unix_time_from_system()), "level": level, "view_mode": view_mode,
 		"room": ep, "steps": []}
+	_rec.merge(extra)
 
 
 ## view: what the driver could see at this step (same numbers as view_mode); -1 leaves it out.
@@ -33,12 +37,13 @@ func step(pos: Vector2i, dir: int, by: String, action: int, model_action: int, m
 	_rec["steps"].append(st)
 
 
-func end(result: String, turns: int, takeovers: int) -> void:
+func end(result: String, turns: int, takeovers: int, extra := {}) -> void:
 	if _rec.is_empty():
 		return
 	_rec["result"] = result
 	_rec["turns"] = turns
 	_rec["takeovers"] = takeovers
+	_rec.merge(extra, true)
 	var f: FileAccess = FileAccess.open(path, FileAccess.READ_WRITE) if FileAccess.file_exists(path) else FileAccess.open(path, FileAccess.WRITE)
 	if f != null:
 		f.seek_end()

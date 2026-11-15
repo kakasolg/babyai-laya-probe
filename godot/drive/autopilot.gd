@@ -191,11 +191,15 @@ func scores(v: PackedInt32Array, color: int, kind: int) -> PackedFloat32Array:
 
 
 ## What the autopilot would do here, without touching its memory (use it to log the model's choice while a person drives).
-func peek(ep: Dictionary, pos: Vector2i, dir: int) -> Dictionary:
+## no_blocked_forward (puzzle mode only, drive/PUZZLE.md rule 1): when the cell ahead is not free, the better of the two
+## turns is chosen instead of forward. The scores are the model's own either way.
+func peek(ep: Dictionary, pos: Vector2i, dir: int, no_blocked_forward := false) -> Dictionary:
 	var v := view(ep, pos, dir)
 	var s := scores(v, int(COLOR_IDX[ep["target"]["color"]]), int(KIND_IDX[ep["target"]["type"]]))
+	var f: Vector2i = pos + DIR_VEC[dir]
+	var n := 2 if no_blocked_forward and cell_code(ep, f.x, f.y) != Vector2i(1, 0) else 3
 	var best := 0
-	for a in range(1, 3):
+	for a in range(1, n):
 		if s[a] > s[best]:
 			best = a
 	return {"action": best, "scores": [s[0], s[1], s[2]], "key": "%d:%s" % [dir, v.to_byte_array().hex_encode()]}

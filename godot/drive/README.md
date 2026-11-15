@@ -32,6 +32,29 @@ Godot_v4.7.2-stable_win64_console.exe --headless --path godot --scene res://driv
 ```
 화면 사진: `-- --shot=파일.png --scene=drive|stuck|win|card|garage` (창이 잠깐 뜬다, `user://shot_*`만 쓰고 지움).
 
+## 퍼즐 모드 (2026-11-15 [win], 설계는 [PUZZLE.md](PUZZLE.md))
+
+- 들어가기: 드라이브 화면 오른쪽 위 **Puzzle** 버튼 → `puzzle.tscn`(`puzzle_game.gd`, 드라이브 화면을 물려받아 규칙·HUD만 바꿈).
+  나가기는 **Drive** 버튼. 드라이브 화면의 동작과 기록은 그대로다(버튼 하나만 더해짐).
+- 자율주행 1등급 고정, 방 전체가 보이는 상태로 시작(V로 헤드라이트). 묶음 300방을 차례로 낸다.
+- 자율주행이 멈추면 차 옆에 갈 수 있는 걸음이 뜬다(왼쪽 돌기 · 오른쪽 돌기 · 앞이 비었으면 전진). 키 ←/A · →/D · ↑/W 또는 표시를 클릭.
+  한 걸음 두면 자율주행이 지나온 자리 기록을 지우지 않고 다시 몬다. 멈춰 있지 않을 때 키는 먹지 않는다.
+- 위 가운데: 도와줄 수 있는 칸(`nudge_par`개의 빈 동그라미)이 쓴 만큼 채워진다. 넘으면 주황.
+- 풀면 별(도와준 횟수 = `nudge_par` 별 3 · +1 별 2 · 그 이상 별 1)과 함께 바닥 불빛: 칸마다 방향별 쐐기 넷.
+  1등급(노랑) → 2등급(초록) → 3등급(파랑)이 1초 간격으로 켜지며, 아래 등급이 위에 그려진다. 오른쪽에 등급별 켜진 비율.
+- 키: R 다시, N 다음 방, Space/클릭 다음(실패면 다시). 진행(다음 방 번호, 방마다 최고 별)은 `user://puzzle_progress.json`.
+- 기록: 같은 `drive_log.jsonl`에 `"mode": "puzzle"`, `"nudge_par"`, `"nudges"`가 더해진다(`"v": 1` 그대로). 운전자 걸음 = 도와준 걸음.
+- 막힌 전진 금지는 `autopilot.gd` `peek(..., true)`로, 퍼즐에서만 켠다.
+
+묶음 점검(`-- --puzzlecheck`): 게임의 규칙 코드 그대로 (a) 300방 모두 자율주행 혼자 멈추는지, (b) `nudge_solution`대로 두면
+`nudge_par`번 · `nudge_turns`걸음에 끝나는지, (c) 10번째 방마다(30방) 세 등급의 `lit`을 Godot 계산으로 다시 내 맞는지,
+기록 줄의 새 필드를 본다. 어긋나는 방은 고치지 않고 번호만 찍는다. 약 4분.
+```
+Godot_v4.7.2-stable_win64_console.exe --headless --path godot res://drive/puzzle.tscn -- --puzzlecheck
+```
+11-15 결과: (a) 300/300 · (b) 300/300 · (c) 90/90 · 기록 300줄 OK — 어긋난 방 없음.
+화면 사진: `res://drive/puzzle.tscn -- --shot=파일.png --scene=stuck|solved --room=n`.
+
 ## MoKa가 정한 게임의 모습 (2026-11-15)
 
 - 방향키대로 움직인다. 특정 키를 누르면 **자율주행**한다.
