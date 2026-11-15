@@ -32,7 +32,7 @@ import numpy as np
 from minigrid.envs.babyai.core.verifier import GoToInstr, ObjDesc
 from minigrid.utils.baby_ai_bot import BabyAIBot
 
-from probe.dump_demos import seed_range
+from probe.dump_demos import guarded_seeds
 from probe.obs_text import ACTIONS, CHOICES, obs_to_text
 from probe.text_stats import categorize
 
@@ -274,15 +274,15 @@ def main() -> None:
     ap.add_argument("--swap", action="store_true", help="swap the instruction to another unique object")
     ap.add_argument("--name", required=True)
     ap.add_argument("--seeds", default="10000-10299")
+    ap.add_argument("--use-final-seeds", action="store_true", help="stage 6 only: allow 20000-20299")
+    ap.add_argument("--out", default="reports/stage3_5")
     a = ap.parse_args()
-    lo = int(a.seeds.split("-")[0])
-    if 20000 <= lo < 20300:
-        raise SystemExit("20000-20299 are reserved for the final check (README)")
-    eps, skipped = run(a.policy, list(seed_range(a.seeds)), a.model, a.mask, a.escape, a.swap)
+    seeds = list(guarded_seeds(a.seeds, a.use_final_seeds))
+    eps, skipped = run(a.policy, seeds, a.model, a.mask, a.escape, a.swap)
     res = summarize(eps, a.policy, a.name, skipped)
     res.update({"mask_mission": a.mask, "escape": a.escape, "swap": a.swap if not res.get("swap") else res["swap"],
                 "model": a.model})
-    out = pathlib.Path("reports/stage3_5")
+    out = pathlib.Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     (out / f"{a.name}.json").write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
     brief = {k: res[k] for k in ("all", "target_visible_at_start", "target_unseen_at_start", "timeouts") if k in res}

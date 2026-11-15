@@ -37,7 +37,7 @@ import urllib.request
 import numpy as np
 
 from probe.closed_loop import NAME_TO_ACT, Ep
-from probe.dump_demos import seed_range
+from probe.dump_demos import guarded_seeds, seed_range
 from probe.laya_rows import state_text
 from probe.obs_text import CHOICES
 from probe.text_stats import categorize
@@ -240,8 +240,21 @@ class JevScorer(CachedScorer):
                 "usage": d.get("usage"), "ms": round(ms, 1)}
 
 
+class FixedScorer:
+    """Model-free control (board 11-15, stage 6): the same scores at every step."""
+    name = "fixed"
+    P = {"forward": 0.7, "turn left": 0.2, "turn right": 0.1}
+
+    def score(self, states: list[str], options=CHOICES) -> list[dict]:
+        return [{"probs": dict(self.P)} for _ in states]
+
+    def stats(self):
+        return {"fixed_probs": self.P}
+
+
 def make_scorer(kind: str, model: str | None):
-    return {"laya": lambda: LayaScorer(model), "gemma": GemmaScorer, "jev": JevScorer}[kind]()
+    return {"laya": lambda: LayaScorer(model), "gemma": GemmaScorer, "jev": JevScorer,
+            "fixed": FixedScorer}[kind]()
 
 
 def ranked(probs: dict) -> list[str]:
@@ -253,9 +266,9 @@ def ranked(probs: dict) -> list[str]:
 PENALTY = 2.0  # visit penalty coefficient, fixed by the board (11-14 20:29); never tuned
 
 
-def run_loop(scorer, policy: str):
+def run_loop(scorer, policy: str, seeds=None):
     """policy: none | R | reset | penalty (board 11-14: R, R-reset and visit penalty share key and ranking)."""
-    eps = [Ep(s, shadow_bot=False, swap=False) for s in seed_range(SEEDS)]
+    eps = [Ep(s, shadow_bot=False, swap=False) for s in (seeds if seeds is not None else seed_range(SEEDS))]
     for e in eps:
         e.tried, e.gave_up, e.n_interv, e.resets, e.count = {}, False, 0, 0, {}
     aborted = None
@@ -386,14 +399,19 @@ def stepcheck(scorer):
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("mode", choices=["loop", "stepcheck"])
-    ap.add_argument("--scorer", required=True, choices=["laya", "gemma", "jev"])
+    ap.add_argument("--scorer", required=True, choices=["laya", "gemma", "jev", "fixed"])
     ap.add_argument("--model", default=None)
     ap.add_argument("--name", default=None)
     ap.add_argument("--rule", action="store_true", help="same as --policy R")
     ap.add_argument("--policy", default=None, choices=["none", "R", "reset", "penalty"])
     ap.add_argument("--base", default=None, help="no-rule run json to compare against")
+    ap.add_argument("--seeds", default=SEEDS)
+    ap.add_argument("--use-final-seeds", action="store_true", help="stage 6 only: allow 20000-20299")
+    ap.add_argument("--out", default=str(OUT))
     a = ap.parse_args()
-    OUT.mkdir(parents=True, exist_ok=True)
+    seeds = list(guarded_seeds(a.seeds, a.use_final_seeds))
+    out = pathlib.Path(a.out)
+    out.mkdir(parents=True, exist_ok=True)
     sc = make_scorer(a.scorer, a.model and os.path.expanduser(a.model))
     if a.mode == "stepcheck":
         res = stepcheck(sc)
@@ -403,11 +421,12 @@ def main() -> None:
     policy = a.policy or ("R" if a.rule else "none")
     if policy == "penalty" and a.scorer != "laya":
         raise SystemExit("visit penalty is for the Laya seeds only (board 11-14 20:29)")
-    eps, aborted = run_loop(sc, policy)
+    eps, aborted = run_loop(sc, policy, seeds)
     base = json.load(open(a.base, encoding="utf-8")) if a.base else None
     res = summarize(eps, a.name, sc, policy, aborted, base)
-    res["model"] = a.model if a.scorer == "laya" else sc.model
-    (OUT / f"{a.name}.json").write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
+    res["model"] = a.model if a.scorer == "laya" else getattr(sc, "model", None)
+    res["seeds"] = a.seeds
+    (out / f"{a.name}.json").write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
     print(json.dumps({k: res[k] for k in ("name", "all", "timeout", "gave_up", "api_aborted", "all_fail_12_solved",
                                           "scorer_stats")} | ({"vs": res["vs_no_rule"]} if base else {}), default=str))
 

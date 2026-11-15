@@ -22,9 +22,20 @@ from probe.obs_text import ACTIONS, obs_to_text
 ENV_ID = "BabyAI-GoToLocal-v0"
 
 
+FINAL_SEEDS = range(20000, 20300)
+
+
 def seed_range(s: str) -> range:
     lo, hi = s.split("-")
     return range(int(lo), int(hi) + 1)
+
+
+def guarded_seeds(s: str, use_final: bool = False) -> range:
+    """Seeds 20000-20299 only with the explicit stage-6 flag (board 11-15: one final run, then locked again)."""
+    r = seed_range(s)
+    if any(x in FINAL_SEEDS for x in r) and not use_final:
+        raise SystemExit("20000-20299 are reserved for the final check (README)")
+    return r
 
 
 def episode(env_id: str, seed: int):
@@ -61,13 +72,15 @@ def main() -> None:
     ap.add_argument("--out", default="data/gotolocal_train.jsonl")
     # Eval seeds keep every episode (MoKa 11-14); only the train dump drops 3/4 episodes.
     ap.add_argument("--keep-all", action="store_true")
+    ap.add_argument("--use-final-seeds", action="store_true", help="stage 6 only: allow 20000-20299")
     a = ap.parse_args()
+    seeds = guarded_seeds(a.seeds, a.use_final_seeds)
     out = pathlib.Path(a.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     n_lines = fails = 0
     dropped, all_acts, lengths = [], collections.Counter(), []
     with open(out, "w", encoding="utf-8") as f:
-        for seed in seed_range(a.seeds):
+        for seed in seeds:
             lines, ok, acts = episode(a.env, seed)
             fails += not ok
             all_acts.update(acts)
