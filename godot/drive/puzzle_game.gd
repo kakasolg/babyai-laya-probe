@@ -282,39 +282,14 @@ func _draw_room() -> void:
 		_draw_moves()
 
 
-## The goal sits on its own small plate (11-15, after reading three open-source Sokoban games: they mark the goal
-## with a dedicated floor plate, no glow or motion). The plate is smaller than the cell so it reads as "this object",
-## not "drive into this cell"; four corner marks in the target's colour stay visible around the object.
+## The goal plate itself is drawn by drive_game.gd (_draw_plate); here only the success response.
 const GUIDE := Color("#9be5ec")
-const PLATE := 62.0          # half of it, 31 px, clears a key or ball
-const PLATE_MARK := 27.0
-const PLATE_BOX := 74.0      # a box is 50 px wide, so its plate is larger
-const PLATE_BOX_MARK := 33.0
+
 
 
 func _draw_goal() -> void:
 	if phase == "result" and result == "success":
 		_draw_arrival()
-
-
-func _is_target_px(m: Vector2) -> bool:
-	for t in room["target"]["positions"]:
-		if _px(Vector2(int(t[0]), int(t[1]))).distance_to(m) < 1.0:
-			return true
-	return false
-
-
-func _draw_plate(m: Vector2, col: Color, kind: String) -> void:
-	var size := PLATE_BOX if kind == "box" else PLATE
-	var mark := PLATE_BOX_MARK if kind == "box" else PLATE_MARK
-	var r := Rect2(m - Vector2(size, size) * 0.5, Vector2(size, size))
-	_round(r, Color("#121722"), Color("#2a3242"), 9)
-	var ink := Color(col, 0.95)
-	for sx in [-1.0, 1.0]:
-		for sy in [-1.0, 1.0]:
-			var c := m + Vector2(sx, sy) * mark
-			draw_line(c, c - Vector2(sx * 9, 0), ink, 3.0, true)
-			draw_line(c, c - Vector2(0, sy * 9), ink, 3.0, true)
 
 
 ## Arrival: a short line from the car to the target, then a check mark on the target's top-right corner.
@@ -329,33 +304,6 @@ func _draw_arrival() -> void:
 	draw_circle(c, 12.0, Color(C_AUTO, 0.9 * ca))
 	draw_polyline(PackedVector2Array([c + Vector2(-6, 0), c + Vector2(-2, 4), c + Vector2(6, -4)]),
 		Color("#0a0d14", ca), 3.0, true)
-
-
-## Board objects without the base glow (only the goal plate speaks), with a small contact shadow so they sit on the floor.
-func _draw_object(kind: String, col: Color, m: Vector2, cell: float) -> void:
-	if cell == CELL:
-		if _is_target_px(m):
-			_draw_plate(m, col, kind)
-		var sh := PackedVector2Array()
-		for i in 20:
-			var u := TAU * i / 20.0
-			sh.append(m + Vector2(cos(u) * cell * 0.3, cell * 0.3 + sin(u) * cell * 0.08))
-		draw_colored_polygon(sh, Color(0, 0, 0, 0.45))
-	match kind:
-		"ball":
-			draw_circle(m, cell * 0.28, col)
-			draw_circle(m + Vector2(-cell * 0.08, -cell * 0.08), cell * 0.08, Color(1, 1, 1, 0.35))
-		"box":
-			var r := Rect2(m - Vector2(cell * 0.3, cell * 0.3), Vector2(cell * 0.6, cell * 0.6))
-			draw_rect(r, col.darkened(0.55))
-			draw_rect(r, col, false, maxf(2.0, cell * 0.06))
-			draw_line(r.position + Vector2(0, r.size.y * 0.35), r.position + Vector2(r.size.x, r.size.y * 0.35), col, maxf(1.5, cell * 0.04))
-		"key":
-			draw_circle(m + Vector2(-cell * 0.18, 0), cell * 0.14, col)
-			draw_circle(m + Vector2(-cell * 0.18, 0), cell * 0.06, Color("#1f2532"))
-			draw_rect(Rect2(m + Vector2(-cell * 0.05, -cell * 0.04), Vector2(cell * 0.33, cell * 0.08)), col)
-			draw_rect(Rect2(m + Vector2(cell * 0.16, 0), Vector2(cell * 0.05, cell * 0.13)), col)
-			draw_rect(Rect2(m + Vector2(cell * 0.24, 0), Vector2(cell * 0.05, cell * 0.1)), col)
 
 
 ## Bit h of lit[level][(y-1)*6 + (x-1)]: from (x, y) facing h that level's autopilot gets there alone.
