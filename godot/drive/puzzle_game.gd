@@ -33,8 +33,7 @@ var result := ""
 var lit_t := 0.0
 var lit_share := [0.0, 0.0, 0.0]
 var move_rects := {}         # action -> Rect2 of its marker while stopped
-var sparks: Array = []       # rising sparks over the matching objects
-var spark_t := 0.0
+var halo_tex: GradientTexture2D   # white radial falloff, tinted per draw (made once)
 var saving := true           # off for checks and screenshots
 
 
@@ -229,20 +228,6 @@ func _process(delta: float) -> void:
 	super._process(delta)
 	if phase == "result":
 		lit_t += delta
-	# a slow drift of sparks above every matching object, so the goal is seen on the board, not only in the badge
-	spark_t += delta
-	while spark_t > 0.09 and not room.is_empty():
-		spark_t -= 0.09
-		var ps: Array = room["target"]["positions"]
-		var t: Array = ps[rng.randi() % ps.size()]
-		var c := _px(Vector2(int(t[0]), int(t[1])))
-		sparks.append({"p": c + Vector2(rng.randf_range(-0.3, 0.3) * CELL, rng.randf_range(0.0, 0.25) * CELL),
-			"v": Vector2(rng.randf_range(-6, 6), -rng.randf_range(18, 34)), "life": rng.randf_range(1.0, 1.8),
-			"max": 1.8, "r": rng.randf_range(1.5, 3.0)})
-	for s in sparks:
-		s["p"] += s["v"] * delta
-		s["life"] -= delta
-	sparks = sparks.filter(func(s): return s["life"] > 0.0)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -298,19 +283,53 @@ func _draw_room() -> void:
 		_draw_moves()
 
 
-## Every matching object: a tinted floor, a slow breathing ring in its colour, and the sparks from _process.
+## The goal, read like a bonfire in a dark level (Perplexity notes, 11-15): what matters most is a steady shape and a
+## soft pool of light; flicker and sparks are small extras. Per matching object, in this order:
+##   static corner brackets on its cell → a soft ground halo (78 px) → a small hot glow (32 px) → the object again,
+##   crisp on top → three tiny looping sparks that stay inside the cell. Brightness moves only about ±6 %.
 func _draw_goal() -> void:
+	if halo_tex == null:
+		var g := Gradient.new()
+		g.offsets = PackedFloat32Array([0.0, 0.35, 0.7, 1.0])
+		g.colors = PackedColorArray([Color(1, 1, 1, 1), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.12), Color(1, 1, 1, 0)])
+		halo_tex = GradientTexture2D.new()
+		halo_tex.width = 128
+		halo_tex.height = 128
+		halo_tex.gradient = g
+		halo_tex.fill = GradientTexture2D.FILL_RADIAL
+		halo_tex.fill_from = Vector2(0.5, 0.5)
+		halo_tex.fill_to = Vector2(1.0, 0.5)
 	var col: Color = COLORS.get(room["target"]["color"], Color.WHITE)
-	var pulse := 0.5 + 0.5 * sin(clock * 3.0)
+	var b := _flicker()
+	var kind: String = room["target"]["type"]
 	for t in room["target"]["positions"]:
 		var cell := Vector2(int(t[0]), int(t[1]))
 		var c := _px(cell)
-		draw_rect(Rect2(BOARD + cell * CELL, Vector2(CELL, CELL)).grow(-1.5), Color(col, 0.10 + 0.06 * pulse))
-		_glow(c, CELL * 0.3, col, 0.6 + 0.6 * pulse)
-		draw_arc(c, CELL * (0.40 + 0.05 * pulse), 0, TAU, 40, Color(col, 0.35 + 0.4 * pulse), 2.5, true)
-	for s in sparks:
-		var a: float = clampf(s["life"] / 0.6, 0.0, 1.0) * clampf((float(s["max"]) - s["life"]) / 0.3, 0.0, 1.0)
-		draw_circle(s["p"], s["r"], Color(col.lightened(0.3), 0.8 * a))
+		var r := Rect2(BOARD + cell * CELL, Vector2(CELL, CELL)).grow(-9)
+		var bc := Color(col.lightened(0.25), 0.6)
+		for k in 4:
+			var corner := r.position + Vector2(r.size.x * (k % 2), r.size.y * (k / 2))
+			var sx := 1.0 if k % 2 == 0 else -1.0
+			var sy := 1.0 if k / 2 == 0 else -1.0
+			draw_line(corner, corner + Vector2(11 * sx, 0), bc, 2.0)
+			draw_line(corner, corner + Vector2(0, 11 * sy), bc, 2.0)
+		draw_texture_rect(halo_tex, Rect2(c - Vector2(39, 39), Vector2(78, 78)), false,
+			Color(col.lightened(0.15), 0.5 * (1.0 + (b - 1.0) * 0.5)))
+		draw_texture_rect(halo_tex, Rect2(c - Vector2(16, 16), Vector2(32, 32)), false, Color(col.lightened(0.45), 0.4 * b))
+		_draw_object(kind, col, c, CELL)
+		for i in 3:
+			var life := 0.78 + 0.07 * i
+			var u := fposmod(clock / life + i / 3.0, 1.0)
+			var p := c + Vector2(-8.0 + 8.0 * i + 2.0 * sin(u * TAU + i * 2.1), -10.0 - 22.0 * u)
+			var a := smoothstep(0.0, 0.12, u) * (1.0 - smoothstep(0.6, 1.0, u))
+			var sc := Color("#fff1c2").lerp(col.lightened(0.2), u)
+			sc.a = 0.85 * a
+			draw_circle(p, 2.2, sc)
+
+
+## Brightness multiplier, about ±6 %, two slow waves so it never looks like a metronome.
+func _flicker() -> float:
+	return 1.0 + 0.04 * sin(TAU * 0.62 * clock) + 0.02 * sin(TAU * 1.71 * clock + 1.3)
 
 
 ## Bit h of lit[level][(y-1)*6 + (x-1)]: from (x, y) facing h that level's autopilot gets there alone.
@@ -367,10 +386,10 @@ func _draw_hud() -> void:
 	var font := get_theme_default_font()
 	# the goal, top centre: the first thing the eye meets, breathing in its own colour like the objects on the board
 	var gcol: Color = COLORS.get(room["target"]["color"], Color.WHITE)
-	var pulse := 0.5 + 0.5 * sin(clock * 3.0)
+	var fl := _flicker()
 	var card := Rect2(W / 2.0 - 46, 8, 92, 92)
-	_glow(card.get_center(), 34, gcol, 0.7 + 0.5 * pulse)
-	_round(card, Color("#141a25"), Color(gcol, 0.5 + 0.4 * pulse), 16)
+	_glow(card.get_center(), 34, gcol, 0.9 * fl)
+	_round(card, Color("#141a25"), Color(gcol, 0.75 * fl), 16)
 	_draw_object(room["target"]["type"], gcol, card.get_center(), 88)
 	var n: int = room["target"]["positions"].size()
 	if n > 1:
