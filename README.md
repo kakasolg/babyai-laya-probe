@@ -86,6 +86,8 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
 5. 닫힌 루프 세 갈래(Laya · Jev · Gemma 12B)와 "안 해본 행동" 규칙 R — `reports/stage5.md`, 아래 "5단계"
 6. 최종 확인(seed 20000~20299, 선언 뒤 한 번) — `reports/stage6_prereg.md`, `reports/stage6.md`
 7. GoToLocal 한 장 정리 — **`reports/summary_gotolocal.md`** (처음 읽는 사람은 여기부터)
+8. 다음 과제 `BabyAI-PickupDist-v0`(선택지에 `pick up` 추가) — 8a 살펴보기(학습 없음): `reports/stage8a.md`, `python -m probe.stage8a`.
+   seed: 학습 0~999, 개발용 10000~10299, 최종 30000~30299(8d 선언 전엔 거부).
 
 각 단계는 MoKa 확인 뒤 하나씩 진행한다.
 

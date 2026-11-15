@@ -23,6 +23,7 @@ ENV_ID = "BabyAI-GoToLocal-v0"
 
 
 FINAL_SEEDS = range(20000, 20300)
+FINAL_SEEDS_PICKUP = range(30000, 30300)  # board 11-15 stage 8: never before the stage-8d declaration
 
 
 def seed_range(s: str) -> range:
@@ -35,6 +36,8 @@ def guarded_seeds(s: str) -> range:
     r = seed_range(s)
     if any(x in FINAL_SEEDS for x in r):
         raise SystemExit("20000-20299 were used for the final check on 11-15 and are locked (README)")
+    if any(x in FINAL_SEEDS_PICKUP for x in r):
+        raise SystemExit("30000-30299 are reserved for the PickupDist final check (stage 8d, after a declaration)")
     return r
 
 

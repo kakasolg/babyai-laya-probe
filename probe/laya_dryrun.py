@@ -32,6 +32,29 @@ def config_only_dir(alias: str) -> str:
     return os.path.join(d, sub) if sub else d
 
 
+def measure(rows_path: str, alias: str) -> dict:
+    """dry_run + token lengths of one rows file for one checkpoint alias (no weights, no training)."""
+    cfg = TrainConfig(shuffle_options=("choice",))
+    d = config_only_dir(alias)
+    rl_cfg = json.load(open(os.path.join(d, "rl_agent_config.json"), encoding="utf-8"))
+    summ = dry_run(rows_path, d, cfg)
+    from laya.agent import _fix_tokenizer_config
+    _fix_tokenizer_config(d)
+    tok = AutoTokenizer.from_pretrained(os.path.join(d, "tokenizer"))
+    rows = read_data(rows_path)
+    items, _ = items_from_rows(tok, rows, summ["max_len"], summ["head_max_len"])
+    full = [len(encode_item(tok, it, summ["max_len"], summ["head_max_len"])["ids"]) for it in items]
+    state = [len(it["state_ids"]) for it in items]
+    return {
+        "repo": resolve_model_spec(alias), "revision": PINNED_REVISIONS.get(resolve_model_spec(alias)[0]),
+        "dir": d, "rl_agent_config_keys": sorted(rl_cfg), "max_len": summ["max_len"],
+        "head_max_len": summ["head_max_len"], "dry_run": {k: v for k, v in summ.items() if k != "data"},
+        "tokens_state(mission+text)": {"median": statistics.median(state), "max": max(state)},
+        "tokens_full_input": {"median": statistics.median(full), "max": max(full),
+                              "at_or_over_max_len": sum(x >= summ["max_len"] for x in full)},
+    }
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("dump")
@@ -43,26 +66,8 @@ def main() -> None:
     res = {"laya": getattr(laya, "__version__", "?"), "rows": n,
            "finetune_signature": str(inspect.signature(finetune)),
            "trainconfig_defaults": {k: str(v) for k, v in TrainConfig().__dict__.items()}, "checkpoints": {}}
-    cfg = TrainConfig(shuffle_options=("choice",))
     for alias in a.candidates.split(","):
-        d = config_only_dir(alias)
-        rl_cfg = json.load(open(os.path.join(d, "rl_agent_config.json"), encoding="utf-8"))
-        summ = dry_run(a.rows, d, cfg)
-        from laya.agent import _fix_tokenizer_config
-        _fix_tokenizer_config(d)
-        tok = AutoTokenizer.from_pretrained(os.path.join(d, "tokenizer"))
-        rows = read_data(a.rows)
-        items, _ = items_from_rows(tok, rows, summ["max_len"], summ["head_max_len"])
-        full = [len(encode_item(tok, it, summ["max_len"], summ["head_max_len"])["ids"]) for it in items]
-        state = [len(it["state_ids"]) for it in items]
-        res["checkpoints"][alias] = {
-            "repo": resolve_model_spec(alias), "revision": PINNED_REVISIONS.get(resolve_model_spec(alias)[0]),
-            "dir": d, "rl_agent_config_keys": sorted(rl_cfg), "max_len": summ["max_len"],
-            "head_max_len": summ["head_max_len"], "dry_run": {k: v for k, v in summ.items() if k != "data"},
-            "tokens_state(mission+text)": {"median": statistics.median(state), "max": max(state)},
-            "tokens_full_input": {"median": statistics.median(full), "max": max(full),
-                                  "at_or_over_max_len": sum(x >= summ["max_len"] for x in full)},
-        }
+        res["checkpoints"][alias] = measure(a.rows, alias)
         print(alias, json.dumps(res["checkpoints"][alias]["tokens_full_input"]),
               json.dumps(res["checkpoints"][alias]["tokens_state(mission+text)"]), flush=True)
     out = pathlib.Path(a.out)
