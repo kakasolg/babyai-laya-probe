@@ -31,12 +31,13 @@ def seed_range(s: str) -> range:
     return range(int(lo), int(hi) + 1)
 
 
-def guarded_seeds(s: str) -> range:
-    """20000-20299 were used once for the stage-6 final check (11-15) and are locked again; never reopen."""
+def guarded_seeds(s: str, use_final_pickup: bool = False) -> range:
+    """20000-20299 were used once for the stage-6 final check (11-15) and are locked again; never reopen.
+    30000-30299 only with the explicit stage-8d flag (declared in reports/stage8d_prereg.md; one run, then locked)."""
     r = seed_range(s)
     if any(x in FINAL_SEEDS for x in r):
         raise SystemExit("20000-20299 were used for the final check on 11-15 and are locked (README)")
-    if any(x in FINAL_SEEDS_PICKUP for x in r):
+    if any(x in FINAL_SEEDS_PICKUP for x in r) and not use_final_pickup:
         raise SystemExit("30000-30299 are reserved for the PickupDist final check (stage 8d, after a declaration)")
     return r
 

@@ -37,12 +37,21 @@ from probe.stage8a import ENV, NAME_TO_ACT4, bot_episode, categorize, matches, m
 CH = CHOICES_PICKUP
 OUT = pathlib.Path("reports/stage8")
 DEV = "10000-10299"
+FINAL = "30000-30299"          # stage 8d only (--use-final-seeds), declared in reports/stage8d_prereg.md
+FIXED = {"forward": 0.4, "turn left": 0.3, "turn right": 0.2, "pick up": 0.1}   # model-free control (8a)
 TRAIN_DUMP = "data/pickupdist_train.jsonl"
 ROWS = "data/laya_rows_pickupdist_train_8b.jsonl"
 
 
 def ranked(p: dict) -> list[str]:
     return sorted(CH, key=lambda c: -p.get(c, 0.0))  # stable: ties keep the fixed option order
+
+
+class FixedScorer:
+    """Model-free control: the same fixed scores for every state (8a: forward > left > right > pick up)."""
+
+    def __call__(self, states, choices=CH):
+        return [dict(FIXED) for _ in states]
 
 
 class Scorer:
@@ -163,8 +172,8 @@ class Ep:
             self.env.close()
 
 
-def run_loop(policy: str, scorer=None):
-    seeds = list(guarded_seeds(DEV))
+def run_loop(policy: str, scorer=None, seeds=None):
+    seeds = list(seeds if seeds is not None else guarded_seeds(DEV))
     bot_n = {s: len(bot_episode(s)[0]) for s in seeds}
     eps = [Ep(s, bot_n[s]) for s in seeds]
     while True:
@@ -251,6 +260,8 @@ def summarize(eps, name, policy, base=None):
            "steps_sum_all": sum(len(e.steps) for e in eps),
            "steps_sum_without_wrong_pickup": sum(len(e.steps) for e in eps if e.end != "wrong_pickup"),
            "pickup_choices": dict(picks),
+           "episodes_with_other_actions": sorted(e.seed for e in eps
+                                                 if any(st["policy"].startswith("other") for st in e.steps)),
            "per_episode": {e.seed: {"end": e.end, "steps": len(e.steps), "bot": e.bot_n, "interventions": e.n_interv,
                                     "wrong_step": e.wrong_step} for e in eps}}
     if policy == "reset":
@@ -277,21 +288,30 @@ def main() -> None:
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--model", default=None)
     ap.add_argument("--name", default=None)
-    ap.add_argument("--policy", default="none", choices=["none", "reset", "bot", "random"])
+    ap.add_argument("--policy", default="none", choices=["none", "reset", "bot", "random", "fixed", "fixed-reset"])
     ap.add_argument("--base", default=None)
+    ap.add_argument("--use-final-seeds", action="store_true", help="stage 8d only: run on 30000-30299")
     a = ap.parse_args()
     model = a.model and os.path.expanduser(a.model)
     if a.mode == "train":
         return train(a.seed)
     if a.mode == "stepeval":
         return stepeval(model, a.name)
-    OUT.mkdir(parents=True, exist_ok=True)
-    eps = run_loop(a.policy, Scorer(model) if a.policy in ("none", "reset") else None)
+    out = OUT / "final" if a.use_final_seeds else OUT
+    out.mkdir(parents=True, exist_ok=True)
+    seeds = guarded_seeds(FINAL if a.use_final_seeds else DEV, use_final_pickup=a.use_final_seeds)
+    fixed = a.policy.startswith("fixed")
+    policy = "reset" if a.policy.endswith("reset") else ("none" if fixed else a.policy)
+    scorer = FixedScorer() if fixed else (Scorer(model) if policy in ("none", "reset") else None)
+    eps = run_loop(policy, scorer, seeds)
     base = json.load(open(a.base, encoding="utf-8")) if a.base else None
-    res = summarize(eps, a.name, a.policy, base)
+    res = summarize(eps, a.name, policy, base)
+    res["seeds"] = FINAL if a.use_final_seeds else DEV
     if model:
         res["model"] = f"babyai-laya-ft/{os.path.basename(model.rstrip('/'))}"
-    (OUT / f"{a.name}.json").write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
+    if fixed:
+        res["model"] = "none (fixed scores)"
+    (out / f"{a.name}.json").write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
     print(json.dumps({k: res[k] for k in ("name", "all", "timeout", "wrong_pickup", "pickup_choices")}
                      | ({"vs": res["vs_no_rule"]} if base else {}), default=str))
 
