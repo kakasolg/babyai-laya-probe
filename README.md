@@ -146,6 +146,14 @@ Windows PowerShell에서 친다면 같은 줄을 `wsl -d Ubuntu -- bash -lc '…
 
 ## 게임으로 보기 (`godot/`, Godot 4.7)
 
+**드라이브 화면 (11-15, 그냥 켜면 먼저 뜬다).** 반자동 자율주행 게임이다. 어두운 방에서 차(주황 삼각형)를 지시문 그림의 물체 앞까지 몬다.
+- **실시간으로 운전하는 자율주행은 Laya가 아니다.** 약 67,000 파라미터의 작은 합성곱망이 MiniGrid 봇의 시범을 따라 배운 것이다. 앞 7×7칸과 지시문의 색·종류만 보고, 기억이 없다. 게임 안(브라우저 포함)에서 계산한다. Laya는 아래 "Lab" 화면의 녹화 재생뿐이다.
+- 키: ↑ 전진 · ← → 회전 · Space 자율주행 켜기/끄기 · V 전조등 ↔ 방 전체 · G 정비소 · N 건너뛰기.
+  자율주행이 이미 지나온 장면에 다시 서면 스스로 멈추고(주황 표시등) 운전자가 넘겨받는다. 오른쪽 위에서 자율주행 등급(1~3), 기록 저장, Lab을 고른다.
+- 운전 기록(방마다 한 줄, 걸음마다 누가 몰았나 · 모델이라면 무엇을 · 그때의 시야)과 정비소(35턴 이상 걸렸거나 못 끝낸 방)는 **그 기기에만** 남는다(웹은 브라우저 저장소). 어디로도 보내지 않는다.
+- 게임 안에서는 설명하지 않는다. 자세한 것은 [`godot/drive/README.md`](godot/drive/README.md).
+
+**Lab (예전 화면).** 드라이브 화면 오른쪽 위 "Lab"으로 들어가고 `< Drive`로 돌아온다. 인자를 주고 실행하면(`-- --selftest` 등) 바로 Lab으로 들어간다.
 글자 화면 대신 그림으로 보는 뷰어 겸 게임. 재학습·평가와는 무관하고, 3단계 모델(seed 0)의 걸음을 다시 보여 줄 뿐이다.
 
 1. 리플레이 내보내기 (WSL, 한 번만): dev seed 10000~10029 + 세 모델 모두 실패한 12판, 모두 35판.
@@ -217,7 +225,7 @@ $PY -m probe.stage5_blocked                                # 앞 칸이 막힌 �
 ## 게임 웹 빌드
 
 - 2026-11-14 itch.io에 공개: https://mokaflow.itch.io/babyai-laya-an-ai-in-the-room (HTML, 1320×860, 업로드는 아래 ZIP을 손으로).
-- 범위: Play yourself + 기록된 Laya 재생(Watch Laya)만. 웹에선 Correct(교정) 모드가 숨겨지고 들어갈 수 없다 — 추론 서버(WSL·Python·GPU)가 브라우저에 없다.
+- 2026-11-15 드라이브 화면 판(v4)으로 바꿨다. 범위: 드라이브 화면(자율주행 모델이 브라우저에서 돎) + Lab의 Play yourself · 기록된 Laya 재생(Watch Laya). 웹에선 Correct(교정) 모드가 숨겨지고 들어갈 수 없다 — 추론 서버(WSL·Python·GPU)가 브라우저에 없다.
 - 프리셋 `godot/export_presets.cfg`: Web, 스레드 없음(교차 출처 격리 헤더 불필요), `data/*.json` 포함. Godot 4.7.2 공식 export templates의 web 템플릿이 필요하다.
 - 내보내기: `Godot_v4.7.2-stable_win64_console.exe --headless --path godot --export-release "Web" <빌드 폴더>/index.html`
 - 확인한 대상은 데스크톱 키보드·마우스(Chromium 계열). 모바일은 아직 지원하지 않는다.
