@@ -84,6 +84,8 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
    ```
 4. (만듦, MoKa가 돌림) 한 걸음씩 멈추고 키보드로 모델 선택을 확인·교정하는 루프(교정은 기록만) — `reports/stage4.md`, 아래 "교정 루프"
 5. 닫힌 루프 세 갈래(Laya · Jev · Gemma 12B)와 "안 해본 행동" 규칙 R — `reports/stage5.md`, 아래 "5단계"
+6. 최종 확인(seed 20000~20299, 선언 뒤 한 번) — `reports/stage6_prereg.md`, `reports/stage6.md`
+7. GoToLocal 한 장 정리 — **`reports/summary_gotolocal.md`** (처음 읽는 사람은 여기부터)
 
 각 단계는 MoKa 확인 뒤 하나씩 진행한다.
 
