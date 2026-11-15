@@ -93,7 +93,10 @@ func _load_progress() -> void:
 	var p = JSON.parse_string(FileAccess.get_file_as_string(progress_path))
 	if p is Dictionary:
 		best = p.get("best", {})
-		pidx = clampi(int(p.get("next", 0)), 0, maxi(0, pack.size() - 1))
+		pidx = 0
+		for i in pack.size():               # by room id, so a changed keep list does not skip rooms
+			if pack[i]["seed"] == p.get("next_seed", ""):
+				pidx = i
 
 
 func _save_progress() -> void:
@@ -101,7 +104,7 @@ func _save_progress() -> void:
 		return
 	var f := FileAccess.open(progress_path, FileAccess.WRITE)
 	if f != null:
-		f.store_string(JSON.stringify({"next": pidx, "best": best}))
+		f.store_string(JSON.stringify({"next_seed": pack[pidx]["seed"], "best": best}))
 		f.close()
 
 
