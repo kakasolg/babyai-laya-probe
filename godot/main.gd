@@ -25,6 +25,9 @@ const UI_MUTED := Color("#8b95a5")
 const UI_KEY_BG := Color("#242830")
 const UI_KEY_BORDER := Color("#4A5260")
 
+## Set by drive mode's "Lab" button. A plain launch opens drive mode (drive/drive.tscn); this screen is the lab.
+static var lab := false
+
 var episodes: Array = []
 var ep_idx := 0
 var mode := "play"
@@ -95,6 +98,9 @@ var fix_script := ""   # self-check keys for fix mode: e model, a/d/w, b bot, 1-
 
 
 func _ready() -> void:
+	if _user_args().is_empty() and not lab:
+		get_tree().change_scene_to_file.call_deferred("res://drive/drive.tscn")
+		return
 	_load_episodes()
 	_build_ui()
 	get_tree().auto_accept_quit = false
@@ -124,7 +130,7 @@ func _ready() -> void:
 		get_tree().quit()
 		return
 	# the start screen only on a plain launch; scripted runs (seed/mode/shot/demo...) go straight in
-	start_screen.visible = args.is_empty()
+	start_screen.visible = args.is_empty() and not lab
 	_refresh()
 
 
@@ -157,6 +163,19 @@ func _selftest() -> void:
 			print("RESULT seed ", _ep()["seed"], " want ", want_res, " got ", p_result)
 	print("selftest: episodes %d steps %d  text mismatches %d  position mismatches %d  result mismatches %d"
 		% [episodes.size(), n, bad_text, bad_pos, bad_res])
+
+
+func _back_to_drive() -> void:
+	if server_pid != 0:
+		# the correction server belongs to this screen: stop it the same way closing the window does
+		fix_busy = false
+		fix_cb = func(_d): pass
+		http.cancel_request()
+		http.request(SERVER + "/quit")
+		server_pid = 0
+		get_tree().create_timer(1.0).timeout.connect(func(): get_tree().change_scene_to_file("res://drive/drive.tscn"))
+		return
+	get_tree().change_scene_to_file("res://drive/drive.tscn")
 
 
 func _user_args() -> Dictionary:
@@ -309,6 +328,7 @@ func _build_top_bar() -> void:
 	top.custom_minimum_size = Vector2(1288, 44)
 	top.add_theme_constant_override("separation", 12)
 	add_child(top)
+	_style_btn(_btn(top, "< Drive", func(): _back_to_drive()), Color("#10261a"), Color("#2f7d4f"), Color("#8fe0b0"))
 
 	# mode switch: one segment lit at a time (ButtonGroup), instead of greyed-out "disabled" buttons
 	var seg := PanelContainer.new()
