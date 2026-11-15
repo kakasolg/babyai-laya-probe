@@ -1,0 +1,2156 @@
+{
+ "name": "random",
+ "policy": "random",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 61,
+  "within_2x_bot": 13
+ },
+ "timeout": 68,
+ "wrong_pickup": 171,
+ "target_visible_at_start": {
+  "n": 175,
+  "success": 46,
+  "within_2x_bot": 10
+ },
+ "target_unseen_at_start": {
+  "n": 125,
+  "success": 15,
+  "within_2x_bot": 3
+ },
+ "mission_kind": {
+  "color only": {
+   "n": 98,
+   "success": 17,
+   "within_2x_bot": 1
+  },
+  "type only": {
+   "n": 112,
+   "success": 32,
+   "within_2x_bot": 5
+  },
+  "both": {
+   "n": 90,
+   "success": 12,
+   "within_2x_bot": 7
+  }
+ },
+ "grey_wall_episodes": {
+  "n": 19,
+  "success": 4,
+  "within_2x_bot": 1
+ },
+ "mean_steps_success": 18.9,
+ "bot_mean_steps_same_eps": 3.43,
+ "steps_sum_all": 12864,
+ "steps_sum_without_wrong_pickup": 4485,
+ "pickup_choices": {
+  "wrong object": 171,
+  "while carrying": 1299,
+  "nothing ahead": 1736,
+  "matching": 61
+ },
+ "per_episode": {
+  "10000": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 9
+  },
+  "10001": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 20
+  },
+  "10002": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 14
+  },
+  "10003": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 30
+  },
+  "10004": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10005": {
+   "end": "success",
+   "steps": 16,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10006": {
+   "end": "success",
+   "steps": 10,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10007": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10008": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10009": {
+   "end": "success",
+   "steps": 23,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10010": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 31
+  },
+  "10011": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 9
+  },
+  "10012": {
+   "end": "success",
+   "steps": 13,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10013": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10014": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 42
+  },
+  "10015": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 26
+  },
+  "10016": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10017": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 25
+  },
+  "10018": {
+   "end": "success",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10019": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10020": {
+   "end": "success",
+   "steps": 9,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10021": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 8
+  },
+  "10022": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 12
+  },
+  "10023": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 30
+  },
+  "10024": {
+   "end": "success",
+   "steps": 43,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10025": {
+   "end": "success",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10026": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 2
+  },
+  "10027": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 23
+  },
+  "10028": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10029": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 1
+  },
+  "10030": {
+   "end": "success",
+   "steps": 30,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10031": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 15
+  },
+  "10032": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10033": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 10
+  },
+  "10034": {
+   "end": "success",
+   "steps": 24,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10035": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 45
+  },
+  "10036": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 17
+  },
+  "10037": {
+   "end": "success",
+   "steps": 7,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10038": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": 20
+  },
+  "10039": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 4
+  },
+  "10040": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 16
+  },
+  "10041": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": 2
+  },
+  "10042": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10043": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 25
+  },
+  "10044": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 10,
+   "interventions": 0,
+   "wrong_step": 31
+  },
+  "10045": {
+   "end": "success",
+   "steps": 13,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10046": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10047": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 32
+  },
+  "10048": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 3
+  },
+  "10049": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10050": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 9
+  },
+  "10051": {
+   "end": "success",
+   "steps": 27,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10052": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 2
+  },
+  "10053": {
+   "end": "success",
+   "steps": 6,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10054": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": 15
+  },
+  "10055": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": 16
+  },
+  "10056": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 18
+  },
+  "10057": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 8
+  },
+  "10058": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": 3
+  },
+  "10059": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 13
+  },
+  "10060": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 4
+  },
+  "10061": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 26
+  },
+  "10062": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 18
+  },
+  "10063": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 37
+  },
+  "10064": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10065": {
+   "end": "success",
+   "steps": 30,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10066": {
+   "end": "success",
+   "steps": 10,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10067": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 8
+  },
+  "10068": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 30
+  },
+  "10069": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 28
+  },
+  "10070": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 30
+  },
+  "10071": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 5
+  },
+  "10072": {
+   "end": "success",
+   "steps": 13,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10073": {
+   "end": "success",
+   "steps": 41,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10074": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 10,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10075": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 5
+  },
+  "10076": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 12
+  },
+  "10077": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10078": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 12,
+   "interventions": 0,
+   "wrong_step": 7
+  },
+  "10079": {
+   "end": "success",
+   "steps": 34,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10080": {
+   "end": "success",
+   "steps": 23,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10081": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 5
+  },
+  "10082": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 7
+  },
+  "10083": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 12,
+   "interventions": 0,
+   "wrong_step": 3
+  },
+  "10084": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 2
+  },
+  "10085": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 36
+  },
+  "10086": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 44
+  },
+  "10087": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 3
+  },
+  "10088": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 4
+  },
+  "10089": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 36
+  },
+  "10090": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 10
+  },
+  "10091": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": 48
+  },
+  "10092": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": 36
+  },
+  "10093": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 1
+  },
+  "10094": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 6
+  },
+  "10095": {
+   "end": "success",
+   "steps": 27,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10096": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10097": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10098": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 6
+  },
+  "10099": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 16
+  },
+  "10100": {
+   "end": "success",
+   "steps": 40,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10101": {
+   "end": "success",
+   "steps": 26,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10102": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 47
+  },
+  "10103": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 13
+  },
+  "10104": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10105": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 6
+  },
+  "10106": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10107": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 10,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10108": {
+   "end": "success",
+   "steps": 22,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10109": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10110": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 5
+  },
+  "10111": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 28
+  },
+  "10112": {
+   "end": "success",
+   "steps": 24,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10113": {
+   "end": "success",
+   "steps": 9,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10114": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 3
+  },
+  "10115": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 5
+  },
+  "10116": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": 2
+  },
+  "10117": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": 4
+  },
+  "10118": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 39
+  },
+  "10119": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 18
+  },
+  "10120": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 7
+  },
+  "10121": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 37
+  },
+  "10122": {
+   "end": "success",
+   "steps": 5,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10123": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 19
+  },
+  "10124": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 48
+  },
+  "10125": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10126": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10127": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10128": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10129": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 13
+  },
+  "10130": {
+   "end": "success",
+   "steps": 11,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10131": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10132": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10133": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 41
+  },
+  "10134": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 9
+  },
+  "10135": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10136": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 13
+  },
+  "10137": {
+   "end": "success",
+   "steps": 7,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10138": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 47
+  },
+  "10139": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 12,
+   "interventions": 0,
+   "wrong_step": 5
+  },
+  "10140": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10141": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 4
+  },
+  "10142": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 8
+  },
+  "10143": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": 1
+  },
+  "10144": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": 8
+  },
+  "10145": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10146": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10147": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 25
+  },
+  "10148": {
+   "end": "success",
+   "steps": 13,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10149": {
+   "end": "success",
+   "steps": 17,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10150": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 45
+  },
+  "10151": {
+   "end": "success",
+   "steps": 41,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10152": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": 13
+  },
+  "10153": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10154": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10155": {
+   "end": "success",
+   "steps": 25,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10156": {
+   "end": "success",
+   "steps": 31,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10157": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 32
+  },
+  "10158": {
+   "end": "success",
+   "steps": 13,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10159": {
+   "end": "success",
+   "steps": 6,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10160": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 12,
+   "interventions": 0,
+   "wrong_step": 3
+  },
+  "10161": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 21
+  },
+  "10162": {
+   "end": "success",
+   "steps": 6,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10163": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10164": {
+   "end": "success",
+   "steps": 27,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10165": {
+   "end": "success",
+   "steps": 6,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10166": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 17
+  },
+  "10167": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10168": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 13
+  },
+  "10169": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 8
+  },
+  "10170": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 13
+  },
+  "10171": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": 11
+  },
+  "10172": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10173": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": 36
+  },
+  "10174": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": 21
+  },
+  "10175": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10176": {
+   "end": "success",
+   "steps": 4,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10177": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 33
+  },
+  "10178": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 8
+  },
+  "10179": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 4
+  },
+  "10180": {
+   "end": "success",
+   "steps": 6,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10181": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 17
+  },
+  "10182": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 3
+  },
+  "10183": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10184": {
+   "end": "success",
+   "steps": 20,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10185": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 25
+  },
+  "10186": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 4
+  },
+  "10187": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10188": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 14
+  },
+  "10189": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 2
+  },
+  "10190": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10191": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 23
+  },
+  "10192": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 19
+  },
+  "10193": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 37
+  },
+  "10194": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10195": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10196": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10197": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 16
+  },
+  "10198": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10199": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10200": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 28
+  },
+  "10201": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 39
+  },
+  "10202": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 47
+  },
+  "10203": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 17
+  },
+  "10204": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10205": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10206": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10207": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 3
+  },
+  "10208": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 26
+  },
+  "10209": {
+   "end": "success",
+   "steps": 21,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10210": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 12
+  },
+  "10211": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10212": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 34
+  },
+  "10213": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 19
+  },
+  "10214": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 5
+  },
+  "10215": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 3
+  },
+  "10216": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10217": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 10,
+   "interventions": 0,
+   "wrong_step": 36
+  },
+  "10218": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 31
+  },
+  "10219": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10220": {
+   "end": "success",
+   "steps": 6,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10221": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 17
+  },
+  "10222": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10223": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 25
+  },
+  "10224": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 4
+  },
+  "10225": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 32
+  },
+  "10226": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10227": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 3
+  },
+  "10228": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10229": {
+   "end": "success",
+   "steps": 19,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10230": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 27
+  },
+  "10231": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10232": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 12
+  },
+  "10233": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10234": {
+   "end": "success",
+   "steps": 30,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10235": {
+   "end": "success",
+   "steps": 6,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10236": {
+   "end": "success",
+   "steps": 5,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10237": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 13
+  },
+  "10238": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": 23
+  },
+  "10239": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 29
+  },
+  "10240": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 23
+  },
+  "10241": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 27
+  },
+  "10242": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 44
+  },
+  "10243": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10244": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 18
+  },
+  "10245": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10246": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 11
+  },
+  "10247": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": 11
+  },
+  "10248": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10249": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 13,
+   "interventions": 0,
+   "wrong_step": 27
+  },
+  "10250": {
+   "end": "success",
+   "steps": 22,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10251": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 9
+  },
+  "10252": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 23
+  },
+  "10253": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 11
+  },
+  "10254": {
+   "end": "success",
+   "steps": 15,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10255": {
+   "end": "success",
+   "steps": 36,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10256": {
+   "end": "success",
+   "steps": 16,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10257": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10258": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 34
+  },
+  "10259": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 12
+  },
+  "10260": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 22
+  },
+  "10261": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": 8
+  },
+  "10262": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10263": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 7
+  },
+  "10264": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": 31
+  },
+  "10265": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 21
+  },
+  "10266": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 34
+  },
+  "10267": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 40
+  },
+  "10268": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10269": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10270": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 9
+  },
+  "10271": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10272": {
+   "end": "success",
+   "steps": 14,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10273": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": 1
+  },
+  "10274": {
+   "end": "success",
+   "steps": 14,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10275": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10276": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 33
+  },
+  "10277": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 7
+  },
+  "10278": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": 18
+  },
+  "10279": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 38
+  },
+  "10280": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10281": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10282": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 10
+  },
+  "10283": {
+   "end": "success",
+   "steps": 44,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10284": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 22
+  },
+  "10285": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": 46
+  },
+  "10286": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10287": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": 14
+  },
+  "10288": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10289": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": 6
+  },
+  "10290": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": 21
+  },
+  "10291": {
+   "end": "success",
+   "steps": 13,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10292": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10293": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10294": {
+   "end": "success",
+   "steps": 24,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10295": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": 37
+  },
+  "10296": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10297": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": 13
+  },
+  "10298": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": 4
+  },
+  "10299": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 19,
+   "interventions": 0,
+   "wrong_step": null
+  }
+ }
+}

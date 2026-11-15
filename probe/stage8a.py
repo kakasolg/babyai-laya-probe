@@ -2,7 +2,7 @@
 
 Usage (WSL, repo root): python -m probe.stage8a [--tokenizer-alias english]
 Writes reports/stage8a/stage8a.json, data/pickupdist_train.jsonl (git-ignored, every bot step of seeds 0-999),
-data/laya_rows_pickupdist_train.jsonl (rows with the DRAFT 4-choice question, for dry_run only).
+data/laya_rows_pickupdist_train.jsonl (rows with the 4-choice question, a draft at 8a, confirmed 11-15; 8b trains on this file).
 
 Fixed by the board (11-15):
   choices turn left / turn right / forward / pick up (this order), partial view 7x7, env unchanged.
@@ -25,7 +25,7 @@ import numpy as np
 from minigrid.utils.baby_ai_bot import BabyAIBot
 
 from probe.dump_demos import guarded_seeds
-from probe.laya_rows import state_text
+from probe.laya_rows import question_pickup, state_text
 from probe.measure_env import ambiguity
 from probe.obs_text import AX, AY, IDX_TO_COLOR, IDX_TO_OBJECT, _SKIP, obs_to_text, rel
 
@@ -36,15 +36,7 @@ NAME_TO_ACT4 = {v: k for k, v in ACTIONS4.items()}
 FIXED = {"forward": 0.4, "turn left": 0.3, "turn right": 0.2, "pick up": 0.1}
 OUT = pathlib.Path("reports/stage8a")
 
-# DRAFT question for dry_run / token length only. Not fixed; MoKa decides the text format before 8b.
-DRAFT_INSTRUCTIONS = ("A grid agent must pick up an object that matches the mission. "
-                      "Pick its next action from what it can see now.")
-DRAFT_CRITERIA = {
-    "turn left": "rotate 90 degrees left, stay in place",
-    "turn right": "rotate 90 degrees right, stay in place",
-    "forward": "move one cell ahead",
-    "pick up": "pick up the object in the cell directly ahead",
-}
+# The question was a draft at 8a and was confirmed unchanged (MoKa 11-15 12:09): probe/laya_rows.py.
 
 
 def matches(typ: str, color: str, target: dict) -> bool:
@@ -238,7 +230,7 @@ def main() -> None:
     if not a.skip_dryrun:
         from probe.laya_dryrun import measure
         rows_path = "data/laya_rows_pickupdist_train.jsonl"
-        q = {"action": {"type": "choice", "instructions": DRAFT_INSTRUCTIONS, "criteria": DRAFT_CRITERIA}}
+        q = question_pickup()
         with open(rows_path, "w", encoding="utf-8") as f:
             for r in rows:
                 if r["action"] in ACTIONS4:

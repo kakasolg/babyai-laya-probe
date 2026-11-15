@@ -1,0 +1,2238 @@
+{
+ "name": "laya-s2",
+ "policy": "none",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 271,
+  "within_2x_bot": 270
+ },
+ "timeout": 28,
+ "wrong_pickup": 1,
+ "target_visible_at_start": {
+  "n": 175,
+  "success": 167,
+  "within_2x_bot": 166
+ },
+ "target_unseen_at_start": {
+  "n": 125,
+  "success": 104,
+  "within_2x_bot": 104
+ },
+ "mission_kind": {
+  "color only": {
+   "n": 98,
+   "success": 88,
+   "within_2x_bot": 88
+  },
+  "type only": {
+   "n": 112,
+   "success": 104,
+   "within_2x_bot": 103
+  },
+  "both": {
+   "n": 90,
+   "success": 79,
+   "within_2x_bot": 79
+  }
+ },
+ "grey_wall_episodes": {
+  "n": 19,
+  "success": 19,
+  "within_2x_bot": 19
+ },
+ "mean_steps_success": 4.85,
+ "bot_mean_steps_same_eps": 4.73,
+ "steps_sum_all": 2735,
+ "steps_sum_without_wrong_pickup": 2686,
+ "pickup_choices": {
+  "matching": 271,
+  "wrong object": 1,
+  "while carrying": 41
+ },
+ "per_episode": {
+  "10000": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10001": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10002": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10003": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10004": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10005": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10006": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10007": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10008": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10009": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10010": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10011": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10012": {
+   "end": "success",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10013": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10014": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10015": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10016": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10017": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10018": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10019": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10020": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10021": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10022": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10023": {
+   "end": "success",
+   "steps": 7,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10024": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10025": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10026": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10027": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10028": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10029": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10030": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10031": {
+   "end": "success",
+   "steps": 7,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10032": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10033": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10034": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10035": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10036": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10037": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10038": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10039": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10040": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10041": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10042": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10043": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10044": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 10,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10045": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10046": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10047": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10048": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10049": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10050": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10051": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10052": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10053": {
+   "end": "success",
+   "steps": 3,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10054": {
+   "end": "success",
+   "steps": 12,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10055": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10056": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10057": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10058": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10059": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10060": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10061": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10062": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10063": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10064": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10065": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10066": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10067": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10068": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10069": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10070": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10071": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10072": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10073": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10074": {
+   "end": "wrong_pickup",
+   "steps": 49,
+   "bot": 10,
+   "interventions": 0,
+   "wrong_step": 1
+  },
+  "10075": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10076": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10077": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10078": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 12,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10079": {
+   "end": "success",
+   "steps": 5,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10080": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10081": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10082": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10083": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 12,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10084": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10085": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10086": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10087": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10088": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10089": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10090": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10091": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10092": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10093": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10094": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10095": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10096": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10097": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10098": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10099": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10100": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10101": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10102": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10103": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10104": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10105": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10106": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10107": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10108": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10109": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10110": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10111": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10112": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10113": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10114": {
+   "end": "success",
+   "steps": 11,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10115": {
+   "end": "success",
+   "steps": 9,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10116": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10117": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10118": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10119": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10120": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10121": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10122": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10123": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10124": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10125": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10126": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10127": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10128": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10129": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10130": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10131": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10132": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10133": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10134": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10135": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10136": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10137": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10138": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10139": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 12,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10140": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10141": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10142": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10143": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10144": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10145": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10146": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10147": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10148": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10149": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10150": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10151": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10152": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10153": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10154": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10155": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10156": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10157": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10158": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10159": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10160": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 12,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10161": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10162": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10163": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10164": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10165": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10166": {
+   "end": "success",
+   "steps": 14,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10167": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10168": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10169": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10170": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10171": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10172": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10173": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10174": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10175": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10176": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10177": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10178": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10179": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10180": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10181": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10182": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10183": {
+   "end": "success",
+   "steps": 4,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10184": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10185": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10186": {
+   "end": "success",
+   "steps": 7,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10187": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10188": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10189": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10190": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10191": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10192": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10193": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10194": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10195": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10196": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10197": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10198": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10199": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10200": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10201": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10202": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10203": {
+   "end": "success",
+   "steps": 10,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10204": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10205": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10206": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10207": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10208": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10209": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10210": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10211": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10212": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10213": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10214": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10215": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10216": {
+   "end": "success",
+   "steps": 9,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10217": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10218": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10219": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10220": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10221": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10222": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10223": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10224": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10225": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10226": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10227": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10228": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10229": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10230": {
+   "end": "success",
+   "steps": 5,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10231": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10232": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10233": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10234": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10235": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10236": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10237": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10238": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10239": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10240": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10241": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10242": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10243": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10244": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10245": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10246": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10247": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10248": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10249": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 13,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10250": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10251": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10252": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10253": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10254": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10255": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10256": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10257": {
+   "end": "success",
+   "steps": 13,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10258": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10259": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10260": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10261": {
+   "end": "success",
+   "steps": 6,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10262": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10263": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10264": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10265": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10266": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10267": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10268": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10269": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10270": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10271": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10272": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10273": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10274": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10275": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10276": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10277": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10278": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10279": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10280": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10281": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10282": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10283": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10284": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10285": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10286": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 8,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10287": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10288": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10289": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10290": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10291": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10292": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10293": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10294": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10295": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10296": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10297": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10298": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 11,
+   "interventions": 0,
+   "wrong_step": null
+  },
+  "10299": {
+   "end": "timeout",
+   "steps": 49,
+   "bot": 19,
+   "interventions": 0,
+   "wrong_step": null
+  }
+ },
+ "representative_failures": [
+  {
+   "seed": 10028,
+   "end": "timeout",
+   "step": 0,
+   "why": "repeat, period 2",
+   "mission": "pick up the red key",
+   "text": "facing: north\ngreen key: 3 ahead, 1 right\ngrey key: 4 ahead\nred ball: 3 ahead, 3 right\nwalls: 5 ahead, 1 left",
+   "model": "turn right",
+   "scores": {
+    "turn left": 0.012,
+    "turn right": 0.964,
+    "forward": 0.012,
+    "pick up": 0.012
+   },
+   "bot": "turn right"
+  },
+  {
+   "seed": 10039,
+   "end": "timeout",
+   "step": 0,
+   "why": "repeat, period 2",
+   "mission": "pick up the red object",
+   "text": "facing: south\ngreen key: 1 left\nyellow ball: 2 right\npurple box: 2 ahead, 1 left\nyellow box: 3 ahead, 2 left\nwalls: 4 ahead, 3 left, 3 right",
+   "model": "turn right",
+   "scores": {
+    "turn left": 0.013,
+    "turn right": 0.963,
+    "forward": 0.012,
+    "pick up": 0.012
+   },
+   "bot": "turn right"
+  },
+  {
+   "seed": 10044,
+   "end": "timeout",
+   "step": 6,
+   "why": "repeat, period 1",
+   "mission": "pick up the key",
+   "text": "facing: north\npurple ball: 1 right\nblue key: 2 right\nwalls: 1 ahead, 3 left, 3 right",
+   "model": "forward",
+   "scores": {
+    "turn left": 0.005,
+    "turn right": 0.044,
+    "forward": 0.945,
+    "pick up": 0.005
+   },
+   "bot": "turn right"
+  },
+  {
+   "seed": 10057,
+   "end": "timeout",
+   "step": 5,
+   "why": "repeat, period 1",
+   "mission": "pick up a red object",
+   "text": "facing: west\nyellow key: 1 right\nred key: 2 right\nwalls: 1 ahead, 3 left, 3 right",
+   "model": "forward",
+   "scores": {
+    "turn left": 0.008,
+    "turn right": 0.318,
+    "forward": 0.665,
+    "pick up": 0.008
+   },
+   "bot": "turn right"
+  },
+  {
+   "seed": 10074,
+   "end": "wrong_pickup",
+   "step": 1,
+   "why": "wrong pickup",
+   "mission": "pick up the green box",
+   "text": "facing: east\ngreen ball: 1 ahead\ngrey box: 2 left\nblue box: 1 ahead, 1 right\nblue ball: 1 ahead, 2 left\ngreen box: 4 ahead, 2 left\nwalls: 5 ahead, 2 right",
+   "model": "pick up",
+   "scores": {
+    "turn left": 0.012,
+    "turn right": 0.007,
+    "forward": 0.006,
+    "pick up": 0.976
+   },
+   "bot": "turn left"
+  }
+ ],
+ "model": "babyai-laya-ft/pickupdist-s2"
+}

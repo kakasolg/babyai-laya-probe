@@ -88,6 +88,9 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
 7. GoToLocal 한 장 정리 — **`reports/summary_gotolocal.md`** (처음 읽는 사람은 여기부터)
 8. 다음 과제 `BabyAI-PickupDist-v0`(선택지에 `pick up` 추가) — 8a 살펴보기(학습 없음): `reports/stage8a.md`, `python -m probe.stage8a`.
    seed: 학습 0~999, 개발용 10000~10299, 최종 30000~30299(8d 선언 전엔 거부).
+   8b 학습 · 8c 닫힌 루프(개발용 300판): `reports/stage8.md`. WSL에서
+   `python -m probe.stage8 train --seed 0` → `stepeval --model ~/babyai-laya-ft/pickupdist-s0 --name s0`
+   → `loop --policy none|reset|bot|random --model … --name laya-s0 [--base reports/stage8/laya-s0.json]`.
 
 각 단계는 MoKa 확인 뒤 하나씩 진행한다.
 

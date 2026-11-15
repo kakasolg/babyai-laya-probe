@@ -1,0 +1,70 @@
+{
+ "model": "babyai-laya-ft/pickupdist-s1",
+ "steps": 1542,
+ "all": {
+  "n": 1542,
+  "agree": 0.9572
+ },
+ "pickup_is_correct": {
+  "n": 302,
+  "agree": 0.9901
+ },
+ "target_unseen": {
+  "n": 195,
+  "agree": 0.8667
+ },
+ "distractor_closer": {
+  "n": 498,
+  "agree": 0.9438
+ },
+ "two_matching": {
+  "n": 539,
+  "agree": 0.9592
+ },
+ "mission_kind": {
+  "color only": {
+   "n": 499,
+   "agree": 0.9619
+  },
+  "type only": {
+   "n": 502,
+   "agree": 0.9681
+  },
+  "both": {
+   "n": 541,
+   "agree": 0.9427
+  }
+ },
+ "order_flip_rate": 0.0071,
+ "reversed_order_agree": 0.9527,
+ "confusion_bot_to_model": {
+  "turn left": {
+   "turn left": 220,
+   "forward": 11,
+   "turn right": 5,
+   "pick up": 1
+  },
+  "turn right": {
+   "turn right": 273,
+   "forward": 15,
+   "turn left": 2,
+   "pick up": 1
+  },
+  "forward": {
+   "forward": 684,
+   "turn left": 12,
+   "turn right": 16
+  },
+  "pick up": {
+   "pick up": 299,
+   "turn right": 2,
+   "turn left": 1
+  }
+ },
+ "model_choice_share": {
+  "forward": 710,
+  "turn left": 235,
+  "turn right": 296,
+  "pick up": 301
+ }
+}
