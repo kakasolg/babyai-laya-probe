@@ -8,8 +8,9 @@ extends RefCounted
 ##             {"x", "y", "dir", "by": "auto" | "driver", "a": action taken (0 left, 1 right, 2 forward),
 ##              "m": what the autopilot would have done, "s": its three scores, "alarm": the autopilot had stopped itself here}]}
 
-const PATH := "user://drive_log.jsonl"
-const GARAGE := "user://garage.json"
+## Where the files live. Static so a test can point them elsewhere (selftest_drive.gd does) without touching real records.
+static var path := "user://drive_log.jsonl"
+static var garage_path := "user://garage.json"
 
 var _rec := {}
 
@@ -32,7 +33,7 @@ func end(result: String, turns: int, takeovers: int) -> void:
 	_rec["result"] = result
 	_rec["turns"] = turns
 	_rec["takeovers"] = takeovers
-	var f: FileAccess = FileAccess.open(PATH, FileAccess.READ_WRITE) if FileAccess.file_exists(PATH) else FileAccess.open(PATH, FileAccess.WRITE)
+	var f: FileAccess = FileAccess.open(path, FileAccess.READ_WRITE) if FileAccess.file_exists(path) else FileAccess.open(path, FileAccess.WRITE)
 	if f != null:
 		f.seek_end()
 		f.store_line(JSON.stringify(_rec))
@@ -41,7 +42,7 @@ func end(result: String, turns: int, takeovers: int) -> void:
 
 
 static func read_all() -> String:
-	return FileAccess.get_file_as_string(PATH) if FileAccess.file_exists(PATH) else ""
+	return FileAccess.get_file_as_string(path) if FileAccess.file_exists(path) else ""
 
 
 ## Lets the player save their own record as a file (web: a browser download; desktop: returns the absolute path).
@@ -49,20 +50,20 @@ static func export_file() -> String:
 	if OS.has_feature("web"):
 		JavaScriptBridge.download_buffer(read_all().to_utf8_buffer(), "drive_log.jsonl", "application/json")
 		return "drive_log.jsonl"
-	return ProjectSettings.globalize_path(PATH)
+	return ProjectSettings.globalize_path(path)
 
 
 # ---- the "garage": rooms that took 35 turns or more, or were not finished, kept to be driven again
 
 static func garage() -> Array:
-	if not FileAccess.file_exists(GARAGE):
+	if not FileAccess.file_exists(garage_path):
 		return []
-	var parsed = JSON.parse_string(FileAccess.get_file_as_string(GARAGE))
+	var parsed = JSON.parse_string(FileAccess.get_file_as_string(garage_path))
 	return parsed if parsed is Array else []
 
 
 static func _garage_save(items: Array) -> void:
-	var f := FileAccess.open(GARAGE, FileAccess.WRITE)
+	var f := FileAccess.open(garage_path, FileAccess.WRITE)
 	if f != null:
 		f.store_string(JSON.stringify(items))
 		f.close()
