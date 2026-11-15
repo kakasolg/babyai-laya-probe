@@ -3,6 +3,8 @@ extends SceneTree
 ##   Godot_v4.7.2-stable_win64_console.exe --headless --path godot --script res://drive/selftest_drive.gd
 ## 1) view() against 150 views computed in Python from MiniGrid's rules   2) scores() against 200 stored vectors per level
 ## 3) time per decision   4) rooms.gd: par and the autopilot alone on 150 generated rooms per level
+## 5) drivelog.gd: writes two rooms and reads them back, the 35-turn rule, garage add/remove, export_file
+##    (in user://selftest_* files, removed afterwards; the real drive_log.jsonl / garage.json are not touched)
 ## Expected (from the Python mirror, 2026-11-15): view mismatches 0; score difference below 1e-3 and the same action on
 ## all 200; level 3 alone solves roughly 90 % of generated rooms, level 2 fewer, level 1 fewer still.
 
