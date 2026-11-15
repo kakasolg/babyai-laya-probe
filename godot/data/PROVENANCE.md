@@ -20,7 +20,7 @@ The only edit after export: the top-level `"model"` field held a local filesyste
 
 - Base model `convaiinnovations/laya`: Apache-2.0 (model card at the revision above). The model repository has no NOTICE file. The model itself is not redistributed here.
 - `laya` package 0.4.31: Apache-2.0. Not redistributed here.
-- `minigrid` 3.2.0: MIT. Not redistributed here; the room layouts and expert moves in this file were produced with it.
+- `minigrid` 3.2.0: Apache-2.0 according to the repository's `LICENSE` file (the full Apache License 2.0 text, also shipped inside the PyPI package); its `pyproject.toml` and PyPI metadata say "MIT License". Checked 2026-11-15. Not redistributed here; the room layouts and expert moves in this file, and the demonstrations the drive policy was trained on, were produced with it.
 - The web build of the game contains the Godot Engine (MIT, with third-party components). Its copyright and license notices must accompany any published build.
 
 These references describe where the recording came from. They do not set a license for this repository or for this file; this repository has no license file of its own.

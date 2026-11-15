@@ -6,7 +6,8 @@ extends RefCounted
 ##          "room": the room dictionary (layout, target, start, par), "result": "success" | "timeout" | "left",
 ##          "turns": n, "takeovers": n, "steps": [
 ##             {"x", "y", "dir", "by": "auto" | "driver", "a": action taken (0 left, 1 right, 2 forward),
-##              "m": what the autopilot would have done, "s": its three scores, "alarm": the autopilot had stopped itself here}]}
+##              "m": what the autopilot would have done, "s": its three scores, "alarm": the autopilot had stopped itself here,
+##              "vm": what the driver could see at this step (added 11-15; "view_mode" above is the room's start)}]}
 
 ## Where the files live. Static so a test can point them elsewhere (selftest_drive.gd does) without touching real records.
 static var path := "user://drive_log.jsonl"
@@ -20,11 +21,16 @@ func begin(ep: Dictionary, level: int, view_mode: int) -> void:
 		"room": ep, "steps": []}
 
 
-func step(pos: Vector2i, dir: int, by: String, action: int, model_action: int, model_scores: Array, alarm: bool) -> void:
+## view: what the driver could see at this step (same numbers as view_mode); -1 leaves it out.
+func step(pos: Vector2i, dir: int, by: String, action: int, model_action: int, model_scores: Array, alarm: bool,
+		view := -1) -> void:
 	if _rec.is_empty():
 		return
-	_rec["steps"].append({"x": pos.x, "y": pos.y, "dir": dir, "by": by, "a": action, "m": model_action,
-		"s": model_scores, "alarm": alarm})
+	var st := {"x": pos.x, "y": pos.y, "dir": dir, "by": by, "a": action, "m": model_action,
+		"s": model_scores, "alarm": alarm}
+	if view >= 0:
+		st["vm"] = view
+	_rec["steps"].append(st)
 
 
 func end(result: String, turns: int, takeovers: int) -> void:

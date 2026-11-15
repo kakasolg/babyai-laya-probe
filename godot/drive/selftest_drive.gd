@@ -117,7 +117,7 @@ func _check_drivelog() -> int:
 		log.begin(ep, 1, 1)
 		for step in 3:
 			var m: Dictionary = ap.peek(ep, pos, dir)
-			log.step(pos, dir, "auto" if step < 2 else "driver", int(m["action"]), int(m["action"]), m["scores"], step == 2)
+			log.step(pos, dir, "auto" if step < 2 else "driver", int(m["action"]), int(m["action"]), m["scores"], step == 2, 1 + step % 2)
 			dir = (dir + 1) % 4
 		log.end("success" if r == 0 else "timeout", 3, r)
 	var lines := DriveLog.read_all().strip_edges().split("\n")
@@ -137,6 +137,7 @@ func _check_drivelog() -> int:
 			bad += _expect(String(steps[0]["by"]) == "auto" and String(steps[2]["by"]) == "driver", "line %d who drove" % i)
 			bad += _expect(steps[2]["alarm"] == true and steps[0]["alarm"] == false, "line %d alarm flag" % i)
 			bad += _expect(steps[1]["s"].size() == 3 and steps[1].has("m") and steps[1].has("a"), "line %d model scores and choices" % i)
+			bad += _expect(int(steps[0]["vm"]) == 1 and int(steps[1]["vm"]) == 2, "line %d view at each step" % i)
 	bad += _expect(not DriveLog.belongs_in_garage("success", 34), "34 turns and solved stays out of the garage")
 	bad += _expect(DriveLog.belongs_in_garage("success", 35), "35 turns goes to the garage")
 	bad += _expect(DriveLog.belongs_in_garage("timeout", 5), "an unfinished room goes to the garage")

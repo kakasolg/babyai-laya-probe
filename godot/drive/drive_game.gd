@@ -237,7 +237,7 @@ func _angle(d: int) -> float:
 
 
 func _act(a: int, by: String, model: Dictionary, alarm: bool) -> void:
-	dlog.step(pos, dir, by, a, int(model["action"]), model["scores"], alarm)
+	dlog.step(pos, dir, by, a, int(model["action"]), model["scores"], alarm, view_mode)
 	glide_from = _car_pos()
 	angle_from = _car_angle()
 	glide_t = 0.0
@@ -825,9 +825,11 @@ func _drivecheck(n: int) -> void:
 		var rec = JSON.parse_string(ln)
 		if not (rec is Dictionary) or int(rec["turns"]) != rec["steps"].size():
 			steps_ok = false
+		elif rec["steps"].any(func(st): return not st.has("vm")):
+			steps_ok = false
 	print("drivecheck: level %d, %d rooms: autopilot alone %d, with takeover %d, failed %d, stuck events %d, garage %d, %d ms"
 		% [level, n, alone, helped, failed, stuck_events, DriveLog.garage().size(), Time.get_ticks_msec() - t0])
-	print("drivecheck: log lines %d (%s), turns == logged steps on every line: %s"
+	print("drivecheck: log lines %d (%s), turns == logged steps and a view on every step: %s"
 		% [lines.size(), "ok" if ok else "WRONG", "ok" if steps_ok else "WRONG"])
 	for f in [DriveLog.path, DriveLog.garage_path]:
 		if FileAccess.file_exists(f):
