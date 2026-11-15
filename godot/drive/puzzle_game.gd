@@ -282,34 +282,39 @@ func _draw_room() -> void:
 		_draw_moves()
 
 
-## Where to stand for the goal (Perplexity notes, 11-15): the winning move is "be on a free cell next to the target,
-## facing it", so the hint goes on those cells, not on the target. Each free neighbour gets a dot and a chevron
-## pointing at the target, all in one guide colour; the one the car is on is brighter. Nothing pulses.
+## The goal sits on its own small plate (11-15, after reading three open-source Sokoban games: they mark the goal
+## with a dedicated floor plate, no glow or motion). The plate is smaller than the cell so it reads as "this object",
+## not "drive into this cell"; four corner marks in the target's colour stay visible around the object.
 const GUIDE := Color("#9be5ec")
+const PLATE := 62.0          # half of it, 31 px, clears a key or ball
+const PLATE_MARK := 27.0
+const PLATE_BOX := 74.0      # a box is 50 px wide, so its plate is larger
+const PLATE_BOX_MARK := 33.0
 
 
 func _draw_goal() -> void:
-	if phase == "result":
-		if result == "success":
-			_draw_arrival()
-		return
+	if phase == "result" and result == "success":
+		_draw_arrival()
+
+
+func _is_target_px(m: Vector2) -> bool:
 	for t in room["target"]["positions"]:
-		var tc := Vector2i(int(t[0]), int(t[1]))
-		for h in 4:
-			var d: Vector2i = DIR_VEC[h]
-			var ac: Vector2i = tc - d
-			if not Rooms.is_free(room, ac.x, ac.y):
-				continue
-			var p := _px(Vector2(ac))
-			var on := ac == pos
-			var a := 0.95 if on else 0.7
-			var dv := Vector2(d)
-			var side := Vector2(-dv.y, dv.x)
-			draw_circle(p, 18.0, Color(GUIDE, 0.16 if on else 0.08))
-			draw_circle(p, 3.0, Color(GUIDE, a))
-			var tip := p + dv * 30.0
-			draw_polyline(PackedVector2Array([tip - dv * 8.0 + side * 8.0, tip, tip - dv * 8.0 - side * 8.0]),
-				Color(GUIDE, a), 3.0, true)
+		if _px(Vector2(int(t[0]), int(t[1]))).distance_to(m) < 1.0:
+			return true
+	return false
+
+
+func _draw_plate(m: Vector2, col: Color, kind: String) -> void:
+	var size := PLATE_BOX if kind == "box" else PLATE
+	var mark := PLATE_BOX_MARK if kind == "box" else PLATE_MARK
+	var r := Rect2(m - Vector2(size, size) * 0.5, Vector2(size, size))
+	_round(r, Color("#121722"), Color("#2a3242"), 9)
+	var ink := Color(col, 0.95)
+	for sx in [-1.0, 1.0]:
+		for sy in [-1.0, 1.0]:
+			var c := m + Vector2(sx, sy) * mark
+			draw_line(c, c - Vector2(sx * 9, 0), ink, 3.0, true)
+			draw_line(c, c - Vector2(0, sy * 9), ink, 3.0, true)
 
 
 ## Arrival: a short line from the car to the target, then a check mark on the target's top-right corner.
@@ -326,9 +331,11 @@ func _draw_arrival() -> void:
 		Color("#0a0d14", ca), 3.0, true)
 
 
-## Board objects without the base glow (only the goal guide speaks), with a small contact shadow so they sit on the floor.
+## Board objects without the base glow (only the goal plate speaks), with a small contact shadow so they sit on the floor.
 func _draw_object(kind: String, col: Color, m: Vector2, cell: float) -> void:
 	if cell == CELL:
+		if _is_target_px(m):
+			_draw_plate(m, col, kind)
 		var sh := PackedVector2Array()
 		for i in 20:
 			var u := TAU * i / 20.0
