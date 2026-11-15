@@ -67,6 +67,7 @@ var clock := 0.0
 var toast := ""
 var toast_t := 0.0
 var garage_cards: Array = []                 # [Rect2, index] of the open garage overlay
+var card_garage_rect := Rect2()              # the garage key on the result card; empty when the garage is
 
 var btn_garage: Button
 var btn_level: Button
@@ -296,8 +297,11 @@ func _auto_tick() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if phase == "card":
-			phase = "drive"
-			_new_room()
+			if card_garage_rect.has_point(event.position):
+				_toggle_garage()
+			else:
+				phase = "drive"
+				_new_room()
 		elif phase == "garage":
 			_garage_click(event.position)
 		return
@@ -307,6 +311,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if phase == "card":
 		if k in [KEY_SPACE, KEY_ENTER, KEY_ESCAPE]:
 			_new_room()
+		elif k == KEY_G and card_garage_rect.has_area():
+			_toggle_garage()
 		return
 	if phase == "garage":
 		if k in [KEY_G, KEY_ESCAPE]:
@@ -384,6 +390,8 @@ func _toggle_garage() -> void:
 	if phase == "garage":
 		phase = "drive"
 		return
+	if phase == "card":
+		_new_room()             # the batch is done; closing the garage drives this fresh room
 	if phase != "drive":
 		return
 	phase = "garage"
@@ -706,7 +714,18 @@ func _draw_card() -> void:
 	for i in last_card.size():
 		draw_circle(Vector2(tiles[2].position.x + 18 + i * 16, tiles[2].position.y + 118), 5.0, _result_color(last_card[i]))
 	draw_string(font, Vector2(tiles[2].position.x, tiles[2].position.y + 160), "%d / %d" % [tu, pa], HORIZONTAL_ALIGNMENT_CENTER, 180, 24, C_TEXT)
-	_keycap(Vector2(W / 2.0 - 35, r.end.y - 62), "Space", -1, 70)
+	var gn := DriveLog.garage().size()
+	if gn == 0:
+		card_garage_rect = Rect2()
+		_keycap(Vector2(W / 2.0 - 35, r.end.y - 62), "Space", -1, 70)
+		return
+	var ky := r.end.y - 62
+	_keycap(Vector2(W / 2.0 - 120, ky), "Space", -1, 70)
+	_chevrons(Vector2(W / 2.0 - 34, ky + 15), C_AUTO)
+	card_garage_rect = Rect2(Vector2(W / 2.0 + 10, ky), Vector2(110, 30))
+	_keycap(card_garage_rect.position, "G")
+	_wrench(Vector2(W / 2.0 + 64, ky + 15), 8, C_STUCK)
+	draw_string(font, Vector2(W / 2.0 + 80, ky + 22), "%d" % gn, HORIZONTAL_ALIGNMENT_LEFT, -1, 18, C_STUCK)
 
 
 func _draw_garage() -> void:
@@ -870,6 +889,8 @@ func _shot_setup(scene: String) -> void:
 					"takeovers": 1 if i in [2, 5] else 0, "auto": 4 + i % 4})
 			last_card = batch.duplicate()
 			batch.clear()
+			for i in 2:
+				DriveLog.garage_add(Rooms.make(rng, 8, 8, "g%d" % i), "timeout", 40 + i, 1)
 			phase = "card"
 		"garage":
 			for i in 5:
