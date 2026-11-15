@@ -200,6 +200,8 @@ How to read the observation:
 $PY -m probe.stage5 loop --scorer laya --model ~/babyai-laya-ft/gotolocal-s0 --name laya-s0 [--rule --base reports/stage5/laya-s0.json]
 $PY -m probe.stage5 stepcheck --scorer gemma            # Jev: JEV_MODEL=jev-1.14.0, 키는 환경변수 TYPESAFE_API_KEY
 $PY -m probe.stage5 loop --scorer gemma --name gemma [--rule --base reports/stage5/gemma.json]
+# 변형(보드 11-14 20:29): --policy R | reset | penalty(Laya만), 예: --name laya-s0-reset --policy reset --base reports/stage5/laya-s0.json
+$PY -m probe.stage5_blocked                                # 앞 칸이 막힌 걸음의 forward 1순위 비율(캐시만 씀)
 ```
 
 ## 게임 웹 빌드

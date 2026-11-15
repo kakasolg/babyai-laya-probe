@@ -1,0 +1,76 @@
+{
+ "definition": "Blocked step = the state text has an object line that is exactly \"1 ahead\" (no left/right part) or a walls line\ncontaining \"1 ahead\". Counted on two sets of steps per scorer:\n  loop - the no-rule closed loop (300 dev seeds), replayed deterministically and checked against the saved\n         reports/stage5/<name>.json episode by episode (end and step count must match);\n  bot  - the 1,567 steps the bot walked on the same seeds (data/gotolocal_eval.jsonl), options in the fixed order.\nJev/Gemma are served from the response cache only; a cache miss stops the script (no new API calls).",
+ "bot_blocked_steps_total": 249,
+ "runs": {
+  "laya-s0": {
+   "loop_no_rule": {
+    "blocked_steps": 764,
+    "rank1_forward": 471,
+    "rate": 0.6165
+   },
+   "loop_replay_mismatch_episodes": [],
+   "aborted": null,
+   "bot_trajectory": {
+    "blocked_steps": 249,
+    "rank1_forward": 0,
+    "rate": 0.0
+   }
+  },
+  "laya-s1": {
+   "loop_no_rule": {
+    "blocked_steps": 1018,
+    "rank1_forward": 783,
+    "rate": 0.7692
+   },
+   "loop_replay_mismatch_episodes": [],
+   "aborted": null,
+   "bot_trajectory": {
+    "blocked_steps": 249,
+    "rank1_forward": 2,
+    "rate": 0.008
+   }
+  },
+  "laya-s2": {
+   "loop_no_rule": {
+    "blocked_steps": 1004,
+    "rank1_forward": 523,
+    "rate": 0.5209
+   },
+   "loop_replay_mismatch_episodes": [],
+   "aborted": null,
+   "bot_trajectory": {
+    "blocked_steps": 249,
+    "rank1_forward": 0,
+    "rate": 0.0
+   }
+  },
+  "jev": {
+   "loop_no_rule": {
+    "blocked_steps": 1931,
+    "rank1_forward": 732,
+    "rate": 0.3791
+   },
+   "loop_replay_mismatch_episodes": [],
+   "aborted": null,
+   "bot_trajectory": {
+    "blocked_steps": 249,
+    "rank1_forward": 13,
+    "rate": 0.0522
+   }
+  },
+  "gemma": {
+   "loop_no_rule": {
+    "blocked_steps": 7849,
+    "rank1_forward": 5770,
+    "rate": 0.7351
+   },
+   "loop_replay_mismatch_episodes": [],
+   "aborted": null,
+   "bot_trajectory": {
+    "blocked_steps": 249,
+    "rank1_forward": 56,
+    "rate": 0.2249
+   }
+  }
+ }
+}

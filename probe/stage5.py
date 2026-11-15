@@ -1,8 +1,8 @@
 """Stage 5: closed loop for three scorers (Laya fine-tuned, Jev and Gemma 12B untrained) with/without rule R.
 
 Usage (WSL, repo root):
-  python -m probe.stage5 loop --scorer laya --model ~/babyai-laya-ft/gotolocal-s0 --name laya-s0 [--rule]
-  python -m probe.stage5 loop --scorer gemma|jev --name gemma [--rule]
+  python -m probe.stage5 loop --scorer laya --model ~/babyai-laya-ft/gotolocal-s0 --name laya-s0 [--policy R|reset|penalty]
+  python -m probe.stage5 loop --scorer gemma|jev --name gemma [--policy R|reset]
   python -m probe.stage5 stepcheck --scorer gemma|jev           # bot trajectories of the 300 dev seeds
 
 Fixed for every run (board instruction 11-14, stage 5):
@@ -14,6 +14,8 @@ Rule R (exactly as defined on the board; nothing else):
   Rank the three actions by score; take the highest one not in tried[key], add it to tried[key].
   All three tried -> the episode ends as gave_up (a failure, counted apart from timeout).
   Executed action != rank 1 -> one intervention.
+R-reset (board 11-14 20:29): as R, except all three tried -> clear tried[key] only, take rank 1, keep walking.
+Visit penalty (Laya only): per key count[a]; take argmax ln(max(p(a), 1e-9)) - 2.0 * count[a], then count[a] += 1.
 
 Jev/Gemma calls are cached by (model, explanation, state, option order): the same request is sent once.
 """
@@ -248,10 +250,14 @@ def ranked(probs: dict) -> list[str]:
 
 # ---------------------------------------------------------------- closed loop
 
-def run_loop(scorer, rule: bool):
+PENALTY = 2.0  # visit penalty coefficient, fixed by the board (11-14 20:29); never tuned
+
+
+def run_loop(scorer, policy: str):
+    """policy: none | R | reset | penalty (board 11-14: R, R-reset and visit penalty share key and ranking)."""
     eps = [Ep(s, shadow_bot=False, swap=False) for s in seed_range(SEEDS)]
     for e in eps:
-        e.tried, e.gave_up, e.n_interv = {}, False, 0
+        e.tried, e.gave_up, e.n_interv, e.resets, e.count = {}, False, 0, 0, {}
     aborted = None
     while True:
         live = [e for e in eps if not e.done]
@@ -268,15 +274,24 @@ def run_loop(scorer, rule: bool):
             text = e.text()
             c = order[0]
             interv = False
-            if rule:
+            if policy in ("R", "reset"):
                 tried = e.tried.setdefault(text, set())
                 left = [o for o in order if o not in tried]
                 if not left:
-                    e.gave_up = e.done = True
-                    e.env.close()
-                    continue
+                    if policy == "R":
+                        e.gave_up = e.done = True
+                        e.env.close()
+                        continue
+                    tried.clear()  # R-reset: only this key is cleared, then rank 1 as usual
+                    e.resets += 1
+                    left = order
                 c = left[0]
                 tried.add(c)
+            elif policy == "penalty":
+                cnt = e.count.setdefault(text, collections.Counter())
+                c = max(CHOICES, key=lambda o: math.log(max(p.get(o, 0.0), 1e-9)) - PENALTY * cnt[o])  # ties: fixed order
+                cnt[c] += 1
+            if policy != "none":
                 interv = c != order[0]
                 e.n_interv += interv
             e.step(NAME_TO_ACT[c], choice=c, intervened=interv)
@@ -298,11 +313,13 @@ def med(xs):
     return round(statistics.median(xs), 4) if xs else None
 
 
-def summarize(eps, name, scorer, rule, aborted, base=None):
+def summarize(eps, name, scorer, policy, aborted, base=None):
+    rule = policy != "none"
     succ = [e for e in eps if e.success]
     steps = [s for e in eps for s in e.steps]
     blocked = [s for s in steps if s["policy"] == "forward" and not s["moved"]]
-    res = {"name": name, "scorer": scorer.name, "rule_r": rule, "api_aborted": aborted, "episodes": len(eps),
+    res = {"name": name, "scorer": scorer.name, "policy": policy, "rule_r": policy == "R", "api_aborted": aborted,
+           "episodes": len(eps), "steps_sum_all_episodes": len(steps),
            "all": rate(eps), "timeout": sum(e.timeout for e in eps), "gave_up": sum(e.gave_up for e in eps),
            "target_visible_at_start": rate([e for e in eps if e.visible_at_start]),
            "target_unseen_at_start": rate([e for e in eps if not e.visible_at_start]),
@@ -323,6 +340,12 @@ def summarize(eps, name, scorer, rule, aborted, base=None):
         res["interventions"] = sum(e.n_interv for e in eps)
         res["success_without_intervention"] = sum(e.success and e.n_interv == 0 for e in eps)
         res["success_with_intervention"] = sum(e.success and e.n_interv > 0 for e in eps)
+    if policy == "reset":
+        res["resets"] = sum(e.resets for e in eps)
+        res["resets_per_episode"] = {"0": sum(e.resets == 0 for e in eps), "1": sum(e.resets == 1 for e in eps),
+                                     "2+": sum(e.resets >= 2 for e in eps)}
+        for k, e in zip(res["per_episode"], eps):
+            res["per_episode"][k]["resets"] = e.resets
     if base is not None:
         b = {int(k): v["end"] == "success" for k, v in base["per_episode"].items()}
         res["vs_no_rule"] = {
@@ -366,7 +389,8 @@ def main() -> None:
     ap.add_argument("--scorer", required=True, choices=["laya", "gemma", "jev"])
     ap.add_argument("--model", default=None)
     ap.add_argument("--name", default=None)
-    ap.add_argument("--rule", action="store_true")
+    ap.add_argument("--rule", action="store_true", help="same as --policy R")
+    ap.add_argument("--policy", default=None, choices=["none", "R", "reset", "penalty"])
     ap.add_argument("--base", default=None, help="no-rule run json to compare against")
     a = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
@@ -376,9 +400,12 @@ def main() -> None:
         (OUT / f"stepcheck-{a.scorer}.json").write_text(json.dumps(res, indent=1), encoding="utf-8")
         print(json.dumps(res))
         return
-    eps, aborted = run_loop(sc, a.rule)
+    policy = a.policy or ("R" if a.rule else "none")
+    if policy == "penalty" and a.scorer != "laya":
+        raise SystemExit("visit penalty is for the Laya seeds only (board 11-14 20:29)")
+    eps, aborted = run_loop(sc, policy)
     base = json.load(open(a.base, encoding="utf-8")) if a.base else None
-    res = summarize(eps, a.name, sc, a.rule, aborted, base)
+    res = summarize(eps, a.name, sc, policy, aborted, base)
     res["model"] = a.model if a.scorer == "laya" else sc.model
     (OUT / f"{a.name}.json").write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
     print(json.dumps({k: res[k] for k in ("name", "all", "timeout", "gave_up", "api_aborted", "all_fail_12_solved",
