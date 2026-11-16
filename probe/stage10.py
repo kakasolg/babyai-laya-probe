@@ -53,7 +53,15 @@ TRAIN_DUMP = "data/putnext_train.jsonl"
 PHASES = ("before pickup", "pickup", "carrying", "drop")
 
 
-def seeds_of(s: str):
+FINAL = "70000-70299"
+
+
+def seeds_of(s: str, final: bool = False):
+    """10e (board 11-16): --use-final-seeds opens exactly 70000-70299, once; the flag is removed after the run."""
+    if final:
+        if s != FINAL:
+            raise SystemExit(f"--use-final-seeds is only for {FINAL}")
+        return range(70000, 70300)
     r = guarded_seeds(s)
     if any(x in rg for rg in LOCKED for x in r):
         raise SystemExit("60000-60299 (stage 9) and 70000-70299 (stage 10 final) are not opened here")
@@ -288,7 +296,7 @@ def summarize(eps, name, policy, base=None):
 
 
 def loop(a) -> None:
-    seeds = seeds_of(a.seeds)
+    seeds = seeds_of(a.seeds, a.use_final_seeds)
     model = a.model and os.path.expanduser(a.model)
     if a.scorer in ("bot", "random"):
         eps = run_loop(a.scorer, None, seeds)
@@ -302,8 +310,9 @@ def loop(a) -> None:
     res["env"], res["seeds"], res["carry_line"] = ENV, a.seeds, not a.no_carry
     res["model"] = (f"babyai-laya-ft/{os.path.basename(model.rstrip('/'))}" if model else
                     "none (fixed scores)" if a.scorer == "fixed" else None)
-    OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / f"{a.name}.json").write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
+    out = OUT / "final" if a.use_final_seeds else OUT
+    out.mkdir(parents=True, exist_ok=True)
+    (out / f"{a.name}.json").write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
     print(json.dumps({k: res.get(k) for k in ("name", "all", "timeout", "reached", "wrong_pickups", "null_actions",
                                               "blocked_forward_rate")}
                      | ({"vs": {k: (len(v) if isinstance(v, list) else v) for k, v in res["vs_no_rule"].items()}}
@@ -431,6 +440,7 @@ def main() -> None:
     ap.add_argument("--seeds", default=DEV)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--no-carry", action="store_true", help="10d: state text without the carrying line")
+    ap.add_argument("--use-final-seeds", action="store_true", help="10e only, run once (removed afterwards)")
     a = ap.parse_args()
     if a.mode == "stats":
         return stats()
