@@ -31,6 +31,18 @@ def question_pickup(choices=CHOICES_PICKUP) -> dict:
                   "criteria": {c: CRITERIA_PICKUP[c] for c in choices}}}
 
 
+# PutNextLocal (stage 10, board c7d1bc74 11-16): the stage-8 frame, a new goal sentence and a fifth option "drop".
+INSTRUCTIONS_PUTNEXT = ("A grid agent must pick up the first object named in the mission and put it down "
+                        "next to the second. Pick its next action from what it can see now.")
+CRITERIA_PUTNEXT = {**CRITERIA_PICKUP, "drop": "put down the carried object in the cell directly ahead"}
+CHOICES_PUTNEXT = list(CRITERIA_PUTNEXT)  # turn left / turn right / forward / pick up / drop
+
+
+def question_putnext(choices=CHOICES_PUTNEXT) -> dict:
+    return {QID: {"type": "choice", "instructions": INSTRUCTIONS_PUTNEXT,
+                  "criteria": {c: CRITERIA_PUTNEXT[c] for c in choices}}}
+
+
 def state_text(text: str, mission: str) -> str:
     return f"mission: {mission}\n{text}"
 

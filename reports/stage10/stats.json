@@ -1,0 +1,140 @@
+{
+ "env": "BabyAI-PutNextLocal-v0",
+ "minigrid": "3.2.0",
+ "choices": [
+  "turn left",
+  "turn right",
+  "forward",
+  "pick up",
+  "drop"
+ ],
+ "fixed_control": {
+  "forward": 0.3,
+  "turn left": 0.25,
+  "turn right": 0.2,
+  "pick up": 0.15,
+  "drop": 0.1
+ },
+ "bot_train_0_999": {
+  "episodes": 1000,
+  "success": 1000,
+  "max_steps_env": [
+   128
+  ],
+  "actions": {
+   "forward": 6082,
+   "pick up": 1005,
+   "turn right": 2145,
+   "drop": 1005,
+   "turn left": 1799
+  },
+  "episodes_with_other_actions": [],
+  "steps_mean": 12.04,
+  "steps_median": 11.0,
+  "steps_p90": 18,
+  "steps_max": 35,
+  "first_pickup_step_mean": 5.74,
+  "pickups_per_episode": {
+   "1": 996,
+   "2": 3,
+   "3": 1
+  },
+  "multi_pickup_seeds": [
+   83,
+   540,
+   844,
+   987
+  ]
+ },
+ "bot_dev_10000_10299": {
+  "episodes": 300,
+  "success": 300,
+  "max_steps_env": [
+   128
+  ],
+  "actions": {
+   "forward": 1729,
+   "pick up": 300,
+   "turn left": 547,
+   "drop": 300,
+   "turn right": 642
+  },
+  "episodes_with_other_actions": [],
+  "steps_mean": 11.73,
+  "steps_median": 11.0,
+  "steps_p90": 16,
+  "steps_max": 30,
+  "first_pickup_step_mean": 5.57,
+  "pickups_per_episode": {
+   "1": 300
+  },
+  "multi_pickup_seeds": []
+ },
+ "missions": {
+  "steps": 15554,
+  "match_one_form": 15554,
+  "examples": [
+   "put the blue ball next to the blue box",
+   "put the blue ball next to the blue key",
+   "put the blue ball next to the green ball",
+   "put the blue ball next to the green box",
+   "put the blue ball next to the green key",
+   "put the blue ball next to the grey ball"
+  ]
+ },
+ "objects_in_room": 8,
+ "carry_check": {
+  "steps": 15554,
+  "obs_equals_env": 15554,
+  "steps_carrying": 6820
+ },
+ "phase_steps": {
+  "before pickup": 1670,
+  "pickup": 300,
+  "carrying": 1248,
+  "drop": 300
+ },
+ "samples": [
+  {
+   "phase": "before pickup",
+   "seed": 10000,
+   "step": 0,
+   "bot": "forward",
+   "state": "mission: put the green ball next to the red key\ncarrying: nothing\nfacing: south\nred key: 2 left\ngreen ball: 2 ahead\ngreen key: 2 ahead, 1 left\ngrey ball: 1 ahead, 3 left\nwalls: 3 ahead, 1 right"
+  },
+  {
+   "phase": "pickup",
+   "seed": 10000,
+   "step": 1,
+   "bot": "pick up",
+   "state": "mission: put the green ball next to the red key\ncarrying: nothing\nfacing: south\ngreen ball: 1 ahead\ngreen key: 1 ahead, 1 left\ngrey ball: 3 left\nwalls: 2 ahead, 1 right"
+  },
+  {
+   "phase": "carrying",
+   "seed": 10000,
+   "step": 2,
+   "bot": "turn left",
+   "state": "mission: put the green ball next to the red key\ncarrying: green ball\nfacing: south\ngreen key: 1 ahead, 1 left\ngrey ball: 3 left\nwalls: 2 ahead, 1 right"
+  },
+  {
+   "phase": "drop",
+   "seed": 10000,
+   "step": 4,
+   "bot": "drop",
+   "state": "mission: put the green ball next to the red key\ncarrying: green ball\nfacing: east\ngreen key: 1 right\npurple key: 2 left\nred key: 1 ahead, 1 left\ngrey ball: 2 ahead\nblue box: 3 ahead, 2 left\ngrey box: 4 ahead, 3 left\nwalls: 5 ahead, 2 right"
+  }
+ ],
+ "question": {
+  "action": {
+   "type": "choice",
+   "instructions": "A grid agent must pick up the first object named in the mission and put it down next to the second. Pick its next action from what it can see now.",
+   "criteria": {
+    "turn left": "rotate 90 degrees left, stay in place",
+    "turn right": "rotate 90 degrees right, stay in place",
+    "forward": "move one cell ahead",
+    "pick up": "pick up the object in the cell directly ahead",
+    "drop": "put down the carried object in the cell directly ahead"
+   }
+  }
+ }
+}
