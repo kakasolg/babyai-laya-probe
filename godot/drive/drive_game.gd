@@ -1,5 +1,5 @@
 extends Control
-## Drive mode: the game's front screen. Arrow keys drive, Space hands the wheel to the autopilot and back.
+## Drive mode (the "Drive" button on the puzzle screen, which is the front screen). Arrow keys drive, Space hands the wheel to the autopilot and back.
 ## The autopilot is drive/autopilot.gd (a small CNN, **not Laya**). It stops itself when it sees a view it has already
 ## driven through ("stuck") and the driver takes over. Every room is written to DriveLog (this device only).
 ## Rooms that took 35 turns or more, or were not finished, go to the garage to be driven again.

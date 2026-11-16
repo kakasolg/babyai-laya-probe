@@ -25,7 +25,7 @@ const UI_MUTED := Color("#8b95a5")
 const UI_KEY_BG := Color("#242830")
 const UI_KEY_BORDER := Color("#4A5260")
 
-## Set by drive mode's "Lab" button. A plain launch opens drive mode (drive/drive.tscn); this screen is the lab.
+## Set by drive mode's "Lab" button. A plain launch opens puzzle mode (drive/puzzle.tscn); this screen is the lab.
 static var lab := false
 
 var episodes: Array = []
@@ -99,7 +99,7 @@ var fix_script := ""   # self-check keys for fix mode: e model, a/d/w, b bot, 1-
 
 func _ready() -> void:
 	if _user_args().is_empty() and not lab:
-		get_tree().change_scene_to_file.call_deferred("res://drive/drive.tscn")
+		get_tree().change_scene_to_file.call_deferred("res://drive/puzzle.tscn")
 		return
 	_load_episodes()
 	_build_ui()
