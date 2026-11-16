@@ -25,7 +25,7 @@ const UI_MUTED := Color("#8b95a5")
 const UI_KEY_BG := Color("#242830")
 const UI_KEY_BORDER := Color("#4A5260")
 
-## Set by drive mode's "Lab" button. A plain launch opens drive mode (drive/drive.tscn); this screen is the lab.
+## Set by drive mode's "Lab" button. A plain launch opens puzzle mode (drive/puzzle.tscn); this screen is the lab.
 static var lab := false
 
 var episodes: Array = []
@@ -99,7 +99,7 @@ var fix_script := ""   # self-check keys for fix mode: e model, a/d/w, b bot, 1-
 
 func _ready() -> void:
 	if _user_args().is_empty() and not lab:
-		get_tree().change_scene_to_file.call_deferred("res://drive/drive.tscn")
+		get_tree().change_scene_to_file.call_deferred("res://drive/puzzle.tscn")
 		return
 	_load_episodes()
 	_build_ui()
@@ -1057,16 +1057,15 @@ func _draw_board() -> void:
 		if i > 0 and trail[i] != trail[i - 1]:
 			board.draw_line(_center(trail[i - 1]), _center(trail[i]), Color(1, 0.55, 0.3, 0.35), 4.0)
 
+	# in play mode the goal stays unmarked until the end (the player reads the same text the AI reads)
+	var show_goal := mode != "play" or p_result != ""
 	for o in e["objects"]:
 		var c := Vector2i(int(o["x"]), int(o["y"]))
 		if view_mode == 1 and not view.has(c):
 			continue
+		if show_goal and _is_target(c):
+			_draw_plate(c, COLORS.get(o["color"], Color.WHITE), String(o["type"]))
 		_draw_object(o, c)
-
-	if mode != "play" or p_result != "":
-		for p in e["target"]["positions"]:
-			var c := Vector2i(int(p[0]), int(p[1]))
-			board.draw_arc(_center(c), CELL * 0.46, 0, TAU, 40, Color("#ffffff"), 3.0)
 
 	# dim outside the 7x7 view (whole-room view)
 	if view_mode == 2:
@@ -1117,6 +1116,25 @@ func _draw_object(o: Dictionary, c: Vector2i) -> void:
 			board.draw_rect(Rect2(m + Vector2(-CELL * 0.05, -CELL * 0.04), Vector2(CELL * 0.33, CELL * 0.08)), col)
 			board.draw_rect(Rect2(m + Vector2(CELL * 0.16, 0), Vector2(CELL * 0.05, CELL * 0.13)), col)
 			board.draw_rect(Rect2(m + Vector2(CELL * 0.24, 0), Vector2(CELL * 0.05, CELL * 0.1)), col)
+
+
+## Same goal plate as the drive screens (drive_game.gd), scaled to this board's 72 px cells.
+func _draw_plate(c: Vector2i, col: Color, kind: String) -> void:
+	var m := _center(c)
+	var size := 64.0 if kind == "box" else 54.0
+	var mark := size * 0.44
+	var sb := StyleBoxFlat.new()
+	sb.bg_color = Color("#161a21")
+	sb.border_color = Color("#343b47")
+	sb.set_border_width_all(1)
+	sb.set_corner_radius_all(8)
+	board.draw_style_box(sb, Rect2(m - Vector2(size, size) * 0.5, Vector2(size, size)))
+	var ink := Color(col, 0.95)
+	for sx in [-1.0, 1.0]:
+		for sy in [-1.0, 1.0]:
+			var k := m + Vector2(sx, sy) * mark
+			board.draw_line(k, k - Vector2(sx * 8, 0), ink, 3.0, true)
+			board.draw_line(k, k - Vector2(0, sy * 8), ink, 3.0, true)
 
 
 func _draw_agent(pos: Vector2i, dir: int) -> void:

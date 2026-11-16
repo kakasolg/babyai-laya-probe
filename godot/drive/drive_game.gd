@@ -1,5 +1,5 @@
 extends Control
-## Drive mode: the game's front screen. Arrow keys drive, Space hands the wheel to the autopilot and back.
+## Drive mode (the "Drive" button on the puzzle screen, which is the front screen). Arrow keys drive, Space hands the wheel to the autopilot and back.
 ## The autopilot is drive/autopilot.gd (a small CNN, **not Laya**). It stops itself when it sees a view it has already
 ## driven through ("stuck") and the driver takes over. Every room is written to DriveLog (this device only).
 ## Rooms that took 35 turns or more, or were not finished, go to the garage to be driven again.
@@ -104,13 +104,14 @@ func _user_args() -> Dictionary:
 
 func _build_buttons() -> void:
 	var row := HBoxContainer.new()
-	row.position = Vector2(W - 460, 26)
-	row.size = Vector2(440, 40)
+	row.position = Vector2(W - 560, 26)
+	row.size = Vector2(540, 40)
 	row.alignment = BoxContainer.ALIGNMENT_END
 	row.add_theme_constant_override("separation", 8)
 	add_child(row)
 	btn_level = _button(row, "", func(): _cycle_level())
 	btn_garage = _button(row, "", func(): _toggle_garage())
+	_button(row, "Puzzle", func(): _open_puzzle())
 	_button(row, "Save log", func(): _save_log())
 	_button(row, "Lab", func(): _open_lab())
 	_sync_buttons()
@@ -163,6 +164,11 @@ func _open_lab() -> void:
 	_leave_room()
 	Main.lab = true
 	get_tree().change_scene_to_file("res://main.tscn")
+
+
+func _open_puzzle() -> void:
+	_leave_room()
+	get_tree().change_scene_to_file("res://drive/puzzle.tscn")
 
 
 func _say(t: String) -> void:
@@ -516,8 +522,50 @@ func _draw_room() -> void:
 		draw_circle(p["p"], p["r"], Color(p["c"], clampf(p["life"] * 1.5, 0.0, 1.0)))
 
 
+## The goal sits on its own small plate (11-15, after reading three open-source Sokoban games: they mark the goal
+## with a dedicated floor plate, no glow or motion). The plate is smaller than the cell so it reads as "this object",
+## not "drive into this cell"; four corner marks in the target's colour stay visible around the object.
+const PLATE := 62.0          # half of it, 31 px, clears a key or ball
+const PLATE_MARK := 27.0
+const PLATE_BOX := 74.0      # a box is 50 px wide, so its plate is larger
+const PLATE_BOX_MARK := 33.0
+
+
+func _is_target_px(m: Vector2) -> bool:
+	for t in room["target"]["positions"]:
+		if _px(Vector2(int(t[0]), int(t[1]))).distance_to(m) < 1.0:
+			return true
+	return false
+
+
+func _draw_plate(m: Vector2, col: Color, kind: String) -> void:
+	var size := PLATE_BOX if kind == "box" else PLATE
+	var mark := PLATE_BOX_MARK if kind == "box" else PLATE_MARK
+	var r := Rect2(m - Vector2(size, size) * 0.5, Vector2(size, size))
+	_round(r, Color("#121722"), Color("#2a3242"), 9)
+	var ink := Color(col, 0.95)
+	for sx in [-1.0, 1.0]:
+		for sy in [-1.0, 1.0]:
+			var c := m + Vector2(sx, sy) * mark
+			draw_line(c, c - Vector2(sx * 9, 0), ink, 3.0, true)
+			draw_line(c, c - Vector2(0, sy * 9), ink, 3.0, true)
+
+
+## Board objects without the base glow (only the goal plate speaks), with a small contact shadow so they sit on the floor.
 func _draw_object(kind: String, col: Color, m: Vector2, cell: float) -> void:
-	_glow(m, cell * 0.22, col, 0.6)
+	if cell == CELL:
+		if _is_target_px(m):
+			_draw_plate(m, col, kind)
+		var sh := PackedVector2Array()
+		for i in 20:
+			var u := TAU * i / 20.0
+			sh.append(m + Vector2(cos(u) * cell * 0.3, cell * 0.3 + sin(u) * cell * 0.08))
+		draw_colored_polygon(sh, Color(0, 0, 0, 0.45))
+	_draw_shape(kind, col, m, cell)
+
+
+## The object itself (puzzle mode draws toy sprites here instead).
+func _draw_shape(kind: String, col: Color, m: Vector2, cell: float) -> void:
 	match kind:
 		"ball":
 			draw_circle(m, cell * 0.28, col)
