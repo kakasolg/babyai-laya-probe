@@ -16,6 +16,22 @@ The only edit after export: the top-level `"model"` field held a local filesyste
 
 **Regenerating this exact recording is not possible from a fresh clone.** The fine-tuned checkpoint is not distributed. With the checkpoint, the command is in the README ("게임으로 보기").
 
+# Provenance of `putnext_episodes.json` (Lab → "Put next")
+
+**Recorded playback, not live inference**, like `episodes.json`.
+
+| | |
+|---|---|
+| Fine-tuned checkpoint | `babyai-laya-ft/putnext-s0` (seed 0, stage 10b; `reports/stage10.md`), run with no rule (stage 10c setting) |
+| Base model | same as above (`convaiinnovations/laya`, english, revision `55cf4c4…`) |
+| Environment | `BabyAI-PutNextLocal-v0`, `minigrid` 3.2.0, five choices (turn left / turn right / forward / pick up / drop) |
+| Export script | `probe/export_godot_putnext.py`, run with its defaults on 2026-11-16 |
+| Seeds (34, dev set only) | 10000–10029, plus 10040 · 10041 (never picked anything up) and 10032 · 10043 (picked the right toy, never put it down) — failures of putnext-s0 in `reports/stage10/laya-s0.json`. The final-check seeds 70000–70299 are not used. |
+| Per step | agent position and facing, every object's position, what the agent carries, the exact text given to the model, its five scores and its choice, and a fresh expert bot's choice from the same state |
+| Check | step counts, results and bot step counts are the same as `reports/stage10/laya-s0.json` for all 34 rooms |
+
+The baby and toy sprites drawn in this screen are the puzzle mode's (`godot/drive/baby`, `godot/drive/toys`; AI-generated, see their READMEs).
+
 ## License references
 
 - Base model `convaiinnovations/laya`: Apache-2.0 (model card at the revision above). The model repository has no NOTICE file. The model itself is not redistributed here.
