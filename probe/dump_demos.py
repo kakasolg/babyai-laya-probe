@@ -42,9 +42,9 @@ def guarded_seeds(s: str) -> range:
     return r
 
 
-def episode(env_id: str, seed: int):
-    """Bot episode -> (lines, success, all_actions)."""
-    env = gym.make(env_id)
+def episode(env_id: str, seed: int, kwargs: dict | None = None):
+    """Bot episode -> (lines, success, all_actions). kwargs go to gym.make (stage 9: num_dists=16)."""
+    env = gym.make(env_id, **(kwargs or {}))
     obs, _ = env.reset(seed=seed)
     u = env.unwrapped
     desc = u.instrs.desc

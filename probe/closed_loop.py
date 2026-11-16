@@ -38,6 +38,7 @@ from probe.text_stats import categorize
 
 ENV_ID = "BabyAI-GoToLocal-v0"
 NAME_TO_ACT = {v: k for k, v in ACTIONS.items()}
+ENV_KWARGS: dict = {}  # stage 9 sets {"num_dists": 16}; empty = the registered env as before
 
 
 def room_objects(u):
@@ -59,7 +60,7 @@ def swap_target(u):
 
 
 def make_env(seed: int, swap: bool):
-    env = gym.make(ENV_ID)
+    env = gym.make(ENV_ID, **ENV_KWARGS)
     obs, _ = env.reset(seed=seed)
     u = env.unwrapped
     orig = None
