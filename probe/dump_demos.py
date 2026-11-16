@@ -24,6 +24,7 @@ ENV_ID = "BabyAI-GoToLocal-v0"
 
 FINAL_SEEDS = range(20000, 20300)
 FINAL_SEEDS_PICKUP = range(30000, 30300)  # used once for the stage-8d final check (11-15), locked again
+FINAL_SEEDS_PUTNEXT = range(70000, 70300)  # used once for the stage-10e final check (11-16), locked again
 
 
 def seed_range(s: str) -> range:
@@ -39,6 +40,8 @@ def guarded_seeds(s: str) -> range:
         raise SystemExit("20000-20299 were used for the final check on 11-15 and are locked (README)")
     if any(x in FINAL_SEEDS_PICKUP for x in r):
         raise SystemExit("30000-30299 were used for the PickupDist final check on 11-15 and are locked (README)")
+    if any(x in FINAL_SEEDS_PUTNEXT for x in r):
+        raise SystemExit("70000-70299 were used for the PutNextLocal final check on 11-16 and are locked (README)")
     return r
 
 

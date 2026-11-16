@@ -1,0 +1,2458 @@
+{
+ "name": "fixed-reset",
+ "policy": "reset",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 0,
+  "within_2x_bot": 0
+ },
+ "timeout": 300,
+ "reached": {
+  "1 never picked anything up": 174,
+  "2 picked only wrong objects": 113,
+  "3 picked the right object, never put it right": 13
+ },
+ "wrong_pickups": 116,
+ "episodes_with_wrong_pickup": 113,
+ "repickups_after_a_drop": 3,
+ "null_actions": {
+  "null pickup": 961,
+  "null drop": 938
+ },
+ "blocked_forward_steps": 6684,
+ "steps_total": 38400,
+ "blocked_forward_rate": 0.1741,
+ "mean_steps_success": null,
+ "bot_mean_steps_same_eps": null,
+ "actions": {
+  "forward": 22805,
+  "turn left": 9408,
+  "turn right": 4151,
+  "pick up": 1090,
+  "drop": 946
+ },
+ "per_episode": {
+  "70000": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 49
+  },
+  "70001": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70002": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 48
+  },
+  "70003": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 56
+  },
+  "70004": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 45
+  },
+  "70005": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 42
+  },
+  "70006": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 51
+  },
+  "70007": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 58
+  },
+  "70008": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 49
+  },
+  "70009": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70010": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 48
+  },
+  "70011": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 54
+  },
+  "70012": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 67
+  },
+  "70013": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 59
+  },
+  "70014": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 59
+  },
+  "70015": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 54
+  },
+  "70016": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 50
+  },
+  "70017": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 54
+  },
+  "70018": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 51
+  },
+  "70019": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 48
+  },
+  "70020": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 49
+  },
+  "70021": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 55
+  },
+  "70022": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 50
+  },
+  "70023": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 56
+  },
+  "70024": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 48
+  },
+  "70025": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 54
+  },
+  "70026": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 63
+  },
+  "70027": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 52
+  },
+  "70028": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 51
+  },
+  "70029": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 63
+  },
+  "70030": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 62
+  },
+  "70031": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 63
+  },
+  "70032": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 2,
+   "interventions": 77
+  },
+  "70033": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 58
+  },
+  "70034": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 66
+  },
+  "70035": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 17,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 66
+  },
+  "70036": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 49
+  },
+  "70037": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 44
+  },
+  "70038": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 50
+  },
+  "70039": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 53
+  },
+  "70040": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 60
+  },
+  "70041": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 48
+  },
+  "70042": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 58
+  },
+  "70043": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 51
+  },
+  "70044": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 19,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 48
+  },
+  "70045": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 62
+  },
+  "70046": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 28,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 55
+  },
+  "70047": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 44
+  },
+  "70048": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 49
+  },
+  "70049": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 42
+  },
+  "70050": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 61
+  },
+  "70051": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 50
+  },
+  "70052": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 47
+  },
+  "70053": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 53
+  },
+  "70054": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70055": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70056": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 19,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 53
+  },
+  "70057": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 48
+  },
+  "70058": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 57
+  },
+  "70059": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 18,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 47
+  },
+  "70060": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 46
+  },
+  "70061": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 17,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70062": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70063": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70064": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 61
+  },
+  "70065": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 60
+  },
+  "70066": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 26,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 46
+  },
+  "70067": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 59
+  },
+  "70068": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70069": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 64
+  },
+  "70070": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 52
+  },
+  "70071": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 19,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 59
+  },
+  "70072": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 50
+  },
+  "70073": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70074": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70075": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 54
+  },
+  "70076": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 48
+  },
+  "70077": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 51
+  },
+  "70078": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 60
+  },
+  "70079": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 51
+  },
+  "70080": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 50
+  },
+  "70081": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 60
+  },
+  "70082": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70083": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 46
+  },
+  "70084": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 51
+  },
+  "70085": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 39
+  },
+  "70086": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 21,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 49
+  },
+  "70087": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 45
+  },
+  "70088": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 49
+  },
+  "70089": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 22,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 46
+  },
+  "70090": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 46
+  },
+  "70091": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 49
+  },
+  "70092": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 49
+  },
+  "70093": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 5,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 64
+  },
+  "70094": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 51
+  },
+  "70095": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 47
+  },
+  "70096": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 64
+  },
+  "70097": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 2,
+   "interventions": 55
+  },
+  "70098": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 61
+  },
+  "70099": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70100": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 49
+  },
+  "70101": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 45
+  },
+  "70102": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 17,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 54
+  },
+  "70103": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 65
+  },
+  "70104": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 56
+  },
+  "70105": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 45
+  },
+  "70106": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 52
+  },
+  "70107": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 45
+  },
+  "70108": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 57
+  },
+  "70109": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 43
+  },
+  "70110": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 45
+  },
+  "70111": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 40
+  },
+  "70112": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 45
+  },
+  "70113": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 47
+  },
+  "70114": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 53
+  },
+  "70115": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 43
+  },
+  "70116": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70117": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 46
+  },
+  "70118": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 58
+  },
+  "70119": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 54
+  },
+  "70120": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 24,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 49
+  },
+  "70121": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 20,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 43
+  },
+  "70122": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 18,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 51
+  },
+  "70123": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 49
+  },
+  "70124": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70125": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 49
+  },
+  "70126": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 62
+  },
+  "70127": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 49
+  },
+  "70128": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 62
+  },
+  "70129": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 40
+  },
+  "70130": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 55
+  },
+  "70131": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 64
+  },
+  "70132": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 51
+  },
+  "70133": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 49
+  },
+  "70134": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 43
+  },
+  "70135": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 51
+  },
+  "70136": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 53
+  },
+  "70137": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 48
+  },
+  "70138": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 58
+  },
+  "70139": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 63
+  },
+  "70140": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 47
+  },
+  "70141": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 43
+  },
+  "70142": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 44
+  },
+  "70143": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 54
+  },
+  "70144": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 61
+  },
+  "70145": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 49
+  },
+  "70146": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 46
+  },
+  "70147": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 53
+  },
+  "70148": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70149": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 50
+  },
+  "70150": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 44
+  },
+  "70151": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 53
+  },
+  "70152": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 44
+  },
+  "70153": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 53
+  },
+  "70154": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 17,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 43
+  },
+  "70155": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 18,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 56
+  },
+  "70156": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 51
+  },
+  "70157": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 63
+  },
+  "70158": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 67
+  },
+  "70159": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 58
+  },
+  "70160": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 53
+  },
+  "70161": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 19,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 48
+  },
+  "70162": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 17,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 51
+  },
+  "70163": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 59
+  },
+  "70164": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 49
+  },
+  "70165": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 58
+  },
+  "70166": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 57
+  },
+  "70167": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 50
+  },
+  "70168": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 43
+  },
+  "70169": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 48
+  },
+  "70170": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 48
+  },
+  "70171": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 62
+  },
+  "70172": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 48
+  },
+  "70173": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 52
+  },
+  "70174": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 50
+  },
+  "70175": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 49
+  },
+  "70176": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 45
+  },
+  "70177": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 22,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 45
+  },
+  "70178": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 51
+  },
+  "70179": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 61
+  },
+  "70180": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 51
+  },
+  "70181": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 57
+  },
+  "70182": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 45
+  },
+  "70183": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 56
+  },
+  "70184": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 37
+  },
+  "70185": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 61
+  },
+  "70186": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 41
+  },
+  "70187": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 48
+  },
+  "70188": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 59
+  },
+  "70189": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 62
+  },
+  "70190": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 59
+  },
+  "70191": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 62
+  },
+  "70192": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 47
+  },
+  "70193": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 48
+  },
+  "70194": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 51
+  },
+  "70195": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 52
+  },
+  "70196": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 20,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 53
+  },
+  "70197": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 62
+  },
+  "70198": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 47
+  },
+  "70199": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 56
+  },
+  "70200": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 43
+  },
+  "70201": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 56
+  },
+  "70202": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 60
+  },
+  "70203": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 56
+  },
+  "70204": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 17,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 50
+  },
+  "70205": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 50
+  },
+  "70206": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 18,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70207": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 55
+  },
+  "70208": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 50
+  },
+  "70209": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 47
+  },
+  "70210": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 19,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 50
+  },
+  "70211": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 55
+  },
+  "70212": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 58
+  },
+  "70213": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 46
+  },
+  "70214": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 59
+  },
+  "70215": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 63
+  },
+  "70216": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70217": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 22,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 53
+  },
+  "70218": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 18,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 45
+  },
+  "70219": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70220": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 41
+  },
+  "70221": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 54
+  },
+  "70222": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 54
+  },
+  "70223": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 18,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 62
+  },
+  "70224": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 52
+  },
+  "70225": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 51
+  },
+  "70226": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 52
+  },
+  "70227": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 61
+  },
+  "70228": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 42
+  },
+  "70229": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 19,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 53
+  },
+  "70230": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 50
+  },
+  "70231": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 46
+  },
+  "70232": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70233": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 56
+  },
+  "70234": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 5,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 63
+  },
+  "70235": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 41
+  },
+  "70236": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 54
+  },
+  "70237": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 65
+  },
+  "70238": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 73
+  },
+  "70239": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 52
+  },
+  "70240": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 57
+  },
+  "70241": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 45
+  },
+  "70242": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 18,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 54
+  },
+  "70243": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 42
+  },
+  "70244": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 52
+  },
+  "70245": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 45
+  },
+  "70246": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 62
+  },
+  "70247": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70248": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 45
+  },
+  "70249": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 50
+  },
+  "70250": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 18,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 2,
+   "interventions": 69
+  },
+  "70251": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 25,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 52
+  },
+  "70252": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 39
+  },
+  "70253": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70254": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 53
+  },
+  "70255": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 47
+  },
+  "70256": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 52
+  },
+  "70257": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 63
+  },
+  "70258": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 17,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 51
+  },
+  "70259": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 45
+  },
+  "70260": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70261": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 52
+  },
+  "70262": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 57
+  },
+  "70263": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 9,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 52
+  },
+  "70264": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 57
+  },
+  "70265": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 60
+  },
+  "70266": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 46
+  },
+  "70267": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70268": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 62
+  },
+  "70269": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 55
+  },
+  "70270": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 61
+  },
+  "70271": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 63
+  },
+  "70272": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 50
+  },
+  "70273": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 41
+  },
+  "70274": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 45
+  },
+  "70275": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 4,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 48
+  },
+  "70276": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 50
+  },
+  "70277": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 60
+  },
+  "70278": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 43
+  },
+  "70279": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 45
+  },
+  "70280": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 17,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 55
+  },
+  "70281": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70282": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 6,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 44
+  },
+  "70283": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 71
+  },
+  "70284": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70285": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 53
+  },
+  "70286": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 57
+  },
+  "70287": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 46
+  },
+  "70288": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 60
+  },
+  "70289": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 56
+  },
+  "70290": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 49
+  },
+  "70291": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 70
+  },
+  "70292": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 8,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 54
+  },
+  "70293": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 58
+  },
+  "70294": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 42
+  },
+  "70295": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 7,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 47
+  },
+  "70296": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 53
+  },
+  "70297": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 50
+  },
+  "70298": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 12,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 49
+  },
+  "70299": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 54
+  }
+ },
+ "episodes_with_intervention": 300,
+ "interventions": 15595,
+ "rule_chosen_kinds": {
+  "turn left": 9408,
+  "turn right": 4151,
+  "null pickup": 961,
+  "null drop": 938,
+  "pickup wrong": 116,
+  "pickup move": 13,
+  "drop": 8
+ },
+ "vs_no_rule": {
+  "saved": [],
+  "saved_within_2x_bot": 0,
+  "broken": [],
+  "broken_with_rule_chosen_pickup_or_drop": []
+ },
+ "env": "BabyAI-PutNextLocal-v0",
+ "seeds": "70000-70299",
+ "carry_line": true,
+ "model": "none (fixed scores)"
+}
