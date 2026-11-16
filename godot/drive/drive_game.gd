@@ -561,6 +561,11 @@ func _draw_object(kind: String, col: Color, m: Vector2, cell: float) -> void:
 			var u := TAU * i / 20.0
 			sh.append(m + Vector2(cos(u) * cell * 0.3, cell * 0.3 + sin(u) * cell * 0.08))
 		draw_colored_polygon(sh, Color(0, 0, 0, 0.45))
+	_draw_shape(kind, col, m, cell)
+
+
+## The object itself (puzzle mode draws toy sprites here instead).
+func _draw_shape(kind: String, col: Color, m: Vector2, cell: float) -> void:
 	match kind:
 		"ball":
 			draw_circle(m, cell * 0.28, col)

@@ -13,7 +13,7 @@ extends "res://drive/drive_game.gd"
 ##   5. 64 turns in all (autopilot moves + the driver's); 6. success = a matching object directly ahead.
 ##
 ## Command line (after `--`):  --puzzlecheck[=N]   check the pack in Godot (all rooms; lit for every 10th), then quit
-##                             --shot=file.png --scene=stuck|solved [--room=n]   one screenshot
+##                             --shot=file.png --scene=stuck|talk|solved [--room=n]   one screenshot
 
 const PACK := "res://data/puzzle_rooms_l1.json"
 const KEEP := "res://data/puzzle_keep_l1.json"      # which pack rooms are played (written by --puzzlefilter)
@@ -34,11 +34,28 @@ var lit_t := 0.0
 var lit_share := [0.0, 0.0, 0.0]
 var move_rects := {}         # action -> Rect2 of its marker while stopped
 var saving := true           # off for checks and screenshots
+var baby := {}               # pose name -> Texture2D (drive/baby/*.png), drawn instead of the car
+var toys := {}               # "ball_a" etc. -> white Texture2D (drive/toys/*.png), tinted with the object's colour
+var mom_text := ""           # the parent's line; only after a driver's move (see TALK below)
+var mom_t := 0.0
+var last_nudge := -1         # the previous driver move in this room (for "again" lines)
+var toy_name := ""           # "blue rattle": what the baby calls this room's target
+var bags := {}               # line pool -> indices not yet used (see _pick)
+var last_line := {}          # line pool -> the line used last
+var baby_text := ""          # the baby's own reaction (room start, stopped, got it, gave up)
+var baby_t := 0.0
+var baby_wait := 0.0
 
 
 func _ready() -> void:
 	get_tree().auto_accept_quit = true
 	rng.randomize()
+	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	for n in ["up", "down", "left", "right", "look", "reach", "grab", "cry"]:
+		baby[n] = load("res://drive/baby/%s.png" % n)
+	for n in ["ball", "key", "box"]:
+		for v in ["a", "b"]:
+			toys[n + "_" + v] = load("res://drive/toys/%s_%s.png" % [n, v])
 	var parsed = JSON.parse_string(FileAccess.get_file_as_string(PACK))
 	pack = parsed["rooms"] if parsed is Dictionary else []
 	level = 1
@@ -142,6 +159,11 @@ func _new_room(_ep := {}, _gidx := -1) -> void:
 			bits += _bits(int(v))
 		lit_share[lv] = float(bits) / float(maxi(1, free * 4))
 	dlog.begin(room, 1, view_mode, {"mode": "puzzle", "nudge_par": int(room["nudge_par"])})
+	mom_t = 0.0
+	var tk: String = room["target"]["type"]
+	toy_name = "%s %s" % [room["target"]["color"], TOY_NAME.get(tk + "_" + _look(tk), tk)]
+	last_nudge = -1
+	_baby(_pick("start", BABY_START), rng.randf_range(0.4, 0.8), 2.2)
 
 
 static func _bits(v: int) -> int:
@@ -163,6 +185,7 @@ func _auto_tick() -> void:
 	var key := Vector3i(pos.x, pos.y, dir)
 	if acted.has(key):
 		state = "stuck"
+		_baby(_pick("stuck", BABY_STUCK), 0.2, 2.6)
 		return
 	acted[key] = true
 	var d := ap.peek(room, pos, dir, true)
@@ -182,6 +205,7 @@ func _nudge(a: int) -> void:
 		return
 	nudges += 1
 	takeovers = nudges
+	_mom(a)
 	state = "auto"
 	auto_t = 0.0
 	_act(a, "driver", ap.peek(room, pos, dir, true), true)
@@ -202,8 +226,10 @@ func _finish(res: String) -> void:
 	phase_t = 0.0
 	if res == "success":
 		_burst()
+		_baby(_pick("star3", BABY_STAR3) if stars == 3 else _pick("got", BABY_GOT), 0.1, 3.5)
 	else:
 		shake = 0.5
+		_baby(_pick("cry", BABY_CRY), 0.1, 3.5)
 
 
 func _after_effect() -> void:
@@ -225,6 +251,11 @@ func _retry() -> void:
 
 func _process(delta: float) -> void:
 	super._process(delta)
+	mom_t = maxf(0.0, mom_t - delta)
+	if baby_wait > 0.0:
+		baby_wait -= delta
+	else:
+		baby_t = maxf(0.0, baby_t - delta)
 	if phase == "result":
 		lit_t += delta
 
@@ -290,6 +321,48 @@ const GUIDE := Color("#9be5ec")
 func _draw_goal() -> void:
 	if phase == "result" and result == "success":
 		_draw_arrival()
+
+
+## Objects are baby toys: white sprites tinted with the object's colour. Each kind has two looks (a, b);
+## one room uses one look per kind (picked from the room's seed), so the goal card always matches the board.
+func _look(kind: String) -> String:
+	return "a" if (str(room.get("seed", "")) + kind).hash() % 2 == 0 else "b"
+
+
+func _draw_shape(kind: String, col: Color, m: Vector2, cell: float) -> void:
+	var tex: Texture2D = toys.get(kind + "_" + _look(kind))
+	if tex == null:
+		super._draw_shape(kind, col, m, cell)
+		return
+	var sz := tex.get_size() * (cell / CELL)
+	draw_texture_rect(tex, Rect2(m - sz * 0.5, sz), false, col.lightened(0.15))
+
+
+## The car is drawn as a crawling android baby (11-15 trial; sprites made locally with FLUX.2 klein, see
+## drive/baby/README.md). Heading picks the sprite; after the room it grabs the toy or cries.
+## The stopped ring stays under the baby so the stuck signal is unchanged.
+const BABY_DIR := ["right", "down", "left", "up"]
+
+
+func _draw_car() -> void:
+	var m := _px(_car_pos())
+	if state == "stuck" and phase == "drive":
+		var pulse := 0.5 + 0.5 * sin(clock * 7.0)
+		draw_arc(m + Vector2(0, 14), CELL * (0.40 + 0.04 * pulse), 0, TAU, 40, Color(C_STUCK, 0.45 + 0.45 * pulse), 3.0)
+	var pose: String = BABY_DIR[dir]
+	if phase == "result":
+		pose = "grab" if result == "success" else "cry"
+	var tex: Texture2D = baby.get(pose)
+	if tex == null:
+		super._draw_car()
+		return
+	var sh := PackedVector2Array()
+	for i in 20:
+		var u := TAU * i / 20.0
+		sh.append(m + Vector2(cos(u) * 28.0, 32.0 + sin(u) * 7.0))
+	draw_colored_polygon(sh, Color(0, 0, 0, 0.45))
+	var sz := tex.get_size()
+	draw_texture(tex, m + Vector2(-sz.x * 0.5, 38.0 - sz.y))
 
 
 ## Arrival: a short line from the car to the target, then a check mark on the target's top-right corner.
@@ -459,6 +532,108 @@ func _draw_hints() -> void:
 		var go := Rect2(Vector2(x, y), Vector2(70, 30))
 		_round(go, Color("#161b25"), C_STUCK if result == "success" else Color("#2c3546"), 6)
 		draw_string(get_theme_default_font(), Vector2(x, y + 21), "Space", HORIZONTAL_ALIGNMENT_CENTER, 70, 15, C_TEXT)
+	_draw_talk()
+
+
+# ---------------------------------------------------------------- talk
+
+## ── 말투 원칙 (11-15, Perplexity 조사: parentese·serve-and-return·이름 불러 주기) ──────────
+##  · 엄마(부모) 말은 플레이어가 한 수를 거들 때만 나온다. 아기에게 하듯 짧고 다정하게, 꾸짖지 않는다.
+##  · 나머지 순간(방 시작, 멈춤, 성공, 실패)은 아기 자신의 반응이다. 멈출 때 "Mama?"가 부르고 엄마가 답하는 주고받기.
+##  · 혼자 잘 가는 동안에는 아무도 말하지 않는다. 새 말이 오면 앞 말은 바로 사라진다(줄 세우지 않음).
+## 대사는 풀마다 섞어서 다 쓰고 나서야 다시 돌린다(_pick). 같은 줄이 연달아 나오지 않게 해서 오래 해도 덜 지루하게.
+## {t} = 이번 방의 장난감 이름("blue rattle"), {T} = 첫 글자 대문자(문장 중간 "!" 뒤). 엄마 말은 짧게(5~6단어), 다정하게, 꾸짖는 말 없이.
+const MOM_LINES := [
+	["Let's turn left.", "A little turn left.", "Turning left together.", "Left, nice and gentle.", "This way, sweetie. Left!",
+		"Try left, little one.", "Peek to the left!", "Let's look left, love.", "Over to the left, darling.",
+		"Left, you clever bean.", "Swing left, sweet pea.", "How about left?"],
+	["Let's turn right.", "A little turn right.", "Turning right together.", "Right, nice and gentle.", "This way, sweetie. Right!",
+		"Try right, little one.", "Peek to the right!", "Let's look right, love.", "Over to the right, darling.",
+		"Right, you clever bean.", "Swing right, sweet pea.", "How about right?"],
+	["Let's crawl forward.", "A little crawl ahead.", "Forward, nice and gentle.", "Keep going, sweetie!", "Crawl, crawl, crawl!",
+		"Go on, little one.", "One more scoot!", "Straight ahead, love.", "You can do it. Go!", "Off you go, darling.",
+		"Wiggle forward, sweet pea.", "Scoot, scoot!"],
+]
+const MOM_AGAIN := [
+	["Left again, sweetie.", "One more left!", "And left once more.", "Another little left."],
+	["Right again, sweetie.", "One more right!", "And right once more.", "Another little right."],
+	["Keep crawling, love.", "And again, forward!", "A bit more, sweetie.", "Nearly there, keep going."],
+]
+const TOY_NAME := {"ball_a": "ball", "ball_b": "ball", "key_a": "rattle", "key_b": "key", "box_a": "block", "box_b": "toy box"}
+const BABY_START := ["Ooh! {T}!", "{t}!", "Want {t}!", "Look! {T}!", "There! {T}!", "Me get {t}!", "Hi, {t}!",
+	"Ooh, ooh! {T}!", "Gonna get {t}!", "Mine! {T}!", "Ba-ba! {T}!", "{t}! {T}!"]
+const BABY_STUCK := ["Hmm?", "Mama?", "Uh-oh!", "Huh?", "Which way?", "Mama, help?", "Stuck...", "Ehh?", "Hmmm...",
+	"Where go?", "Bump!", "Mama, look!", "Oopsie?", "Nuh-uh?", "Mmm... Mama?", "Help pwease?"]
+const BABY_GOT := ["Got it!", "Yay!", "Hee-hee!", "Got {t}!", "Mine!", "Again! Again!", "Yay, {t}!", "Did it!",
+	"Hehe, {t}!", "Ta-da!", "Wheee!", "Mama, look! {T}!", "Hug {t}!", "Yummy {t}!"]
+const BABY_STAR3 := ["Me did it!", "All me!", "Me! Me did it!", "Big baby!", "Me so smart!", "Easy peasy!"]
+const BABY_CRY := ["Waah...", "Nnngh...", "Uh-oh...", "Sleepy...", "Mama...", "No more...", "Hmph.", "Tired...",
+	"Wanna nap...", "Sniff...", "Uppy, Mama...", "Bwaaah..."]
+const C_MOM := Color("#ff8fb1")
+
+
+## A shuffled bag per pool: every line once before any repeats, and never the same line twice in a row.
+func _pick(pool: String, lines: Array) -> String:
+	var bag: Array = bags.get(pool, [])
+	if bag.is_empty():
+		bag = range(lines.size())
+		bag.shuffle()
+		if lines.size() > 1 and lines[bag[-1]] == last_line.get(pool, ""):
+			var t = bag[0]
+			bag[0] = bag[-1]
+			bag[-1] = t
+	var line: String = lines[bag.pop_back()]
+	bags[pool] = bag
+	last_line[pool] = line
+	return line.replace("{T}", toy_name.substr(0, 1).to_upper() + toy_name.substr(1)).replace("{t}", toy_name)
+
+
+func _mom(a: int) -> void:
+	if a == last_nudge and rng.randf() < 0.6:
+		mom_text = _pick("again%d" % a, MOM_AGAIN[a])
+	else:
+		mom_text = _pick("mom%d" % a, MOM_LINES[a])
+	last_nudge = a
+	mom_t = 2.4
+	baby_t = 0.0                      # the baby's call is answered; its bubble gives way
+
+
+func _baby(t: String, wait: float, dur: float) -> void:
+	baby_text = t.substr(0, 1).to_upper() + t.substr(1)
+	baby_wait = wait
+	baby_t = dur
+
+
+## The parent's bubble sits on the left panel with a heart, its tail toward the board; the baby's floats above its head.
+func _draw_talk() -> void:
+	var font := get_theme_default_font()
+	if mom_t > 0.0:
+		var a := minf(1.0, mom_t / 0.4)
+		var tw := font.get_string_size(mom_text, HORIZONTAL_ALIGNMENT_LEFT, -1, 19).x
+		var r := Rect2(Vector2(maxf(12.0, BOARD.x - 28 - tw - 36), 392), Vector2(tw + 36, 46))
+		_round(r, Color("#1a1420", 0.95 * a), Color(C_MOM, 0.9 * a), 14)
+		var t := Vector2(r.end.x, r.get_center().y)
+		draw_colored_polygon(PackedVector2Array([t + Vector2(-1, -9), t + Vector2(16, 0), t + Vector2(-1, 9)]), Color(C_MOM, 0.9 * a))
+		draw_string(font, Vector2(r.position.x + 18, r.position.y + 30), mom_text, HORIZONTAL_ALIGNMENT_LEFT, -1, 19,
+			Color(C_TEXT, a))
+		_heart(Vector2(r.position.x + 14, r.position.y - 4), Color(C_MOM, a))
+		draw_string(font, Vector2(r.position.x + 28, r.position.y - 6), "Mom", HORIZONTAL_ALIGNMENT_LEFT, -1, 14,
+			Color(C_MOM, a))
+	if baby_wait <= 0.0 and baby_t > 0.0:
+		var a := minf(1.0, baby_t / 0.4)
+		var m := _px(_car_pos()) + Vector2(30, -50)
+		var tw := font.get_string_size(baby_text, HORIZONTAL_ALIGNMENT_LEFT, -1, 18).x
+		var r := Rect2(m + Vector2(0, -40), Vector2(tw + 26, 40))
+		_round(r, Color(1, 1, 1, 0.95 * a), Color(1, 1, 1, 0.95 * a), 14)
+		draw_colored_polygon(PackedVector2Array([m + Vector2(6, -2), m + Vector2(-10, 12), m + Vector2(22, -2)]),
+			Color(1, 1, 1, 0.95 * a))
+		draw_string(font, r.position + Vector2(13, 27), baby_text, HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color("#1a1f2a", a))
+
+
+func _heart(c: Vector2, col: Color) -> void:
+	draw_circle(c + Vector2(-3.5, 0), 4.5, col)
+	draw_circle(c + Vector2(3.5, 0), 4.5, col)
+	draw_colored_polygon(PackedVector2Array([c + Vector2(-7.8, 1.5), c + Vector2(7.8, 1.5), c + Vector2(0, 10)]), col)
 
 
 # ---------------------------------------------------------------- headless check and screenshots
@@ -655,3 +830,7 @@ func _puzzle_shot(scene: String) -> void:
 	glide_t = 1.0
 	_say("")
 	toast_t = 0.0
+	baby_wait = 0.0
+	if scene == "talk":
+		_mom(int(room["nudge_solution"][0]))
+		_baby("Mama?", 0.0, 3.0)
