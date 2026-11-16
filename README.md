@@ -94,6 +94,8 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
    → `loop --policy none|reset|bot|random --model … --name laya-s0 [--base reports/stage8/laya-s0.json]`.
 9. 물건 16개 방(`GoToLocal`, `num_dists=16`, 환경 코드 그대로) — 9a 옮기기 · 9b 다시 학습(개발용 300판): `reports/stage9.md`,
    선언 `reports/stage9_prereg.md`, `python -m probe.stage9`. seed: 학습 0~999, 개발용 10000~10299, 최종용 60000~60299(열지 않음, 코드가 거부).
+10. 옮겨 놓기 `BabyAI-PutNextLocal-v0`(선택지 다섯: 네 개 + `drop`, 상태 글에 `carrying:` 줄) — 10a~10d(개발용 300판): `reports/stage10.md`,
+   선언 `reports/stage10_prereg.md`, `python -m probe.stage10`. seed: 학습 0~999, 개발용 10000~10299, 최종용 70000~70299(열지 않음, 코드가 거부).
 
 각 단계는 MoKa 확인 뒤 하나씩 진행한다.
 
