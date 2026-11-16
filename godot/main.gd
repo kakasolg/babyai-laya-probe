@@ -178,6 +178,19 @@ func _back_to_drive() -> void:
 	get_tree().change_scene_to_file("res://drive/drive.tscn")
 
 
+## Laya replays of the harder put-next task (lab/putnext.tscn); stops the correction server first, as _back_to_drive does.
+func _open_putnext() -> void:
+	if server_pid != 0:
+		fix_busy = false
+		fix_cb = func(_d): pass
+		http.cancel_request()
+		http.request(SERVER + "/quit")
+		server_pid = 0
+		get_tree().create_timer(1.0).timeout.connect(func(): get_tree().change_scene_to_file("res://lab/putnext.tscn"))
+		return
+	get_tree().change_scene_to_file("res://lab/putnext.tscn")
+
+
 func _user_args() -> Dictionary:
 	var d := {}
 	for a in OS.get_cmdline_user_args():
@@ -326,7 +339,7 @@ func _build_top_bar() -> void:
 	var top := HBoxContainer.new()
 	top.position = Vector2(16, 8)
 	top.custom_minimum_size = Vector2(1288, 44)
-	top.add_theme_constant_override("separation", 12)
+	top.add_theme_constant_override("separation", 8)
 	add_child(top)
 	_style_btn(_btn(top, "< Drive", func(): _back_to_drive()), Color("#10261a"), Color("#2f7d4f"), Color("#8fe0b0"))
 
@@ -388,6 +401,7 @@ func _build_top_bar() -> void:
 
 	_style_btn(_btn(top, "Next failure", func(): _next_hard()), UI_KEY_BG, UI_KEY_BORDER, UI_TEXT)
 	_style_btn(_btn(top, "Stuck example", func(): _stuck_example()), Color("#2a1a14"), Color("#b5532a"), Color("#f0997b"))
+	_style_btn(_btn(top, "Put next", func(): _open_putnext()), Color("#1c1a2e"), Color("#6a5acd"), Color("#c7bfff"))
 	btn_view = OptionButton.new()
 	btn_view.focus_mode = Control.FOCUS_NONE
 	for t in VIEW_MENU:

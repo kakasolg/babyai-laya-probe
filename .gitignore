@@ -4,6 +4,8 @@ data/
 godot/data/*
 !godot/data/episodes.json
 !godot/data/PROVENANCE.md
+# the put-next Laya replay for the Lab (probe/export_godot_putnext.py), provenance in PROVENANCE.md
+!godot/data/putnext_episodes.json
 # the drive engine's small policy (not Laya) and its check files — see godot/drive/README.md
 !godot/data/policy_l*.json
 !godot/data/drive_view_test.json
