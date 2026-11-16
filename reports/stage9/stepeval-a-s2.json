@@ -1,0 +1,46 @@
+{
+ "model": "babyai-laya-ft/gotolocal-s2",
+ "env": "BabyAI-GoToLocal-v0",
+ "kwargs": {
+  "num_dists": 16
+ },
+ "steps": 1640,
+ "all": {
+  "n": 1640,
+  "agree": 0.9134
+ },
+ "target_visible": {
+  "n": 1329,
+  "agree": 0.9308
+ },
+ "target_unseen": {
+  "n": 311,
+  "agree": 0.8392
+ },
+ "distractor_closer": {
+  "n": 985,
+  "agree": 0.9086
+ },
+ "two_matching": {
+  "n": 684,
+  "agree": 0.9225
+ },
+ "order_flip_rate": 0.0104,
+ "confusion_bot_to_model": {
+  "turn left": {
+   "turn left": 240,
+   "forward": 50,
+   "turn right": 15
+  },
+  "turn right": {
+   "turn right": 323,
+   "forward": 43,
+   "turn left": 5
+  },
+  "forward": {
+   "forward": 935,
+   "turn right": 26,
+   "turn left": 3
+  }
+ }
+}

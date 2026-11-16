@@ -1,0 +1,1544 @@
+{
+ "name": "bot",
+ "policy": "bot",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 300,
+  "rate": 1.0,
+  "within_2x_bot": 300,
+  "rate_2x": 1.0
+ },
+ "timeout": 0,
+ "target_visible_at_start": {
+  "n": 172,
+  "success": 172,
+  "rate": 1.0,
+  "within_2x_bot": 172,
+  "rate_2x": 1.0
+ },
+ "target_unseen_at_start": {
+  "n": 128,
+  "success": 128,
+  "rate": 1.0,
+  "within_2x_bot": 128,
+  "rate_2x": 1.0
+ },
+ "blocked_forward_steps": 0,
+ "steps_total": 1642,
+ "actions": {
+  "turn left": 305,
+  "forward": 964,
+  "turn right": 371,
+  "3": 1,
+  "4": 1
+ },
+ "per_episode": {
+  "10000": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10001": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10002": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10003": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10004": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10
+  },
+  "10005": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10006": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10007": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10008": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10009": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10010": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10011": {
+   "end": "success",
+   "steps": 18,
+   "bot": 18
+  },
+  "10012": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10013": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10014": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10015": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10016": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10017": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10018": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10019": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10020": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10021": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11
+  },
+  "10022": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10023": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10
+  },
+  "10024": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10025": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10026": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10027": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10028": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10029": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14
+  },
+  "10030": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9
+  },
+  "10031": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10032": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10033": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10034": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10035": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13
+  },
+  "10036": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11
+  },
+  "10037": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10038": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10039": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7
+  },
+  "10040": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10041": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10042": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10043": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7
+  },
+  "10044": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10045": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10046": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15
+  },
+  "10047": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10048": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10
+  },
+  "10049": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10050": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9
+  },
+  "10051": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10052": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10053": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9
+  },
+  "10054": {
+   "end": "success",
+   "steps": 19,
+   "bot": 19
+  },
+  "10055": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10056": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13
+  },
+  "10057": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10058": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10059": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10060": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10061": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10062": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10063": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1
+  },
+  "10064": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7
+  },
+  "10065": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10066": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10067": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10068": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10069": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10070": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10071": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10072": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1
+  },
+  "10073": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10074": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10075": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10076": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10077": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10078": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9
+  },
+  "10079": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10
+  },
+  "10080": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10081": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10082": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7
+  },
+  "10083": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10084": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10085": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9
+  },
+  "10086": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10087": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10088": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10
+  },
+  "10089": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10090": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10091": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11
+  },
+  "10092": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10093": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10094": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10095": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10096": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10097": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10098": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10099": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10100": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12
+  },
+  "10101": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10102": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10103": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10104": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10105": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10106": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9
+  },
+  "10107": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10108": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10109": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10110": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10111": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10112": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14
+  },
+  "10113": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10114": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7
+  },
+  "10115": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10116": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10117": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1
+  },
+  "10118": {
+   "end": "success",
+   "steps": 17,
+   "bot": 17
+  },
+  "10119": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10120": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10
+  },
+  "10121": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10122": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10123": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9
+  },
+  "10124": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10125": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10126": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10127": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10128": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10129": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10130": {
+   "end": "success",
+   "steps": 16,
+   "bot": 16
+  },
+  "10131": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10132": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12
+  },
+  "10133": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10134": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7
+  },
+  "10135": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10136": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10137": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10138": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1
+  },
+  "10139": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10140": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10141": {
+   "end": "success",
+   "steps": 17,
+   "bot": 17
+  },
+  "10142": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15
+  },
+  "10143": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15
+  },
+  "10144": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10145": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10
+  },
+  "10146": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11
+  },
+  "10147": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7
+  },
+  "10148": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10149": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10150": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10151": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9
+  },
+  "10152": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12
+  },
+  "10153": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10154": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14
+  },
+  "10155": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10156": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10157": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13
+  },
+  "10158": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10159": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10160": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10161": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10162": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10163": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10164": {
+   "end": "success",
+   "steps": 17,
+   "bot": 17
+  },
+  "10165": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10166": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13
+  },
+  "10167": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10168": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10169": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10170": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11
+  },
+  "10171": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1
+  },
+  "10172": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7
+  },
+  "10173": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11
+  },
+  "10174": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7
+  },
+  "10175": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10176": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10177": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10178": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10179": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9
+  },
+  "10180": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10181": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10182": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10183": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10184": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10185": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10186": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10187": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10188": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10189": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10190": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10191": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10192": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10193": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10194": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10195": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10196": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9
+  },
+  "10197": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10198": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10199": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10200": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10
+  },
+  "10201": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13
+  },
+  "10202": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10203": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10204": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10205": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10206": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10207": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10208": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10209": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10210": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10211": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10212": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10213": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10214": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10215": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10216": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10217": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10218": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10219": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10220": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10221": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10222": {
+   "end": "success",
+   "steps": 17,
+   "bot": 17
+  },
+  "10223": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10224": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10225": {
+   "end": "success",
+   "steps": 16,
+   "bot": 16
+  },
+  "10226": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10227": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10228": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10229": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10230": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10231": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10232": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10233": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14
+  },
+  "10234": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10235": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10236": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10237": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10238": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10239": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10240": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7
+  },
+  "10241": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10242": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10243": {
+   "end": "success",
+   "steps": 16,
+   "bot": 16
+  },
+  "10244": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10245": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10246": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15
+  },
+  "10247": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10248": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10249": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10250": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10251": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10252": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10253": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10254": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10255": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10256": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10257": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10258": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15
+  },
+  "10259": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10260": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10261": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10262": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10263": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10264": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10265": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13
+  },
+  "10266": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10
+  },
+  "10267": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1
+  },
+  "10268": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10269": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10270": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9
+  },
+  "10271": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10272": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10273": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13
+  },
+  "10274": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10275": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10276": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10277": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10278": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10279": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10280": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10281": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10282": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10283": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10284": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5
+  },
+  "10285": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14
+  },
+  "10286": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10287": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10288": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10289": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2
+  },
+  "10290": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10291": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8
+  },
+  "10292": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12
+  },
+  "10293": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10294": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6
+  },
+  "10295": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  },
+  "10296": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4
+  },
+  "10297": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11
+  },
+  "10298": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11
+  },
+  "10299": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3
+  }
+ },
+ "blocked_forward_rate": 0.0,
+ "env": "BabyAI-GoToLocal-v0",
+ "kwargs": {
+  "num_dists": 16
+ },
+ "seeds": "10000-10299"
+}
