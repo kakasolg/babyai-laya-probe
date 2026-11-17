@@ -1,0 +1,53 @@
+{
+ "task": "gotolocal",
+ "seeds": "0-4999",
+ "minutes": 0.05,
+ "check_first_1000_equals_old_dump": true,
+ "old_dump_lines": 5310,
+ "new_first_1000_lines": 5310,
+ "per_n": {
+  "100": {
+   "episodes_kept": 99,
+   "steps": 479,
+   "calibration_items": 36,
+   "dropped_seeds": [
+    94
+   ]
+  },
+  "500": {
+   "episodes_kept": 499,
+   "steps": 2638,
+   "calibration_items": 199,
+   "dropped_seeds": [
+    94
+   ]
+  },
+  "1000": {
+   "episodes_kept": 998,
+   "steps": 5310,
+   "calibration_items": 400,
+   "dropped_seeds": [
+    94,
+    844
+   ]
+  },
+  "5000": {
+   "episodes_kept": 4989,
+   "steps": 26489,
+   "calibration_items": 1995,
+   "dropped_seeds": [
+    94,
+    844,
+    1668,
+    2372,
+    2722,
+    2773,
+    3097,
+    3897,
+    3933,
+    4141,
+    4499
+   ]
+  }
+ }
+}
