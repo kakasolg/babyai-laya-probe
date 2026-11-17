@@ -71,7 +71,7 @@ var hint_ctx := ""
 var key_font: FontVariation
 var start_screen: Control
 # fix (correction loop) state
-const SERVER := "http://127.0.0.1:18799"
+var SERVER := "http://127.0.0.1:%s" % (OS.get_environment("LAYA_PORT") if OS.get_environment("LAYA_PORT") != "" else "18799")
 const MEMO_TXT := {"1": "the answer is in the input but the model got it wrong", "2": "the input lacks the information", "3": "the text is confusing", "4": "other"}
 var http: HTTPRequest
 var fix_seeds: Array = []
@@ -96,6 +96,23 @@ var test_done := {}
 var test_ok := 0
 var test_long := 0
 var test_autostart := false
+## Help test (H): the 23 dev rooms Laya fails on its own (reports/help_test.md). Laya plays; when it is back at a
+## place and heading it already had (it would loop forever), it stops and the player gives one nudge, up to 3.
+## [seed, helps the bot's move needed, helps the best move needed] (0 = not solved within 3), from reports/help_test.json
+const HELP_ROOMS := [[10014, 1, 1], [10015, 0, 0], [10016, 0, 0], [10017, 0, 1], [10021, 2, 1], [10023, 0, 1],
+	[10024, 0, 1], [10026, 0, 0], [10041, 2, 1], [10051, 1, 1], [10122, 0, 0], [10124, 3, 1], [10149, 0, 0],
+	[10164, 0, 1], [10168, 0, 0], [10170, 1, 1], [10176, 1, 1], [10191, 2, 1], [10204, 1, 1], [10220, 2, 1],
+	[10221, 1, 1], [10242, 0, 3], [10259, 0, 1]]
+const HELP_MAX := 3
+var help_run := ""
+var help_left := 0
+var help_waiting := false
+var help_given: Array = []
+var help_visited := {}
+var help_timer := 0.0
+var help_done := {}          # seed -> helps used to succeed (1..3), 0 = not solved
+var help_ended := false      # this room's result is in
+var help_autostart := false
 const BABY_DIR := ["right", "down", "left", "up"]
 var baby := {}               # puzzle mode's baby and toy sprites (drive/baby, drive/toys), as in lab/putnext.gd
 var toys := {}
@@ -143,6 +160,7 @@ func _ready() -> void:
 	shot_path = args.get("shot", "")
 	fix_script = args.get("fixmoves", "")
 	test_autostart = args.has("testrun")
+	help_autostart = args.has("helptest")
 	if args.has("demo"):
 		_set_demo(true)
 	if args.has("selftest"):
@@ -294,9 +312,9 @@ func _build_ui() -> void:
 	r1.add_theme_constant_override("separation", 6)
 	fix_bar.add_child(r1)
 	_btn(r1, "AI's choice (Enter)", func(): _fix_step(""))
-	_btn(r1, "Turn left (A)", func(): _fix_step("turn left"))
-	_btn(r1, "Turn right (D)", func(): _fix_step("turn right"))
-	_btn(r1, "Forward (W)", func(): _fix_step("forward"))
+	_btn(r1, "Turn left (A)", func(): _help_give("turn left") if help_run != "" else _fix_step("turn left"))
+	_btn(r1, "Turn right (D)", func(): _help_give("turn right") if help_run != "" else _fix_step("turn right"))
+	_btn(r1, "Forward (W)", func(): _help_give("forward") if help_run != "" else _fix_step("forward"))
 	_btn(r1, "Show bot (B)", func(): fix_bot_shown = not fix_bot_shown; _refresh())
 	var r2 := HBoxContainer.new()
 	r2.add_theme_constant_override("separation", 6)
@@ -304,6 +322,7 @@ func _build_ui() -> void:
 	for code in ["1", "2", "3", "4"]:
 		_btn(r2, "Memo %s" % code, func(): _fix_set_memo(code))
 	_btn(r2, "AI to the end (R)", func(): _fix_set_auto(true))
+	_btn(r2, "Help test: 23 rooms (H)", func(): _help_start())
 	_btn(r2, "Test run: 300 rooms (L)", func(): _fix_set_loop(not fix_loop))
 	_btn(r2, "Next room (N)", func(): _change_ep(1))
 	var r3 := Label.new()
@@ -855,14 +874,14 @@ func _process(delta: float) -> void:
 				w_playing = true
 	if mode == "fix":
 		_fix_process(delta)
-	if mode == "fix" and fix_script != "" and not fix_busy and not fix_room.is_empty():
+	if mode == "fix" and fix_script != "" and not fix_busy and not fix_room.is_empty() and (help_run == "" or help_waiting):
 		var ch := fix_script.substr(0, 1)
 		fix_script = fix_script.substr(1)
 		match ch:
 			"e": _fix_step("")
-			"a": _fix_step("turn left")
-			"d": _fix_step("turn right")
-			"w": _fix_step("forward")
+			"a": _help_give("turn left") if help_run != "" else _fix_step("turn left")
+			"d": _help_give("turn right") if help_run != "" else _fix_step("turn right")
+			"w": _help_give("forward") if help_run != "" else _fix_step("forward")
 			"b": fix_bot_shown = true; _refresh()
 			"1", "2", "3", "4": _fix_set_memo(ch)
 	if shot_path != "":
@@ -1286,7 +1305,10 @@ func _fix_connect() -> void:
 			return
 		fix_seeds = d["seeds"]
 		fix_idx = 0
-		if test_autostart:
+		if help_autostart:
+			help_autostart = false
+			_help_start()
+		elif test_autostart:
 			test_autostart = false
 			_fix_set_loop(true)
 		else:
@@ -1300,7 +1322,7 @@ func _start_server() -> void:
 	if exe != "":
 		var dir := exe.get_base_dir()
 		server_pid = OS.create_process(exe, ["--onnx", dir.path_join("model/laya_fp32.onnx"), "--model", dir.path_join("model"),
-			"--root", dir, "--log", ProjectSettings.globalize_path("user://correct_log.jsonl"), "--parent-pid", str(OS.get_process_id())])
+			"--root", dir, "--log", ProjectSettings.globalize_path("user://correct_log.jsonl"), "--parent-pid", str(OS.get_process_id()), "--port", SERVER.get_slice(":", 2)])
 		print("started packaged AI server: pid ", server_pid, " ", exe)
 		return
 	var root := ProjectSettings.globalize_path("res://").trim_suffix("/").get_base_dir()   # repo root (Windows)
@@ -1339,6 +1361,12 @@ func _fix_reset() -> void:
 		fix_trail = [Vector2i(int(d["x"]), int(d["y"]))]
 		fix_bot_shown = false
 		fix_memo = ""
+		help_left = HELP_MAX
+		help_waiting = false
+		help_given = []
+		help_visited = {}
+		help_timer = 0.0
+		help_ended = false
 		_refresh())
 
 
@@ -1423,7 +1451,107 @@ func _test_record(d: Dictionary) -> void:
 		f.close()
 
 
+func _help_start() -> void:
+	if fix_room.is_empty() and fix_seeds.is_empty():
+		return
+	fix_loop = false
+	fix_auto = false
+	test_run = ""
+	help_run = "help-" + Time.get_datetime_string_from_system().replace(":", "")
+	help_done = {}
+	fix_seeds = []
+	for r in HELP_ROOMS:
+		fix_seeds.append({"seed": r[0], "note": ""})
+	fix_idx = 0
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("user://help_runs"))
+	_fix_reset()
+
+
+func _help_room() -> Array:
+	return HELP_ROOMS[fix_idx] if help_run != "" and fix_idx < HELP_ROOMS.size() else []
+
+
+## One help: the player's move at the stuck spot (logged by the server as a correction).
+func _help_give(action: String) -> void:
+	if not help_waiting or fix_busy:
+		return
+	help_waiting = false
+	help_left -= 1
+	help_given.append(action)
+	_fix_step(action)
+
+
+func _help_record(result: String) -> void:
+	if help_ended:
+		return
+	help_ended = true
+	var r := _help_room()
+	var used := help_given.size()
+	help_done[int(r[0])] = used if result == "success" else 0
+	var f_path := "user://help_runs/%s.jsonl" % help_run
+	var f := FileAccess.open(f_path, FileAccess.READ_WRITE if FileAccess.file_exists(f_path) else FileAccess.WRITE)
+	if f != null:
+		f.seek_end()
+		f.store_line(JSON.stringify({"seed": int(r[0]), "result": result, "helps": help_given, "steps": int(fix_state.get("step", 0)),
+			"bot_needed": int(r[1]), "best_needed": int(r[2])}))
+		f.close()
+	_refresh()
+
+
+func _help_process(delta: float) -> void:
+	if help_run == "" or fix_busy or fix_room.is_empty():
+		return
+	if fix_state.get("result") != null:
+		_help_record(String(fix_state["result"]))
+		help_timer += delta
+		if help_timer >= 2.0 and fix_idx < fix_seeds.size() - 1:
+			_change_ep(1)
+		return
+	if help_waiting or help_ended:
+		return
+	help_timer += delta
+	if help_timer < 0.3:
+		return
+	help_timer = 0.0
+	var k := Vector3i(int(fix_state["x"]), int(fix_state["y"]), int(fix_state["dir"]))
+	if help_visited.has(k):
+		if help_left > 0:
+			help_waiting = true
+			_refresh()
+		else:
+			_help_record("stuck")
+			_fix_get("/end", func(d):
+				if d != null:
+					fix_state = d
+				help_timer = -0.5
+				_refresh())
+		return
+	help_visited[k] = true
+	_fix_step("")
+
+
+func _help_summary() -> String:
+	var n := help_done.size()
+	var h := [0, 0, 0, 0]
+	var bot := [0, 0, 0, 0]
+	var best := [0, 0, 0, 0]
+	for r in HELP_ROOMS:
+		if not help_done.has(int(r[0])):
+			continue
+		for i in [1, 2, 3]:
+			if help_done[int(r[0])] > 0 and help_done[int(r[0])] <= i:
+				h[i] += 1
+			if int(r[1]) > 0 and int(r[1]) <= i:
+				bot[i] += 1
+			if int(r[2]) > 0 and int(r[2]) <= i:
+				best[i] += 1
+	return ("[color=#f5c518]Help test %d/%d done · you: %d with 1 help, %d within 3[/color] "
+		+ "[color=#8b95a5]· bot %d/%d · best %d/%d[/color]\n") % [
+		n, HELP_ROOMS.size(), h[1], h[3], bot[1], bot[3], best[1], best[3]]
+
+
 func _fix_process(delta: float) -> void:
+	_help_process(delta)
 	if fix_retry >= 0.0:
 		fix_retry -= delta
 		fix_wait += delta
@@ -1456,6 +1584,24 @@ func _fix_process(delta: float) -> void:
 func _fix_key(k: int, echo: bool) -> bool:
 	if echo:
 		return false
+	if k == KEY_H:
+		_help_start()
+		return true
+	if help_run != "":
+		match k:
+			KEY_A: _help_give("turn left")
+			KEY_D: _help_give("turn right")
+			KEY_W: _help_give("forward")
+			KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_DOWN:
+				_help_give(_screen_key_action(int(fix_state.get("dir", 0)), k))
+			KEY_N, KEY_ENTER, KEY_KP_ENTER, KEY_SPACE:
+				if help_ended or fix_state.get("result") != null:
+					_change_ep(1)
+			KEY_B:
+				fix_bot_shown = not fix_bot_shown
+				_refresh()
+			_: return false
+		return true
 	match k:
 		KEY_ENTER, KEY_KP_ENTER, KEY_SPACE:
 			if fix_state.get("result") != null:
@@ -1496,18 +1642,32 @@ func _refresh_fix() -> void:
 		text_title.text = ""
 		return
 	var st := fix_state
-	seed_label.text = ("Test room %d of %d" % [fix_idx + 1, TEST_N]) if test_run != "" else "Correct room %d of %d" % [fix_idx + 1, fix_seeds.size()]
+	seed_label.text = ("Help room %d of %d" % [fix_idx + 1, HELP_ROOMS.size()]) if help_run != "" else (("Test room %d of %d" % [fix_idx + 1, TEST_N]) if test_run != "" else "Correct room %d of %d" % [fix_idx + 1, fix_seeds.size()])
 	seed_sub.text = "seed %d" % int(fix_room["seed"])
 	mission_label.text = "Mission: %s" % fix_room["mission"]
 	var s := "[b]Step %d / %d[/b] · corrections %d · memos %d\n[color=#8b95a5]%s[/color]\n" % [int(st["step"]),
 		int(fix_room["max_steps"]), int(st["corrections"]), int(st["memos"]), fix_room["note"]]
+	if help_run != "":
+		s += _help_summary()
+		if help_waiting:
+			s += "[color=#ff7a45][b]Laya is stuck[/b] (back where it was).[/color] [b]Your nudge: A · D · W[/b] (helps left %d/%d)\n" % [help_left, HELP_MAX]
+		elif fix_state.get("result") == null:
+			s += "[color=#8b95a5]Laya plays until it gets stuck · helps used %d/%d[/color]\n" % [help_given.size(), HELP_MAX]
+		elif help_ended:
+			var hr := _help_room()
+			s += "[color=#8b95a5]This room: the bot's move needed %s, the best move %s[/color]\n" % ["no fix within 3" if int(hr[1]) == 0 else "%d help(s)" % int(hr[1]), "no fix within 3" if int(hr[2]) == 0 else "%d help(s)" % int(hr[2])]
 	if test_run != "":
 		var played := test_done.size()
 		s += "[color=#f5c518]Test run: %d of %d rooms played · success %d (%.0f%%) · over %d steps: %d[/color]  [color=#8b95a5](recorded PyTorch run: %d of %d)[/color]\n" % [
 			played, TEST_N, test_ok, 100.0 * test_ok / maxi(played, 1), LONG_ROOM, test_long, TEST_RECORDED_OK, TEST_N]
 	if st.get("result") != null:
 		var res: String = st["result"]
-		s += ("[color=#46a758][b]Success![/b][/color]" if res == "success" else "[color=#e5484d][b]Failed: all 64 steps used.[/b][/color]")
+		if res == "success":
+			s += "[color=#46a758][b]Success![/b][/color]"
+		elif help_run != "" and res == "skipped":
+			s += "[color=#e5484d][b]Stuck again with no helps left.[/b][/color]"
+		else:
+			s += "[color=#e5484d][b]Failed: all 64 steps used.[/b][/color]"
 		s += "  log saved (data/correct_log.jsonl)\n"
 		if fix_loop:
 			s += "[color=#f5c518]Next room in a moment (L pauses)[/color]"
