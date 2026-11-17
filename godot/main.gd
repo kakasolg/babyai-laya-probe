@@ -1239,12 +1239,30 @@ func _fix_connect() -> void:
 func _start_server() -> void:
 	if web:   # no processes in the browser build
 		return
+	var exe := _packaged_server()
+	if exe != "":
+		var dir := exe.get_base_dir()
+		server_pid = OS.create_process(exe, ["--onnx", dir.path_join("model/laya_fp32.onnx"), "--model", dir.path_join("model"),
+			"--root", dir, "--log", ProjectSettings.globalize_path("user://correct_log.jsonl"), "--parent-pid", str(OS.get_process_id())])
+		print("started packaged AI server: pid ", server_pid, " ", exe)
+		return
 	var root := ProjectSettings.globalize_path("res://").trim_suffix("/").get_base_dir()   # repo root (Windows)
 	var wsl_root := "/mnt/%s%s" % [root.substr(0, 1).to_lower(), root.substr(2).replace("\\", "/")]
 	# no spaces in any argument: Windows command-line quoting of a multi-word "bash -c" string was unreliable
 	# open_console=true: without a console of its own wsl.exe exits at once when started from the game
 	server_pid = OS.create_process("wsl.exe", ["-d", "Ubuntu", "--cd", wsl_root, "--", "bash", "probe/run_correct_server.sh"], true)
 	print("started AI server: pid ", server_pid, " in ", wsl_root)
+
+
+## The packaged Windows Laya server (tools/laya_server/build.ps1, ONNX on the CPU, no WSL): next to the exported
+## game in laya_server/, or wherever LAYA_SERVER_EXE points (for running from the editor). "" = none, use WSL.
+func _packaged_server() -> String:
+	var paths := [OS.get_executable_path().get_base_dir().path_join("laya_server/laya_server.exe"),
+		OS.get_environment("LAYA_SERVER_EXE")]
+	for p in paths:
+		if p != "" and FileAccess.file_exists(p):
+			return p
+	return ""
 
 
 func _fix_reset() -> void:

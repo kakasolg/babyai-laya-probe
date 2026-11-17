@@ -22,7 +22,7 @@ from urllib.parse import parse_qs, urlparse
 import gymnasium as gym
 
 from probe.correct_loop import ENV_ID, MEMOS, NAME_TO_ACT, bot_choice, default_seeds, failure_note
-from probe.laya_model import Chooser
+from probe.laya_model import Chooser, OnnxChooser
 from probe.laya_rows import state_text
 from probe.obs_text import obs_to_text
 from probe.text_stats import categorize
@@ -110,13 +110,30 @@ class Session:
         return s
 
 
+def _exit_with_parent(pid: int) -> None:
+    """The game may end without sending /quit (crash, kill, scripted --shot run); don't outlive it."""
+    import ctypes
+    k32 = ctypes.windll.kernel32
+    h = k32.OpenProcess(0x00100000, False, pid)  # SYNCHRONIZE
+    if h:
+        k32.WaitForSingleObject(h, 0xFFFFFFFF)
+    os._exit(0)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--port", type=int, default=18799)
     ap.add_argument("--model", default=os.path.expanduser("~/babyai-laya-ft/gotolocal-s0"))
     ap.add_argument("--log", default="data/correct_log.jsonl")
+    ap.add_argument("--onnx", default=None, help="run this ONNX export on the CPU instead of the PyTorch checkpoint")
+    ap.add_argument("--root", default=None, help="folder holding reports/stage3_5 (the packaged server's own folder)")
+    ap.add_argument("--parent-pid", type=int, default=0, help="Windows: exit when this process (the game) ends")
     a = ap.parse_args()
-    sess = Session(Chooser(a.model), a.log)
+    if a.root:
+        os.chdir(a.root)
+    if a.parent_pid and os.name == "nt":
+        threading.Thread(target=_exit_with_parent, args=(a.parent_pid,), daemon=True).start()
+    sess = Session(OnnxChooser(a.model, a.onnx) if a.onnx else Chooser(a.model), a.log)
     lock = threading.Lock()
 
     class H(BaseHTTPRequestHandler):

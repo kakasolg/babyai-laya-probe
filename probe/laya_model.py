@@ -41,3 +41,13 @@ class Chooser:
                 ch = max(probs, key=probs.get)
             out.append((ch, probs))
         return out
+
+
+class OnnxChooser(Chooser):
+    """Same choices from an ONNX export on the CPU (onnxruntime). `path` needs only rl_agent_config.json,
+    tokenizer/ and encoder/config.json; the weights are in `onnx_path`.
+    944/944 same choices as the PyTorch checkpoint on godot/data/episodes.json (fp32, 2026-11-16)."""
+
+    def __init__(self, path: str, onnx_path: str):
+        from laya.onnx_agent import ONNXAgent
+        self.agent = ONNXAgent(path, onnx_path=onnx_path)
