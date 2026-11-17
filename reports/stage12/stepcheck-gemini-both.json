@@ -1,0 +1,40 @@
+{
+ "scorer": "gemini-both",
+ "steps": 1567,
+ "all": {
+  "n": 1567,
+  "agree": 0.4205
+ },
+ "target_visible": {
+  "n": 1330,
+  "agree": 0.4045
+ },
+ "target_unseen": {
+  "n": 237,
+  "agree": 0.5105
+ },
+ "order_flip_rate": 0.0,
+ "format_error_rate": 0.0,
+ "blocked_steps": 249,
+ "blocked_forward_rank1": 0.0201,
+ "choice_share": {
+  "turn left": 896,
+  "forward": 242,
+  "turn right": 429
+ },
+ "scorer_stats": {
+  "model": "gemini-decision-1_both",
+  "new_calls": 3123,
+  "reused": 11,
+  "errors_retried": 1,
+  "latency_ms_p50": 452.3,
+  "latency_ms_p95": 2413.7,
+  "usage_new_calls": {
+   "total_tokens": 2944063,
+   "total_input_tokens": 2944063,
+   "total_output_tokens": 0
+  }
+ },
+ "called": "2026-11-17",
+ "criteria": "null"
+}
