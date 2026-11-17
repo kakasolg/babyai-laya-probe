@@ -22,10 +22,12 @@ from urllib.parse import parse_qs, urlparse
 import gymnasium as gym
 
 from probe.correct_loop import ENV_ID, MEMOS, NAME_TO_ACT, bot_choice, default_seeds, failure_note
-from probe.laya_model import Chooser
+from probe.laya_model import Chooser, OnnxChooser
 from probe.laya_rows import state_text
 from probe.obs_text import obs_to_text
 from probe.text_stats import categorize
+
+LONG_ROOM = 20  # rooms that take more steps than this also go, step by step, to long_rooms.jsonl beside the log
 
 
 class Session:
@@ -36,13 +38,13 @@ class Session:
         self.result = None
 
     # ---- episode
-    def reset(self, seed: int) -> dict:
+    def reset(self, seed: int, run: str | None = None) -> dict:
         if 20000 <= seed < 20300:
             raise ValueError("20000-20299 are reserved for the final check (README)")
         self.end("skipped")
         self.env = gym.make(ENV_ID)
         self.obs, _ = self.env.reset(seed=seed)
-        self.seed, self.rows, self.result = seed, [], None
+        self.seed, self.rows, self.result, self.run = seed, [], None, run
         u = self.env.unwrapped
         d = u.instrs.desc
         self.target = {"type": d.type, "color": d.color}
@@ -74,7 +76,8 @@ class Session:
                "model_choice": self.choice, "bot_choice": self.bot, "memo": None,
                "target_visible": not categorize({"image": self.obs["image"], "target": self.target,
                                                  "n_matching": len(d.obj_poss)})["target_unseen"],
-               "taken": action, "corrected": action != self.choice, "source": "game"}
+               "taken": action, "corrected": action != self.choice, "source": "game",
+               "x": int(u.agent_pos[0]), "y": int(u.agent_pos[1]), "dir": int(u.agent_dir), "run": self.run}
         if memo in MEMOS:
             row["memo"] = {"code": int(memo), "label": MEMOS[memo]}
         self.rows.append(row)
@@ -95,6 +98,13 @@ class Session:
             for r in self.rows:
                 r["episode_result"], r["logged_at"] = result, now
                 log.write(json.dumps(r, ensure_ascii=False) + "\n")
+        if len(self.rows) > LONG_ROOM:
+            long_path = pathlib.Path(self.log_path).with_name("long_rooms.jsonl")
+            keep = ("step", "x", "y", "dir", "input", "probs", "model_choice", "bot_choice", "taken", "target_visible")
+            rec = {"seed": self.seed, "run": self.run, "result": result, "steps": len(self.rows), "logged_at": now,
+                   "mission": self.obs["mission"], "trace": [{k: r[k] for k in keep} for r in self.rows]}
+            with open(long_path, "a", encoding="utf-8") as f:
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
 
     def state(self) -> dict:
         if self.env is None:
@@ -110,13 +120,30 @@ class Session:
         return s
 
 
+def _exit_with_parent(pid: int) -> None:
+    """The game may end without sending /quit (crash, kill, scripted --shot run); don't outlive it."""
+    import ctypes
+    k32 = ctypes.windll.kernel32
+    h = k32.OpenProcess(0x00100000, False, pid)  # SYNCHRONIZE
+    if h:
+        k32.WaitForSingleObject(h, 0xFFFFFFFF)
+    os._exit(0)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--port", type=int, default=18799)
     ap.add_argument("--model", default=os.path.expanduser("~/babyai-laya-ft/gotolocal-s0"))
     ap.add_argument("--log", default="data/correct_log.jsonl")
+    ap.add_argument("--onnx", default=None, help="run this ONNX export on the CPU instead of the PyTorch checkpoint")
+    ap.add_argument("--root", default=None, help="folder holding reports/stage3_5 (the packaged server's own folder)")
+    ap.add_argument("--parent-pid", type=int, default=0, help="Windows: exit when this process (the game) ends")
     a = ap.parse_args()
-    sess = Session(Chooser(a.model), a.log)
+    if a.root:
+        os.chdir(a.root)
+    if a.parent_pid and os.name == "nt":
+        threading.Thread(target=_exit_with_parent, args=(a.parent_pid,), daemon=True).start()
+    sess = Session(OnnxChooser(a.model, a.onnx) if a.onnx else Chooser(a.model), a.log)
     lock = threading.Lock()
 
     class H(BaseHTTPRequestHandler):
@@ -133,7 +160,7 @@ def main() -> None:
                         body = {"ok": True, "seeds": [{"seed": s, "note": failure_note(s)} for s in default_seeds()],
                                 "model": a.model, "log": a.log}
                     elif url.path == "/reset":
-                        body = sess.reset(int(q["seed"]))
+                        body = sess.reset(int(q["seed"]), q.get("run"))
                     elif url.path == "/step":
                         if q.get("action") not in NAME_TO_ACT:
                             raise ValueError(f"bad action {q.get('action')!r}")

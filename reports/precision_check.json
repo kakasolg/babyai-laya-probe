@@ -1,0 +1,68 @@
+{
+ "steps": 1625,
+ "rooms": 300,
+ "room_results": {
+  "success": 277,
+  "stuck": 23
+ },
+ "fp32_gap_under": {
+  "0.01": 4,
+  "0.02": 9,
+  "0.05": 23
+ },
+ "flips": {
+  "bf16_one": {
+   "steps": 1,
+   "rooms": 1,
+   "list": [
+    {
+     "seed": 10263,
+     "step": 0,
+     "fp32_top": "turn right",
+     "bf16_one_top": "forward",
+     "fp32_gap": 0.0018,
+     "room_result": "success"
+    }
+   ]
+  },
+  "bf16_batch": {
+   "steps": 2,
+   "rooms": 2,
+   "list": [
+    {
+     "seed": 10138,
+     "step": 4,
+     "fp32_top": "turn right",
+     "bf16_batch_top": "forward",
+     "fp32_gap": 0.0003,
+     "room_result": "success"
+    },
+    {
+     "seed": 10263,
+     "step": 0,
+     "fp32_top": "turn right",
+     "bf16_batch_top": "forward",
+     "fp32_gap": 0.0018,
+     "room_result": "success"
+    }
+   ]
+  }
+ },
+ "prob_diff": {
+  "bf16_one": {
+   "mean": 0.00098,
+   "max": 0.1218
+  },
+  "bf16_batch": {
+   "mean": 0.00082,
+   "max": 0.0817
+  },
+  "one_vs_batch": {
+   "mean": 0.00093,
+   "max": 0.16
+  }
+ },
+ "seconds": 70.4,
+ "one_vs_batch_top_differs": 1,
+ "fp32_path_seconds": 32.5
+}

@@ -1,0 +1,1308 @@
+{
+ "prereg": "reports/help_test_prereg.md",
+ "model": "babyai-laya-ft/gotolocal-s0 (ONNX fp32, CPU)",
+ "seeds": "10000-10299",
+ "summary": {
+  "failed": 23,
+  "same_as_stage3_5": false,
+  "stage3_5_failed": [
+   10014,
+   10015,
+   10016,
+   10017,
+   10021,
+   10023,
+   10024,
+   10026,
+   10041,
+   10051,
+   10122,
+   10124,
+   10149,
+   10164,
+   10168,
+   10170,
+   10176,
+   10191,
+   10204,
+   10220,
+   10221,
+   10242,
+   10259,
+   10263
+  ],
+  "stuck_rooms": 23,
+  "wander_rooms": 0,
+  "bot_1_saved": 6,
+  "bot_2_saved": 10,
+  "bot_3_saved": 11,
+  "best_1_saved": 16,
+  "best_2_saved": 16,
+  "best_3_saved": 17,
+  "verdict_1_help_works": false,
+  "verdict_3_helps_mostly": false
+ },
+ "rooms": [
+  {
+   "seed": 10014,
+   "no_help": "stuck",
+   "no_help_steps": 7,
+   "bot_1": {
+    "result": "success",
+    "steps": 14,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "bot_2": {
+    "result": "success",
+    "steps": 14,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "bot_3": {
+    "result": "success",
+    "steps": 14,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 14,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 14,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 14,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10015,
+   "no_help": "stuck",
+   "no_help_steps": 4,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 5,
+    "helps_used": 1,
+    "helps": [
+     "turn right"
+    ]
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 6,
+    "helps_used": 2,
+    "helps": [
+     "turn right",
+     "turn left"
+    ]
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 7,
+    "helps_used": 3,
+    "helps": [
+     "turn right",
+     "turn left",
+     "turn right"
+    ]
+   },
+   "best_1": {
+    "result": "stuck",
+    "steps": 9,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "stuck",
+    "steps": 18,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "stuck",
+    "steps": 20,
+    "helps_used": 3,
+    "helps": [
+     "turn left",
+     "turn left",
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10016,
+   "no_help": "stuck",
+   "no_help_steps": 3,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 3,
+    "helps_used": 0,
+    "helps": []
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 3,
+    "helps_used": 0,
+    "helps": []
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 3,
+    "helps_used": 0,
+    "helps": []
+   },
+   "best_1": {
+    "result": "stuck",
+    "steps": 5,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "stuck",
+    "steps": 9,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "stuck",
+    "steps": 10,
+    "helps_used": 3,
+    "helps": [
+     "turn left",
+     "turn left",
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10017,
+   "no_help": "stuck",
+   "no_help_steps": 2,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 3,
+    "helps_used": 1,
+    "helps": [
+     "turn right"
+    ]
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 4,
+    "helps_used": 2,
+    "helps": [
+     "turn right",
+     "turn left"
+    ]
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 5,
+    "helps_used": 3,
+    "helps": [
+     "turn right",
+     "turn left",
+     "turn right"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 19,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 19,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 19,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   }
+  },
+  {
+   "seed": 10021,
+   "no_help": "stuck",
+   "no_help_steps": 7,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 8,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "bot_2": {
+    "result": "success",
+    "steps": 15,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "forward"
+    ]
+   },
+   "bot_3": {
+    "result": "success",
+    "steps": 15,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "forward"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 15,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 15,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 15,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   }
+  },
+  {
+   "seed": 10023,
+   "no_help": "stuck",
+   "no_help_steps": 2,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 3,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 4,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "turn right"
+    ]
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 5,
+    "helps_used": 3,
+    "helps": [
+     "turn left",
+     "turn right",
+     "turn left"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 12,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 12,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 12,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   }
+  },
+  {
+   "seed": 10024,
+   "no_help": "stuck",
+   "no_help_steps": 2,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 3,
+    "helps_used": 1,
+    "helps": [
+     "turn right"
+    ]
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 4,
+    "helps_used": 2,
+    "helps": [
+     "turn right",
+     "turn left"
+    ]
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 5,
+    "helps_used": 3,
+    "helps": [
+     "turn right",
+     "turn left",
+     "turn right"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 5,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 5,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 5,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10026,
+   "no_help": "stuck",
+   "no_help_steps": 16,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 17,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 18,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "turn left"
+    ]
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 19,
+    "helps_used": 3,
+    "helps": [
+     "turn left",
+     "turn left",
+     "forward"
+    ]
+   },
+   "best_1": {
+    "result": "stuck",
+    "steps": 17,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "stuck",
+    "steps": 18,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "stuck",
+    "steps": 20,
+    "helps_used": 3,
+    "helps": [
+     "turn left",
+     "turn left",
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10041,
+   "no_help": "stuck",
+   "no_help_steps": 2,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 3,
+    "helps_used": 1,
+    "helps": [
+     "turn right"
+    ]
+   },
+   "bot_2": {
+    "result": "success",
+    "steps": 7,
+    "helps_used": 2,
+    "helps": [
+     "turn right",
+     "turn right"
+    ]
+   },
+   "bot_3": {
+    "result": "success",
+    "steps": 7,
+    "helps_used": 2,
+    "helps": [
+     "turn right",
+     "turn right"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 6,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 6,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 6,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10051,
+   "no_help": "stuck",
+   "no_help_steps": 4,
+   "bot_1": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "bot_2": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "bot_3": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   }
+  },
+  {
+   "seed": 10122,
+   "no_help": "stuck",
+   "no_help_steps": 10,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 10,
+    "helps_used": 0,
+    "helps": []
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 10,
+    "helps_used": 0,
+    "helps": []
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 10,
+    "helps_used": 0,
+    "helps": []
+   },
+   "best_1": {
+    "result": "stuck",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "stuck",
+    "steps": 12,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "stuck",
+    "steps": 16,
+    "helps_used": 3,
+    "helps": [
+     "turn left",
+     "turn left",
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10124,
+   "no_help": "stuck",
+   "no_help_steps": 14,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 15,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 16,
+    "helps_used": 2,
+    "helps": [
+     "forward",
+     "forward"
+    ]
+   },
+   "bot_3": {
+    "result": "success",
+    "steps": 20,
+    "helps_used": 3,
+    "helps": [
+     "forward",
+     "forward",
+     "turn left"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 20,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 20,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 20,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10149,
+   "no_help": "stuck",
+   "no_help_steps": 13,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 14,
+    "helps_used": 1,
+    "helps": [
+     "turn right"
+    ]
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 15,
+    "helps_used": 2,
+    "helps": [
+     "turn right",
+     "turn right"
+    ]
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 16,
+    "helps_used": 3,
+    "helps": [
+     "turn right",
+     "turn right",
+     "forward"
+    ]
+   },
+   "best_1": {
+    "result": "stuck",
+    "steps": 15,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "stuck",
+    "steps": 16,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "stuck",
+    "steps": 17,
+    "helps_used": 3,
+    "helps": [
+     "turn left",
+     "turn left",
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10164,
+   "no_help": "stuck",
+   "no_help_steps": 4,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 5,
+    "helps_used": 1,
+    "helps": [
+     "turn right"
+    ]
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 6,
+    "helps_used": 2,
+    "helps": [
+     "turn right",
+     "turn left"
+    ]
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 7,
+    "helps_used": 3,
+    "helps": [
+     "turn right",
+     "turn left",
+     "turn right"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 9,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 9,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 9,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10168,
+   "no_help": "stuck",
+   "no_help_steps": 20,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 21,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 22,
+    "helps_used": 2,
+    "helps": [
+     "forward",
+     "turn right"
+    ]
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 23,
+    "helps_used": 3,
+    "helps": [
+     "forward",
+     "turn right",
+     "turn left"
+    ]
+   },
+   "best_1": {
+    "result": "stuck",
+    "steps": 21,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "stuck",
+    "steps": 22,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "stuck",
+    "steps": 23,
+    "helps_used": 3,
+    "helps": [
+     "turn left",
+     "turn left",
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10170,
+   "no_help": "stuck",
+   "no_help_steps": 3,
+   "bot_1": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "bot_2": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "bot_3": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   }
+  },
+  {
+   "seed": 10176,
+   "no_help": "stuck",
+   "no_help_steps": 3,
+   "bot_1": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "bot_2": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "bot_3": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 10,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10191,
+   "no_help": "stuck",
+   "no_help_steps": 2,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 3,
+    "helps_used": 1,
+    "helps": [
+     "turn right"
+    ]
+   },
+   "bot_2": {
+    "result": "success",
+    "steps": 8,
+    "helps_used": 2,
+    "helps": [
+     "turn right",
+     "turn right"
+    ]
+   },
+   "bot_3": {
+    "result": "success",
+    "steps": 8,
+    "helps_used": 2,
+    "helps": [
+     "turn right",
+     "turn right"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 6,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 6,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 6,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10204,
+   "no_help": "stuck",
+   "no_help_steps": 4,
+   "bot_1": {
+    "result": "success",
+    "steps": 8,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "bot_2": {
+    "result": "success",
+    "steps": 8,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "bot_3": {
+    "result": "success",
+    "steps": 8,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 8,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 8,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 8,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   }
+  },
+  {
+   "seed": 10220,
+   "no_help": "stuck",
+   "no_help_steps": 4,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 5,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "bot_2": {
+    "result": "success",
+    "steps": 6,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "forward"
+    ]
+   },
+   "bot_3": {
+    "result": "success",
+    "steps": 6,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "forward"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 5,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 5,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 5,
+    "helps_used": 1,
+    "helps": [
+     "forward"
+    ]
+   }
+  },
+  {
+   "seed": 10221,
+   "no_help": "stuck",
+   "no_help_steps": 4,
+   "bot_1": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "turn right"
+    ]
+   },
+   "bot_2": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "turn right"
+    ]
+   },
+   "bot_3": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "turn right"
+    ]
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 11,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   }
+  },
+  {
+   "seed": 10242,
+   "no_help": "stuck",
+   "no_help_steps": 12,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 13,
+    "helps_used": 1,
+    "helps": [
+     "turn right"
+    ]
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 14,
+    "helps_used": 2,
+    "helps": [
+     "turn right",
+     "turn right"
+    ]
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 15,
+    "helps_used": 3,
+    "helps": [
+     "turn right",
+     "turn right",
+     "forward"
+    ]
+   },
+   "best_1": {
+    "result": "stuck",
+    "steps": 14,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "stuck",
+    "steps": 15,
+    "helps_used": 2,
+    "helps": [
+     "turn left",
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 24,
+    "helps_used": 3,
+    "helps": [
+     "turn left",
+     "turn right",
+     "forward"
+    ]
+   }
+  },
+  {
+   "seed": 10259,
+   "no_help": "stuck",
+   "no_help_steps": 7,
+   "bot_1": {
+    "result": "stuck",
+    "steps": 7,
+    "helps_used": 0,
+    "helps": []
+   },
+   "bot_2": {
+    "result": "stuck",
+    "steps": 7,
+    "helps_used": 0,
+    "helps": []
+   },
+   "bot_3": {
+    "result": "stuck",
+    "steps": 7,
+    "helps_used": 0,
+    "helps": []
+   },
+   "best_1": {
+    "result": "success",
+    "steps": 17,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_2": {
+    "result": "success",
+    "steps": 17,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   },
+   "best_3": {
+    "result": "success",
+    "steps": 17,
+    "helps_used": 1,
+    "helps": [
+     "turn left"
+    ]
+   }
+  }
+ ],
+ "seconds": 1314
+}
