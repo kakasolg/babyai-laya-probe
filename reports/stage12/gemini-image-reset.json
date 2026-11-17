@@ -1,0 +1,10124 @@
+{
+ "name": "gemini-image-reset",
+ "scorer": "gemini",
+ "policy": "reset",
+ "rule_r": false,
+ "api_aborted": null,
+ "episodes": 300,
+ "steps_sum_all_episodes": 5165,
+ "all": {
+  "n": 300,
+  "success": 280,
+  "rate": 0.9333,
+  "within_2x_bot": 142,
+  "rate_2x": 0.4733
+ },
+ "timeout": 20,
+ "gave_up": 0,
+ "target_visible_at_start": {
+  "n": 158,
+  "success": 155,
+  "rate": 0.981,
+  "within_2x_bot": 81,
+  "rate_2x": 0.5127
+ },
+ "target_unseen_at_start": {
+  "n": 142,
+  "success": 125,
+  "rate": 0.8803,
+  "within_2x_bot": 61,
+  "rate_2x": 0.4296
+ },
+ "mean_steps_success": 13.88,
+ "bot_mean_steps_same_eps": 4.88,
+ "blocked_forward_steps": 409,
+ "top_p_median_blocked_forward": 0.6468,
+ "top_p_median_other_steps": 0.6331,
+ "format_error_steps": 0,
+ "steps_total": 5165,
+ "actions": {
+  "forward": 1792,
+  "turn left": 1913,
+  "turn right": 1460
+ },
+ "all_fail_12_solved": [
+  10014,
+  10023,
+  10024,
+  10026,
+  10149,
+  10164,
+  10220
+ ],
+ "scorer_stats": {
+  "model": "gemini-decision-1_image",
+  "new_calls": 1551,
+  "reused": 3614,
+  "errors_retried": 0,
+  "latency_ms_p50": 753.0,
+  "latency_ms_p95": 2655.8,
+  "usage_new_calls": {
+   "total_tokens": 870111,
+   "total_input_tokens": 870111,
+   "total_output_tokens": 0
+  }
+ },
+ "per_episode": {
+  "10000": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10001": {
+   "end": "success",
+   "steps": 19,
+   "bot": 6,
+   "interventions": 8,
+   "resets": 1
+  },
+  "10002": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10003": {
+   "end": "success",
+   "steps": 19,
+   "bot": 7,
+   "interventions": 6,
+   "resets": 0
+  },
+  "10004": {
+   "end": "success",
+   "steps": 9,
+   "bot": 5,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10005": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10006": {
+   "end": "success",
+   "steps": 8,
+   "bot": 5,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10007": {
+   "end": "success",
+   "steps": 17,
+   "bot": 3,
+   "interventions": 6,
+   "resets": 0
+  },
+  "10008": {
+   "end": "success",
+   "steps": 10,
+   "bot": 4,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10009": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10010": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10011": {
+   "end": "success",
+   "steps": 10,
+   "bot": 3,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10012": {
+   "end": "success",
+   "steps": 15,
+   "bot": 8,
+   "interventions": 4,
+   "resets": 1
+  },
+  "10013": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 6,
+   "interventions": 30,
+   "resets": 4
+  },
+  "10014": {
+   "end": "success",
+   "steps": 37,
+   "bot": 9,
+   "interventions": 16,
+   "resets": 2
+  },
+  "10015": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 11,
+   "interventions": 33,
+   "resets": 8
+  },
+  "10016": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 11,
+   "interventions": 32,
+   "resets": 9
+  },
+  "10017": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 13,
+   "interventions": 28,
+   "resets": 3
+  },
+  "10018": {
+   "end": "success",
+   "steps": 13,
+   "bot": 5,
+   "interventions": 4,
+   "resets": 0
+  },
+  "10019": {
+   "end": "success",
+   "steps": 12,
+   "bot": 6,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10020": {
+   "end": "success",
+   "steps": 8,
+   "bot": 4,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10021": {
+   "end": "success",
+   "steps": 52,
+   "bot": 11,
+   "interventions": 21,
+   "resets": 2
+  },
+  "10022": {
+   "end": "success",
+   "steps": 31,
+   "bot": 7,
+   "interventions": 13,
+   "resets": 2
+  },
+  "10023": {
+   "end": "success",
+   "steps": 40,
+   "bot": 12,
+   "interventions": 17,
+   "resets": 4
+  },
+  "10024": {
+   "end": "success",
+   "steps": 5,
+   "bot": 4,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10025": {
+   "end": "success",
+   "steps": 33,
+   "bot": 6,
+   "interventions": 13,
+   "resets": 3
+  },
+  "10026": {
+   "end": "success",
+   "steps": 47,
+   "bot": 14,
+   "interventions": 15,
+   "resets": 1
+  },
+  "10027": {
+   "end": "success",
+   "steps": 9,
+   "bot": 5,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10028": {
+   "end": "success",
+   "steps": 8,
+   "bot": 4,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10029": {
+   "end": "success",
+   "steps": 15,
+   "bot": 8,
+   "interventions": 4,
+   "resets": 1
+  },
+  "10030": {
+   "end": "success",
+   "steps": 29,
+   "bot": 9,
+   "interventions": 10,
+   "resets": 0
+  },
+  "10031": {
+   "end": "success",
+   "steps": 12,
+   "bot": 5,
+   "interventions": 4,
+   "resets": 0
+  },
+  "10032": {
+   "end": "success",
+   "steps": 11,
+   "bot": 4,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10033": {
+   "end": "success",
+   "steps": 12,
+   "bot": 4,
+   "interventions": 4,
+   "resets": 0
+  },
+  "10034": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10035": {
+   "end": "success",
+   "steps": 20,
+   "bot": 8,
+   "interventions": 7,
+   "resets": 2
+  },
+  "10036": {
+   "end": "success",
+   "steps": 9,
+   "bot": 5,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10037": {
+   "end": "success",
+   "steps": 11,
+   "bot": 5,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10038": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10039": {
+   "end": "success",
+   "steps": 16,
+   "bot": 4,
+   "interventions": 6,
+   "resets": 1
+  },
+  "10040": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10041": {
+   "end": "success",
+   "steps": 6,
+   "bot": 5,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10042": {
+   "end": "success",
+   "steps": 22,
+   "bot": 6,
+   "interventions": 8,
+   "resets": 0
+  },
+  "10043": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10044": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10045": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10046": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10047": {
+   "end": "success",
+   "steps": 18,
+   "bot": 8,
+   "interventions": 6,
+   "resets": 1
+  },
+  "10048": {
+   "end": "success",
+   "steps": 7,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10049": {
+   "end": "success",
+   "steps": 10,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10050": {
+   "end": "success",
+   "steps": 4,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10051": {
+   "end": "success",
+   "steps": 26,
+   "bot": 8,
+   "interventions": 7,
+   "resets": 0
+  },
+  "10052": {
+   "end": "success",
+   "steps": 16,
+   "bot": 6,
+   "interventions": 4,
+   "resets": 0
+  },
+  "10053": {
+   "end": "success",
+   "steps": 26,
+   "bot": 5,
+   "interventions": 10,
+   "resets": 0
+  },
+  "10054": {
+   "end": "success",
+   "steps": 4,
+   "bot": 6,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10055": {
+   "end": "success",
+   "steps": 9,
+   "bot": 2,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10056": {
+   "end": "success",
+   "steps": 4,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10057": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 9,
+   "interventions": 30,
+   "resets": 3
+  },
+  "10058": {
+   "end": "success",
+   "steps": 13,
+   "bot": 5,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10059": {
+   "end": "success",
+   "steps": 7,
+   "bot": 4,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10060": {
+   "end": "success",
+   "steps": 5,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10061": {
+   "end": "success",
+   "steps": 13,
+   "bot": 7,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10062": {
+   "end": "success",
+   "steps": 23,
+   "bot": 5,
+   "interventions": 7,
+   "resets": 0
+  },
+  "10063": {
+   "end": "success",
+   "steps": 15,
+   "bot": 3,
+   "interventions": 4,
+   "resets": 0
+  },
+  "10064": {
+   "end": "success",
+   "steps": 10,
+   "bot": 4,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10065": {
+   "end": "success",
+   "steps": 13,
+   "bot": 6,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10066": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10067": {
+   "end": "success",
+   "steps": 10,
+   "bot": 4,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10068": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10069": {
+   "end": "success",
+   "steps": 21,
+   "bot": 4,
+   "interventions": 5,
+   "resets": 1
+  },
+  "10070": {
+   "end": "success",
+   "steps": 41,
+   "bot": 7,
+   "interventions": 14,
+   "resets": 1
+  },
+  "10071": {
+   "end": "success",
+   "steps": 19,
+   "bot": 5,
+   "interventions": 7,
+   "resets": 0
+  },
+  "10072": {
+   "end": "success",
+   "steps": 9,
+   "bot": 5,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10073": {
+   "end": "success",
+   "steps": 15,
+   "bot": 5,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10074": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10075": {
+   "end": "success",
+   "steps": 4,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10076": {
+   "end": "success",
+   "steps": 21,
+   "bot": 5,
+   "interventions": 8,
+   "resets": 0
+  },
+  "10077": {
+   "end": "success",
+   "steps": 15,
+   "bot": 5,
+   "interventions": 6,
+   "resets": 0
+  },
+  "10078": {
+   "end": "success",
+   "steps": 9,
+   "bot": 3,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10079": {
+   "end": "success",
+   "steps": 4,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10080": {
+   "end": "success",
+   "steps": 23,
+   "bot": 9,
+   "interventions": 8,
+   "resets": 2
+  },
+  "10081": {
+   "end": "success",
+   "steps": 8,
+   "bot": 2,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10082": {
+   "end": "success",
+   "steps": 38,
+   "bot": 9,
+   "interventions": 14,
+   "resets": 1
+  },
+  "10083": {
+   "end": "success",
+   "steps": 7,
+   "bot": 5,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10084": {
+   "end": "success",
+   "steps": 5,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10085": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10086": {
+   "end": "success",
+   "steps": 20,
+   "bot": 8,
+   "interventions": 4,
+   "resets": 0
+  },
+  "10087": {
+   "end": "success",
+   "steps": 11,
+   "bot": 5,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10088": {
+   "end": "success",
+   "steps": 14,
+   "bot": 5,
+   "interventions": 5,
+   "resets": 0
+  },
+  "10089": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10090": {
+   "end": "success",
+   "steps": 12,
+   "bot": 7,
+   "interventions": 5,
+   "resets": 0
+  },
+  "10091": {
+   "end": "success",
+   "steps": 18,
+   "bot": 5,
+   "interventions": 6,
+   "resets": 0
+  },
+  "10092": {
+   "end": "success",
+   "steps": 38,
+   "bot": 7,
+   "interventions": 15,
+   "resets": 0
+  },
+  "10093": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10094": {
+   "end": "success",
+   "steps": 21,
+   "bot": 9,
+   "interventions": 8,
+   "resets": 0
+  },
+  "10095": {
+   "end": "success",
+   "steps": 7,
+   "bot": 3,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10096": {
+   "end": "success",
+   "steps": 6,
+   "bot": 2,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10097": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10098": {
+   "end": "success",
+   "steps": 12,
+   "bot": 6,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10099": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10100": {
+   "end": "success",
+   "steps": 9,
+   "bot": 5,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10101": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10102": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10103": {
+   "end": "success",
+   "steps": 4,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10104": {
+   "end": "success",
+   "steps": 12,
+   "bot": 4,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10105": {
+   "end": "success",
+   "steps": 10,
+   "bot": 6,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10106": {
+   "end": "success",
+   "steps": 40,
+   "bot": 6,
+   "interventions": 12,
+   "resets": 0
+  },
+  "10107": {
+   "end": "success",
+   "steps": 11,
+   "bot": 5,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10108": {
+   "end": "success",
+   "steps": 13,
+   "bot": 4,
+   "interventions": 5,
+   "resets": 0
+  },
+  "10109": {
+   "end": "success",
+   "steps": 3,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10110": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10111": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10112": {
+   "end": "success",
+   "steps": 11,
+   "bot": 5,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10113": {
+   "end": "success",
+   "steps": 25,
+   "bot": 10,
+   "interventions": 8,
+   "resets": 2
+  },
+  "10114": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10115": {
+   "end": "success",
+   "steps": 4,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10116": {
+   "end": "success",
+   "steps": 7,
+   "bot": 3,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10117": {
+   "end": "success",
+   "steps": 4,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10118": {
+   "end": "success",
+   "steps": 7,
+   "bot": 3,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10119": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10120": {
+   "end": "success",
+   "steps": 12,
+   "bot": 5,
+   "interventions": 4,
+   "resets": 0
+  },
+  "10121": {
+   "end": "success",
+   "steps": 15,
+   "bot": 7,
+   "interventions": 5,
+   "resets": 1
+  },
+  "10122": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 19,
+   "interventions": 35,
+   "resets": 4
+  },
+  "10123": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10124": {
+   "end": "success",
+   "steps": 25,
+   "bot": 8,
+   "interventions": 10,
+   "resets": 0
+  },
+  "10125": {
+   "end": "success",
+   "steps": 22,
+   "bot": 8,
+   "interventions": 5,
+   "resets": 0
+  },
+  "10126": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10127": {
+   "end": "success",
+   "steps": 11,
+   "bot": 7,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10128": {
+   "end": "success",
+   "steps": 26,
+   "bot": 8,
+   "interventions": 7,
+   "resets": 0
+  },
+  "10129": {
+   "end": "success",
+   "steps": 4,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10130": {
+   "end": "success",
+   "steps": 11,
+   "bot": 4,
+   "interventions": 4,
+   "resets": 0
+  },
+  "10131": {
+   "end": "success",
+   "steps": 9,
+   "bot": 7,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10132": {
+   "end": "success",
+   "steps": 7,
+   "bot": 3,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10133": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10134": {
+   "end": "success",
+   "steps": 4,
+   "bot": 6,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10135": {
+   "end": "success",
+   "steps": 21,
+   "bot": 7,
+   "interventions": 7,
+   "resets": 0
+  },
+  "10136": {
+   "end": "success",
+   "steps": 3,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10137": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 8,
+   "interventions": 28,
+   "resets": 3
+  },
+  "10138": {
+   "end": "success",
+   "steps": 60,
+   "bot": 7,
+   "interventions": 25,
+   "resets": 2
+  },
+  "10139": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10140": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 11,
+   "interventions": 30,
+   "resets": 4
+  },
+  "10141": {
+   "end": "success",
+   "steps": 6,
+   "bot": 4,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10142": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10143": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10144": {
+   "end": "success",
+   "steps": 38,
+   "bot": 8,
+   "interventions": 17,
+   "resets": 1
+  },
+  "10145": {
+   "end": "success",
+   "steps": 6,
+   "bot": 4,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10146": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 9,
+   "interventions": 31,
+   "resets": 4
+  },
+  "10147": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10148": {
+   "end": "success",
+   "steps": 20,
+   "bot": 9,
+   "interventions": 5,
+   "resets": 1
+  },
+  "10149": {
+   "end": "success",
+   "steps": 38,
+   "bot": 12,
+   "interventions": 15,
+   "resets": 1
+  },
+  "10150": {
+   "end": "success",
+   "steps": 28,
+   "bot": 4,
+   "interventions": 9,
+   "resets": 2
+  },
+  "10151": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 11,
+   "interventions": 31,
+   "resets": 4
+  },
+  "10152": {
+   "end": "success",
+   "steps": 8,
+   "bot": 6,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10153": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10154": {
+   "end": "success",
+   "steps": 40,
+   "bot": 8,
+   "interventions": 17,
+   "resets": 3
+  },
+  "10155": {
+   "end": "success",
+   "steps": 40,
+   "bot": 5,
+   "interventions": 18,
+   "resets": 4
+  },
+  "10156": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10157": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 11,
+   "interventions": 36,
+   "resets": 12
+  },
+  "10158": {
+   "end": "success",
+   "steps": 25,
+   "bot": 5,
+   "interventions": 12,
+   "resets": 2
+  },
+  "10159": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10160": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10161": {
+   "end": "success",
+   "steps": 4,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10162": {
+   "end": "success",
+   "steps": 6,
+   "bot": 4,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10163": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10164": {
+   "end": "success",
+   "steps": 23,
+   "bot": 7,
+   "interventions": 8,
+   "resets": 1
+  },
+  "10165": {
+   "end": "success",
+   "steps": 6,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10166": {
+   "end": "success",
+   "steps": 51,
+   "bot": 9,
+   "interventions": 21,
+   "resets": 3
+  },
+  "10167": {
+   "end": "success",
+   "steps": 10,
+   "bot": 3,
+   "interventions": 3,
+   "resets": 1
+  },
+  "10168": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 14,
+   "interventions": 30,
+   "resets": 4
+  },
+  "10169": {
+   "end": "success",
+   "steps": 54,
+   "bot": 9,
+   "interventions": 21,
+   "resets": 3
+  },
+  "10170": {
+   "end": "success",
+   "steps": 37,
+   "bot": 9,
+   "interventions": 13,
+   "resets": 0
+  },
+  "10171": {
+   "end": "success",
+   "steps": 35,
+   "bot": 5,
+   "interventions": 15,
+   "resets": 0
+  },
+  "10172": {
+   "end": "success",
+   "steps": 11,
+   "bot": 3,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10173": {
+   "end": "success",
+   "steps": 10,
+   "bot": 6,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10174": {
+   "end": "success",
+   "steps": 57,
+   "bot": 10,
+   "interventions": 24,
+   "resets": 5
+  },
+  "10175": {
+   "end": "success",
+   "steps": 14,
+   "bot": 5,
+   "interventions": 4,
+   "resets": 0
+  },
+  "10176": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 5,
+   "interventions": 28,
+   "resets": 4
+  },
+  "10177": {
+   "end": "success",
+   "steps": 7,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10178": {
+   "end": "success",
+   "steps": 8,
+   "bot": 4,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10179": {
+   "end": "success",
+   "steps": 16,
+   "bot": 6,
+   "interventions": 5,
+   "resets": 0
+  },
+  "10180": {
+   "end": "success",
+   "steps": 15,
+   "bot": 4,
+   "interventions": 6,
+   "resets": 0
+  },
+  "10181": {
+   "end": "success",
+   "steps": 22,
+   "bot": 7,
+   "interventions": 9,
+   "resets": 2
+  },
+  "10182": {
+   "end": "success",
+   "steps": 12,
+   "bot": 6,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10183": {
+   "end": "success",
+   "steps": 8,
+   "bot": 5,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10184": {
+   "end": "success",
+   "steps": 18,
+   "bot": 7,
+   "interventions": 6,
+   "resets": 1
+  },
+  "10185": {
+   "end": "success",
+   "steps": 11,
+   "bot": 4,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10186": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10187": {
+   "end": "success",
+   "steps": 29,
+   "bot": 9,
+   "interventions": 11,
+   "resets": 1
+  },
+  "10188": {
+   "end": "success",
+   "steps": 9,
+   "bot": 7,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10189": {
+   "end": "success",
+   "steps": 20,
+   "bot": 10,
+   "interventions": 5,
+   "resets": 1
+  },
+  "10190": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10191": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 6,
+   "interventions": 30,
+   "resets": 6
+  },
+  "10192": {
+   "end": "success",
+   "steps": 44,
+   "bot": 6,
+   "interventions": 21,
+   "resets": 2
+  },
+  "10193": {
+   "end": "success",
+   "steps": 12,
+   "bot": 6,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10194": {
+   "end": "success",
+   "steps": 6,
+   "bot": 3,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10195": {
+   "end": "success",
+   "steps": 50,
+   "bot": 8,
+   "interventions": 24,
+   "resets": 2
+  },
+  "10196": {
+   "end": "success",
+   "steps": 24,
+   "bot": 3,
+   "interventions": 9,
+   "resets": 1
+  },
+  "10197": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10198": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10199": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10200": {
+   "end": "success",
+   "steps": 13,
+   "bot": 8,
+   "interventions": 3,
+   "resets": 1
+  },
+  "10201": {
+   "end": "success",
+   "steps": 11,
+   "bot": 6,
+   "interventions": 3,
+   "resets": 1
+  },
+  "10202": {
+   "end": "success",
+   "steps": 33,
+   "bot": 6,
+   "interventions": 14,
+   "resets": 2
+  },
+  "10203": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10204": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10205": {
+   "end": "success",
+   "steps": 13,
+   "bot": 3,
+   "interventions": 5,
+   "resets": 0
+  },
+  "10206": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10207": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10208": {
+   "end": "success",
+   "steps": 7,
+   "bot": 3,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10209": {
+   "end": "success",
+   "steps": 10,
+   "bot": 6,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10210": {
+   "end": "success",
+   "steps": 3,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10211": {
+   "end": "success",
+   "steps": 9,
+   "bot": 5,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10212": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10213": {
+   "end": "success",
+   "steps": 58,
+   "bot": 14,
+   "interventions": 28,
+   "resets": 5
+  },
+  "10214": {
+   "end": "success",
+   "steps": 3,
+   "bot": 1,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10215": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10216": {
+   "end": "success",
+   "steps": 13,
+   "bot": 5,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10217": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10218": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10219": {
+   "end": "success",
+   "steps": 8,
+   "bot": 4,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10220": {
+   "end": "success",
+   "steps": 5,
+   "bot": 4,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10221": {
+   "end": "success",
+   "steps": 10,
+   "bot": 6,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10222": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10223": {
+   "end": "success",
+   "steps": 17,
+   "bot": 8,
+   "interventions": 5,
+   "resets": 1
+  },
+  "10224": {
+   "end": "success",
+   "steps": 24,
+   "bot": 9,
+   "interventions": 9,
+   "resets": 1
+  },
+  "10225": {
+   "end": "success",
+   "steps": 24,
+   "bot": 4,
+   "interventions": 8,
+   "resets": 0
+  },
+  "10226": {
+   "end": "success",
+   "steps": 6,
+   "bot": 5,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10227": {
+   "end": "success",
+   "steps": 21,
+   "bot": 7,
+   "interventions": 6,
+   "resets": 1
+  },
+  "10228": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 8,
+   "interventions": 31,
+   "resets": 5
+  },
+  "10229": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10230": {
+   "end": "success",
+   "steps": 9,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10231": {
+   "end": "success",
+   "steps": 3,
+   "bot": 1,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10232": {
+   "end": "success",
+   "steps": 12,
+   "bot": 8,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10233": {
+   "end": "success",
+   "steps": 15,
+   "bot": 6,
+   "interventions": 5,
+   "resets": 1
+  },
+  "10234": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10235": {
+   "end": "success",
+   "steps": 33,
+   "bot": 9,
+   "interventions": 11,
+   "resets": 2
+  },
+  "10236": {
+   "end": "success",
+   "steps": 63,
+   "bot": 11,
+   "interventions": 32,
+   "resets": 4
+  },
+  "10237": {
+   "end": "success",
+   "steps": 17,
+   "bot": 5,
+   "interventions": 6,
+   "resets": 0
+  },
+  "10238": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10239": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10240": {
+   "end": "success",
+   "steps": 16,
+   "bot": 6,
+   "interventions": 5,
+   "resets": 0
+  },
+  "10241": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 12,
+   "interventions": 35,
+   "resets": 7
+  },
+  "10242": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 12,
+   "interventions": 33,
+   "resets": 5
+  },
+  "10243": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 7,
+   "interventions": 33,
+   "resets": 8
+  },
+  "10244": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10245": {
+   "end": "success",
+   "steps": 17,
+   "bot": 4,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10246": {
+   "end": "success",
+   "steps": 40,
+   "bot": 3,
+   "interventions": 19,
+   "resets": 3
+  },
+  "10247": {
+   "end": "success",
+   "steps": 13,
+   "bot": 7,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10248": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10249": {
+   "end": "success",
+   "steps": 14,
+   "bot": 7,
+   "interventions": 5,
+   "resets": 0
+  },
+  "10250": {
+   "end": "success",
+   "steps": 14,
+   "bot": 9,
+   "interventions": 4,
+   "resets": 1
+  },
+  "10251": {
+   "end": "success",
+   "steps": 36,
+   "bot": 7,
+   "interventions": 15,
+   "resets": 3
+  },
+  "10252": {
+   "end": "success",
+   "steps": 7,
+   "bot": 2,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10253": {
+   "end": "success",
+   "steps": 41,
+   "bot": 7,
+   "interventions": 16,
+   "resets": 0
+  },
+  "10254": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10255": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10256": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10257": {
+   "end": "success",
+   "steps": 6,
+   "bot": 5,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10258": {
+   "end": "success",
+   "steps": 32,
+   "bot": 6,
+   "interventions": 15,
+   "resets": 3
+  },
+  "10259": {
+   "end": "success",
+   "steps": 43,
+   "bot": 12,
+   "interventions": 16,
+   "resets": 0
+  },
+  "10260": {
+   "end": "success",
+   "steps": 12,
+   "bot": 5,
+   "interventions": 4,
+   "resets": 1
+  },
+  "10261": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 10,
+   "interventions": 32,
+   "resets": 6
+  },
+  "10262": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10263": {
+   "end": "success",
+   "steps": 29,
+   "bot": 4,
+   "interventions": 14,
+   "resets": 2
+  },
+  "10264": {
+   "end": "success",
+   "steps": 6,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10265": {
+   "end": "success",
+   "steps": 9,
+   "bot": 5,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10266": {
+   "end": "success",
+   "steps": 7,
+   "bot": 6,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10267": {
+   "end": "success",
+   "steps": 50,
+   "bot": 14,
+   "interventions": 20,
+   "resets": 3
+  },
+  "10268": {
+   "end": "success",
+   "steps": 4,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10269": {
+   "end": "success",
+   "steps": 20,
+   "bot": 5,
+   "interventions": 8,
+   "resets": 0
+  },
+  "10270": {
+   "end": "success",
+   "steps": 10,
+   "bot": 5,
+   "interventions": 3,
+   "resets": 1
+  },
+  "10271": {
+   "end": "success",
+   "steps": 17,
+   "bot": 5,
+   "interventions": 5,
+   "resets": 1
+  },
+  "10272": {
+   "end": "success",
+   "steps": 4,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10273": {
+   "end": "success",
+   "steps": 16,
+   "bot": 4,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10274": {
+   "end": "success",
+   "steps": 3,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10275": {
+   "end": "success",
+   "steps": 19,
+   "bot": 5,
+   "interventions": 7,
+   "resets": 0
+  },
+  "10276": {
+   "end": "success",
+   "steps": 5,
+   "bot": 4,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10277": {
+   "end": "success",
+   "steps": 27,
+   "bot": 11,
+   "interventions": 7,
+   "resets": 0
+  },
+  "10278": {
+   "end": "success",
+   "steps": 11,
+   "bot": 4,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10279": {
+   "end": "success",
+   "steps": 8,
+   "bot": 3,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10280": {
+   "end": "success",
+   "steps": 12,
+   "bot": 6,
+   "interventions": 4,
+   "resets": 0
+  },
+  "10281": {
+   "end": "success",
+   "steps": 7,
+   "bot": 3,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10282": {
+   "end": "success",
+   "steps": 16,
+   "bot": 7,
+   "interventions": 4,
+   "resets": 0
+  },
+  "10283": {
+   "end": "success",
+   "steps": 25,
+   "bot": 7,
+   "interventions": 9,
+   "resets": 0
+  },
+  "10284": {
+   "end": "success",
+   "steps": 4,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10285": {
+   "end": "success",
+   "steps": 8,
+   "bot": 6,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10286": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10287": {
+   "end": "success",
+   "steps": 20,
+   "bot": 9,
+   "interventions": 5,
+   "resets": 0
+  },
+  "10288": {
+   "end": "success",
+   "steps": 7,
+   "bot": 2,
+   "interventions": 3,
+   "resets": 0
+  },
+  "10289": {
+   "end": "success",
+   "steps": 46,
+   "bot": 11,
+   "interventions": 16,
+   "resets": 1
+  },
+  "10290": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 8,
+   "interventions": 28,
+   "resets": 7
+  },
+  "10291": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10292": {
+   "end": "success",
+   "steps": 4,
+   "bot": 2,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10293": {
+   "end": "success",
+   "steps": 30,
+   "bot": 7,
+   "interventions": 10,
+   "resets": 1
+  },
+  "10294": {
+   "end": "success",
+   "steps": 6,
+   "bot": 4,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10295": {
+   "end": "success",
+   "steps": 7,
+   "bot": 4,
+   "interventions": 1,
+   "resets": 0
+  },
+  "10296": {
+   "end": "success",
+   "steps": 10,
+   "bot": 6,
+   "interventions": 2,
+   "resets": 0
+  },
+  "10297": {
+   "end": "success",
+   "steps": 29,
+   "bot": 7,
+   "interventions": 12,
+   "resets": 1
+  },
+  "10298": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0,
+   "resets": 0
+  },
+  "10299": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0,
+   "resets": 0
+  }
+ },
+ "episodes_with_intervention": 233,
+ "interventions": 1862,
+ "success_without_intervention": 67,
+ "success_with_intervention": 213,
+ "resets": 218,
+ "resets_per_episode": {
+  "0": 220,
+  "1": 32,
+  "2+": 48
+ },
+ "vs_no_rule": {
+  "saved": [
+   10001,
+   10003,
+   10004,
+   10006,
+   10007,
+   10008,
+   10011,
+   10012,
+   10014,
+   10018,
+   10019,
+   10020,
+   10021,
+   10022,
+   10023,
+   10024,
+   10025,
+   10026,
+   10027,
+   10028,
+   10029,
+   10030,
+   10031,
+   10032,
+   10033,
+   10035,
+   10036,
+   10037,
+   10039,
+   10041,
+   10042,
+   10047,
+   10048,
+   10049,
+   10051,
+   10052,
+   10053,
+   10055,
+   10056,
+   10058,
+   10059,
+   10060,
+   10061,
+   10062,
+   10063,
+   10064,
+   10065,
+   10067,
+   10068,
+   10069,
+   10070,
+   10071,
+   10072,
+   10073,
+   10075,
+   10076,
+   10077,
+   10078,
+   10080,
+   10081,
+   10082,
+   10083,
+   10084,
+   10086,
+   10087,
+   10088,
+   10089,
+   10090,
+   10091,
+   10092,
+   10094,
+   10095,
+   10096,
+   10098,
+   10100,
+   10103,
+   10104,
+   10105,
+   10106,
+   10107,
+   10108,
+   10110,
+   10112,
+   10113,
+   10115,
+   10116,
+   10117,
+   10118,
+   10120,
+   10121,
+   10123,
+   10124,
+   10125,
+   10126,
+   10127,
+   10128,
+   10129,
+   10130,
+   10131,
+   10132,
+   10133,
+   10135,
+   10138,
+   10141,
+   10144,
+   10148,
+   10149,
+   10150,
+   10152,
+   10154,
+   10155,
+   10158,
+   10161,
+   10162,
+   10164,
+   10165,
+   10166,
+   10167,
+   10169,
+   10170,
+   10171,
+   10172,
+   10173,
+   10174,
+   10175,
+   10177,
+   10178,
+   10179,
+   10180,
+   10181,
+   10182,
+   10183,
+   10184,
+   10185,
+   10187,
+   10188,
+   10189,
+   10192,
+   10193,
+   10194,
+   10195,
+   10196,
+   10197,
+   10200,
+   10201,
+   10202,
+   10205,
+   10207,
+   10208,
+   10209,
+   10211,
+   10213,
+   10214,
+   10216,
+   10219,
+   10221,
+   10222,
+   10223,
+   10224,
+   10225,
+   10227,
+   10229,
+   10230,
+   10231,
+   10232,
+   10233,
+   10235,
+   10236,
+   10237,
+   10239,
+   10240,
+   10245,
+   10246,
+   10247,
+   10249,
+   10250,
+   10251,
+   10252,
+   10253,
+   10256,
+   10258,
+   10259,
+   10260,
+   10263,
+   10264,
+   10265,
+   10266,
+   10267,
+   10269,
+   10270,
+   10271,
+   10272,
+   10273,
+   10275,
+   10277,
+   10278,
+   10279,
+   10280,
+   10281,
+   10282,
+   10283,
+   10284,
+   10285,
+   10286,
+   10287,
+   10288,
+   10289,
+   10292,
+   10293,
+   10294,
+   10295,
+   10296,
+   10297
+  ],
+  "broken": [],
+  "gave_up_and_failed_without_rule": 0
+ },
+ "trace": {
+  "10013": [
+   [
+    "turn left",
+    "turn left",
+    0.444,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.449,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.455,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.435,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.435,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.841,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.435,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.455,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.455,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.538,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.841,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.63,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.444,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.611,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.881,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.611,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.651,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.543,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.651,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.915,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.584,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.915,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.64,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.472,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.472,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.552,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.469,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.834,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.547,
+    1
+   ],
+   [
+    "turn right",
+    "forward",
+    0.472,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.64,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.552,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.64,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.64,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.472,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.472,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.788,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.891,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.584,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.891,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.483,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.915,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.483,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.912,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.826,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.854,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.584,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.584,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.915,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.584,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.891,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.475,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.672,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.651,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.672,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.921,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.665,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.699,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.665,
+    1
+   ],
+   [
+    "forward",
+    "turn right",
+    0.826,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.826,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.912,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.912,
+    0
+   ]
+  ],
+  "10015": [
+   [
+    "forward",
+    "forward",
+    0.65,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.885,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.885,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.849,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.885,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.927,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.885,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.885,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.849,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.549,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.611,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.695,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.585,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.695,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.927,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.927,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.679,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.525,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.984,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.525,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.73,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.968,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.73,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.986,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.73,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.73,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.968,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.968,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.684,
+    1
+   ],
+   [
+    "turn left",
+    "forward",
+    0.65,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.959,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.525,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.959,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.65,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.984,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.984,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.65,
+    1
+   ],
+   [
+    "turn right",
+    "forward",
+    0.885,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.927,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.885,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.885,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.849,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.679,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.927,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.927,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.679,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.849,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.885,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.927,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.885,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.885,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.849,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.549,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.431,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.518,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.725,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.778,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.574,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.778,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.731,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.599,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.731,
+    1
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.695,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.611,
+    1
+   ]
+  ],
+  "10016": [
+   [
+    "turn right",
+    "turn right",
+    0.507,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.47,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.869,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.47,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.808,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.622,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.808,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.488,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.53,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.584,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.386,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.386,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.973,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.386,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.754,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.386,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.386,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.973,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.754,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.701,
+    1
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.47,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.507,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.584,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.869,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.584,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.507,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.507,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.47,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.869,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.799,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.852,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.815,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.506,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.591,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.642,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.799,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.642,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.562,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.642,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.642,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.799,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.487,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.678,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.678,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.699,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.502,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.699,
+    1
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.562,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.852,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.799,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.852,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.562,
+    1
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.507,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.584,
+    1
+   ],
+   [
+    "turn left",
+    "forward",
+    0.386,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.754,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.386,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.386,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.973,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.973,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.386,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.754,
+    0
+   ]
+  ],
+  "10017": [
+   [
+    "forward",
+    "forward",
+    0.803,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.775,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.436,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.569,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.619,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.619,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.788,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.788,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.422,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.788,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.619,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.505,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.619,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.619,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.788,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.788,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.422,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.505,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.413,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.365,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.583,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.365,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.549,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.715,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.549,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.577,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.675,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.577,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.708,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.484,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.484,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.708,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.789,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.514,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.484,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.514,
+    1
+   ],
+   [
+    "turn left",
+    "forward",
+    0.803,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.675,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.551,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.646,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.646,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.34,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.627,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.803,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.627,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.492,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.432,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.384,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.589,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.541,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.589,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.616,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.63,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.616,
+    1
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.675,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.803,
+    1
+   ],
+   [
+    "turn left",
+    "forward",
+    0.775,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.715,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.409,
+    1
+   ],
+   [
+    "turn right",
+    "forward",
+    0.646,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.551,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.634,
+    1
+   ]
+  ],
+  "10057": [
+   [
+    "forward",
+    "forward",
+    0.456,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.516,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.494,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.494,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.516,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.788,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.801,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.788,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.788,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.481,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.56,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.801,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.657,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.517,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.56,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.439,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.597,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.807,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.56,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.807,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.524,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.59,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.689,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.59,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.543,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.492,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.494,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.378,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.4,
+    1
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.439,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.56,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.56,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.439,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.439,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.597,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.439,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.56,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.807,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.597,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.629,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.786,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.786,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.629,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.657,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.629,
+    1
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.481,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.788,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.801,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.56,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.658,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.494,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.658,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.628,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.658,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.424,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.475,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.424,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.579,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.526,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.491,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.492,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.418,
+    0
+   ]
+  ],
+  "10122": [
+   [
+    "turn left",
+    "turn left",
+    0.566,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.507,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.536,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.536,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.701,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.468,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.701,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.415,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.415,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.415,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.442,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.415,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.402,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.415,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.415,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.442,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.402,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.468,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.413,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.413,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.566,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.413,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.551,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.507,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.551,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.413,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.413,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.566,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.566,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.507,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.566,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.413,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.551,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.686,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.595,
+    1
+   ],
+   [
+    "turn right",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.402,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.442,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.512,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.544,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.595,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.686,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.512,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.686,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.682,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.434,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.636,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.434,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.682,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.542,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.41,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.586,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.471,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.586,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.586,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.46,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.67,
+    0
+   ]
+  ],
+  "10137": [
+   [
+    "forward",
+    "forward",
+    0.464,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.465,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.911,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.394,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.911,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.911,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.649,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.525,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.394,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.394,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.525,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.714,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.62,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.465,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.62,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.37,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.879,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.879,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.862,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.879,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.37,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.49,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.555,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.49,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.741,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.493,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.741,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.881,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.463,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.881,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.912,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.457,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.912,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.881,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.881,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.463,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.463,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.457,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.463,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.881,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.912,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.912,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.457,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.535,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.836,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.535,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.692,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.743,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.692,
+    1
+   ],
+   [
+    "forward",
+    "turn right",
+    0.862,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.555,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.714,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.563,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.526,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.563,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.753,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.611,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.753,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.797,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.438,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.797,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.952,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.525,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.75,
+    0
+   ]
+  ],
+  "10140": [
+   [
+    "forward",
+    "forward",
+    0.599,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.613,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.781,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.504,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.781,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.748,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.615,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.533,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.839,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.533,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.481,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.683,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.481,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.78,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.66,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.78,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.584,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.584,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.516,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.516,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.584,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.422,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.584,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.584,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.516,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.53,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.516,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.516,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.584,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.422,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.53,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.789,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.66,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.503,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.503,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.853,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.503,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.948,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.503,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.503,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.853,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.853,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.917,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.853,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.503,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.948,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.917,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.449,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.789,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.471,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.508,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.528,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.748,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.748,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.528,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.552,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.528,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.455,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.642,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.347,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.642,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.642,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.455,
+    0
+   ]
+  ],
+  "10146": [
+   [
+    "turn right",
+    "turn right",
+    0.581,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.401,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.454,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.454,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.87,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.454,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.417,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.424,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.87,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.87,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.424,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.417,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.454,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.454,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.87,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.454,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.417,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.72,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.475,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.839,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.475,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.72,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.382,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.72,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.72,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.475,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.475,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.839,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.87,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.87,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.424,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.449,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.815,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.401,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.815,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.947,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.631,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.667,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.631,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.631,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.947,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.441,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.399,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.643,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.425,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.643,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.651,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.452,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.446,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.655,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.446,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.499,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.716,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.499,
+    1
+   ],
+   [
+    "forward",
+    "turn right",
+    0.667,
+    1
+   ],
+   [
+    "forward",
+    "turn right",
+    0.581,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.731,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.541,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.749,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.541,
+    1
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.475,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.72,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.382,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.422,
+    0
+   ]
+  ],
+  "10151": [
+   [
+    "turn right",
+    "turn right",
+    0.604,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.613,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.746,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.613,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.944,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.563,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.726,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.811,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.437,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.437,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.811,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.811,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.769,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.811,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.437,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.453,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.769,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.453,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.52,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.433,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.433,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.944,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.944,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.433,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.887,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.563,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.944,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.563,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.887,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.456,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.746,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.657,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.688,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.657,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.839,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.575,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.839,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.844,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.642,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.642,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.867,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.642,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.844,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.844,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.509,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.844,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.642,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.642,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.867,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.509,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.867,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.485,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.496,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.688,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.803,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.726,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.803,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.52,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.803,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.901,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.508,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.901,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.519,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.426,
+    0
+   ]
+  ],
+  "10157": [
+   [
+    "turn left",
+    "turn left",
+    0.546,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.513,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.371,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.653,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.371,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.371,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.403,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.356,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.653,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.356,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.576,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.546,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.488,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.59,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.488,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.725,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.725,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.49,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.59,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.49,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.725,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.488,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.488,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.59,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.59,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.488,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.725,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.725,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.49,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.397,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.576,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.397,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.513,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.397,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.602,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.645,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.439,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.632,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.439,
+    1
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.546,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.576,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.576,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.546,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.513,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.546,
+    1
+   ],
+   [
+    "forward",
+    "turn right",
+    0.488,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.488,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.59,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.49,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.59,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.59,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.488,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.725,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.488,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.488,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.59,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.49,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.725,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.725,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.49,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.397,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.576,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.397,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.513,
+    1
+   ]
+  ],
+  "10168": [
+   [
+    "turn left",
+    "turn left",
+    0.494,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.692,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.516,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.669,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.669,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.715,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.669,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.779,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.669,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.669,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.715,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.779,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.83,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.511,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.94,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.511,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.511,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.83,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.83,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.549,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.83,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.511,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.94,
+    1
+   ],
+   [
+    "forward",
+    "turn right",
+    0.715,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.715,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.669,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.779,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.564,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.612,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.777,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.516,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.777,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.712,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.562,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.763,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.562,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.511,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.511,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.83,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.83,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.549,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.454,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.55,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.44,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.513,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.421,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.513,
+    1
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.562,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.712,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.489,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.712,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.65,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.712,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.712,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.489,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.535,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.508,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.878,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.692,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.878,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.655,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.625,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.655,
+    0
+   ]
+  ],
+  "10176": [
+   [
+    "turn left",
+    "turn left",
+    0.622,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.682,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.622,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.784,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.608,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.784,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.916,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.916,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.955,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.916,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.551,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.551,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.916,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.916,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.955,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.811,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.692,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.863,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.432,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.642,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.674,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.494,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.504,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.945,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.504,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.513,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.513,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.504,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.504,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.945,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.927,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.571,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.687,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.687,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.479,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.394,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.927,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.927,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.624,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.661,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.624,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.428,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.934,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.48,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.777,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.428,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.777,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.777,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.48,
+    1
+   ],
+   [
+    "turn right",
+    "forward",
+    0.571,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.927,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.571,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.661,
+    1
+   ],
+   [
+    "turn right",
+    "forward",
+    0.513,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.46,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.945,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.46,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.474,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.748,
+    0
+   ]
+  ],
+  "10191": [
+   [
+    "turn right",
+    "turn right",
+    0.518,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.441,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.518,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.536,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.657,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.536,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.827,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.461,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.625,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.818,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.625,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.441,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.388,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.742,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.632,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.742,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.388,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.55,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.69,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.866,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.69,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.708,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.783,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.708,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.621,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.555,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.987,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.555,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.555,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.978,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.555,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.987,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.987,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.4,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.903,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.961,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.961,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.955,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.961,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.422,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.655,
+    1
+   ],
+   [
+    "turn left",
+    "forward",
+    0.621,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.971,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.971,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.903,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.966,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.621,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.966,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.903,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.621,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.555,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.555,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.978,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.4,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.987,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.555,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.987,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.987,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.4,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.978,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.978,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.555,
+    0
+   ]
+  ],
+  "10228": [
+   [
+    "turn left",
+    "turn left",
+    0.487,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.603,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.578,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.603,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.4,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.499,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.4,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.4,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.387,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.761,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.499,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.761,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.387,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.506,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.806,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.471,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.806,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.806,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.506,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.872,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.471,
+    1
+   ],
+   [
+    "forward",
+    "turn right",
+    0.499,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.499,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.4,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.499,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.761,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.594,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.487,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.594,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.552,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.474,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.719,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.477,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.719,
+    1
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.603,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.487,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.444,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.649,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.468,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.649,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.806,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.471,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.872,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.569,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.425,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.482,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.425,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.476,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.761,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.476,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.425,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.588,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.456,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.635,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.593,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.635,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.761,
+    1
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.649,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.444,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.569,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.444,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.444,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.649,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.468,
+    0
+   ]
+  ],
+  "10241": [
+   [
+    "turn right",
+    "turn right",
+    0.752,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.671,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.576,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.489,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.489,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.516,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.489,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.912,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.489,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.489,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.516,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.587,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.912,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.982,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.466,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.853,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.466,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.466,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.982,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.482,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.982,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.982,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.466,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.853,
+    1
+   ],
+   [
+    "forward",
+    "turn right",
+    0.516,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.516,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.489,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.912,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.587,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.516,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.587,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.487,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.85,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.576,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.717,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.576,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.85,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.912,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.663,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.466,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.466,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.982,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.482,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.853,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.482,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.447,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.912,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.488,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.656,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.796,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.656,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.656,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.488,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.528,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.796,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.818,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.663,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.818,
+    1
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.717,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.487,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.717,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.717,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.576,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.489,
+    0
+   ]
+  ],
+  "10242": [
+   [
+    "turn right",
+    "turn right",
+    0.777,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.68,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.777,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.403,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.41,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.926,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.719,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.618,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.719,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.719,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.547,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.893,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.618,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.618,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.893,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.547,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.719,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.618,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.719,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.719,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.547,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.547,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.893,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.488,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.644,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.926,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.604,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.488,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.504,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.672,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.41,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.403,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.504,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.493,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.794,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.383,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.367,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.493,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.498,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.456,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.524,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.383,
+    1
+   ],
+   [
+    "turn right",
+    "forward",
+    0.41,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.672,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.692,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.68,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.935,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.935,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.604,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.935,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.607,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.935,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.935,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.604,
+    1
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.604,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.926,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.644,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.607,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.607,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.459,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.607,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.935,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.607,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.607,
+    0
+   ]
+  ],
+  "10243": [
+   [
+    "forward",
+    "forward",
+    0.751,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.372,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.372,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.668,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.668,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.372,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.372,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.372,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.668,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.453,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.665,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.466,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.665,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.586,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.446,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.763,
+    1
+   ],
+   [
+    "turn left",
+    "forward",
+    0.751,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.485,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.485,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.665,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.485,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.751,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.466,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.751,
+    1
+   ],
+   [
+    "turn left",
+    "forward",
+    0.372,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.453,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.668,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.668,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.372,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.372,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.668,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.453,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.372,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.662,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.453,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.665,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.466,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.407,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.655,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.407,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.729,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.729,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.459,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.485,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.485,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.665,
+    1
+   ],
+   [
+    "forward",
+    "turn left",
+    0.586,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.508,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.574,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.405,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.424,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.668,
+    1
+   ],
+   [
+    "turn left",
+    "forward",
+    0.763,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.354,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.763,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.446,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.544,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.634,
+    1
+   ],
+   [
+    "turn right",
+    "forward",
+    0.729,
+    0
+   ]
+  ],
+  "10261": [
+   [
+    "turn left",
+    "turn left",
+    0.568,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.393,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.568,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.632,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.632,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.537,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.567,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.693,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.567,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.567,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.713,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.567,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.693,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.693,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.509,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.713,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.867,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.597,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.606,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.597,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.597,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.867,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.903,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.507,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.552,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.507,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.79,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.4,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.79,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.79,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.937,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.79,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.4,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.963,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.4,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.4,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.79,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.79,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.937,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.963,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.399,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.552,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.399,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.903,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.399,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.498,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.962,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.536,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.632,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.536,
+    1
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.507,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.903,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.903,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.507,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.552,
+    1
+   ],
+   [
+    "forward",
+    "turn right",
+    0.606,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.693,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.567,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.567,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.713,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.509,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.495,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.677,
+    0
+   ]
+  ],
+  "10290": [
+   [
+    "forward",
+    "forward",
+    0.386,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.359,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.676,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.424,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.475,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.537,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.543,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.543,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.375,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.528,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.468,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.522,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.644,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.922,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.922,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.833,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.516,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.718,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.516,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.833,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.833,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.718,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.659,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.922,
+    0
+   ],
+   [
+    "turn left",
+    "turn right",
+    0.659,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.588,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.588,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.632,
+    0
+   ],
+   [
+    "turn right",
+    "turn left",
+    0.522,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.632,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.627,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.452,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.452,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.371,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.541,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.371,
+    1
+   ],
+   [
+    "turn left",
+    "forward",
+    0.644,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.541,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.644,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.522,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.522,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.644,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.922,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.922,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "turn left",
+    "forward",
+    0.922,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.659,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.659,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.922,
+    0
+   ],
+   [
+    "turn right",
+    "forward",
+    0.922,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    1
+   ],
+   [
+    "turn left",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "turn left",
+    0.516,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.542,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.478,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.652,
+    0
+   ],
+   [
+    "forward",
+    "turn right",
+    0.478,
+    1
+   ]
+  ]
+ },
+ "loop_blocked_steps": 1799,
+ "loop_blocked_forward_rank1": 0.2335,
+ "model": "gemini-decision-1",
+ "input": "image",
+ "called": "2026-11-17"
+}

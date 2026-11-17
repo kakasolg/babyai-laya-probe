@@ -1,0 +1,35 @@
+{
+ "scorer": "clef-flash",
+ "steps": 1567,
+ "all": {
+  "n": 1567,
+  "agree": 0.5552
+ },
+ "target_visible": {
+  "n": 1330,
+  "agree": 0.5617
+ },
+ "target_unseen": {
+  "n": 237,
+  "agree": 0.519
+ },
+ "order_flip_rate": 0.0,
+ "format_error_rate": 0.0,
+ "blocked_steps": 249,
+ "blocked_forward_rank1": 0.1446,
+ "choice_share": {
+  "turn left": 626,
+  "forward": 461,
+  "turn right": 480
+ },
+ "scorer_stats": {
+  "model": "clef-flash:latest",
+  "new_calls": 3126,
+  "reused": 8,
+  "errors_retried": 0,
+  "latency_ms_p50": 96.7,
+  "latency_ms_p95": 102.7,
+  "usage_new_calls": {}
+ },
+ "called": "2026-11-17"
+}
