@@ -266,8 +266,9 @@ def ranked(probs: dict) -> list[str]:
 PENALTY = 2.0  # visit penalty coefficient, fixed by the board (11-14 20:29); never tuned
 
 
-def run_loop(scorer, policy: str, seeds=None):
-    """policy: none | R | reset | penalty (board 11-14: R, R-reset and visit penalty share key and ranking)."""
+def run_loop(scorer, policy: str, seeds=None, state_fn=None):
+    """policy: none | R | reset | penalty (board 11-14: R, R-reset and visit penalty share key and ranking).
+    state_fn(ep) -> the text given to the model (stage 11 adds a line); the rule key stays the obs text."""
     eps = [Ep(s, shadow_bot=False, swap=False) for s in (seeds if seeds is not None else seed_range(SEEDS))]
     for e in eps:
         e.tried, e.gave_up, e.n_interv, e.resets, e.count = {}, False, 0, 0, {}
@@ -277,7 +278,7 @@ def run_loop(scorer, policy: str, seeds=None):
         if not live:
             break
         try:
-            scores = scorer.score([state_text(e.text(), e.obs["mission"]) for e in live])
+            scores = scorer.score([state_fn(e) if state_fn else state_text(e.text(), e.obs["mission"]) for e in live])
         except ApiAborted as x:
             aborted = str(x)
             break
