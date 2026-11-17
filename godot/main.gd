@@ -85,6 +85,20 @@ var fix_status := ""
 var fix_bot_shown := false
 var fix_memo := ""
 var fix_auto := false
+var fix_loop := false        # test run going (L): Laya plays the 300 dev rooms one after another
+var fix_loop_wait := 0.0
+const TEST_FIRST := 10000    # the 300 dev rooms of stage 3.5 (reports/stage3_5/model-s0.json)
+const TEST_N := 300
+const TEST_RECORDED_OK := 276  # successes of the seed-0 model on these rooms, recorded with PyTorch
+const LONG_ROOM := 20          # must match LONG_ROOM in probe/correct_server.py
+var test_run := ""
+var test_done := {}
+var test_ok := 0
+var test_long := 0
+var test_autostart := false
+const BABY_DIR := ["right", "down", "left", "up"]
+var baby := {}               # puzzle mode's baby and toy sprites (drive/baby, drive/toys), as in lab/putnext.gd
+var toys := {}
 var fix_timer := 0.0
 var fix_retry := -1.0
 var fix_wait := 0.0
@@ -102,6 +116,11 @@ func _ready() -> void:
 		get_tree().change_scene_to_file.call_deferred("res://drive/puzzle.tscn")
 		return
 	_load_episodes()
+	for n in ["up", "down", "left", "right", "grab", "cry"]:
+		baby[n] = load("res://drive/baby/%s.png" % n)
+	for n in ["ball", "key", "box"]:
+		for v in ["a", "b"]:
+			toys[n + "_" + v] = load("res://drive/toys/%s_%s.png" % [n, v])
 	_build_ui()
 	get_tree().auto_accept_quit = false
 	http = HTTPRequest.new()
@@ -123,6 +142,7 @@ func _ready() -> void:
 			_play_act({"a": "turn left", "d": "turn right", "w": "forward"}.get(ch, ""))
 	shot_path = args.get("shot", "")
 	fix_script = args.get("fixmoves", "")
+	test_autostart = args.has("testrun")
 	if args.has("demo"):
 		_set_demo(true)
 	if args.has("selftest"):
@@ -235,6 +255,7 @@ func _build_ui() -> void:
 	board.position = Vector2(16, 110)
 	board.size = Vector2(CELL * 8, CELL * 8)
 	board.draw.connect(_draw_board)
+	board.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	add_child(board)
 
 	key_font = FontVariation.new()
@@ -283,6 +304,7 @@ func _build_ui() -> void:
 	for code in ["1", "2", "3", "4"]:
 		_btn(r2, "Memo %s" % code, func(): _fix_set_memo(code))
 	_btn(r2, "AI to the end (R)", func(): _fix_set_auto(true))
+	_btn(r2, "Test run: 300 rooms (L)", func(): _fix_set_loop(not fix_loop))
 	_btn(r2, "Next room (N)", func(): _change_ep(1))
 	var r3 := Label.new()
 	r3.add_theme_color_override("font_color", Color("#8b95a5"))
@@ -1097,6 +1119,16 @@ func _draw_board() -> void:
 	_draw_agent(ag[0], ag[1])
 
 
+## "" while the room is still going, else "success" or the failure result.
+func _end_result() -> String:
+	if mode == "fix":
+		var r = fix_state.get("result")
+		return "" if r == null else String(r)
+	if mode == "play":
+		return p_result
+	return String(_ep()["result"]) if w_i >= _ep()["steps"].size() else ""
+
+
 func _center(c: Vector2i) -> Vector2:
 	return Vector2(c.x * CELL + CELL / 2.0, c.y * CELL + CELL / 2.0)
 
@@ -1117,6 +1149,13 @@ func _draw_view_outline(view: Dictionary) -> void:
 func _draw_object(o: Dictionary, c: Vector2i) -> void:
 	var col: Color = COLORS.get(o["color"], Color.WHITE)
 	var m := _center(c)
+	var kind := String(o["type"])
+	var look := "a" if (str(_ep().get("seed", "")) + kind).hash() % 2 == 0 else "b"
+	var tex: Texture2D = toys.get(kind + "_" + look)
+	if tex != null:
+		var sz := tex.get_size() * (CELL / 84.0)
+		board.draw_texture_rect(tex, Rect2(m - sz * 0.5, sz), false, col.lightened(0.15))
+		return
 	match o["type"]:
 		"ball":
 			board.draw_circle(m, CELL * 0.3, col)
@@ -1151,10 +1190,24 @@ func _draw_plate(c: Vector2i, col: Color, kind: String) -> void:
 			board.draw_line(k, k - Vector2(0, sy * 8), ink, 3.0, true)
 
 
+## The crawling baby (same sprites as puzzle mode); at the end of a room it grabs (success) or cries (failure).
 func _draw_agent(pos: Vector2i, dir: int) -> void:
 	var m := _center(pos)
 	var f := Vector2(DIR_VEC[dir])
 	var p := Vector2(-f.y, f.x)
+	var res := _end_result()
+	var tex: Texture2D = baby.get(BABY_DIR[dir] if res == "" else ("grab" if res == "success" else "cry"))
+	if tex != null:
+		var sh := PackedVector2Array()
+		for i in 20:
+			var u := TAU * i / 20.0
+			sh.append(m + Vector2(cos(u) * 23.0, 25.0 + sin(u) * 5.0))
+		board.draw_colored_polygon(sh, Color(0, 0, 0, 0.45))
+		var sz := tex.get_size() * 0.86
+		board.draw_texture_rect(tex, Rect2(m + Vector2(-sz.x * 0.5, 30.0 - sz.y), sz), false)
+		var tip := m + f * CELL * 0.47
+		board.draw_colored_polygon(PackedVector2Array([tip, tip - f * 10 + p * 8, tip - f * 10 - p * 8]), Color("#ff7a45"))
+		return
 	var pts := PackedVector2Array([m + f * CELL * 0.36, m - f * CELL * 0.28 + p * CELL * 0.28, m - f * CELL * 0.28 - p * CELL * 0.28])
 	board.draw_colored_polygon(pts, Color("#ff7a45"))
 	pts.append(pts[0])
@@ -1233,7 +1286,11 @@ func _fix_connect() -> void:
 			return
 		fix_seeds = d["seeds"]
 		fix_idx = 0
-		_fix_reset())
+		if test_autostart:
+			test_autostart = false
+			_fix_set_loop(true)
+		else:
+			_fix_reset())
 
 
 func _start_server() -> void:
@@ -1269,7 +1326,10 @@ func _fix_reset() -> void:
 	if fix_seeds.is_empty():
 		return
 	fix_auto = false
-	_fix_get("/reset?seed=%d" % int(fix_seeds[fix_idx]["seed"]), func(d):
+	var q := "/reset?seed=%d" % int(fix_seeds[fix_idx]["seed"])
+	if test_run != "":
+		q += "&run=" + test_run
+	_fix_get(q, func(d):
 		if d == null:
 			fix_status = "Lost connection to the AI server"
 			_refresh()
@@ -1303,6 +1363,7 @@ func _fix_step(action: String) -> void:
 		fix_memo = ""
 		if d.get("result") != null:
 			fix_auto = false
+			_test_record(d)
 		_refresh())
 
 
@@ -1313,9 +1374,53 @@ func _fix_set_memo(code: String) -> void:
 
 
 func _fix_set_auto(on: bool) -> void:
+	if not on:
+		fix_loop = false
 	fix_auto = on and fix_state.get("result") == null
 	fix_timer = 0.0
 	_refresh()
+
+
+## Test run (L): Laya plays the 300 dev rooms 10000-10299 in order, each to the end, by itself. L again pauses and
+## resumes. Every finished room adds a line to user://test_runs/<run>.jsonl; the server also keeps the step-by-step
+## trace of every room longer than 20 steps in long_rooms.jsonl beside its log.
+## The 300 final-check rooms (20000-20299) are not played here: they stay locked (README).
+func _fix_set_loop(on: bool) -> void:
+	fix_loop = on
+	fix_loop_wait = 0.0
+	if not on:
+		fix_auto = false
+	elif test_run == "" or test_done.size() >= TEST_N:
+		test_run = "test-" + Time.get_datetime_string_from_system().replace(":", "")
+		test_done = {}
+		test_ok = 0
+		test_long = 0
+		fix_seeds = []
+		for i in TEST_N:
+			fix_seeds.append({"seed": TEST_FIRST + i, "note": ""})
+		fix_idx = clampi(int(_user_args().get("teststart", "1")) - 1, 0, TEST_N - 1)
+		DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("user://test_runs"))
+		_fix_reset()
+	_refresh()
+
+
+func _test_record(d: Dictionary) -> void:
+	var seed := int(fix_room["seed"])
+	if test_run == "" or test_done.has(seed):
+		return
+	var steps := int(d["step"])
+	test_done[seed] = d["result"]
+	if d["result"] == "success":
+		test_ok += 1
+	if steps > LONG_ROOM:
+		test_long += 1
+	var f := FileAccess.open("user://test_runs/%s.jsonl" % test_run, FileAccess.READ_WRITE if FileAccess.file_exists(
+		"user://test_runs/%s.jsonl" % test_run) else FileAccess.WRITE)
+	if f != null:
+		f.seek_end()
+		f.store_line(JSON.stringify({"seed": seed, "result": d["result"], "steps": steps,
+			"corrections": int(d["corrections"]), "long": steps > LONG_ROOM}))
+		f.close()
 
 
 func _fix_process(delta: float) -> void:
@@ -1328,6 +1433,19 @@ func _fix_process(delta: float) -> void:
 				_refresh()
 			else:
 				_fix_connect()
+	if fix_loop and not fix_busy and not fix_room.is_empty():
+		if fix_state.get("result") != null:
+			fix_loop_wait += delta
+			if fix_loop_wait >= 1.2:
+				fix_loop_wait = 0.0
+				if test_done.size() >= TEST_N or fix_idx >= fix_seeds.size() - 1:
+					fix_loop = false
+					_refresh()
+				else:
+					_change_ep(1)
+		elif not fix_auto:
+			fix_auto = true
+			fix_timer = 0.0
 	if fix_auto and not fix_busy:
 		fix_timer += delta
 		if fix_timer >= 0.25:
@@ -1356,6 +1474,7 @@ func _fix_key(k: int, echo: bool) -> bool:
 		KEY_1, KEY_2, KEY_3, KEY_4, KEY_KP_1, KEY_KP_2, KEY_KP_3, KEY_KP_4:
 			_fix_set_memo(str((k - KEY_0) if k <= KEY_9 else (k - KEY_KP_0)))
 		KEY_R: _fix_set_auto(not fix_auto)
+		KEY_L: _fix_set_loop(not fix_loop)
 		KEY_N: _change_ep(1)
 		_: return false
 	return true
@@ -1377,16 +1496,24 @@ func _refresh_fix() -> void:
 		text_title.text = ""
 		return
 	var st := fix_state
-	seed_label.text = "Correct room %d of %d" % [fix_idx + 1, fix_seeds.size()]
+	seed_label.text = ("Test room %d of %d" % [fix_idx + 1, TEST_N]) if test_run != "" else "Correct room %d of %d" % [fix_idx + 1, fix_seeds.size()]
 	seed_sub.text = "seed %d" % int(fix_room["seed"])
 	mission_label.text = "Mission: %s" % fix_room["mission"]
 	var s := "[b]Step %d / %d[/b] · corrections %d · memos %d\n[color=#8b95a5]%s[/color]\n" % [int(st["step"]),
 		int(fix_room["max_steps"]), int(st["corrections"]), int(st["memos"]), fix_room["note"]]
+	if test_run != "":
+		var played := test_done.size()
+		s += "[color=#f5c518]Test run: %d of %d rooms played · success %d (%.0f%%) · over %d steps: %d[/color]  [color=#8b95a5](recorded PyTorch run: %d of %d)[/color]\n" % [
+			played, TEST_N, test_ok, 100.0 * test_ok / maxi(played, 1), LONG_ROOM, test_long, TEST_RECORDED_OK, TEST_N]
 	if st.get("result") != null:
 		var res: String = st["result"]
 		s += ("[color=#46a758][b]Success![/b][/color]" if res == "success" else "[color=#e5484d][b]Failed: all 64 steps used.[/b][/color]")
 		s += "  log saved (data/correct_log.jsonl)\n"
-		if fix_idx == fix_seeds.size() - 1:
+		if fix_loop:
+			s += "[color=#f5c518]Next room in a moment (L pauses)[/color]"
+		elif test_run != "" and test_done.size() >= TEST_N:
+			s += "[color=#f5c518][b]Test run finished.[/b][/color] Results: test_runs/%s.jsonl, long rooms: long_rooms.jsonl (game's user folder)" % test_run
+		elif fix_idx == fix_seeds.size() - 1:
 			s += "[color=#f5c518][b]All %d rooms done.[/b][/color] You can close the window (Enter/N starts over)" % fix_seeds.size()
 		else:
 			s += "Enter or N: next room"
@@ -1400,7 +1527,7 @@ func _refresh_fix() -> void:
 			s += "   [color=#5d6675](B shows the bot's choice)[/color]"
 		if fix_memo != "":
 			s += "\nMemo for this step: [color=#f5c518]%s. %s[/color] (press again to cancel)" % [fix_memo, MEMO_TXT[fix_memo]]
-		if fix_auto:
+		if fix_auto and not fix_loop:
 			s += "\n[color=#f5c518]Running the AI to the end (R stops)[/color]"
 		text_box.text = st["input"]
 	info.text = s

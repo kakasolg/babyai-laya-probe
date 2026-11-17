@@ -27,6 +27,8 @@ from probe.laya_rows import state_text
 from probe.obs_text import obs_to_text
 from probe.text_stats import categorize
 
+LONG_ROOM = 20  # rooms that take more steps than this also go, step by step, to long_rooms.jsonl beside the log
+
 
 class Session:
     def __init__(self, chooser: Chooser, log_path: str):
@@ -36,13 +38,13 @@ class Session:
         self.result = None
 
     # ---- episode
-    def reset(self, seed: int) -> dict:
+    def reset(self, seed: int, run: str | None = None) -> dict:
         if 20000 <= seed < 20300:
             raise ValueError("20000-20299 are reserved for the final check (README)")
         self.end("skipped")
         self.env = gym.make(ENV_ID)
         self.obs, _ = self.env.reset(seed=seed)
-        self.seed, self.rows, self.result = seed, [], None
+        self.seed, self.rows, self.result, self.run = seed, [], None, run
         u = self.env.unwrapped
         d = u.instrs.desc
         self.target = {"type": d.type, "color": d.color}
@@ -74,7 +76,8 @@ class Session:
                "model_choice": self.choice, "bot_choice": self.bot, "memo": None,
                "target_visible": not categorize({"image": self.obs["image"], "target": self.target,
                                                  "n_matching": len(d.obj_poss)})["target_unseen"],
-               "taken": action, "corrected": action != self.choice, "source": "game"}
+               "taken": action, "corrected": action != self.choice, "source": "game",
+               "x": int(u.agent_pos[0]), "y": int(u.agent_pos[1]), "dir": int(u.agent_dir), "run": self.run}
         if memo in MEMOS:
             row["memo"] = {"code": int(memo), "label": MEMOS[memo]}
         self.rows.append(row)
@@ -95,6 +98,13 @@ class Session:
             for r in self.rows:
                 r["episode_result"], r["logged_at"] = result, now
                 log.write(json.dumps(r, ensure_ascii=False) + "\n")
+        if len(self.rows) > LONG_ROOM:
+            long_path = pathlib.Path(self.log_path).with_name("long_rooms.jsonl")
+            keep = ("step", "x", "y", "dir", "input", "probs", "model_choice", "bot_choice", "taken", "target_visible")
+            rec = {"seed": self.seed, "run": self.run, "result": result, "steps": len(self.rows), "logged_at": now,
+                   "mission": self.obs["mission"], "trace": [{k: r[k] for k in keep} for r in self.rows]}
+            with open(long_path, "a", encoding="utf-8") as f:
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
 
     def state(self) -> dict:
         if self.env is None:
@@ -150,7 +160,7 @@ def main() -> None:
                         body = {"ok": True, "seeds": [{"seed": s, "note": failure_note(s)} for s in default_seeds()],
                                 "model": a.model, "log": a.log}
                     elif url.path == "/reset":
-                        body = sess.reset(int(q["seed"]))
+                        body = sess.reset(int(q["seed"]), q.get("run"))
                     elif url.path == "/step":
                         if q.get("action") not in NAME_TO_ACT:
                             raise ValueError(f"bad action {q.get('action')!r}")
