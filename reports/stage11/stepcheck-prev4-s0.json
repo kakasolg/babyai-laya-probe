@@ -1,0 +1,45 @@
+{
+ "model": "/home/moka/babyai-laya-ft/gotolocal-prev4-s0",
+ "steps": 1567,
+ "all": {
+  "n": 1567,
+  "agree": 0.9649
+ },
+ "bot_action_same": {
+  "n": 470,
+  "agree": 0.9787
+ },
+ "bot_action_changed": {
+  "n": 797,
+  "agree": 0.9523
+ },
+ "first_step": {
+  "n": 300,
+  "agree": 0.9767
+ },
+ "masked_none": {
+  "all": {
+   "n": 1567,
+   "agree": 0.9445
+  },
+  "bot_action_same": {
+   "n": 470,
+   "agree": 0.934
+  },
+  "bot_action_changed": {
+   "n": 797,
+   "agree": 0.9385
+  }
+ },
+ "repeat_prev_rate": {
+  "model": 0.3875,
+  "bot": 0.371,
+  "masked_model": 0.367,
+  "n": 1267
+ },
+ "model_choice_share": {
+  "forward": 991,
+  "turn left": 268,
+  "turn right": 308
+ }
+}
