@@ -135,6 +135,8 @@ Each row was run once after its criteria were committed. Reports are in Korean; 
 
 Seed ranges and which are locked: `reports/seeds.md`. Checkpoints and caches kept outside the repository: `reports/checkpoints.md`.
 
+Stage 13 and 15 reach the on-device model through a small signed macOS command-line app. That app lives in **Kortex, a separate personal project of the author's that is not part of this work and is not public**; running BabyAI through it was one test inside it, and nothing in this repository depends on it. Any signed macOS binary that answers a JSON request per step would do instead — `probe/stage13.py` takes the binary's path as an argument.
+
 ## Repository layout
 
 | Path | Contents |

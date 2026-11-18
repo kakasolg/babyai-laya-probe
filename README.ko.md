@@ -109,7 +109,8 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
 12. ([win]) 호스팅 · 공개 결정 모델 참조선(Gemini Decision 1 글 · 그림 · 글+그림, clef-flash) — `reports/stage12.md`, 선언 `reports/stage12_prereg.md`, `python -m probe.stage12`.
 13. Apple Foundation Models 참조선([mac] 맥 미니, 학습 없음) — **`reports/stage13.md`**, 선언 `reports/stage13_prereg.md`(추가 선언 6~8절),
    `python -m probe.stage13 stepcheck|loop|help [--tier device|pcc] [--seeds 10000-10099]`.
-   모델은 Kortex 저장소의 서명된 맥 프로브 앱(`KortexProbeApp --run "babyai --tier device"`)을 자식 프로세스로 불러 쓴다. 맥 venv는 `/Volumes/EXA/devel/venvs/babyai-laya-venv`(minigrid만).
+   모델은 서명된 맥 명령줄 앱을 자식 프로세스로 띄워 부른다(걸음마다 JSON 한 줄). 여기서 쓴 앱은 **Kortex**의 것인데, 이것은 **MoKa의 다른 개인 프로젝트이고 이 작업의 일부가 아니며 공개돼 있지 않다** — BabyAI를 그 앱으로 돌려 본 것은 그 프로젝트 안의 한 가지 테스트였고, 이 저장소의 다른 어떤 것도 그 앱에 기대지 않는다. 같은 규약(stdin/stdout JSON)을 지키는 다른 바이너리를 `--app`으로 주면 된다.
+   Kortex 저장소의 서명된 맥 프로브 앱(`KortexProbeApp --run "babyai --tier device"`)을 자식 프로세스로 불러 쓴다. 맥 venv는 `/Volumes/EXA/devel/venvs/babyai-laya-venv`(minigrid만).
    - 온디바이스 걸음 단위(1,567걸음): 봇과 일치 62.5 %이나 93.7 %가 forward(늘 forward면 60.4 %), 막힌 걸음에서 forward 87.2 %.
    - 온디바이스 닫힌 루프 100판(seed 10000~10099, 규칙 없음): 12판. 실패 88판은 모두 막힌 칸 앞에서 forward 반복.
    - 20 · 40 · 60걸음에 봇이 한 걸음 돕기: 44판(살린 32, 망가뜨린 0). 실패 56판은 평균으로는 목표에 가까워지지 않음.
