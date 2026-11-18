@@ -8,6 +8,26 @@ The test bed is [BabyAI](https://minigrid.farama.org/environments/babyai/) (Mini
 
 **This is not a new method and not a sample-efficiency result.** Fine-tuning a pretrained language model to pick BabyAI actions from text observations was published in 2022 (LID; see [Prior work](#prior-work)), with higher model-alone numbers than ours at equal demonstration counts. What this repository adds is narrower: paired measurements of a small executor-side rule, what part of that rule does the work, and a set of pre-declared, run-once checks.
 
+## Play it first
+
+**<https://mokaflow.itch.io/babyai-laya-an-ai-in-the-room>** — runs in the browser, nothing to install, about a minute to see the point.
+
+The game is the same rooms, the same observations and the same stop condition as the experiments below. You watch a small decision model drive a room on its own, and you take over when it stops.
+
+<!-- screenshots: docs/img/puzzle_stuck.png, docs/img/puzzle_solved.png, docs/img/drive_card.png — see the board instruction of 2026-11-19; uncomment the block below once the three files are committed.
+<p>
+  <img src="docs/img/puzzle_stuck.png" width="32%" alt="Puzzle mode: the autopilot has stopped and the moves you may make are shown beside the car">
+  <img src="docs/img/puzzle_solved.png" width="32%" alt="A solved room with the floor lit by grade: yellow 1, green 2, blue 3">
+  <img src="docs/img/drive_card.png" width="32%" alt="Drive mode: the card at the end of a round of ten rooms">
+</p>
+-->
+
+- **Puzzle mode** (the first screen) is the shortest version. The autopilot is fixed at its weakest grade and drives a room it cannot finish alone. When it stops, the moves you may make appear beside the car; you make exactly **one**, and it drives on, keeping its record of where it has already acted. 106 rooms, filtered so the car never stops within 5 steps of the toy. Stars count your moves against the room's fewest.
+- **Drive mode** is the full thing: three autopilot grades, take over whenever you want, and a card at the end of each round of ten rooms.
+- **The floor lights up** when you solve a room. For every cell and every facing it shows whether each grade's autopilot would get to the toy from there alone — yellow grade 1, green 2, blue 3. That one picture is what the whole study is about. Averaged over the 300 rooms in the pack, grade 1 lights 48 % of the cell-and-facing pairs, grade 2 86 % and grade 3 92 %; a single room can be far better or worse.
+
+The model that drives in real time in the browser is the small CNN, not Laya; Laya appears as recorded replays. The baby and toy sprites are AI-generated images (sources in `godot/drive/baby/README.md` and `godot/drive/toys/README.md`). Source and design notes: `godot/` and [`godot/drive/PUZZLE.md`](godot/drive/PUZZLE.md).
+
 ## What we found
 
 1. **A fine-tuned choice model finishes most rooms alone, at about the expert's pace.** With about 1,000 demonstrations per task it solves 84–92 % of unseen layouts on four single-room tasks, including a two-stage task (pick up one object, put it next to another).
@@ -198,10 +218,6 @@ $PY -m probe.closed_loop --policy model --model ~/babyai-laya-ft/gotolocal-s0 --
 ```
 
 Per-stage commands are in [README.ko.md](README.ko.md) and at the top of each `probe/stageN.py`. Demonstration dumps and checkpoints are not in git; dumps are regenerated from seeds. Fine-tuned weights are available on request; see [Licence](#licence).
-
-## Game
-
-A browser build is at <https://mokaflow.itch.io/babyai-laya-an-ai-in-the-room>. The model that drives in real time in the browser is the small CNN, not Laya; Laya appears as recorded replays. The baby and toy sprites are AI-generated images (sources in `godot/drive/baby/README.md` and `godot/drive/toys/README.md`).
 
 ## Licence
 
