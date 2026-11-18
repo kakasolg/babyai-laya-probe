@@ -115,6 +115,9 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
 
 번호 없는 정리 문서:
 - 네 과제 정리(GoToLocal · PickupDist · 물건 16개 · 옮겨 놓기, 커밋된 숫자만) — **`reports/summary_four_tasks.md`** ([cloud] 작성, [win] 숫자 대조). 예전 README의 11번.
+- seed 장부(어느 범위를 어디에 썼고 무엇이 잠겼나) — **`reports/seeds.md`**.
+- 체크포인트 · 저장소 밖 자료 목록(이름 · 위치 · 크기, 다시 만들 수 있나) — `reports/checkpoints.md`.
+- 11-18 저장소 정리 보고(MoKa가 정할 것 목록 포함) — `reports/cleanup_1118.md`.
 - GoToLocal 한 장 정리는 위 7번(`reports/summary_gotolocal.md`)에 그대로 둔다(번호를 옮기면 이전 글의 "7단계"가 어긋나서).
 
 게임에서 잰 것(단계 번호 없음, [win]):
