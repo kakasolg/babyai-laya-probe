@@ -1,0 +1,2794 @@
+{
+ "name": "putnext-s0-V7-r1",
+ "policy": "V7",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 279,
+  "within_2x_bot": 236
+ },
+ "timeout": 21,
+ "reached": {
+  "1 never picked anything up": 6,
+  "2 picked only wrong objects": 2,
+  "3 picked the right object, never put it right": 13,
+  "4 success": 279
+ },
+ "wrong_pickups": 9,
+ "episodes_with_wrong_pickup": 8,
+ "repickups_after_a_drop": 61,
+ "null_actions": {
+  "null pickup": 352,
+  "null drop": 85
+ },
+ "blocked_forward_steps": 730,
+ "steps_total": 8006,
+ "blocked_forward_rate": 0.0912,
+ "mean_steps_success": 19.06,
+ "bot_mean_steps_same_eps": 11.39,
+ "actions": {
+  "forward": 3249,
+  "pick up": 707,
+  "turn left": 1685,
+  "drop": 427,
+  "turn right": 1938
+ },
+ "per_episode": {
+  "10000": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10001": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10002": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10003": {
+   "end": "success",
+   "steps": 16,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10004": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10005": {
+   "end": "success",
+   "steps": 10,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10006": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10007": {
+   "end": "success",
+   "steps": 17,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10008": {
+   "end": "success",
+   "steps": 9,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10009": {
+   "end": "success",
+   "steps": 16,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10010": {
+   "end": "success",
+   "steps": 39,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 1,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10011": {
+   "end": "success",
+   "steps": 9,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10012": {
+   "end": "success",
+   "steps": 19,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10013": {
+   "end": "success",
+   "steps": 10,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10014": {
+   "end": "success",
+   "steps": 22,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10015": {
+   "end": "success",
+   "steps": 16,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10016": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10017": {
+   "end": "success",
+   "steps": 18,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10018": {
+   "end": "success",
+   "steps": 39,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10019": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10020": {
+   "end": "success",
+   "steps": 93,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 7,
+   "triggers": 0
+  },
+  "10021": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10022": {
+   "end": "success",
+   "steps": 15,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10023": {
+   "end": "success",
+   "steps": 28,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10024": {
+   "end": "success",
+   "steps": 14,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10025": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10026": {
+   "end": "success",
+   "steps": 13,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10027": {
+   "end": "success",
+   "steps": 90,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 1,
+   "interventions": 10,
+   "triggers": 0
+  },
+  "10028": {
+   "end": "success",
+   "steps": 12,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10029": {
+   "end": "success",
+   "steps": 16,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 1,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10030": {
+   "end": "success",
+   "steps": 17,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10031": {
+   "end": "success",
+   "steps": 21,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10032": {
+   "end": "success",
+   "steps": 22,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10033": {
+   "end": "success",
+   "steps": 9,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10034": {
+   "end": "success",
+   "steps": 16,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10035": {
+   "end": "success",
+   "steps": 18,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10036": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10037": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10038": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10039": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10040": {
+   "end": "success",
+   "steps": 42,
+   "bot": 22,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10041": {
+   "end": "success",
+   "steps": 11,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10042": {
+   "end": "success",
+   "steps": 12,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10043": {
+   "end": "success",
+   "steps": 29,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10044": {
+   "end": "success",
+   "steps": 12,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10045": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10046": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10047": {
+   "end": "success",
+   "steps": 19,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10048": {
+   "end": "success",
+   "steps": 8,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10049": {
+   "end": "success",
+   "steps": 16,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10050": {
+   "end": "success",
+   "steps": 25,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10051": {
+   "end": "success",
+   "steps": 15,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10052": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10053": {
+   "end": "success",
+   "steps": 94,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 5,
+   "triggers": 0
+  },
+  "10054": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 7,
+   "triggers": 0
+  },
+  "10055": {
+   "end": "success",
+   "steps": 12,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10056": {
+   "end": "success",
+   "steps": 11,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10057": {
+   "end": "success",
+   "steps": 17,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10058": {
+   "end": "success",
+   "steps": 13,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10059": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10060": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 2,
+   "interventions": 13,
+   "triggers": 0
+  },
+  "10061": {
+   "end": "success",
+   "steps": 14,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10062": {
+   "end": "success",
+   "steps": 14,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10063": {
+   "end": "success",
+   "steps": 8,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10064": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10065": {
+   "end": "success",
+   "steps": 11,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10066": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10067": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10068": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10069": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10070": {
+   "end": "success",
+   "steps": 9,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10071": {
+   "end": "success",
+   "steps": 16,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10072": {
+   "end": "success",
+   "steps": 11,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10073": {
+   "end": "success",
+   "steps": 95,
+   "bot": 22,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 6,
+   "triggers": 0
+  },
+  "10074": {
+   "end": "success",
+   "steps": 10,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10075": {
+   "end": "success",
+   "steps": 12,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10076": {
+   "end": "success",
+   "steps": 27,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10077": {
+   "end": "success",
+   "steps": 26,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10078": {
+   "end": "success",
+   "steps": 13,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10079": {
+   "end": "success",
+   "steps": 10,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10080": {
+   "end": "success",
+   "steps": 13,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10081": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10082": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10083": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10084": {
+   "end": "success",
+   "steps": 25,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10085": {
+   "end": "success",
+   "steps": 13,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10086": {
+   "end": "success",
+   "steps": 51,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 7,
+   "triggers": 0
+  },
+  "10087": {
+   "end": "success",
+   "steps": 13,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10088": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 30,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 9,
+   "triggers": 0
+  },
+  "10089": {
+   "end": "success",
+   "steps": 34,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10090": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10091": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10092": {
+   "end": "success",
+   "steps": 15,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10093": {
+   "end": "success",
+   "steps": 13,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10094": {
+   "end": "success",
+   "steps": 14,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10095": {
+   "end": "success",
+   "steps": 11,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10096": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10097": {
+   "end": "success",
+   "steps": 63,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10098": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 6,
+   "triggers": 0
+  },
+  "10099": {
+   "end": "success",
+   "steps": 7,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10100": {
+   "end": "success",
+   "steps": 15,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10101": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10102": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10103": {
+   "end": "success",
+   "steps": 14,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10104": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10105": {
+   "end": "success",
+   "steps": 11,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10106": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10107": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10108": {
+   "end": "success",
+   "steps": 27,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10109": {
+   "end": "success",
+   "steps": 23,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 5,
+   "triggers": 0
+  },
+  "10110": {
+   "end": "success",
+   "steps": 14,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10111": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10112": {
+   "end": "success",
+   "steps": 21,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10113": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10114": {
+   "end": "success",
+   "steps": 8,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10115": {
+   "end": "success",
+   "steps": 17,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10116": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10117": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10118": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 23,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 10,
+   "triggers": 0
+  },
+  "10119": {
+   "end": "success",
+   "steps": 18,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10120": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10121": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10122": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 24,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 8,
+   "triggers": 0
+  },
+  "10123": {
+   "end": "success",
+   "steps": 23,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 5,
+   "triggers": 0
+  },
+  "10124": {
+   "end": "success",
+   "steps": 35,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 5,
+   "triggers": 0
+  },
+  "10125": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 9,
+   "triggers": 0
+  },
+  "10126": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10127": {
+   "end": "success",
+   "steps": 60,
+   "bot": 21,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 8,
+   "triggers": 0
+  },
+  "10128": {
+   "end": "success",
+   "steps": 15,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10129": {
+   "end": "success",
+   "steps": 20,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10130": {
+   "end": "success",
+   "steps": 16,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10131": {
+   "end": "success",
+   "steps": 13,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10132": {
+   "end": "success",
+   "steps": 14,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10133": {
+   "end": "success",
+   "steps": 11,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10134": {
+   "end": "success",
+   "steps": 11,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10135": {
+   "end": "success",
+   "steps": 22,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10136": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 14,
+   "triggers": 0
+  },
+  "10137": {
+   "end": "success",
+   "steps": 16,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10138": {
+   "end": "success",
+   "steps": 17,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10139": {
+   "end": "success",
+   "steps": 26,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 1,
+   "interventions": 6,
+   "triggers": 0
+  },
+  "10140": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10141": {
+   "end": "success",
+   "steps": 75,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10142": {
+   "end": "success",
+   "steps": 15,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10143": {
+   "end": "success",
+   "steps": 17,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10144": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10145": {
+   "end": "success",
+   "steps": 24,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10146": {
+   "end": "success",
+   "steps": 127,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 9,
+   "triggers": 0
+  },
+  "10147": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10148": {
+   "end": "success",
+   "steps": 19,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10149": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 11,
+   "triggers": 0
+  },
+  "10150": {
+   "end": "success",
+   "steps": 13,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10151": {
+   "end": "success",
+   "steps": 11,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10152": {
+   "end": "success",
+   "steps": 21,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10153": {
+   "end": "success",
+   "steps": 53,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 6,
+   "triggers": 0
+  },
+  "10154": {
+   "end": "success",
+   "steps": 22,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10155": {
+   "end": "success",
+   "steps": 18,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10156": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10157": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10158": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10159": {
+   "end": "success",
+   "steps": 16,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10160": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10161": {
+   "end": "success",
+   "steps": 13,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10162": {
+   "end": "success",
+   "steps": 81,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 7,
+   "triggers": 0
+  },
+  "10163": {
+   "end": "success",
+   "steps": 12,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10164": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10165": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10166": {
+   "end": "success",
+   "steps": 16,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10167": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10168": {
+   "end": "success",
+   "steps": 22,
+   "bot": 20,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10169": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 17,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 8,
+   "triggers": 0
+  },
+  "10170": {
+   "end": "success",
+   "steps": 16,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10171": {
+   "end": "success",
+   "steps": 12,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10172": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10173": {
+   "end": "success",
+   "steps": 28,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10174": {
+   "end": "success",
+   "steps": 18,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10175": {
+   "end": "success",
+   "steps": 27,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10176": {
+   "end": "success",
+   "steps": 13,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10177": {
+   "end": "success",
+   "steps": 16,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10178": {
+   "end": "success",
+   "steps": 11,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10179": {
+   "end": "success",
+   "steps": 27,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 1,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10180": {
+   "end": "success",
+   "steps": 12,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10181": {
+   "end": "success",
+   "steps": 19,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10182": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10183": {
+   "end": "success",
+   "steps": 18,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10184": {
+   "end": "success",
+   "steps": 14,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10185": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10186": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10187": {
+   "end": "success",
+   "steps": 12,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 5,
+   "triggers": 0
+  },
+  "10188": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10189": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 25,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 8,
+   "triggers": 0
+  },
+  "10190": {
+   "end": "success",
+   "steps": 15,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10191": {
+   "end": "success",
+   "steps": 43,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10192": {
+   "end": "success",
+   "steps": 13,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10193": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10194": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10195": {
+   "end": "success",
+   "steps": 18,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10196": {
+   "end": "success",
+   "steps": 14,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10197": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 7,
+   "triggers": 0
+  },
+  "10198": {
+   "end": "success",
+   "steps": 21,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10199": {
+   "end": "success",
+   "steps": 74,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10200": {
+   "end": "success",
+   "steps": 13,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10201": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 8,
+   "triggers": 0
+  },
+  "10202": {
+   "end": "success",
+   "steps": 50,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 6,
+   "triggers": 0
+  },
+  "10203": {
+   "end": "success",
+   "steps": 34,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10204": {
+   "end": "success",
+   "steps": 22,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10205": {
+   "end": "success",
+   "steps": 12,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10206": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 11,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 11,
+   "triggers": 0
+  },
+  "10207": {
+   "end": "success",
+   "steps": 16,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10208": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10209": {
+   "end": "success",
+   "steps": 32,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10210": {
+   "end": "success",
+   "steps": 12,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10211": {
+   "end": "success",
+   "steps": 12,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10212": {
+   "end": "success",
+   "steps": 16,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10213": {
+   "end": "success",
+   "steps": 36,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10214": {
+   "end": "success",
+   "steps": 10,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10215": {
+   "end": "success",
+   "steps": 27,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10216": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10217": {
+   "end": "success",
+   "steps": 16,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10218": {
+   "end": "success",
+   "steps": 10,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10219": {
+   "end": "success",
+   "steps": 16,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10220": {
+   "end": "success",
+   "steps": 9,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10221": {
+   "end": "success",
+   "steps": 14,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10222": {
+   "end": "success",
+   "steps": 19,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 5,
+   "triggers": 0
+  },
+  "10223": {
+   "end": "success",
+   "steps": 18,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10224": {
+   "end": "success",
+   "steps": 17,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10225": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 14,
+   "reached": "2 picked only wrong objects",
+   "wrong_picks": 1,
+   "interventions": 10,
+   "triggers": 0
+  },
+  "10226": {
+   "end": "success",
+   "steps": 84,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 5,
+   "triggers": 0
+  },
+  "10227": {
+   "end": "success",
+   "steps": 16,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10228": {
+   "end": "success",
+   "steps": 11,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10229": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 10,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 6,
+   "triggers": 0
+  },
+  "10230": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10231": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "1 never picked anything up",
+   "wrong_picks": 0,
+   "interventions": 8,
+   "triggers": 0
+  },
+  "10232": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 8,
+   "triggers": 0
+  },
+  "10233": {
+   "end": "success",
+   "steps": 18,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10234": {
+   "end": "success",
+   "steps": 15,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10235": {
+   "end": "success",
+   "steps": 19,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10236": {
+   "end": "success",
+   "steps": 42,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10237": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10238": {
+   "end": "success",
+   "steps": 13,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10239": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10240": {
+   "end": "success",
+   "steps": 12,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10241": {
+   "end": "success",
+   "steps": 18,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10242": {
+   "end": "success",
+   "steps": 61,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 10,
+   "triggers": 0
+  },
+  "10243": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10244": {
+   "end": "success",
+   "steps": 54,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 5,
+   "triggers": 0
+  },
+  "10245": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10246": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10247": {
+   "end": "success",
+   "steps": 14,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10248": {
+   "end": "success",
+   "steps": 26,
+   "bot": 23,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10249": {
+   "end": "success",
+   "steps": 11,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10250": {
+   "end": "success",
+   "steps": 19,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10251": {
+   "end": "success",
+   "steps": 14,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 1,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10252": {
+   "end": "success",
+   "steps": 15,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10253": {
+   "end": "success",
+   "steps": 17,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10254": {
+   "end": "success",
+   "steps": 24,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10255": {
+   "end": "success",
+   "steps": 12,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10256": {
+   "end": "success",
+   "steps": 23,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10257": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10258": {
+   "end": "success",
+   "steps": 16,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10259": {
+   "end": "success",
+   "steps": 29,
+   "bot": 20,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10260": {
+   "end": "success",
+   "steps": 13,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10261": {
+   "end": "success",
+   "steps": 18,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10262": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10263": {
+   "end": "success",
+   "steps": 11,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10264": {
+   "end": "success",
+   "steps": 16,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10265": {
+   "end": "success",
+   "steps": 15,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10266": {
+   "end": "success",
+   "steps": 18,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10267": {
+   "end": "success",
+   "steps": 18,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10268": {
+   "end": "success",
+   "steps": 16,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10269": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 15,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 5,
+   "triggers": 0
+  },
+  "10270": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10271": {
+   "end": "success",
+   "steps": 11,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10272": {
+   "end": "success",
+   "steps": 10,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10273": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 16,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10274": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10275": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10276": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10277": {
+   "end": "success",
+   "steps": 13,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3,
+   "triggers": 0
+  },
+  "10278": {
+   "end": "success",
+   "steps": 18,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10279": {
+   "end": "success",
+   "steps": 15,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10280": {
+   "end": "success",
+   "steps": 24,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 5,
+   "triggers": 0
+  },
+  "10281": {
+   "end": "success",
+   "steps": 45,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10282": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10283": {
+   "end": "success",
+   "steps": 16,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10284": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10285": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10286": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10287": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 17,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 9,
+   "triggers": 0
+  },
+  "10288": {
+   "end": "success",
+   "steps": 8,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10289": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10290": {
+   "end": "success",
+   "steps": 14,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10291": {
+   "end": "success",
+   "steps": 10,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10292": {
+   "end": "success",
+   "steps": 20,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2,
+   "triggers": 0
+  },
+  "10293": {
+   "end": "success",
+   "steps": 11,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10294": {
+   "end": "success",
+   "steps": 16,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10295": {
+   "end": "success",
+   "steps": 11,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  },
+  "10296": {
+   "end": "success",
+   "steps": 78,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 7,
+   "triggers": 0
+  },
+  "10297": {
+   "end": "success",
+   "steps": 81,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4,
+   "triggers": 0
+  },
+  "10298": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0,
+   "triggers": 0
+  },
+  "10299": {
+   "end": "success",
+   "steps": 58,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1,
+   "triggers": 0
+  }
+ },
+ "vs_no_rule": {
+  "saved": [
+   10018,
+   10020,
+   10023,
+   10032,
+   10040,
+   10041,
+   10043,
+   10050,
+   10053,
+   10072,
+   10073,
+   10084,
+   10089,
+   10097,
+   10127,
+   10141,
+   10142,
+   10145,
+   10146,
+   10153,
+   10173,
+   10175,
+   10188,
+   10199,
+   10202,
+   10203,
+   10209,
+   10213,
+   10226,
+   10242,
+   10244,
+   10281,
+   10296,
+   10297,
+   10299
+  ],
+  "saved_within_2x_bot": 8,
+  "broken": [
+   10197
+  ],
+  "broken_with_rule_chosen_pickup_or_drop": [
+   10197
+  ]
+ },
+ "variant": "V7",
+ "rng_seed": 1,
+ "seeds": "10000-10299",
+ "interventions": 613,
+ "interventions_per_episode": 2.043,
+ "episodes_with_intervention": 209,
+ "rule_triggered_steps": 0,
+ "resets": 0,
+ "v4_keys_exhausted": 0,
+ "model": "babyai-laya-ft/putnext-s0"
+}
