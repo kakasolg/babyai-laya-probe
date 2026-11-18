@@ -159,7 +159,7 @@ $PY -m probe.finetune data/gotolocal_train.jsonl --seed 0                   # ab
 $PY -m probe.closed_loop --policy model --model ~/babyai-laya-ft/gotolocal-s0 --name laya-s0
 ```
 
-Per-stage commands are in [README.ko.md](README.ko.md) and at the top of each `probe/stageN.py`. Demonstration dumps and checkpoints are not in git; dumps are regenerated from seeds. For the published weights see [Licence](#licence).
+Per-stage commands are in [README.ko.md](README.ko.md) and at the top of each `probe/stageN.py`. Demonstration dumps and checkpoints are not in git; dumps are regenerated from seeds. Fine-tuned weights are available on request; see [Licence](#licence).
 
 ## Game
 
@@ -169,7 +169,7 @@ A browser build is at <https://mokaflow.itch.io/babyai-laya-an-ai-in-the-room>. 
 
 This repository is MIT-licensed; see [LICENSE](LICENSE).
 
-Fine-tuned weights are released under Apache-2.0, the licence of the upstream checkpoint they are derived from. **Download links: _to be filled in when the upload finishes._** The published set is one checkpoint per task at 1,000 demonstrations (`gotolocal-s0`, `pickupdist-s0`, `putnext-s0`) plus `gotolocal-n5000-s0`; the other ~36 checkpoints are reproducible from the seeds and commands here and are not uploaded.
+**Fine-tuned weights are not uploaded, but you may have them — just ask** (open an issue). They are a derivative of the upstream checkpoint and are shared under its licence, Apache-2.0. They are not hosted because every checkpoint here is reproducible from the seeds and commands in this repository: one fine-tuning run takes about 5 minutes on a single consumer GPU for a 1,000-demonstration task (see [Reproducing](#reproducing)).
 
 Third-party components:
 
