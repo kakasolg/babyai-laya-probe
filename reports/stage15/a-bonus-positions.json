@@ -1,0 +1,120 @@
+{
+ "blocked_steps": 249,
+ "unique_states": 247,
+ "orders": {
+  "turn left / turn right / forward": {
+   "picks": {
+    "forward": 217,
+    "turn left": 32
+   },
+   "by_position": {
+    "last": 217,
+    "first": 32
+   },
+   "agree_bot": 24,
+   "format_errors": 0
+  },
+  "turn left / forward / turn right": {
+   "picks": {
+    "forward": 243,
+    "turn left": 6
+   },
+   "by_position": {
+    "middle": 243,
+    "first": 6
+   },
+   "agree_bot": 6,
+   "format_errors": 0
+  },
+  "turn right / turn left / forward": {
+   "picks": {
+    "forward": 194,
+    "turn right": 39,
+    "turn left": 16
+   },
+   "by_position": {
+    "last": 194,
+    "first": 39,
+    "middle": 16
+   },
+   "agree_bot": 31,
+   "format_errors": 0
+  },
+  "turn right / forward / turn left": {
+   "picks": {
+    "forward": 241,
+    "turn right": 8
+   },
+   "by_position": {
+    "middle": 241,
+    "first": 8
+   },
+   "agree_bot": 0,
+   "format_errors": 0
+  },
+  "forward / turn left / turn right": {
+   "picks": {
+    "forward": 153,
+    "turn left": 96
+   },
+   "by_position": {
+    "first": 153,
+    "middle": 96
+   },
+   "agree_bot": 54,
+   "format_errors": 0
+  },
+  "forward / turn right / turn left": {
+   "picks": {
+    "forward": 143,
+    "turn right": 67,
+    "turn left": 39
+   },
+   "by_position": {
+    "first": 143,
+    "middle": 67,
+    "last": 39
+   },
+   "agree_bot": 78,
+   "format_errors": 0
+  }
+ },
+ "by_position_all_orders": {
+  "first": {
+   "turn left": 38,
+   "turn right": 47,
+   "forward": 296
+  },
+  "middle": {
+   "forward": 484,
+   "turn left": 112,
+   "turn right": 67
+  },
+  "last": {
+   "forward": 411,
+   "turn left": 39
+  }
+ },
+ "turn_right_when_not_middle": 47,
+ "steps_when_not_middle": 996,
+ "turn_right_share_not_middle": 0.0472,
+ "bot_action_on_blocked": {
+  "turn left": 113,
+  "turn right": 136
+ },
+ "reading": "not the position",
+ "scorer_stats": {
+  "model": "afm-device",
+  "new_calls": 988,
+  "reused": 506,
+  "errors_retried": 0,
+  "latency_ms_p50": 546.4,
+  "latency_ms_p95": 572.5,
+  "usage_new_calls": {
+   "input_tokens": 585324,
+   "output_tokens": 13172
+  },
+  "format_errors_new_calls": 0
+ },
+ "called": "2026-11-18"
+}
