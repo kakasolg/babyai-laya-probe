@@ -61,6 +61,14 @@ WSL 실행은 `baby-ai-laya-probe-main`에서, 예전 단계 일부는 `baby-ai-
 
 ## 5. 게임 사용자 폴더 (Windows `%APPDATA%\Godot\app_userdata\BabyAI Laya- an AI in the room\`)
 
+**11-18 덧붙임 — 이 폴더는 두 벌이다.** Claude 데스크톱 앱(MSIX) 안에서 띄운 프로그램이 쓰면 앱 전용 복사본 `%LOCALAPPDATA%\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Godot\app_userdata\…`로 가고, 앱 안에서 읽으면 그쪽이 먼저 보인다. MoKa가 바깥에서 띄운 게임은 진짜 위치에 쓴다.
+- 앱 전용 복사본에만 있는 것: `correct_log.jsonl`, `test_runs\`, `long_rooms.jsonl`, `help_runs\`, `demo_log.jsonl`, `copy_probe.jsonl`, 그리고 Claude가 띄운 게임의 `drive_log.jsonl`(85줄).
+- 진짜 위치에 있는 것: MoKa가 직접 둔 판의 `drive_log.jsonl`(11-18 기준 50줄), `garage.json`, `puzzle_progress.json`.
+- 진짜 파일을 읽거나 복사하려면 앱 밖 프로세스(예: `explorer.exe 스크립트.cmd`)를 쓴다.
+- 두 벌 모두 `C:\Users\moka\Backups\babyai-laya-probe\2026-11-18`에 백업했다(11-18): 앱 전용은 `game_userdata\`, 진짜는 `game_userdata_real\`.
+
+아래 표의 파일 목록은 두 벌을 합친 것이다.
+
 | 파일 | 무엇 | 크기 | 다시 만들 수 있음 |
 |---|---|---|---|
 | `correct_log.jsonl` | Correct 모드 기록(사람 교정 포함) | 1.9 MB | **아니오** |
