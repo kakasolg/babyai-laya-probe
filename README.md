@@ -2,7 +2,7 @@
 
 한국어: [README.ko.md](README.ko.md) — the original working README with every stage and command.
 
-> **Draft (2026-11-18).** Numbers are copied from the committed reports; the commit hashes in the index below still need a second check.
+> **Draft (2026-11-18).** Numbers are copied from the committed reports and were checked against them; LID's numbers in [Prior work](#prior-work) are not yet checked against the paper.
 
 A small, controlled study of one question: **how far can you hand step-by-step decisions to a small "choice" model, and how much of the remaining gap is closed by a few lines of code around it?**
 
@@ -122,14 +122,14 @@ Each row was run once after its criteria were committed. Reports are in Korean; 
 
 | Stage | What | Declared in | Result in | Outcome |
 |---|---|---|---|---|
-| 6 | GoToLocal, held-out seeds 20000–20299 | `reports/stage6_prereg.md` (`eea7aa4`) | `reports/stage6.md` | Model alone **missed** its band by 2 rooms on two seeds; rule effect reproduced |
+| 6 | GoToLocal, held-out seeds 20000–20299 | `reports/stage6_prereg.md` (`eea7aa4`) | `reports/stage6.md` (`37316c9`) | Model alone **missed** its band by 2 rooms on two seeds; rule effect reproduced |
 | 8d | PickupDist, 30000–30299 | `stage8d_prereg.md` (`53923b2`) | `stage8d.md` (`e15e82b`) | Both criteria passed |
 | 10e | PutNextLocal, 70000–70299 | `stage10e_prereg.md` (`97ba88c`) | `stage10e.md` (`ad462dd`) | Both criteria passed |
 | 9 | 16 objects, transfer and retrain (dev) | `stage9_prereg.md` (`de405bd`) | `stage9.md` (`7dfe0ba`) | Transfer loses 20–28 rooms; retraining recovers |
 | 11a | Last four actions in the input (dev) | `stage11_prereg.md` (`387b061`) | `stage11.md` (`9b0c6ae`) | "Explains part of the gap" |
-| 11b | Demonstration-count curve (dev) | `stage11b_prereg.md` (`f01446a`), two addenda | `stage11b.md` (`91b6b4f`, `f3666c6`, `b486ae4`) | Demonstration count was the bottleneck up to about 5,000 |
+| 11b | Demonstration-count curve (dev) | `stage11b_prereg.md` (`f01446a`); addenda `stage11b2_prereg.md` (`9616ad9`), `stage11b3_prereg.md` (`32e4c38`, `a9dd63e`) | `stage11b.md` (`91b6b4f`, `f3666c6`, `b486ae4`) | Demonstration count was the bottleneck up to about 5,000 |
 | 12 | Hosted and local untrained models, text and image (dev) | `stage12_prereg.md` (`1e51527`) | `stage12.md` (`d02eb96`) | Reference lines; no thresholds |
-| 13 | On-device Apple Foundation Models (dev, 100 rooms) | `stage13_prereg.md` (`0ac7302`) | `stage13.md` | Reference line |
+| 13 | On-device Apple Foundation Models (dev, 100 rooms) | `stage13_prereg.md` (`0ac7302`); addenda `750c791`, `fd713ef`, `d604caa` | `stage13.md` (`817df4f`, `47db55d`, `fb9db09`, `a9161db`) | Reference line |
 | 14 | Rule variants (dev) | `stage14_prereg.md` (`06091fc`) | `stage14.md` (`44efb15`) | See table above |
 | — | One move of help (dev) | `help_test_prereg.md` (`1f36345`) | `help_test.md` (`1e3f909`) | Both pre-set criteria answered "no" |
 
