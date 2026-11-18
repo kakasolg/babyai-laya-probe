@@ -170,6 +170,8 @@ Each row was run once after its criteria were committed. Reports are in Korean; 
 
 Seed ranges and which are locked: `reports/seeds.md`. Checkpoints and caches kept outside the repository: `reports/checkpoints.md`.
 
+Stage 13 and 15 reach the on-device model through a small signed macOS command-line app. That app lives in **Kortex, a separate personal project of the author's that is not part of this work and is not public**; running BabyAI through it was one test inside it, and nothing in this repository depends on it. Any signed macOS binary that answers a JSON request per step would do instead — `probe/stage13.py` takes the binary's path as an argument.
+
 ## Repository layout
 
 | Path | Contents |
@@ -194,19 +196,24 @@ $PY -m probe.finetune data/gotolocal_train.jsonl --seed 0                   # ab
 $PY -m probe.closed_loop --policy model --model ~/babyai-laya-ft/gotolocal-s0 --name laya-s0
 ```
 
-Per-stage commands are in [README.ko.md](README.ko.md) and at the top of each `probe/stageN.py`. Demonstration dumps and checkpoints are not in git; dumps are regenerated from seeds. Fine-tuned weights are not published at the moment.
+Per-stage commands are in [README.ko.md](README.ko.md) and at the top of each `probe/stageN.py`. Demonstration dumps and checkpoints are not in git; dumps are regenerated from seeds. Fine-tuned weights are available on request; see [Licence](#licence).
 
 ## Game
 
 A browser build is at <https://mokaflow.itch.io/babyai-laya-an-ai-in-the-room>. The model that drives in real time in the browser is the small CNN, not Laya; Laya appears as recorded replays. The baby and toy sprites are AI-generated images (sources in `godot/drive/baby/README.md` and `godot/drive/toys/README.md`).
 
-## Third-party components
+## Licence
 
-- MiniGrid 3.2.0 — Apache-2.0 according to the repository's `LICENSE` file; its package metadata says MIT.
-- Laya checkpoint and SDK — Apache-2.0 (model card). ModernBERT — Apache-2.0.
-- Godot Engine — MIT; the web build ships its `licenses.txt`.
+This repository is MIT-licensed; see [LICENSE](LICENSE).
 
-*This repository does not yet carry a licence file of its own.*
+**Fine-tuned weights are not uploaded, but you may have them — just ask** (open an issue). They are a derivative of the upstream checkpoint and are shared under its licence, Apache-2.0. They are not hosted because every checkpoint here is reproducible from the seeds and commands in this repository: one fine-tuning run takes about 5 minutes on a single consumer GPU for a 1,000-demonstration task (see [Reproducing](#reproducing)).
+
+Third-party components:
+
+- **MiniGrid 3.2.0** — Apache-2.0 according to the repository's `LICENSE` file; its package metadata says MIT. Not redistributed here; the demonstrations and room layouts in this repository were generated with it.
+- **Laya** checkpoint and SDK — Apache-2.0 (model card). **ModernBERT** — Apache-2.0. The weights we publish are modified derivatives; the upstream notices travel with them.
+- **Godot Engine** — MIT; the web build ships its `licenses.txt`.
+- The baby and toy sprites in the puzzle mode are AI-generated images; see `godot/drive/baby/README.md` and `godot/drive/toys/README.md`.
 
 ## Language
 

@@ -1,6 +1,10 @@
 """Stage 13: Apple Foundation Models (on-device or PCC) as an untrained reference on GoToLocal. Prereg:
-reports/stage13_prereg.md. The model is reached through the signed Mac probe app of the Kortex repo
-(`KortexProbeApp --run "babyai --tier device"`), one JSON line per request on stdin/stdout.
+reports/stage13_prereg.md. The model is reached through a signed macOS command-line app that answers one
+JSON line per request on stdin/stdout (`<app> --run "babyai --tier device"`).
+
+The app used here belongs to Kortex, a separate personal project of the author's; it is not part of this
+work, is not public, and nothing else in this repository depends on it. Running BabyAI through it was one
+test inside that project. Pass --app to point at any binary with the same stdin/stdout contract.
 
   python -m probe.stage13 stepcheck [--tier device|pcc] [--app <path to KortexProbeApp binary>]
   python -m probe.stage13 loop --seeds 10000-10099 [--tier device|pcc]     (no rule; per-step log in data/)
