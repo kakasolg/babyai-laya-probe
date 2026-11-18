@@ -2,6 +2,7 @@
 
 Usage (WSL, repo root, PY=~/babyai-laya-venv/bin/python, HF_HUB_OFFLINE=1):
   $PY -m probe.stage11b dump --task gotolocal|putnext        # seeds 0-4999 -> data/n5000_<task>.jsonl (+ check vs 1,000)
+  $PY -m probe.stage11b dump --task gotolocal --upto 10000   # 11b-3: seeds 0-9999 -> data/n10000_<task>.jsonl (+ check vs 5,000)
   $PY -m probe.stage11b train --task gotolocal --n 100 --seed 0
   $PY -m probe.stage11b eval --task gotolocal --n 100 --seed 0  # step agreement, loop none, loop reset
 
@@ -20,6 +21,7 @@ import time
 
 OUT = pathlib.Path("reports/stage11b")
 DUMP = "data/n5000_{task}.jsonl"
+DUMP10K = "data/n10000_{task}.jsonl"  # 11b-3: seeds 0-9999, first 5,000 must equal DUMP
 OLD_DUMP = {"gotolocal": "/mnt/d/dev/kotlin-prj/baby-ai-laya-probe/data/gotolocal_train.jsonl",
             "putnext": "data/putnext_train.jsonl"}
 CALIB_RATIO = {"gotolocal": 400 / 5310, "putnext": 400 / 12036}
@@ -45,12 +47,13 @@ def _episode(args):
 def cmd_dump(a):
     from probe.dump_demos import guarded_seeds
     from probe.stage10 import seeds_of
-    seeds = list(guarded_seeds("0-4999"))
-    assert list(seeds_of("0-4999")) == seeds  # the stage-10 guard allows the train range too
+    rng = f"0-{a.upto - 1}"
+    seeds = list(guarded_seeds(rng))
+    assert list(seeds_of(rng)) == seeds  # the stage-10 guard allows the train range too
     t0 = time.time()
     with mp.Pool(24) as pool:
         res = pool.map(_episode, [(a.task, s) for s in seeds], chunksize=20)
-    out = DUMP.format(task=a.task)
+    out = (DUMP if a.upto == 5000 else DUMP10K).format(task=a.task)
     dropped = []
     with open(out, "w", encoding="utf-8") as f:
         for seed, keep, lines in res:
@@ -64,16 +67,22 @@ def cmd_dump(a):
     new1k = [d for d in new if d["seed"] < 1000]
     old = [json.loads(l) for l in open(OLD_DUMP[a.task], encoding="utf-8")]
     same = new1k == old
-    summ = {"task": a.task, "seeds": "0-4999", "minutes": round((time.time() - t0) / 60, 2),
+    if a.upto == 10000:
+        old5k = [json.loads(l) for l in open(DUMP.format(task=a.task), encoding="utf-8")]
+        same5k = [d for d in new if d["seed"] < 5000] == old5k
+    summ = {"task": a.task, "seeds": rng, "minutes": round((time.time() - t0) / 60, 2),
             "check_first_1000_equals_old_dump": same, "old_dump_lines": len(old), "new_first_1000_lines": len(new1k),
-            "per_n": {n: sizes(a.task, new, dropped, n) for n in (100, 500, 1000, 5000)}}
+            "per_n": {n: sizes(a.task, new, dropped, n) for n in (100, 500, 1000, 5000, 10000) if n <= a.upto}}
+    if a.upto == 10000:
+        summ["check_first_5000_equals_n5000_dump"] = same5k
+        same = same and same5k
     OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / f"dump-{a.task}.json").write_text(json.dumps(summ, indent=1), encoding="utf-8")
+    (OUT / (f"dump-{a.task}.json" if a.upto == 5000 else f"dump10k-{a.task}.json")).write_text(json.dumps(summ, indent=1), encoding="utf-8")
     print(json.dumps({k: v for k, v in summ.items() if k != "per_n"}
                      | {"per_n": {n: {k: v for k, v in d.items() if k != "dropped_seeds"}
                                   for n, d in summ["per_n"].items()}}))
     if not same:
-        raise SystemExit("first 1,000 seeds differ from the existing dump: stop (prereg 1)")
+        raise SystemExit("first 1,000 / 5,000 seeds differ from the existing dump: stop (prereg 1)")
 
 
 def sizes(task, rows, dropped, n):
@@ -83,7 +92,8 @@ def sizes(task, rows, dropped, n):
 
 
 def demos(task: str, n: int):
-    return [d for d in map(json.loads, open(DUMP.format(task=task), encoding="utf-8")) if d["seed"] < n]
+    path = (DUMP if n <= 5000 else DUMP10K).format(task=task)
+    return [d for d in map(json.loads, open(path, encoding="utf-8")) if d["seed"] < n]
 
 
 # ---------------------------------------------------------------- train
@@ -180,7 +190,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["dump", "train", "eval"])
     ap.add_argument("--task", choices=["gotolocal", "putnext"], required=True)
-    ap.add_argument("--n", type=int, choices=[100, 500, 5000])
+    ap.add_argument("--n", type=int, choices=[100, 500, 5000, 10000])
+    ap.add_argument("--upto", type=int, choices=[5000, 10000], default=5000, help="dump: seeds 0..upto-1")
     ap.add_argument("--seed", type=int, default=0)
     a = ap.parse_args()
     {"dump": cmd_dump, "train": cmd_train, "eval": cmd_eval}[a.cmd](a)
