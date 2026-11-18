@@ -1,0 +1,2482 @@
+{
+ "name": "n5000-putnext-s2-reset",
+ "policy": "reset",
+ "episodes": 300,
+ "all": {
+  "n": 300,
+  "success": 297,
+  "within_2x_bot": 290
+ },
+ "timeout": 3,
+ "reached": {
+  "3 picked the right object, never put it right": 3,
+  "4 success": 297
+ },
+ "wrong_pickups": 4,
+ "episodes_with_wrong_pickup": 3,
+ "repickups_after_a_drop": 13,
+ "null_actions": {
+  "null drop": 18,
+  "null pickup": 22
+ },
+ "blocked_forward_steps": 16,
+ "steps_total": 4329,
+ "blocked_forward_rate": 0.0037,
+ "mean_steps_success": 13.28,
+ "bot_mean_steps_same_eps": 11.65,
+ "actions": {
+  "forward": 2042,
+  "pick up": 335,
+  "turn left": 707,
+  "drop": 328,
+  "turn right": 917
+ },
+ "per_episode": {
+  "10000": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10001": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10002": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10003": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10004": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10005": {
+   "end": "success",
+   "steps": 10,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10006": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10007": {
+   "end": "success",
+   "steps": 14,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10008": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10009": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10010": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10011": {
+   "end": "success",
+   "steps": 10,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10012": {
+   "end": "success",
+   "steps": 17,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10013": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10014": {
+   "end": "success",
+   "steps": 19,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10015": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10016": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10017": {
+   "end": "success",
+   "steps": 14,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10018": {
+   "end": "success",
+   "steps": 26,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10019": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10020": {
+   "end": "success",
+   "steps": 25,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10021": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10022": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10023": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10024": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10025": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10026": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10027": {
+   "end": "success",
+   "steps": 19,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10028": {
+   "end": "success",
+   "steps": 12,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10029": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10030": {
+   "end": "success",
+   "steps": 19,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10031": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10032": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10033": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10034": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10035": {
+   "end": "success",
+   "steps": 17,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10036": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10037": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10038": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10039": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10040": {
+   "end": "success",
+   "steps": 24,
+   "bot": 22,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10041": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10042": {
+   "end": "success",
+   "steps": 10,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10043": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10044": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10045": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10046": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10047": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10048": {
+   "end": "success",
+   "steps": 10,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10049": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10050": {
+   "end": "success",
+   "steps": 16,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10051": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10052": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10053": {
+   "end": "success",
+   "steps": 22,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10054": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10055": {
+   "end": "success",
+   "steps": 11,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10056": {
+   "end": "success",
+   "steps": 11,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10057": {
+   "end": "success",
+   "steps": 15,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10058": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10059": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10060": {
+   "end": "success",
+   "steps": 11,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10061": {
+   "end": "success",
+   "steps": 14,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10062": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10063": {
+   "end": "success",
+   "steps": 8,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10064": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10065": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10066": {
+   "end": "success",
+   "steps": 12,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10067": {
+   "end": "success",
+   "steps": 8,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10068": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10069": {
+   "end": "success",
+   "steps": 11,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10070": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10071": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10072": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10073": {
+   "end": "success",
+   "steps": 22,
+   "bot": 22,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10074": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10075": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10076": {
+   "end": "success",
+   "steps": 19,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10077": {
+   "end": "success",
+   "steps": 14,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10078": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10079": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10080": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10081": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10082": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10083": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10084": {
+   "end": "success",
+   "steps": 17,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10085": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10086": {
+   "end": "success",
+   "steps": 18,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10087": {
+   "end": "success",
+   "steps": 12,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10088": {
+   "end": "success",
+   "steps": 82,
+   "bot": 30,
+   "reached": "4 success",
+   "wrong_picks": 1,
+   "interventions": 25
+  },
+  "10089": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10090": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10091": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10092": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10093": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10094": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10095": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10096": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10097": {
+   "end": "success",
+   "steps": 22,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10098": {
+   "end": "success",
+   "steps": 36,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 4
+  },
+  "10099": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10100": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10101": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10102": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10103": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10104": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10105": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10106": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10107": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10108": {
+   "end": "success",
+   "steps": 17,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10109": {
+   "end": "success",
+   "steps": 15,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10110": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10111": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10112": {
+   "end": "success",
+   "steps": 21,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10113": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10114": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10115": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10116": {
+   "end": "success",
+   "steps": 15,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10117": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10118": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 23,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 59
+  },
+  "10119": {
+   "end": "success",
+   "steps": 18,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10120": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10121": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10122": {
+   "end": "success",
+   "steps": 38,
+   "bot": 24,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 5
+  },
+  "10123": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10124": {
+   "end": "success",
+   "steps": 13,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10125": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10126": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10127": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 21,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 2,
+   "interventions": 39
+  },
+  "10128": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10129": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10130": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10131": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10132": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10133": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10134": {
+   "end": "success",
+   "steps": 11,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10135": {
+   "end": "success",
+   "steps": 14,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10136": {
+   "end": "timeout",
+   "steps": 128,
+   "bot": 13,
+   "reached": "3 picked the right object, never put it right",
+   "wrong_picks": 0,
+   "interventions": 60
+  },
+  "10137": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10138": {
+   "end": "success",
+   "steps": 18,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10139": {
+   "end": "success",
+   "steps": 15,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10140": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10141": {
+   "end": "success",
+   "steps": 16,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10142": {
+   "end": "success",
+   "steps": 8,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10143": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10144": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10145": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10146": {
+   "end": "success",
+   "steps": 26,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10147": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10148": {
+   "end": "success",
+   "steps": 15,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10149": {
+   "end": "success",
+   "steps": 20,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10150": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10151": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10152": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10153": {
+   "end": "success",
+   "steps": 21,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10154": {
+   "end": "success",
+   "steps": 20,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10155": {
+   "end": "success",
+   "steps": 15,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10156": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10157": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10158": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10159": {
+   "end": "success",
+   "steps": 38,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 3
+  },
+  "10160": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10161": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10162": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10163": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10164": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10165": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10166": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10167": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10168": {
+   "end": "success",
+   "steps": 18,
+   "bot": 20,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10169": {
+   "end": "success",
+   "steps": 19,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10170": {
+   "end": "success",
+   "steps": 16,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10171": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10172": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10173": {
+   "end": "success",
+   "steps": 14,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10174": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10175": {
+   "end": "success",
+   "steps": 19,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10176": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10177": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10178": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10179": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10180": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10181": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10182": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10183": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10184": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10185": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10186": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10187": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10188": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10189": {
+   "end": "success",
+   "steps": 127,
+   "bot": 25,
+   "reached": "4 success",
+   "wrong_picks": 1,
+   "interventions": 56
+  },
+  "10190": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10191": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10192": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10193": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10194": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10195": {
+   "end": "success",
+   "steps": 16,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10196": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10197": {
+   "end": "success",
+   "steps": 16,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10198": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10199": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10200": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10201": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10202": {
+   "end": "success",
+   "steps": 10,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10203": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10204": {
+   "end": "success",
+   "steps": 20,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10205": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10206": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10207": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10208": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10209": {
+   "end": "success",
+   "steps": 16,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10210": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10211": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10212": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10213": {
+   "end": "success",
+   "steps": 21,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10214": {
+   "end": "success",
+   "steps": 10,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10215": {
+   "end": "success",
+   "steps": 20,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10216": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10217": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10218": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10219": {
+   "end": "success",
+   "steps": 14,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10220": {
+   "end": "success",
+   "steps": 9,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10221": {
+   "end": "success",
+   "steps": 14,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10222": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10223": {
+   "end": "success",
+   "steps": 16,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10224": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10225": {
+   "end": "success",
+   "steps": 38,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 6
+  },
+  "10226": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10227": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10228": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10229": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10230": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10231": {
+   "end": "success",
+   "steps": 15,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10232": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10233": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10234": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10235": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10236": {
+   "end": "success",
+   "steps": 17,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10237": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10238": {
+   "end": "success",
+   "steps": 15,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10239": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10240": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10241": {
+   "end": "success",
+   "steps": 14,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10242": {
+   "end": "success",
+   "steps": 19,
+   "bot": 19,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10243": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10244": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10245": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10246": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10247": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10248": {
+   "end": "success",
+   "steps": 23,
+   "bot": 23,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10249": {
+   "end": "success",
+   "steps": 13,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10250": {
+   "end": "success",
+   "steps": 16,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10251": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10252": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10253": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10254": {
+   "end": "success",
+   "steps": 19,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2
+  },
+  "10255": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10256": {
+   "end": "success",
+   "steps": 20,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10257": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10258": {
+   "end": "success",
+   "steps": 15,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10259": {
+   "end": "success",
+   "steps": 20,
+   "bot": 20,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10260": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10261": {
+   "end": "success",
+   "steps": 18,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10262": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10263": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10264": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10265": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10266": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10267": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10268": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10269": {
+   "end": "success",
+   "steps": 17,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10270": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10271": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10272": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10273": {
+   "end": "success",
+   "steps": 56,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 17
+  },
+  "10274": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10275": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10276": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10277": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10278": {
+   "end": "success",
+   "steps": 16,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10279": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10280": {
+   "end": "success",
+   "steps": 15,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10281": {
+   "end": "success",
+   "steps": 16,
+   "bot": 18,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 1
+  },
+  "10282": {
+   "end": "success",
+   "steps": 10,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10283": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10284": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10285": {
+   "end": "success",
+   "steps": 12,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10286": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10287": {
+   "end": "success",
+   "steps": 19,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10288": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10289": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10290": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10291": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10292": {
+   "end": "success",
+   "steps": 17,
+   "bot": 16,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10293": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10294": {
+   "end": "success",
+   "steps": 12,
+   "bot": 12,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10295": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10296": {
+   "end": "success",
+   "steps": 26,
+   "bot": 17,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 2
+  },
+  "10297": {
+   "end": "success",
+   "steps": 17,
+   "bot": 15,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10298": {
+   "end": "success",
+   "steps": 13,
+   "bot": 13,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  },
+  "10299": {
+   "end": "success",
+   "steps": 14,
+   "bot": 14,
+   "reached": "4 success",
+   "wrong_picks": 0,
+   "interventions": 0
+  }
+ },
+ "episodes_with_intervention": 27,
+ "interventions": 293,
+ "rule_chosen_kinds": {
+  "turn right": 75,
+  "forward": 84,
+  "turn left": 81,
+  "null drop": 18,
+  "pickup wrong": 4,
+  "drop": 9,
+  "null pickup": 22
+ },
+ "vs_no_rule": {
+  "saved": [
+   10017,
+   10018,
+   10040,
+   10050,
+   10073,
+   10084,
+   10087,
+   10088,
+   10098,
+   10119,
+   10122,
+   10159,
+   10189,
+   10195,
+   10202,
+   10209,
+   10214,
+   10225,
+   10249,
+   10254,
+   10269,
+   10273,
+   10281,
+   10296
+  ],
+  "saved_within_2x_bot": 17,
+  "broken": [],
+  "broken_with_rule_chosen_pickup_or_drop": []
+ },
+ "env": "BabyAI-PutNextLocal-v0",
+ "seeds": "10000-10299",
+ "carry_line": true,
+ "model": "babyai-laya-ft/n5000-putnext-s2"
+}

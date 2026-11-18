@@ -1,0 +1,62 @@
+{
+ "model": "babyai-laya-ft/n500-putnext-s1",
+ "carry_line": true,
+ "steps": 3518,
+ "all": {
+  "n": 3518,
+  "agree": 0.9343
+ },
+ "by_phase": {
+  "before pickup": {
+   "n": 1670,
+   "agree": 0.9563
+  },
+  "pickup": {
+   "n": 300,
+   "agree": 1.0
+  },
+  "carrying": {
+   "n": 1248,
+   "agree": 0.8758
+  },
+  "drop": {
+   "n": 300,
+   "agree": 0.99
+  }
+ },
+ "order_flip_rate": 0.0182,
+ "confusion_bot_to_model": {
+  "turn left": {
+   "turn left": 451,
+   "turn right": 52,
+   "forward": 43,
+   "pick up": 1
+  },
+  "turn right": {
+   "turn right": 589,
+   "forward": 39,
+   "turn left": 13,
+   "pick up": 1
+  },
+  "forward": {
+   "forward": 1650,
+   "turn left": 33,
+   "turn right": 45,
+   "drop": 1
+  },
+  "pick up": {
+   "pick up": 300
+  },
+  "drop": {
+   "drop": 297,
+   "forward": 3
+  }
+ },
+ "model_choice_share": {
+  "forward": 1735,
+  "pick up": 302,
+  "turn left": 497,
+  "drop": 298,
+  "turn right": 686
+ }
+}

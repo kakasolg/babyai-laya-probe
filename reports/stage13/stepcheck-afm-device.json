@@ -1,0 +1,38 @@
+{
+ "scorer": "afm-device",
+ "steps": 1567,
+ "all": {
+  "n": 1567,
+  "agree": 0.6254
+ },
+ "target_visible": {
+  "n": 1330,
+  "agree": 0.709
+ },
+ "target_unseen": {
+  "n": 237,
+  "agree": 0.1561
+ },
+ "order_flip_rate": 0.21,
+ "format_error_rate": 0.0,
+ "blocked_steps": 249,
+ "blocked_forward_rank1": 0.8715,
+ "choice_share": {
+  "forward": 1469,
+  "turn left": 98
+ },
+ "scorer_stats": {
+  "model": "afm-device",
+  "new_calls": 3126,
+  "reused": 8,
+  "errors_retried": 0,
+  "latency_ms_p50": 543.2,
+  "latency_ms_p95": 571.3,
+  "usage_new_calls": {
+   "input_tokens": 1905940,
+   "output_tokens": 41550
+  },
+  "format_errors_new_calls": 0
+ },
+ "called": "2026-11-18"
+}

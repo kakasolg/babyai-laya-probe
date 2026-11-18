@@ -1,0 +1,32 @@
+{"task": "goto", "episodes_kept_of_10000": 9976, "params": 66675, "bot_mean_steps": 5.22}
+{"task": "goto", "N": 100, "seed": 0, "episodes": 99, "rows": 479, "alone": 62, "alone_2x": 51, "rule": 224, "rule_2x": 63, "broken": 0, "saved": 162, "secs": 31}
+{"task": "goto", "N": 100, "seed": 1, "episodes": 99, "rows": 479, "alone": 64, "alone_2x": 50, "rule": 222, "rule_2x": 72, "broken": 0, "saved": 158, "secs": 15}
+{"task": "goto", "N": 100, "seed": 2, "episodes": 99, "rows": 479, "alone": 48, "alone_2x": 46, "rule": 222, "rule_2x": 71, "broken": 0, "saved": 174, "secs": 15}
+{"task": "goto", "N": 500, "seed": 0, "episodes": 499, "rows": 2638, "alone": 167, "alone_2x": 115, "rule": 266, "rule_2x": 124, "broken": 0, "saved": 99, "secs": 13}
+{"task": "goto", "N": 500, "seed": 1, "episodes": 499, "rows": 2638, "alone": 156, "alone_2x": 118, "rule": 266, "rule_2x": 138, "broken": 0, "saved": 110, "secs": 13}
+{"task": "goto", "N": 500, "seed": 2, "episodes": 499, "rows": 2638, "alone": 169, "alone_2x": 128, "rule": 269, "rule_2x": 137, "broken": 0, "saved": 100, "secs": 12}
+{"task": "goto", "N": 1000, "seed": 0, "episodes": 998, "rows": 5310, "alone": 193, "alone_2x": 159, "rule": 284, "rule_2x": 177, "broken": 0, "saved": 91, "secs": 14}
+{"task": "goto", "N": 1000, "seed": 1, "episodes": 998, "rows": 5310, "alone": 221, "alone_2x": 186, "rule": 289, "rule_2x": 202, "broken": 0, "saved": 68, "secs": 14}
+{"task": "goto", "N": 1000, "seed": 2, "episodes": 998, "rows": 5310, "alone": 187, "alone_2x": 146, "rule": 281, "rule_2x": 158, "broken": 0, "saved": 94, "secs": 15}
+{"task": "goto", "N": 5000, "seed": 0, "episodes": 4989, "rows": 26489, "alone": 281, "alone_2x": 278, "rule": 300, "rule_2x": 288, "broken": 0, "saved": 19, "secs": 33}
+{"task": "goto", "N": 5000, "seed": 1, "episodes": 4989, "rows": 26489, "alone": 283, "alone_2x": 280, "rule": 300, "rule_2x": 289, "broken": 0, "saved": 17, "secs": 33}
+{"task": "goto", "N": 5000, "seed": 2, "episodes": 4989, "rows": 26489, "alone": 287, "alone_2x": 283, "rule": 299, "rule_2x": 293, "broken": 0, "saved": 12, "secs": 36}
+{"task": "goto", "N": 10000, "seed": 0, "episodes": 9976, "rows": 53273, "alone": 287, "alone_2x": 285, "rule": 300, "rule_2x": 297, "broken": 0, "saved": 13, "secs": 64}
+{"task": "goto", "N": 10000, "seed": 1, "episodes": 9976, "rows": 53273, "alone": 287, "alone_2x": 285, "rule": 299, "rule_2x": 294, "broken": 0, "saved": 12, "secs": 64}
+{"task": "goto", "N": 10000, "seed": 2, "episodes": 9976, "rows": 53273, "alone": 290, "alone_2x": 286, "rule": 300, "rule_2x": 294, "broken": 0, "saved": 10, "secs": 64}
+{"task": "putnext", "episodes_kept_of_10000": 10000, "params": 66805, "bot_mean_steps": 11.73}
+{"task": "putnext", "N": 100, "seed": 0, "episodes": 100, "rows": 1196, "alone": 3, "alone_2x": 3, "rule": 20, "rule_2x": 4, "broken": 0, "saved": 17, "secs": 42}
+{"task": "putnext", "N": 100, "seed": 1, "episodes": 100, "rows": 1196, "alone": 1, "alone_2x": 1, "rule": 15, "rule_2x": 2, "broken": 0, "saved": 14, "secs": 45}
+{"task": "putnext", "N": 100, "seed": 2, "episodes": 100, "rows": 1196, "alone": 1, "alone_2x": 1, "rule": 20, "rule_2x": 1, "broken": 0, "saved": 19, "secs": 45}
+{"task": "putnext", "N": 500, "seed": 0, "episodes": 500, "rows": 6018, "alone": 13, "alone_2x": 12, "rule": 88, "rule_2x": 18, "broken": 0, "saved": 75, "secs": 45}
+{"task": "putnext", "N": 500, "seed": 1, "episodes": 500, "rows": 6018, "alone": 9, "alone_2x": 7, "rule": 67, "rule_2x": 19, "broken": 0, "saved": 58, "secs": 48}
+{"task": "putnext", "N": 500, "seed": 2, "episodes": 500, "rows": 6018, "alone": 5, "alone_2x": 3, "rule": 64, "rule_2x": 7, "broken": 0, "saved": 59, "secs": 45}
+{"task": "putnext", "N": 1000, "seed": 0, "episodes": 1000, "rows": 12036, "alone": 20, "alone_2x": 19, "rule": 138, "rule_2x": 38, "broken": 0, "saved": 118, "secs": 49}
+{"task": "putnext", "N": 1000, "seed": 1, "episodes": 1000, "rows": 12036, "alone": 25, "alone_2x": 21, "rule": 136, "rule_2x": 33, "broken": 0, "saved": 111, "secs": 49}
+{"task": "putnext", "N": 1000, "seed": 2, "episodes": 1000, "rows": 12036, "alone": 11, "alone_2x": 6, "rule": 72, "rule_2x": 12, "broken": 0, "saved": 61, "secs": 54}
+{"task": "putnext", "N": 5000, "seed": 0, "episodes": 5000, "rows": 60263, "alone": 235, "alone_2x": 233, "rule": 294, "rule_2x": 269, "broken": 0, "saved": 59, "secs": 80}
+{"task": "putnext", "N": 5000, "seed": 1, "episodes": 5000, "rows": 60263, "alone": 253, "alone_2x": 249, "rule": 296, "rule_2x": 279, "broken": 0, "saved": 43, "secs": 75}
+{"task": "putnext", "N": 5000, "seed": 2, "episodes": 5000, "rows": 60263, "alone": 242, "alone_2x": 239, "rule": 298, "rule_2x": 265, "broken": 0, "saved": 56, "secs": 74}
+{"task": "putnext", "N": 10000, "seed": 0, "episodes": 10000, "rows": 120307, "alone": 271, "alone_2x": 270, "rule": 298, "rule_2x": 288, "broken": 0, "saved": 27, "secs": 141}
+{"task": "putnext", "N": 10000, "seed": 1, "episodes": 10000, "rows": 120307, "alone": 261, "alone_2x": 261, "rule": 298, "rule_2x": 288, "broken": 0, "saved": 37, "secs": 144}
+{"task": "putnext", "N": 10000, "seed": 2, "episodes": 10000, "rows": 120307, "alone": 266, "alone_2x": 266, "rule": 297, "rule_2x": 291, "broken": 0, "saved": 31, "secs": 146}

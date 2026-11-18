@@ -97,7 +97,34 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
 10. 옮겨 놓기 `BabyAI-PutNextLocal-v0`(선택지 다섯: 네 개 + `drop`, 상태 글에 `carrying:` 줄) — 10a~10d(개발용 300판): `reports/stage10.md`,
    선언 `reports/stage10_prereg.md`, `python -m probe.stage10`. seed: 학습 0~999, 개발용 10000~10299, 최종 70000~70299.
    **seed 70000~70299는 11-16에 10e 최종 확인으로 한 번 썼다**(`reports/stage10e.md`, 선언은 `reports/stage10e_prereg.md`). 다시 거부한다.
-11. 네 과제 정리(GoToLocal · PickupDist · 물건 16개 · 옮겨 놓기, 커밋된 숫자만) — **`reports/summary_four_tasks.md`** ([cloud] 작성, [win] 숫자 대조)
+11. 입력과 시범 수([win], GoToLocal · PutNextLocal, 개발용 300판)
+   - 11a 지난 행동 줄(최근 4걸음) — `reports/stage11.md`, 선언 `reports/stage11_prereg.md`, `python -m probe.stage11`.
+   - 11b 시범 수 곡선 N = 100 · 500 · (1,000) · 5,000, 11b-2 5,000판 s1 · s2, 11b-3 10,000판 s0 ~ s2 — **`reports/stage11b.md`**,
+     선언 `reports/stage11b_prereg.md` · `stage11b2_prereg.md` · `stage11b3_prereg.md`, `python -m probe.stage11b dump|train|eval`.
+   - 작은 CNN 덧붙임([cloud], CPU) — `reports/stage11b_cnn.md`, `tools/small_policy/cnn_curve.py`.
+12. ([win]) 호스팅 · 공개 결정 모델 참조선(Gemini Decision 1 글 · 그림 · 글+그림, clef-flash) — `reports/stage12.md`, 선언 `reports/stage12_prereg.md`, `python -m probe.stage12`.
+13. Apple Foundation Models 참조선([mac] 맥 미니, 학습 없음) — **`reports/stage13.md`**, 선언 `reports/stage13_prereg.md`(추가 선언 6~8절),
+   `python -m probe.stage13 stepcheck|loop|help [--tier device|pcc] [--seeds 10000-10099]`.
+   모델은 Kortex 저장소의 서명된 맥 프로브 앱(`KortexProbeApp --run "babyai --tier device"`)을 자식 프로세스로 불러 쓴다. 맥 venv는 `/Volumes/EXA/devel/venvs/babyai-laya-venv`(minigrid만).
+   - 온디바이스 걸음 단위(1,567걸음): 봇과 일치 62.5 %이나 93.7 %가 forward(늘 forward면 60.4 %), 막힌 걸음에서 forward 87.2 %.
+   - 온디바이스 닫힌 루프 100판(seed 10000~10099, 규칙 없음): 12판. 실패 88판은 모두 막힌 칸 앞에서 forward 반복.
+   - 20 · 40 · 60걸음에 봇이 한 걸음 돕기: 44판(살린 32, 망가뜨린 0). 실패 56판은 평균으로는 목표에 가까워지지 않음.
+   - PCC(클라우드) 100판은 호출 한도에 걸려 판마다 2걸음째에서 멈춤 — **결과 없음**. 캐시(`data/stage13_cache_afm-pcc.jsonl`)에서 이어 돌릴 수 있다.
+14. ([win]) 규칙 변형 비교 V0 ~ V7(학습 없음, 있는 체크포인트 여덟 개) — **`reports/stage14.md`**, 선언 `reports/stage14_prereg.md`, `python -m probe.stage14 run --task gotolocal|putnext --ckpt <이름>`.
+   규칙 정의는 `probe/stage14.py`의 `Rule` 클래스 하나. 판 전체 기억(V3 직전만 → 15.7 · 40.7판 손해)이 일을 하고, 순위는 "빨리"에, 비우기는 약한 모델에서 크다. 가림은 사실상 없음. 망가뜨린 판은 V7(ε 무작위)만.
+15. (진행 중, [mac]) AFM 하네스 — 브랜치 `mac/stage15`.
+
+번호 없는 정리 문서:
+- 네 과제 정리(GoToLocal · PickupDist · 물건 16개 · 옮겨 놓기, 커밋된 숫자만) — **`reports/summary_four_tasks.md`** ([cloud] 작성, [win] 숫자 대조). 예전 README의 11번.
+- seed 장부(어느 범위를 어디에 썼고 무엇이 잠겼나) — **`reports/seeds.md`**.
+- 체크포인트 · 저장소 밖 자료 목록(이름 · 위치 · 크기, 다시 만들 수 있나) — `reports/checkpoints.md`.
+- 11-18 저장소 정리 보고(MoKa가 정할 것 목록 포함) — `reports/cleanup_1118.md`.
+- GoToLocal 한 장 정리는 위 7번(`reports/summary_gotolocal.md`)에 그대로 둔다(번호를 옮기면 이전 글의 "7단계"가 어긋나서).
+
+게임에서 잰 것(단계 번호 없음, [win]):
+- 게임 안 300판 시험(Laya ONNX fp32, CPU) — `reports/game_test_run.md`.
+- 도움 시험 — `reports/help_test.md`, 선언 `reports/help_test_prereg.md`, 원자료 `reports/help_test.json`.
+- 정밀도 비교(GPU bf16 ↔ fp32, 걸음마다 갈리는 수) — `reports/precision_check.json`, 선언 `reports/precision_prereg.md`.
 
 각 단계는 MoKa 확인 뒤 하나씩 진행한다.
 
