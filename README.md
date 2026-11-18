@@ -2,7 +2,7 @@
 
 한국어: [README.ko.md](README.ko.md) — the original working README with every stage and command.
 
-> **Draft (2026-11-18).** Numbers are copied from the committed reports and were checked against them; LID's numbers in [Prior work](#prior-work) are not yet checked against the paper.
+> **Draft (2026-11-19).** Numbers are copied from the committed reports and were checked against them. LID's numbers in [Prior work](#prior-work) were read from the paper (arXiv:2202.01771v4).
 
 A small, controlled study of one question: **how far can you hand step-by-step decisions to a small "choice" model, and how much of the remaining gap is closed by a few lines of code around it?**
 
@@ -99,13 +99,48 @@ These are reference lines from one task description that was written for one of 
 
 ## Prior work
 
-- **LID** — Li et al., *Pre-Trained Language Models for Interactive Decision-Making*, NeurIPS 2022 — fine-tunes GPT-2 by behaviour cloning on text renderings of the same 7×7 view and predicts the next action. Its reported success at 1,000 demonstrations is 99.0 % (GoToLocal), 99.0 % (PickupLoc) and 93.2 % (PutNextLocal); at 100 demonstrations 64.6 %, 28.7 % and 11.1 %. It includes past actions in the input. **Our model-alone numbers are lower at equal counts** (GoToLocal 87–93 %, PutNextLocal 82–86 % at 1,000 depending on seed and evaluation set; 52.6 % and 3.8 % at 100). The conditions are not matched (history input, evaluation set, environment version), and *we took LID's numbers from a secondary summary and have not checked them against the paper.*
+### LID (Li et al., NeurIPS 2022)
+
+*Pre-Trained Language Models for Interactive Decision-Making* ([arXiv:2202.01771](https://arxiv.org/abs/2202.01771)) is the closest prior work: it fine-tunes GPT-2 by behaviour cloning on a text rendering of the same 7×7 BabyAI view and predicts the next action. Its Table 1, read from v4 of the paper:
+
+| Task | Method | 100 | 500 | 1K | 5K | 10K |
+|---|---|---|---|---|---|---|
+| GoToLocal | BabyAI-Ori | 55.9 | 84.3 | 98.6 | 99.9 | 99.8 |
+| GoToLocal | **LID-Text** | **64.6** | **97.9** | **99.0** | 99.5 | 99.5 |
+| PickupLoc | BabyAI-Ori | 28.0 | 58.0 | 93.3 | 97.9 | 99.8 |
+| PickupLoc | **LID-Text** | **28.7** | **73.4** | **99.0** | 99.6 | 99.8 |
+| PutNextLocal | BabyAI-Ori | 14.3 | 16.8 | 43.4 | 81.2 | 97.7 |
+| PutNextLocal | **LID-Text** | **11.1** | **93.0** | **93.2** | 98.9 | 99.9 |
+
+Ours, model alone, at the same demonstration counts (development seeds; held-out range in brackets):
+
+| Task | 100 | 500 | 1K |
+|---|---|---|---|
+| GoToLocal | 52.6 % | 87.1 % | 91.0–92.7 % [87.3–88.0 %] |
+| PutNextLocal | 3.8 % | 78.7 % | 81.7–85.3 % [84.3–86.0 %] |
+
+**We are below LID-Text at every count we can compare.** Against `BabyAI-Ori` — LID's re-run of the original BabyAI architecture, which has an LSTM memory — we are below on GoToLocal and well above on PutNextLocal (78.7 % vs 16.8 % at 500; about 84 % vs 43.4 % at 1,000).
+
+What differs, from the paper:
+
+- **History.** LID conditions on `(goal, history, observation)`, the history being previous actions written out as text. Our input has no history; stage 11a adds the last four actions and raises GoToLocal from 271.3 to 280.7 of 300 — not enough to close the gap.
+- **Observation text.** LID turns all 7×7 cells into one long sentence ("purple ball", "grey wall", "open door"). Ours lists only the visible objects and the distance to the nearest wall in three directions — shorter and more abstracted.
+- **Evaluation.** 500 episodes per task on BabyAI 1.1's standard test data; ours is 300 layouts per task from our own seed ranges. The BabyAI table gives no per-seed spread.
+- **Tasks.** LID uses `PickupLoc`; we use `PickupDist`. Different levels.
+- **Model.** "a standard pre-trained language model, GPT-2", AdamW at 1e-5 on one 32 GB GPU. The variant (124M / 355M / …) and the step limit per episode are not stated. Ours is a 421M encoder with a choice head.
+- **Ablations.** LID's No-Pretrain / No-Seq / No-FT ablations are on VirtualHome, not BabyAI. Its BabyAI ablation (Appendix A) compares the text encoding against a convolutional encoding of the same grid.
+
+One caution we cannot resolve: LID's `BabyAI-Ori` at 1,000 demonstrations (GoToLocal 98.6 %) is far above what the BabyAI 1.1 paper reports for small models at much larger demonstration counts. The two cannot both describe the same measurement, so neither is a leaderboard our numbers slot into.
+
+### Other work
+
 - BabyAI (Chevalier-Boisvert et al., 2019) and BabyAI 1.1 (Hui et al., 2020) report demonstration requirements for small recurrent models; BabyAI-Text / GLAM (Carta et al., 2023), BALROG (2024) and Gato (2022) run language or generalist models on BabyAI under other training signals.
 - The executor rule belongs to a known family (state–action tabu exploration, loop detection in agents). We did not find a published measurement of this exact rule with paired "previously solved rooms broken" counts; that is a statement about our search, not a claim of novelty.
 - Step-by-step human correction of a BabyAI policy also has prior tools (e.g. RLHF-Blender).
 
 ## Limits
 
+- **We are below the closest prior work at equal demonstration counts** (see [Prior work](#prior-work)); nothing here is a sample-efficiency result.
 - Single-room levels with one instruction. No multi-room, door or key levels, which need memory the model does not have.
 - "The rule broke 0 rooms" is an observation on the rooms tested. Under partial observation the same text can describe different states, so there is no general guarantee.
 - The network has no memory, but **network + rule does** (the rule keeps a per-episode record). Do not read "memoryless" as applying to the combined agent.
