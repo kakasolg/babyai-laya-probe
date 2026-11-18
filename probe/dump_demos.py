@@ -25,6 +25,8 @@ ENV_ID = "BabyAI-GoToLocal-v0"
 FINAL_SEEDS = range(20000, 20300)
 FINAL_SEEDS_PICKUP = range(30000, 30300)  # used once for the stage-8d final check (11-15), locked again
 FINAL_SEEDS_PUTNEXT = range(70000, 70300)  # used once for the stage-10e final check (11-16), locked again
+FINAL_SEEDS_16OBJ = range(60000, 60300)   # kept for a 16-object final check; never opened
+FINAL_SEEDS_NEXT = range(80000, 80300)    # reserved for the next task's final check; not used yet
 
 
 def seed_range(s: str) -> range:
@@ -33,8 +35,9 @@ def seed_range(s: str) -> range:
 
 
 def guarded_seeds(s: str) -> range:
-    """20000-20299 (stage 6) and 30000-30299 (stage 8d) were each used once for a final check on 11-15 and are
-    locked again; never reopen."""
+    """Final-check ranges. 20000-20299 (stage 6), 30000-30299 (stage 8d) and 70000-70299 (stage 10e) were each
+    used once and are locked again; never reopen. 60000-60299 and 80000-80299 have never been opened and are
+    held for future final checks. See reports/seeds.md."""
     r = seed_range(s)
     if any(x in FINAL_SEEDS for x in r):
         raise SystemExit("20000-20299 were used for the final check on 11-15 and are locked (README)")
@@ -42,6 +45,10 @@ def guarded_seeds(s: str) -> range:
         raise SystemExit("30000-30299 were used for the PickupDist final check on 11-15 and are locked (README)")
     if any(x in FINAL_SEEDS_PUTNEXT for x in r):
         raise SystemExit("70000-70299 were used for the PutNextLocal final check on 11-16 and are locked (README)")
+    if any(x in FINAL_SEEDS_16OBJ for x in r):
+        raise SystemExit("60000-60299 are held for a 16-object final check and have never been opened (reports/seeds.md)")
+    if any(x in FINAL_SEEDS_NEXT for x in r):
+        raise SystemExit("80000-80299 are reserved for the next final check and have never been opened (reports/seeds.md)")
     return r
 
 
