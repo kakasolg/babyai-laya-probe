@@ -1,0 +1,15368 @@
+{
+ "name": "n500-gotolocal-s0",
+ "scorer": "laya",
+ "policy": "none",
+ "rule_r": false,
+ "api_aborted": null,
+ "episodes": 300,
+ "steps_sum_all_episodes": 3509,
+ "all": {
+  "n": 300,
+  "success": 265,
+  "rate": 0.8833,
+  "within_2x_bot": 265,
+  "rate_2x": 0.8833
+ },
+ "timeout": 35,
+ "gave_up": 0,
+ "target_visible_at_start": {
+  "n": 158,
+  "success": 146,
+  "rate": 0.9241,
+  "within_2x_bot": 146,
+  "rate_2x": 0.9241
+ },
+ "target_unseen_at_start": {
+  "n": 142,
+  "success": 119,
+  "rate": 0.838,
+  "within_2x_bot": 119,
+  "rate_2x": 0.838
+ },
+ "mean_steps_success": 4.79,
+ "bot_mean_steps_same_eps": 4.63,
+ "blocked_forward_steps": 1627,
+ "top_p_median_blocked_forward": 0.6241,
+ "top_p_median_other_steps": 0.98,
+ "format_error_steps": 0,
+ "steps_total": 3509,
+ "actions": {
+  "forward": 2503,
+  "turn left": 484,
+  "turn right": 522
+ },
+ "all_fail_12_solved": [
+  10014,
+  10024
+ ],
+ "scorer_stats": {
+  "choice_field_vs_argmax_mismatch": 0
+ },
+ "per_episode": {
+  "10000": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0
+  },
+  "10001": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10002": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10003": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10004": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10005": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10006": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10007": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10008": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10009": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10010": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10011": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10012": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10013": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10014": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10015": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10016": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10017": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 13,
+   "interventions": 0
+  },
+  "10018": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10019": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10020": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10021": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10022": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10023": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 12,
+   "interventions": 0
+  },
+  "10024": {
+   "end": "success",
+   "steps": 6,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10025": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10026": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 14,
+   "interventions": 0
+  },
+  "10027": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10028": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10029": {
+   "end": "success",
+   "steps": 12,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10030": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10031": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10032": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10033": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10034": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10035": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10036": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10037": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10038": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0
+  },
+  "10039": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10040": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10041": {
+   "end": "success",
+   "steps": 4,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10042": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10043": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10044": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10045": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10046": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10047": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10048": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10049": {
+   "end": "success",
+   "steps": 4,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10050": {
+   "end": "success",
+   "steps": 3,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10051": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10052": {
+   "end": "success",
+   "steps": 8,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10053": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10054": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10055": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10056": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10057": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10058": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10059": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10060": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10061": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10062": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10063": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10064": {
+   "end": "success",
+   "steps": 5,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10065": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10066": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10067": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10068": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10069": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10070": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10071": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10072": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10073": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10074": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10075": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10076": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10077": {
+   "end": "success",
+   "steps": 6,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10078": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10079": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10080": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10081": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10082": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10083": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10084": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10085": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10086": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10087": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10088": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10089": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10090": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10091": {
+   "end": "success",
+   "steps": 7,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10092": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10093": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10094": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10095": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10096": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10097": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10098": {
+   "end": "success",
+   "steps": 7,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10099": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10100": {
+   "end": "success",
+   "steps": 6,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10101": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10102": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10103": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10104": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10105": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10106": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10107": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10108": {
+   "end": "success",
+   "steps": 3,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10109": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10110": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10111": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10112": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10113": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 10,
+   "interventions": 0
+  },
+  "10114": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10115": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10116": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10117": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10118": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10119": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10120": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10121": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10122": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 19,
+   "interventions": 0
+  },
+  "10123": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10124": {
+   "end": "success",
+   "steps": 12,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10125": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10126": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10127": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10128": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10129": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10130": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10131": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10132": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10133": {
+   "end": "success",
+   "steps": 5,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10134": {
+   "end": "success",
+   "steps": 4,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10135": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10136": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10137": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10138": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10139": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10140": {
+   "end": "success",
+   "steps": 9,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10141": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10142": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10143": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10144": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10145": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10146": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10147": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10148": {
+   "end": "success",
+   "steps": 11,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10149": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 12,
+   "interventions": 0
+  },
+  "10150": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10151": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10152": {
+   "end": "success",
+   "steps": 7,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10153": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10154": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10155": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10156": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0
+  },
+  "10157": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10158": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10159": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0
+  },
+  "10160": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10161": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10162": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10163": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10164": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10165": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10166": {
+   "end": "success",
+   "steps": 13,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10167": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10168": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 14,
+   "interventions": 0
+  },
+  "10169": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10170": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10171": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10172": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10173": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10174": {
+   "end": "success",
+   "steps": 10,
+   "bot": 10,
+   "interventions": 0
+  },
+  "10175": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10176": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10177": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10178": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10179": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10180": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10181": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10182": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10183": {
+   "end": "success",
+   "steps": 7,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10184": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10185": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10186": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10187": {
+   "end": "success",
+   "steps": 10,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10188": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10189": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 10,
+   "interventions": 0
+  },
+  "10190": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10191": {
+   "end": "success",
+   "steps": 10,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10192": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10193": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10194": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10195": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10196": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10197": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10198": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10199": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10200": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10201": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10202": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10203": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10204": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10205": {
+   "end": "success",
+   "steps": 4,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10206": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0
+  },
+  "10207": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10208": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10209": {
+   "end": "success",
+   "steps": 9,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10210": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10211": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10212": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10213": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 14,
+   "interventions": 0
+  },
+  "10214": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0
+  },
+  "10215": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10216": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10217": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10218": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10219": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10220": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10221": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10222": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10223": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10224": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10225": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10226": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10227": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10228": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10229": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10230": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10231": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0
+  },
+  "10232": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10233": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10234": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10235": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10236": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10237": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10238": {
+   "end": "success",
+   "steps": 5,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10239": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10240": {
+   "end": "success",
+   "steps": 7,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10241": {
+   "end": "success",
+   "steps": 16,
+   "bot": 12,
+   "interventions": 0
+  },
+  "10242": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 12,
+   "interventions": 0
+  },
+  "10243": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10244": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0
+  },
+  "10245": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10246": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10247": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10248": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10249": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10250": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10251": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10252": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10253": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10254": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10255": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10256": {
+   "end": "success",
+   "steps": 8,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10257": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10258": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10259": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 12,
+   "interventions": 0
+  },
+  "10260": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10261": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 10,
+   "interventions": 0
+  },
+  "10262": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10263": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10264": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10265": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10266": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10267": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 14,
+   "interventions": 0
+  },
+  "10268": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10269": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10270": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10271": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10272": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10273": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10274": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10275": {
+   "end": "success",
+   "steps": 5,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10276": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10277": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10278": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10279": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10280": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10281": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10282": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10283": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10284": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10285": {
+   "end": "success",
+   "steps": 6,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10286": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10287": {
+   "end": "success",
+   "steps": 9,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10288": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10289": {
+   "end": "success",
+   "steps": 11,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10290": {
+   "end": "timeout",
+   "steps": 64,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10291": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10292": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10293": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10294": {
+   "end": "success",
+   "steps": 4,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10295": {
+   "end": "success",
+   "steps": 6,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10296": {
+   "end": "success",
+   "steps": 7,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10297": {
+   "end": "success",
+   "steps": 7,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10298": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10299": {
+   "end": "success",
+   "steps": 3,
+   "bot": 3,
+   "interventions": 0
+  }
+ },
+ "trace": {
+  "10015": [
+   [
+    "turn left",
+    "turn left",
+    0.78,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.603,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.978,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.701,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ]
+  ],
+  "10016": [
+   [
+    "turn left",
+    "turn left",
+    0.985,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.989,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    0
+   ]
+  ],
+  "10017": [
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.639,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.639,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.639,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.639,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.974,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.638,
+    0
+   ]
+  ],
+  "10023": [
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.549,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.936,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.548,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.938,
+    0
+   ]
+  ],
+  "10026": [
+   [
+    "forward",
+    "forward",
+    0.988,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.99,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.982,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.565,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.563,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.464,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.344,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.785,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.985,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.531,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.98,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.96,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.614,
+    0
+   ]
+  ],
+  "10042": [
+   [
+    "forward",
+    "forward",
+    0.87,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.433,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.474,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.434,
+    0
+   ]
+  ],
+  "10113": [
+   [
+    "forward",
+    "forward",
+    0.981,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.986,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.362,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.537,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.77,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.451,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.401,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.989,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.847,
+    0
+   ]
+  ],
+  "10120": [
+   [
+    "forward",
+    "forward",
+    0.962,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.466,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.443,
+    0
+   ]
+  ],
+  "10122": [
+   [
+    "turn left",
+    "turn left",
+    0.766,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.986,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.499,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.617,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.787,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.788,
+    0
+   ]
+  ],
+  "10127": [
+   [
+    "turn right",
+    "turn right",
+    0.976,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.632,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.632,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.632,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.632,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.632,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.62,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.633,
+    0
+   ]
+  ],
+  "10135": [
+   [
+    "turn right",
+    "turn right",
+    0.892,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.959,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.351,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.661,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.783,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.351,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.66,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.783,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.351,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.661,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.783,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.351,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.661,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.783,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.351,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.661,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.783,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.351,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.661,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.783,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.351,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.661,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.783,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.351,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.661,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.783,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.351,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.661,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.783,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.977,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.351,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.661,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.517,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.783,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ]
+  ],
+  "10144": [
+   [
+    "forward",
+    "forward",
+    0.989,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.965,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    0
+   ]
+  ],
+  "10146": [
+   [
+    "turn right",
+    "turn right",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.962,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.353,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.353,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.353,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.353,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.353,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.349,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.352,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.354,
+    0
+   ]
+  ],
+  "10149": [
+   [
+    "turn left",
+    "turn left",
+    0.586,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.62,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.463,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.989,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.599,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.728,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.342,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.617,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.683,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.754,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.623,
+    0
+   ]
+  ],
+  "10151": [
+   [
+    "turn right",
+    "turn right",
+    0.986,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.56,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.857,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.976,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.969,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.367,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.367,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.368,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.369,
+    0
+   ]
+  ],
+  "10157": [
+   [
+    "turn left",
+    "turn left",
+    0.561,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.688,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.685,
+    0
+   ]
+  ],
+  "10164": [
+   [
+    "turn left",
+    "turn left",
+    0.763,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.982,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.641,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.698,
+    0
+   ]
+  ],
+  "10168": [
+   [
+    "turn left",
+    "turn left",
+    0.545,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.989,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.972,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.596,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.984,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.58,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.558,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.758,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.364,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.532,
+    0
+   ]
+  ],
+  "10169": [
+   [
+    "turn right",
+    "turn right",
+    0.982,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.404,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.361,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.362,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.361,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.36,
+    0
+   ]
+  ],
+  "10180": [
+   [
+    "forward",
+    "forward",
+    0.969,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    0
+   ]
+  ],
+  "10181": [
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.974,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.971,
+    0
+   ]
+  ],
+  "10189": [
+   [
+    "forward",
+    "forward",
+    0.958,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.753,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.986,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.969,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.989,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.565,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.565,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.565,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.542,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.564,
+    0
+   ]
+  ],
+  "10213": [
+   [
+    "forward",
+    "forward",
+    0.832,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.643,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.624,
+    0
+   ]
+  ],
+  "10220": [
+   [
+    "turn left",
+    "turn left",
+    0.988,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.631,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.957,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.989,
+    0
+   ]
+  ],
+  "10224": [
+   [
+    "turn right",
+    "turn right",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.984,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.979,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.478,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.377,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.377,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.377,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.377,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.378,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.377,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.376,
+    0
+   ]
+  ],
+  "10236": [
+   [
+    "forward",
+    "forward",
+    0.874,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.933,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.458,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.615,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.554,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    0
+   ]
+  ],
+  "10242": [
+   [
+    "turn right",
+    "turn right",
+    0.978,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.955,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.962,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.954,
+    0
+   ]
+  ],
+  "10249": [
+   [
+    "turn right",
+    "turn right",
+    0.947,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.974,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.986,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.802,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.813,
+    0
+   ]
+  ],
+  "10250": [
+   [
+    "turn left",
+    "turn left",
+    0.561,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.589,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.589,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.589,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.608,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.59,
+    0
+   ]
+  ],
+  "10253": [
+   [
+    "turn right",
+    "turn right",
+    0.985,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.358,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.358,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.358,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.358,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.358,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.357,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.353,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.359,
+    0
+   ]
+  ],
+  "10259": [
+   [
+    "turn right",
+    "turn right",
+    0.987,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.848,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.983,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.981,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.986,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.975,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.416,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.463,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.626,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.706,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.957,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.335,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.721,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.977,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.975,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.416,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.463,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.625,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.705,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.957,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    0.334,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    0.939,
+    0
+   ]
+  ],
+  "10261": [
+   [
+    "forward",
+    "forward",
+    0.981,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.989,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.985,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.963,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.95,
+    0
+   ]
+  ],
+  "10267": [
+   [
+    "turn right",
+    "turn right",
+    0.964,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.987,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.393,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.393,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.392,
+    0
+   ]
+  ],
+  "10282": [
+   [
+    "turn right",
+    "turn right",
+    0.597,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.974,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.476,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.473,
+    0
+   ]
+  ],
+  "10290": [
+   [
+    "turn left",
+    "turn left",
+    0.797,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.988,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.979,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.989,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.837,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    0.842,
+    0
+   ]
+  ]
+ },
+ "blocked_forward_rate": 0.4637,
+ "model": "babyai-laya-ft/n500-gotolocal-s0",
+ "seeds": "10000-10299"
+}

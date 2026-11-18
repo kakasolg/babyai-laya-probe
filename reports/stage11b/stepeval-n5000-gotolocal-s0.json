@@ -1,0 +1,26 @@
+{
+ "scorer": "laya",
+ "steps": 1567,
+ "all": {
+  "n": 1567,
+  "agree": 0.9751
+ },
+ "target_visible": {
+  "n": 1330,
+  "agree": 0.9857
+ },
+ "target_unseen": {
+  "n": 237,
+  "agree": 0.9156
+ },
+ "order_flip_rate": 0.0045,
+ "format_error_rate": 0.0,
+ "choice_share": {
+  "forward": 947,
+  "turn left": 291,
+  "turn right": 329
+ },
+ "scorer_stats": {
+  "choice_field_vs_argmax_mismatch": 0
+ }
+}
