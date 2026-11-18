@@ -110,7 +110,8 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
    - 온디바이스 닫힌 루프 100판(seed 10000~10099, 규칙 없음): 12판. 실패 88판은 모두 막힌 칸 앞에서 forward 반복.
    - 20 · 40 · 60걸음에 봇이 한 걸음 돕기: 44판(살린 32, 망가뜨린 0). 실패 56판은 평균으로는 목표에 가까워지지 않음.
    - PCC(클라우드) 100판은 호출 한도에 걸려 판마다 2걸음째에서 멈춤 — **결과 없음**. 캐시(`data/stage13_cache_afm-pcc.jsonl`)에서 이어 돌릴 수 있다.
-14. (진행 중, [win]) 규칙 변형 비교 V0 ~ V7(학습 없음, 있는 체크포인트 여덟 개) — 선언 `reports/stage14_prereg.md`, `python -m probe.stage14 run`, 보고 `reports/stage14.md`(예정). 브랜치 `win/stage14`.
+14. ([win]) 규칙 변형 비교 V0 ~ V7(학습 없음, 있는 체크포인트 여덟 개) — **`reports/stage14.md`**, 선언 `reports/stage14_prereg.md`, `python -m probe.stage14 run --task gotolocal|putnext --ckpt <이름>`.
+   규칙 정의는 `probe/stage14.py`의 `Rule` 클래스 하나. 판 전체 기억(V3 직전만 → 15.7 · 40.7판 손해)이 일을 하고, 순위는 "빨리"에, 비우기는 약한 모델에서 크다. 가림은 사실상 없음. 망가뜨린 판은 V7(ε 무작위)만.
 15. (진행 중, [mac]) AFM 하네스 — 브랜치 `mac/stage15`.
 
 번호 없는 정리 문서:
