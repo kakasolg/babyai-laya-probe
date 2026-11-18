@@ -1,0 +1,41 @@
+{
+ "task": "putnext",
+ "seeds": "0-9999",
+ "minutes": 0.31,
+ "check_first_1000_equals_old_dump": true,
+ "old_dump_lines": 12036,
+ "new_first_1000_lines": 12036,
+ "per_n": {
+  "100": {
+   "episodes_kept": 100,
+   "steps": 1196,
+   "calibration_items": 40,
+   "dropped_seeds": []
+  },
+  "500": {
+   "episodes_kept": 500,
+   "steps": 6018,
+   "calibration_items": 200,
+   "dropped_seeds": []
+  },
+  "1000": {
+   "episodes_kept": 1000,
+   "steps": 12036,
+   "calibration_items": 400,
+   "dropped_seeds": []
+  },
+  "5000": {
+   "episodes_kept": 5000,
+   "steps": 60263,
+   "calibration_items": 2003,
+   "dropped_seeds": []
+  },
+  "10000": {
+   "episodes_kept": 10000,
+   "steps": 120307,
+   "calibration_items": 3998,
+   "dropped_seeds": []
+  }
+ },
+ "check_first_5000_equals_n5000_dump": true
+}
