@@ -14,13 +14,11 @@ The test bed is [BabyAI](https://minigrid.farama.org/environments/babyai/) (Mini
 
 The game is the same rooms, the same observations and the same stop condition as the experiments below. You watch a small decision model drive a room on its own, and you take over when it stops.
 
-<!-- screenshots: docs/img/puzzle_stuck.png, docs/img/puzzle_solved.png, docs/img/drive_card.png — see the board instruction of 2026-11-19; uncomment the block below once the three files are committed.
 <p>
   <img src="docs/img/puzzle_stuck.png" width="32%" alt="Puzzle mode: the autopilot has stopped and the moves you may make are shown beside the car">
-  <img src="docs/img/puzzle_solved.png" width="32%" alt="A solved room with the floor lit by grade: yellow 1, green 2, blue 3">
+  <img src="docs/img/puzzle_solved.png" width="32%" alt="A solved room with the floor lit by grade (yellow 1, green 2; blue 3 where only grade 3 gets there) and each grade's share on the right">
   <img src="docs/img/drive_card.png" width="32%" alt="Drive mode: the card at the end of a round of ten rooms">
 </p>
--->
 
 - **Puzzle mode** (the first screen) is the shortest version. The autopilot is fixed at its weakest grade and drives a room it cannot finish alone. When it stops, the moves you may make appear beside the car; you make exactly **one**, and it drives on, keeping its record of where it has already acted. 106 rooms, filtered so the car never stops within 5 steps of the toy. Stars count your moves against the room's fewest.
 - **Drive mode** is the full thing: three autopilot grades, take over whenever you want, and a card at the end of each round of ten rooms.
