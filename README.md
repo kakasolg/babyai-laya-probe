@@ -159,19 +159,24 @@ $PY -m probe.finetune data/gotolocal_train.jsonl --seed 0                   # ab
 $PY -m probe.closed_loop --policy model --model ~/babyai-laya-ft/gotolocal-s0 --name laya-s0
 ```
 
-Per-stage commands are in [README.ko.md](README.ko.md) and at the top of each `probe/stageN.py`. Demonstration dumps and checkpoints are not in git; dumps are regenerated from seeds. Fine-tuned weights are not published at the moment.
+Per-stage commands are in [README.ko.md](README.ko.md) and at the top of each `probe/stageN.py`. Demonstration dumps and checkpoints are not in git; dumps are regenerated from seeds. For the published weights see [Licence](#licence).
 
 ## Game
 
 A browser build is at <https://mokaflow.itch.io/babyai-laya-an-ai-in-the-room>. The model that drives in real time in the browser is the small CNN, not Laya; Laya appears as recorded replays. The baby and toy sprites are AI-generated images (sources in `godot/drive/baby/README.md` and `godot/drive/toys/README.md`).
 
-## Third-party components
+## Licence
 
-- MiniGrid 3.2.0 — Apache-2.0 according to the repository's `LICENSE` file; its package metadata says MIT.
-- Laya checkpoint and SDK — Apache-2.0 (model card). ModernBERT — Apache-2.0.
-- Godot Engine — MIT; the web build ships its `licenses.txt`.
+This repository is MIT-licensed; see [LICENSE](LICENSE).
 
-*This repository does not yet carry a licence file of its own.*
+Fine-tuned weights are released under Apache-2.0, the licence of the upstream checkpoint they are derived from. **Download links: _to be filled in when the upload finishes._** The published set is one checkpoint per task at 1,000 demonstrations (`gotolocal-s0`, `pickupdist-s0`, `putnext-s0`) plus `gotolocal-n5000-s0`; the other ~36 checkpoints are reproducible from the seeds and commands here and are not uploaded.
+
+Third-party components:
+
+- **MiniGrid 3.2.0** — Apache-2.0 according to the repository's `LICENSE` file; its package metadata says MIT. Not redistributed here; the demonstrations and room layouts in this repository were generated with it.
+- **Laya** checkpoint and SDK — Apache-2.0 (model card). **ModernBERT** — Apache-2.0. The weights we publish are modified derivatives; the upstream notices travel with them.
+- **Godot Engine** — MIT; the web build ships its `licenses.txt`.
+- The baby and toy sprites in the puzzle mode are AI-generated images; see `godot/drive/baby/README.md` and `godot/drive/toys/README.md`.
 
 ## Language
 
