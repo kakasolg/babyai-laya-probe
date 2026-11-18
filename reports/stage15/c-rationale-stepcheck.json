@@ -1,0 +1,71 @@
+{
+ "steps": 1567,
+ "all": {
+  "n": 1567,
+  "agree": 0.5718,
+  "failed": 3
+ },
+ "target_visible": {
+  "n": 1330,
+  "agree": 0.6038,
+  "failed": 2
+ },
+ "target_unseen": {
+  "n": 237,
+  "agree": 0.3924,
+  "failed": 1
+ },
+ "blocked_steps": 249,
+ "blocked_answered": 249,
+ "blocked_failed": 0,
+ "blocked_forward": 77,
+ "blocked_forward_share": 0.3092,
+ "blocked_agree": 0.5422,
+ "blocked_picks": {
+  "turn left": 105,
+  "turn right": 67,
+  "forward": 77
+ },
+ "blocked_picks_reversed_order": {
+  "turn right": 153,
+  "forward": 83,
+  "turn left": 13
+ },
+ "choice_share": {
+  "forward": 802,
+  "turn left": 452,
+  "turn right": 310,
+  "None": 3
+ },
+ "choice_share_reversed_order": {
+  "forward": 909,
+  "turn right": 613,
+  "turn left": 45
+ },
+ "order_flip_n": 612,
+ "order_flip_den": 1564,
+ "order_flip_rate": 0.3913,
+ "failed_fixed_order": 3,
+ "failed_reversed_order": 0,
+ "errors": {
+  "ParsingError: FoundationModels.GeneratedContent.ParsingError 1": 3
+ },
+ "latency_ms_p50": 1539.9,
+ "latency_ms_p95": 2003.9,
+ "output_tokens_mean": 51.2,
+ "reading": "frame mattered a lot",
+ "scorer_stats": {
+  "model": "afm-device-rationale",
+  "new_calls": 3126,
+  "reused": 8,
+  "errors_retried": 0,
+  "latency_ms_p50": 1539.0,
+  "latency_ms_p95": 2003.9,
+  "usage_new_calls": {
+   "input_tokens": 1988429,
+   "output_tokens": 159849
+  },
+  "format_errors_new_calls": 3
+ },
+ "called": "2026-11-18"
+}

@@ -5,6 +5,7 @@ Same frame and seeds as stage 13 (probe/stage13.py); the model is reached throug
   python -m probe.stage15 a                  # 15a: reversed-order disagreement as an escalation signal (cache only)
   python -m probe.stage15 abonus             # 15a bonus: four more option orders on the 249 blocked steps
   python -m probe.stage15 loop --variant A1|A2|A3 [--seeds 10000-10099]
+  python -m probe.stage15 c                  # 15c: rationale-first frame on the 1,567 bot steps, both orders
   python -m probe.stage15 peers              # untrained models + R-reset, recounted on the same 100 seeds (no calls)
 """
 from __future__ import annotations
@@ -227,6 +228,85 @@ def cmd_loop(a):
     print(json.dumps({k: x for k, x in res.items() if k != "per_episode"}, default=str))
 
 
+class RatScorer(stage13.AfmScorer):
+    """15c: rationale-first frame. Own cache; a failed call is not retried and is stored as a failure."""
+
+    def __init__(self, app: str):
+        stage5.CachedScorer.__init__(self, "afm-device-rationale")
+        stage12._reload(self, "data/stage15c_cache_afm-device-rationale.jsonl")
+        import threading
+        self.tier, self.app, self.proc, self.lock, self.format_errors, self.n = "device", app, None, threading.Lock(), 0, 0
+
+    def call(self, state: str, options) -> dict:
+        with self.lock:
+            if self.proc is None or self.proc.poll() is not None:
+                self._start()
+            self.n += 1
+            t0 = time.time()
+            self.proc.stdin.write(json.dumps({"id": str(self.n), "instructions": stage13.EXPLAIN, "state": state,
+                                              "options": list(options), "rationale": True}) + "\n")
+            self.proc.stdin.flush()
+            d = self._read()
+            ms = (time.time() - t0) * 1000
+            if d.get("choice") not in options:
+                self.format_errors += 1
+                return {"probs": {}, "failed": True, "error": d.get("error"), "raw_choice": d.get("choice"), "ms": ms}
+            return {"probs": {o: float(o == d["choice"]) for o in options}, "choice": d["choice"],
+                    "rationale": d.get("rationale"), "ms": ms,
+                    "usage": {"input_tokens": d.get("in", 0), "output_tokens": d.get("out", 0)}}
+
+
+def cmd_ctest(a):
+    sc = RatScorer(a.app)
+    print(json.dumps(sc.call("mission: go to the purple box\nfacing: north\npurple box: 2 ahead, 1 left\nwalls: 5 ahead", list(CHOICES))))
+
+
+def cmd_c(a):
+    sc = RatScorer(a.app)
+    rows = eval_rows(a)
+    states = [r["state"] for r in rows]
+    fwd, rev = [], []
+    for i in range(0, len(states), 50):  # the cache file is written when a score() call returns
+        fwd += sc.score(states[i:i + 50], CHOICES)
+        rev += sc.score(states[i:i + 50], REV)
+        print(i + 50, "steps", "new", sc.new, "failed", sc.format_errors, flush=True)
+    for r, x, y in zip(rows, fwd, rev):
+        r["m"] = None if x.get("failed") else x["choice"]
+        r["r"] = None if y.get("failed") else y["choice"]
+        r["x"] = x
+
+    def acc(sub):
+        return {"n": len(sub), "agree": round(sum(r["m"] == r["action_name"] for r in sub) / max(len(sub), 1), 4),
+                "failed": sum(r["m"] is None for r in sub)}
+
+    blk = [r for r in rows if r["blocked"]]
+    blk_ans = [r for r in blk if r["m"] is not None]
+    both = [r for r in rows if r["m"] is not None and r["r"] is not None]
+    share = sum(r["m"] == F for r in blk_ans) / max(len(blk_ans), 1)
+    ok_calls = [d for d in fwd + rev if not d.get("failed")]
+    lat = sorted(d["ms"] for d in fwd + rev)
+    res = {"steps": len(rows), "all": acc(rows), "target_visible": acc([r for r in rows if not r["unseen"]]),
+           "target_unseen": acc([r for r in rows if r["unseen"]]),
+           "blocked_steps": len(blk), "blocked_answered": len(blk_ans), "blocked_failed": len(blk) - len(blk_ans),
+           "blocked_forward": sum(r["m"] == F for r in blk_ans), "blocked_forward_share": round(share, 4),
+           "blocked_agree": acc(blk)["agree"],
+           "blocked_picks": dict(collections.Counter(str(r["m"]) for r in blk)),
+           "blocked_picks_reversed_order": dict(collections.Counter(str(r["r"]) for r in blk)),
+           "choice_share": dict(collections.Counter(str(r["m"]) for r in rows)),
+           "choice_share_reversed_order": dict(collections.Counter(str(r["r"]) for r in rows)),
+           "order_flip_n": sum(r["m"] != r["r"] for r in both), "order_flip_den": len(both),
+           "order_flip_rate": round(sum(r["m"] != r["r"] for r in both) / max(len(both), 1), 4),
+           "failed_fixed_order": sum(r["m"] is None for r in rows), "failed_reversed_order": sum(r["r"] is None for r in rows),
+           "errors": dict(collections.Counter(str(d.get("error"))[:80] for d in fwd + rev if d.get("failed"))),
+           "latency_ms_p50": round(lat[len(lat) // 2], 1), "latency_ms_p95": round(lat[int(0.95 * len(lat))], 1),
+           "output_tokens_mean": round(sum(d["usage"]["output_tokens"] for d in ok_calls) / max(len(ok_calls), 1), 1),
+           "reading": ("frame mattered a lot" if share <= 0.40 else "same with the new frame" if share >= 0.70 else "partly")
+                      + ("; many failures on blocked steps" if len(blk) - len(blk_ans) > 25 else ""),
+           "scorer_stats": sc.stats(), "called": time.strftime("%Y-%m-%d")}
+    save("c-rationale-stepcheck", res)
+    print(json.dumps(res, indent=1))
+
+
 def cmd_peers(a):
     lo, hi = (int(x) for x in a.seeds.split("-"))
     res = {}
@@ -243,13 +323,13 @@ def cmd_peers(a):
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["samecheck", "a", "abonus", "loop", "peers"])
+    ap.add_argument("cmd", choices=["samecheck", "a", "abonus", "loop", "peers", "ctest", "c"])
     ap.add_argument("--variant", choices=["A1", "A2", "A3"])
     ap.add_argument("--seeds", default="10000-10099")
     ap.add_argument("--app", default=stage13.APP)
     ap.add_argument("--eval", default="data/gotolocal_eval.jsonl")
     a = ap.parse_args()
-    {"samecheck": cmd_samecheck, "a": cmd_a, "abonus": cmd_abonus, "loop": cmd_loop, "peers": cmd_peers}[a.cmd](a)
+    {"samecheck": cmd_samecheck, "a": cmd_a, "abonus": cmd_abonus, "loop": cmd_loop, "peers": cmd_peers, "ctest": cmd_ctest, "c": cmd_c}[a.cmd](a)
 
 
 if __name__ == "__main__":
