@@ -3,6 +3,7 @@ reports/stage13_prereg.md. The model is reached through the signed Mac probe app
 (`KortexProbeApp --run "babyai --tier device"`), one JSON line per request on stdin/stdout.
 
   python -m probe.stage13 stepcheck [--tier device|pcc] [--app <path to KortexProbeApp binary>]
+  python -m probe.stage13 loop --seeds 10000-10099 [--tier device|pcc]     (no rule; per-step log in data/)
 """
 from __future__ import annotations
 
@@ -24,6 +25,7 @@ APP = os.environ.get(
 
 
 class AfmScorer(stage5.CachedScorer):
+    name = "afm"
     workers = 1  # one child process, one request at a time
 
     def __init__(self, tier: str, app: str):
@@ -75,14 +77,48 @@ class AfmScorer(stage5.CachedScorer):
         return super().stats() | {"format_errors_new_calls": self.format_errors}
 
 
+def cmd_loop(a):
+    from probe.dump_demos import guarded_seeds
+    from probe.stage5_blocked import blocked_ahead
+    sc = AfmScorer(a.tier, a.app)
+    seeds = list(guarded_seeds(a.seeds))
+    missions = {}
+
+    def state(e):
+        missions[e.seed] = e.obs["mission"]
+        return stage5.state_text(e.text(), e.obs["mission"])
+
+    eps, aborted = stage5.run_loop(sc, "none", seeds, state_fn=state)
+    name = f"afm-{a.tier}-{len(seeds)}"
+    res = stage5.summarize(eps, name, sc, "none", aborted)
+    res["seeds"], res["tier"], res["called"] = a.seeds, a.tier, time.strftime("%Y-%m-%d")
+    out = pathlib.Path("reports/stage13")
+    out.mkdir(parents=True, exist_ok=True)
+    (out / f"{name}.json").write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
+    with open(f"data/stage13_loop_afm-{a.tier}.jsonl", "w", encoding="utf-8") as f:
+        for e in eps:
+            for i, s in enumerate(e.steps):
+                f.write(json.dumps({"seed": e.seed, "step": i, "mission": missions.get(e.seed), "text": s["text"],
+                                    "action": s["policy"], "moved": s["moved"], "pos": s["pos"], "dir": s["dir"],
+                                    "target_visible": s["target_visible"],
+                                    "blocked": blocked_ahead(stage5.state_text(s["text"], missions.get(e.seed, ""))),
+                                    "format_error": s["format_error"], "success": e.success, "bot_n": e.bot_n,
+                                    "visible_at_start": e.visible_at_start}) + "\n")
+    print(json.dumps({k: res[k] for k in ("name", "all", "timeout", "target_visible_at_start", "target_unseen_at_start",
+                                           "blocked_forward_steps", "actions", "scorer_stats")}, default=str))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["stepcheck"])
+    ap.add_argument("cmd", choices=["stepcheck", "loop"])
+    ap.add_argument("--seeds", default="10000-10099")
     ap.add_argument("--tier", choices=["device", "pcc"], default="device")
     ap.add_argument("--app", default=APP)
     ap.add_argument("--eval", default="data/gotolocal_eval.jsonl")
     a = ap.parse_args()
     a.scorer, a.input = "afm", "text"
+    if a.cmd == "loop":
+        return cmd_loop(a)
     stage12.OUT = pathlib.Path("reports/stage13")
     stage12.make = lambda scorer, mode: AfmScorer(a.tier, a.app)
     stage12.tag = lambda _a: f"afm-{a.tier}"
