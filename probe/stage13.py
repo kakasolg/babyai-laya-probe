@@ -66,6 +66,15 @@ class AfmScorer(stage5.CachedScorer):
             if "error" in d:
                 self.errors += 1
                 d = self._ask(state, options)
+            if "error" in d and self.tier == "pcc":  # prereg 8: wait and retry, then stop the run (never invent an answer)
+                for wait in (5, 30):
+                    time.sleep(wait)
+                    self.errors += 1
+                    d = self._ask(state, options)
+                    if "error" not in d:
+                        break
+                else:
+                    raise stage5.ApiAborted(f"pcc failed after retries: {d.get('error')}")
             ms = (time.time() - t0) * 1000
             if d.get("choice") not in options:
                 self.format_errors += 1
