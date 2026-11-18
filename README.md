@@ -166,6 +166,7 @@ Each row was run once after its criteria were committed. Reports are in Korean; 
 | 12 | Hosted and local untrained models, text and image (dev) | `stage12_prereg.md` (`1e51527`) | `stage12.md` (`d02eb96`) | Reference lines; no thresholds |
 | 13 | On-device Apple Foundation Models (dev, 100 rooms) | `stage13_prereg.md` (`0ac7302`); addenda `750c791`, `fd713ef`, `d604caa` | `stage13.md` (`817df4f`, `47db55d`, `fb9db09`, `a9161db`) | Reference line |
 | 14 | Rule variants (dev) | `stage14_prereg.md` (`06091fc`) | `stage14.md` (`44efb15`) | See table above |
+| 15 | Apple Foundation Models with outside rules: 15a order-flip signal, 15b option-removing harness, 15c reason-first answers (dev, 100 rooms / step level) | `stage15_prereg.md` (`f143469`); 15c addendum `fdb6661` | `stage15.md` (`19006a6`, `040bc21`, `4daa2ac`) | 15a: "usable as an escalation signal"; 15b: 12 → 85 of 100, 0 broken (no thresholds); 15c: "the answer frame mattered a lot" |
 | — | One move of help (dev) | `help_test_prereg.md` (`1f36345`) | `help_test.md` (`1e3f909`) | Both pre-set criteria answered "no" |
 
 Seed ranges and which are locked: `reports/seeds.md`. Checkpoints and caches kept outside the repository: `reports/checkpoints.md`.
