@@ -1,0 +1,42 @@
+{
+ "gemma": {
+  "episodes": 100,
+  "success": 39,
+  "within_2x_bot": 39
+ },
+ "gemma-reset": {
+  "episodes": 100,
+  "success": 98,
+  "within_2x_bot": 59
+ },
+ "jev": {
+  "episodes": 100,
+  "success": 55,
+  "within_2x_bot": 54
+ },
+ "jev-reset": {
+  "episodes": 100,
+  "success": 96,
+  "within_2x_bot": 70
+ },
+ "gemini-text": {
+  "episodes": 100,
+  "success": 26,
+  "within_2x_bot": 26
+ },
+ "gemini-text-reset": {
+  "episodes": 100,
+  "success": 95,
+  "within_2x_bot": 51
+ },
+ "clef-flash": {
+  "episodes": 100,
+  "success": 12,
+  "within_2x_bot": 11
+ },
+ "clef-flash-reset": {
+  "episodes": 100,
+  "success": 94,
+  "within_2x_bot": 35
+ }
+}

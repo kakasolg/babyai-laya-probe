@@ -1,0 +1,120 @@
+{
+ "all": {
+  "n": 1567,
+  "agree": 0.6254,
+  "same_n": 1238,
+  "same_agree": 0.7189,
+  "diff_n": 329,
+  "diff_agree": 0.2736,
+  "gap_pp": 44.5,
+  "wrong_n": 587,
+  "wrong_in_diff": 239,
+  "caught_share": 0.4072,
+  "diff_wrong_share": 0.7264,
+  "pairs_fixed_vs_reversed": {
+   "forward | forward": 1190,
+   "turn left | turn right": 35,
+   "forward | turn left": 134,
+   "forward | turn right": 145,
+   "turn left | turn left": 48,
+   "turn left | forward": 15
+  },
+  "diff_bot_action": {
+   "turn right": 116,
+   "turn left": 129,
+   "forward": 84
+  },
+  "diff_reversed_agrees_with_bot": 176
+ },
+ "blocked": {
+  "n": 249,
+  "agree": 0.0964,
+  "same_n": 152,
+  "same_agree": 0.0855,
+  "diff_n": 97,
+  "diff_agree": 0.1134,
+  "gap_pp": -2.8,
+  "wrong_n": 225,
+  "wrong_in_diff": 86,
+  "caught_share": 0.3822,
+  "diff_wrong_share": 0.8866,
+  "pairs_fixed_vs_reversed": {
+   "forward | forward": 139,
+   "forward | turn right": 52,
+   "forward | turn left": 26,
+   "turn left | turn left": 13,
+   "turn left | forward": 4,
+   "turn left | turn right": 15
+  },
+  "diff_bot_action": {
+   "turn right": 44,
+   "turn left": 53
+  },
+  "diff_reversed_agrees_with_bot": 65
+ },
+ "target_unseen": {
+  "n": 237,
+  "agree": 0.1561,
+  "same_n": 135,
+  "same_agree": 0.1407,
+  "diff_n": 102,
+  "diff_agree": 0.1765,
+  "gap_pp": -3.6,
+  "wrong_n": 200,
+  "wrong_in_diff": 84,
+  "caught_share": 0.42,
+  "diff_wrong_share": 0.8235,
+  "pairs_fixed_vs_reversed": {
+   "forward | forward": 132,
+   "forward | turn left": 27,
+   "forward | turn right": 57,
+   "turn left | forward": 6,
+   "turn left | turn right": 12,
+   "turn left | turn left": 3
+  },
+  "diff_bot_action": {
+   "turn left": 40,
+   "forward": 16,
+   "turn right": 46
+  },
+  "diff_reversed_agrees_with_bot": 43
+ },
+ "target_visible_not_blocked": {
+  "n": 1136,
+  "agree": 0.8125,
+  "same_n": 983,
+  "same_agree": 0.8739,
+  "diff_n": 153,
+  "diff_agree": 0.4183,
+  "gap_pp": 45.6,
+  "wrong_n": 213,
+  "wrong_in_diff": 89,
+  "caught_share": 0.4178,
+  "diff_wrong_share": 0.5817,
+  "pairs_fixed_vs_reversed": {
+   "forward | forward": 950,
+   "turn left | turn right": 11,
+   "forward | turn left": 84,
+   "forward | turn right": 50,
+   "turn left | turn left": 33,
+   "turn left | forward": 8
+  },
+  "diff_bot_action": {
+   "turn right": 35,
+   "turn left": 50,
+   "forward": 68
+  },
+  "diff_reversed_agrees_with_bot": 75
+ },
+ "reading": "usable escalation signal",
+ "scorer_stats": {
+  "model": "afm-device",
+  "new_calls": 0,
+  "reused": 3134,
+  "errors_retried": 0,
+  "latency_ms_p50": null,
+  "latency_ms_p95": null,
+  "usage_new_calls": {},
+  "format_errors_new_calls": 0
+ }
+}
