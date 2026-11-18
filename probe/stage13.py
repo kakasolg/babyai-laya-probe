@@ -108,9 +108,124 @@ def cmd_loop(a):
                                            "blocked_forward_steps", "actions", "scorer_stats")}, default=str))
 
 
+HELP_AT = (20, 40, 60)  # after this many steps without success, the next single action is the bot's
+
+
+def _clone(env):
+    import copy
+    u = env.unwrapped
+    saved = (getattr(u, "window", None), getattr(u, "clock", None))
+    u.window, u.clock = None, None
+    try:
+        return copy.deepcopy(u)
+    finally:
+        u.window, u.clock = saved
+
+
+def _bot_left(env):
+    """Steps a fresh bot needs from this state with a fresh step budget; None if it fails."""
+    from minigrid.utils.baby_ai_bot import BabyAIBot
+    try:
+        u = _clone(env)
+        u.step_count = 0
+        bot, n, last = BabyAIBot(u), 0, None
+        while n < 64:
+            act = int(bot.replan(last))
+            _, r, term, trunc, _ = u.step(act)
+            last, n = act, n + 1
+            if term:
+                return n if r > 0 else None
+            if trunc:
+                return None
+    except Exception:  # noqa: BLE001
+        return None
+    return None
+
+
+def _manhattan(env):
+    u = env.unwrapped
+    ax, ay = (int(v) for v in u.agent_pos)
+    return min(abs(ax - int(x)) + abs(ay - int(y)) for x, y in u.instrs.desc.obj_poss)
+
+
+def cmd_help(a):
+    import statistics
+    from minigrid.utils.baby_ai_bot import BabyAIBot
+    from probe.closed_loop import NAME_TO_ACT, Ep
+    from probe.dump_demos import guarded_seeds
+    from probe.obs_text import ACTIONS
+    sc = AfmScorer(a.tier, a.app)
+    seeds = list(guarded_seeds(a.seeds))
+    base = json.load(open(f"reports/stage13/afm-{a.tier}-{len(seeds)}.json", encoding="utf-8"))["per_episode"]
+    rows, log = [], open(f"data/stage13_help_afm-{a.tier}.jsonl", "w", encoding="utf-8")
+    for seed in seeds:
+        e = Ep(seed, shadow_bot=False, swap=False)
+        mission = e.obs["mission"]
+        marks = [{"at": "start", "step": 0, "bot_left": _bot_left(e.env), "manhattan": _manhattan(e.env)}]
+        helps, help_skipped, min_md = 0, 0, marks[0]["manhattan"]
+        while not e.done:
+            n = len(e.steps)
+            helped = False
+            if n in HELP_AT:
+                marks.append({"at": f"before_help_{n}", "step": n, "bot_left": _bot_left(e.env), "manhattan": _manhattan(e.env)})
+                try:
+                    c = ACTIONS.get(int(BabyAIBot(_clone(e.env)).replan()))
+                except Exception:  # noqa: BLE001
+                    c = None
+                if c in CHOICES:
+                    helped, helps = True, helps + 1
+                else:
+                    help_skipped += 1
+            if not helped:
+                d = sc.score([stage5.state_text(e.text(), mission)])[0]
+                c = stage5.ranked(d.get("probs") or {})[0]
+            e.step(NAME_TO_ACT[c], choice=c, intervened=helped)
+            if not e.done:
+                min_md = min(min_md, _manhattan(e.env))
+                if helped:
+                    marks.append({"at": f"after_help_{n}", "step": n + 1, "bot_left": _bot_left(e.env),
+                                  "manhattan": _manhattan(e.env), "help_action": c})
+            s = e.steps[-1]
+            log.write(json.dumps({"seed": seed, "step": n, "mission": mission, "text": s["text"], "action": c,
+                                  "helped": helped, "moved": s["moved"], "pos": s["pos"], "dir": s["dir"],
+                                  "target_visible": s["target_visible"]}) + "\n")
+        end = {"at": "end", "step": len(e.steps)}
+        if e.success:
+            end.update({"bot_left": 0, "manhattan": 1})
+            min_md = 1
+        else:  # the env is closed but its state is still readable
+            end.update({"bot_left": _bot_left(e.env), "manhattan": _manhattan(e.env)})
+        marks.append(end)
+        rows.append({"seed": seed, "success": e.success, "steps": len(e.steps), "bot_n": e.bot_n, "helps": helps,
+                     "help_skipped": help_skipped, "visible_at_start": e.visible_at_start, "min_manhattan": min_md,
+                     "no_help_success": base[str(seed)]["end"] == "success", "marks": marks})
+    log.close()
+    fail = [r for r in rows if not r["success"]]
+
+    def med(xs):
+        xs = [x for x in xs if x is not None]
+        return statistics.median(xs) if xs else None
+
+    res = {"name": f"help-afm-{a.tier}-{len(seeds)}", "seeds": a.seeds, "help_at": HELP_AT, "episodes": len(rows),
+           "success": sum(r["success"] for r in rows), "no_help_success": sum(r["no_help_success"] for r in rows),
+           "saved": sorted(r["seed"] for r in rows if r["success"] and not r["no_help_success"]),
+           "broken": sorted(r["seed"] for r in rows if not r["success"] and r["no_help_success"]),
+           "success_by_helps": {str(k): sum(r["success"] and r["helps"] == k for r in rows) for k in range(4)},
+           "helps_total": sum(r["helps"] for r in rows), "help_skipped": sum(r["help_skipped"] for r in rows),
+           "fail": {"n": len(fail),
+                    "bot_left_start_median": med([r["marks"][0]["bot_left"] for r in fail]),
+                    "bot_left_end_median": med([r["marks"][-1]["bot_left"] for r in fail]),
+                    "manhattan_start_median": med([r["marks"][0]["manhattan"] for r in fail]),
+                    "manhattan_end_median": med([r["marks"][-1]["manhattan"] for r in fail]),
+                    "manhattan_min_median": med([r["min_manhattan"] for r in fail])},
+           "scorer_stats": sc.stats(), "called": time.strftime("%Y-%m-%d"), "per_episode": rows}
+    pathlib.Path(f"reports/stage13/{res['name']}.json").write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
+    print(json.dumps({k: v for k, v in res.items() if k not in ("per_episode",)}, default=str))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["stepcheck", "loop"])
+    ap.add_argument("cmd", choices=["stepcheck", "loop", "help"])
     ap.add_argument("--seeds", default="10000-10099")
     ap.add_argument("--tier", choices=["device", "pcc"], default="device")
     ap.add_argument("--app", default=APP)
@@ -119,6 +234,8 @@ def main() -> None:
     a.scorer, a.input = "afm", "text"
     if a.cmd == "loop":
         return cmd_loop(a)
+    if a.cmd == "help":
+        return cmd_help(a)
     stage12.OUT = pathlib.Path("reports/stage13")
     stage12.make = lambda scorer, mode: AfmScorer(a.tier, a.app)
     stage12.tag = lambda _a: f"afm-{a.tier}"
