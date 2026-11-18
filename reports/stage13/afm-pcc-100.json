@@ -1,0 +1,1925 @@
+{
+ "name": "afm-pcc-100",
+ "scorer": "afm",
+ "policy": "none",
+ "rule_r": false,
+ "api_aborted": "pcc failed after retries: Error: FoundationModels.PrivateCloudComputeLanguageModel.Error 1",
+ "episodes": 100,
+ "steps_sum_all_episodes": 198,
+ "all": {
+  "n": 100,
+  "success": 10,
+  "rate": 0.1,
+  "within_2x_bot": 10,
+  "rate_2x": 0.1
+ },
+ "timeout": 0,
+ "gave_up": 0,
+ "target_visible_at_start": {
+  "n": 52,
+  "success": 10,
+  "rate": 0.1923,
+  "within_2x_bot": 10,
+  "rate_2x": 0.1923
+ },
+ "target_unseen_at_start": {
+  "n": 48,
+  "success": 0,
+  "rate": 0.0,
+  "within_2x_bot": 0,
+  "rate_2x": 0.0
+ },
+ "mean_steps_success": 1.8,
+ "bot_mean_steps_same_eps": 1.8,
+ "blocked_forward_steps": 0,
+ "top_p_median_blocked_forward": null,
+ "top_p_median_other_steps": 1.0,
+ "format_error_steps": 0,
+ "steps_total": 198,
+ "actions": {
+  "forward": 58,
+  "turn right": 61,
+  "turn left": 79
+ },
+ "all_fail_12_solved": [],
+ "scorer_stats": {
+  "model": "afm-pcc",
+  "new_calls": 213,
+  "reused": 22,
+  "errors_retried": 159,
+  "latency_ms_p50": 728.7,
+  "latency_ms_p95": 888.3,
+  "usage_new_calls": {
+   "input_tokens": 128357,
+   "output_tokens": 3061
+  },
+  "format_errors_new_calls": 0
+ },
+ "per_episode": {
+  "10000": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0
+  },
+  "10001": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10002": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10003": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10004": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10005": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10006": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10007": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10008": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10009": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10010": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10011": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10012": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10013": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10014": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10015": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10016": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10017": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 13,
+   "interventions": 0
+  },
+  "10018": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10019": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10020": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10021": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 11,
+   "interventions": 0
+  },
+  "10022": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10023": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 12,
+   "interventions": 0
+  },
+  "10024": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10025": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10026": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 14,
+   "interventions": 0
+  },
+  "10027": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10028": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10029": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10030": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10031": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10032": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10033": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10034": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10035": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10036": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10037": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10038": {
+   "end": "success",
+   "steps": 1,
+   "bot": 1,
+   "interventions": 0
+  },
+  "10039": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10040": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10041": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10042": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10043": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10044": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10045": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10046": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10047": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10048": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10049": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10050": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10051": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10052": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10053": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10054": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10055": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10056": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10057": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10058": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10059": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10060": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10061": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10062": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10063": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10064": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10065": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10066": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10067": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10068": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10069": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10070": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10071": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10072": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10073": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10074": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10075": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10076": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10077": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10078": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10079": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10080": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10081": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10082": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10083": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10084": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10085": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 4,
+   "interventions": 0
+  },
+  "10086": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 8,
+   "interventions": 0
+  },
+  "10087": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10088": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10089": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10090": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10091": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 5,
+   "interventions": 0
+  },
+  "10092": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 7,
+   "interventions": 0
+  },
+  "10093": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10094": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 9,
+   "interventions": 0
+  },
+  "10095": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10096": {
+   "end": "success",
+   "steps": 2,
+   "bot": 2,
+   "interventions": 0
+  },
+  "10097": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  },
+  "10098": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 6,
+   "interventions": 0
+  },
+  "10099": {
+   "end": "unfinished",
+   "steps": 2,
+   "bot": 3,
+   "interventions": 0
+  }
+ },
+ "trace": {
+  "10001": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10002": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10003": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10004": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10005": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10006": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10007": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10008": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10009": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10010": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10011": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10012": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10013": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10014": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10015": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10016": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10017": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10018": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10019": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10020": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10021": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10022": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10023": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10024": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10025": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10026": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10027": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10028": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10029": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10030": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10031": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10032": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10033": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10034": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10035": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10036": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10037": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10039": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10040": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10041": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10042": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10043": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10047": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10048": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10049": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10050": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10051": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10052": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10053": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10054": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10057": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10058": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10059": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10060": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10061": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10062": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10063": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10064": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10065": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10067": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10068": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10069": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10070": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10071": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10072": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10073": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10074": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10075": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10076": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10077": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10078": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10079": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10080": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10082": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10083": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10084": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10085": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10086": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10087": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10088": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10089": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10090": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10091": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10092": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ],
+  "10093": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10094": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10095": [
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10097": [
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ],
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ]
+  ],
+  "10098": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "turn right",
+    "turn right",
+    1.0,
+    0
+   ]
+  ],
+  "10099": [
+   [
+    "turn left",
+    "turn left",
+    1.0,
+    0
+   ],
+   [
+    "forward",
+    "forward",
+    1.0,
+    1
+   ]
+  ]
+ },
+ "seeds": "10000-10099",
+ "tier": "pcc",
+ "called": "2026-11-18"
+}

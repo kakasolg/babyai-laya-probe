@@ -1,0 +1,5269 @@
+{
+ "name": "help-afm-device-100",
+ "seeds": "10000-10099",
+ "help_at": [
+  20,
+  40,
+  60
+ ],
+ "episodes": 100,
+ "success": 44,
+ "no_help_success": 12,
+ "saved": [
+  10005,
+  10007,
+  10008,
+  10009,
+  10013,
+  10020,
+  10023,
+  10033,
+  10035,
+  10037,
+  10040,
+  10043,
+  10044,
+  10046,
+  10048,
+  10049,
+  10050,
+  10052,
+  10053,
+  10055,
+  10059,
+  10060,
+  10068,
+  10071,
+  10078,
+  10083,
+  10085,
+  10087,
+  10090,
+  10093,
+  10097,
+  10098
+ ],
+ "broken": [],
+ "success_by_helps": {
+  "0": 12,
+  "1": 21,
+  "2": 7,
+  "3": 4
+ },
+ "helps_total": 213,
+ "help_skipped": 2,
+ "fail": {
+  "n": 56,
+  "bot_left_start_median": 5.0,
+  "bot_left_end_median": 6.0,
+  "manhattan_start_median": 4.0,
+  "manhattan_end_median": 4.0,
+  "manhattan_min_median": 2.0
+ },
+ "scorer_stats": {
+  "model": "afm-device",
+  "new_calls": 486,
+  "reused": 3939,
+  "errors_retried": 0,
+  "latency_ms_p50": 553.7,
+  "latency_ms_p95": 587.9,
+  "usage_new_calls": {
+   "input_tokens": 292441,
+   "output_tokens": 6380
+  },
+  "format_errors_new_calls": 0
+ },
+ "called": "2026-11-18",
+ "per_episode": [
+  {
+   "seed": 10000,
+   "success": true,
+   "steps": 1,
+   "bot_n": 1,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 1,
+     "manhattan": 2
+    },
+    {
+     "at": "end",
+     "step": 1,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10001,
+   "success": false,
+   "steps": 64,
+   "bot_n": 6,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 8,
+     "manhattan": 7,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 8,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 7,
+     "manhattan": 7,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 7,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 6,
+     "manhattan": 5,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 6,
+     "manhattan": 5
+    }
+   ]
+  },
+  {
+   "seed": 10002,
+   "success": true,
+   "steps": 5,
+   "bot_n": 3,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "end",
+     "step": 5,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10003,
+   "success": false,
+   "steps": 64,
+   "bot_n": 7,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 7,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 5,
+     "manhattan": 4,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 4,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 1,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10004,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 5,
+     "manhattan": 4,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 8,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 7,
+     "manhattan": 5,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 8,
+     "manhattan": 5
+    }
+   ]
+  },
+  {
+   "seed": 10005,
+   "success": true,
+   "steps": 21,
+   "bot_n": 4,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 21,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10006,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 7,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 6,
+     "manhattan": 5,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 2,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10007,
+   "success": true,
+   "steps": 21,
+   "bot_n": 3,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 21,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10008,
+   "success": true,
+   "steps": 21,
+   "bot_n": 4,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 21,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10009,
+   "success": true,
+   "steps": 41,
+   "bot_n": 3,
+   "helps": 2,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 41,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10010,
+   "success": false,
+   "steps": 64,
+   "bot_n": 3,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 3,
+     "manhattan": 3
+    }
+   ]
+  },
+  {
+   "seed": 10011,
+   "success": true,
+   "steps": 3,
+   "bot_n": 3,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "end",
+     "step": 3,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10012,
+   "success": false,
+   "steps": 64,
+   "bot_n": 8,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 9,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 8,
+     "manhattan": 4,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 7,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 6,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 9,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 8,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 8,
+     "manhattan": 6
+    }
+   ]
+  },
+  {
+   "seed": 10013,
+   "success": true,
+   "steps": 64,
+   "bot_n": 6,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 6,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 4,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10014,
+   "success": false,
+   "steps": 64,
+   "bot_n": 9,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 8,
+     "manhattan": 7,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 7,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 6,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 6,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 5,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 8,
+     "manhattan": 5
+    }
+   ]
+  },
+  {
+   "seed": 10015,
+   "success": false,
+   "steps": 64,
+   "bot_n": 11,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 11,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 14,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 13,
+     "manhattan": 4,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 8,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 11,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 10,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 9,
+     "manhattan": 7,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 9,
+     "manhattan": 7
+    }
+   ]
+  },
+  {
+   "seed": 10016,
+   "success": false,
+   "steps": 64,
+   "bot_n": 11,
+   "helps": 1,
+   "help_skipped": 2,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 11,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 11,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 10,
+     "manhattan": 4,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 10,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 10,
+     "manhattan": 3
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 10,
+     "manhattan": 3
+    }
+   ]
+  },
+  {
+   "seed": 10017,
+   "success": false,
+   "steps": 64,
+   "bot_n": 13,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 4,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 13,
+     "manhattan": 8
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 11,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 10,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 10,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 11,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 15,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 14,
+     "manhattan": 5,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 11,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10018,
+   "success": true,
+   "steps": 5,
+   "bot_n": 5,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 5
+    },
+    {
+     "at": "end",
+     "step": 5,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10019,
+   "success": false,
+   "steps": 64,
+   "bot_n": 6,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 4,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 6,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 9,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 8,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 9,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 8,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 9,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 8,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 9,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10020,
+   "success": true,
+   "steps": 22,
+   "bot_n": 4,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 1,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 22,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10021,
+   "success": false,
+   "steps": 64,
+   "bot_n": 11,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 11,
+     "manhattan": 8
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 11,
+     "manhattan": 8
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 10,
+     "manhattan": 8,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 8,
+     "manhattan": 7,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 6,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 5,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 6,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10022,
+   "success": false,
+   "steps": 64,
+   "bot_n": 7,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 7,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 7,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 7,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 7,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 2,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 1,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10023,
+   "success": true,
+   "steps": 61,
+   "bot_n": 12,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 12,
+     "manhattan": 8
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 7,
+     "manhattan": 6,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 61,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10024,
+   "success": false,
+   "steps": 64,
+   "bot_n": 4,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 7,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 6,
+     "manhattan": 5,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 7,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 4,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10025,
+   "success": false,
+   "steps": 64,
+   "bot_n": 6,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 4,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 7,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 9,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 8,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 8,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 9,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 4,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10026,
+   "success": false,
+   "steps": 64,
+   "bot_n": 14,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 14,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 13,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 12,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 11,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 10,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 8,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 7,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 4,
+     "manhattan": 3
+    }
+   ]
+  },
+  {
+   "seed": 10027,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 8,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 7,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 8,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 7,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 8,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10028,
+   "success": false,
+   "steps": 64,
+   "bot_n": 4,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 7,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 6,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 5,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 6,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 5,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 7,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10029,
+   "success": false,
+   "steps": 64,
+   "bot_n": 8,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 8,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 6,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 5,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 11,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 10,
+     "manhattan": 7,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 11,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 10,
+     "manhattan": 6,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 13,
+     "manhattan": 3
+    }
+   ]
+  },
+  {
+   "seed": 10030,
+   "success": false,
+   "steps": 64,
+   "bot_n": 9,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 8,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 7,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 6,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 5,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 9,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 8,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 8,
+     "manhattan": 6
+    }
+   ]
+  },
+  {
+   "seed": 10031,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 4,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 8,
+     "manhattan": 7,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 11,
+     "manhattan": 6
+    }
+   ]
+  },
+  {
+   "seed": 10032,
+   "success": false,
+   "steps": 64,
+   "bot_n": 4,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 8,
+     "manhattan": 7,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 8,
+     "manhattan": 7
+    }
+   ]
+  },
+  {
+   "seed": 10033,
+   "success": true,
+   "steps": 21,
+   "bot_n": 4,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 21,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10034,
+   "success": false,
+   "steps": 64,
+   "bot_n": 3,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 7,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 6,
+     "manhattan": 5,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 2,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 3,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10035,
+   "success": true,
+   "steps": 43,
+   "bot_n": 8,
+   "helps": 2,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 8,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 7,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 6,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 43,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10036,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 7,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 6,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 6,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 5,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 11,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 10,
+     "manhattan": 5,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 10,
+     "manhattan": 5
+    }
+   ]
+  },
+  {
+   "seed": 10037,
+   "success": true,
+   "steps": 25,
+   "bot_n": 5,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 5,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 25,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10038,
+   "success": true,
+   "steps": 1,
+   "bot_n": 1,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 1,
+     "manhattan": 2
+    },
+    {
+     "at": "end",
+     "step": 1,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10039,
+   "success": false,
+   "steps": 64,
+   "bot_n": 4,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 2,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 7,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 6,
+     "manhattan": 5,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 9,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 8,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 8,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10040,
+   "success": true,
+   "steps": 23,
+   "bot_n": 3,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 23,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10041,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 7,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 6,
+     "manhattan": 5,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 6,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 7,
+     "manhattan": 5,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 11,
+     "manhattan": 8
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 10,
+     "manhattan": 8,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 7,
+     "manhattan": 6
+    }
+   ]
+  },
+  {
+   "seed": 10042,
+   "success": false,
+   "steps": 64,
+   "bot_n": 6,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 6,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 11,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 12,
+     "manhattan": 4,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 9,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 8,
+     "manhattan": 5,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 1,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10043,
+   "success": true,
+   "steps": 21,
+   "bot_n": 6,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 6,
+     "manhattan": 6
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 21,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10044,
+   "success": true,
+   "steps": 45,
+   "bot_n": 2,
+   "helps": 2,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 45,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10045,
+   "success": true,
+   "steps": 2,
+   "bot_n": 2,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "end",
+     "step": 2,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10046,
+   "success": true,
+   "steps": 42,
+   "bot_n": 2,
+   "helps": 2,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 1,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 42,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10047,
+   "success": false,
+   "steps": 64,
+   "bot_n": 8,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 8,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 9,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 8,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 10,
+     "manhattan": 8
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 9,
+     "manhattan": 8,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 8,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 7,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 6,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10048,
+   "success": true,
+   "steps": 23,
+   "bot_n": 3,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 23,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10049,
+   "success": true,
+   "steps": 22,
+   "bot_n": 3,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 1,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 22,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10050,
+   "success": true,
+   "steps": 21,
+   "bot_n": 2,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 21,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10051,
+   "success": false,
+   "steps": 64,
+   "bot_n": 8,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 8,
+     "manhattan": 7
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 11,
+     "manhattan": 8
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 10,
+     "manhattan": 8,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 7,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 6,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 5,
+     "manhattan": 5,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 2,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10052,
+   "success": true,
+   "steps": 23,
+   "bot_n": 6,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 6,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 23,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10053,
+   "success": true,
+   "steps": 24,
+   "bot_n": 5,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 24,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10054,
+   "success": false,
+   "steps": 64,
+   "bot_n": 6,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 6,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 6,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 5,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 7,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 6,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 7,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 6,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 7,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10055,
+   "success": true,
+   "steps": 21,
+   "bot_n": 2,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 21,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10056,
+   "success": true,
+   "steps": 2,
+   "bot_n": 2,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "end",
+     "step": 2,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10057,
+   "success": false,
+   "steps": 64,
+   "bot_n": 9,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 11,
+     "manhattan": 9
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 10,
+     "manhattan": 9,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 8,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 7,
+     "manhattan": 7,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 5,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 6,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10058,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 2,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 2,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 3,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10059,
+   "success": true,
+   "steps": 21,
+   "bot_n": 4,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 21,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10060,
+   "success": true,
+   "steps": 26,
+   "bot_n": 2,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 26,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10061,
+   "success": false,
+   "steps": 64,
+   "bot_n": 7,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 7,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 7,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 8,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 7,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 7,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 6,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 7,
+     "manhattan": 6
+    }
+   ]
+  },
+  {
+   "seed": 10062,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 5,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 7,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 6,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 6,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 5,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 6,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10063,
+   "success": false,
+   "steps": 64,
+   "bot_n": 3,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 5,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 5,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10064,
+   "success": false,
+   "steps": 64,
+   "bot_n": 4,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 2,
+     "manhattan": 1
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 1,
+     "manhattan": 1,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 7,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 6,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 9,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 8,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 7,
+     "manhattan": 5
+    }
+   ]
+  },
+  {
+   "seed": 10065,
+   "success": false,
+   "steps": 64,
+   "bot_n": 6,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 4,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 6,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 10,
+     "manhattan": 8
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 9,
+     "manhattan": 8,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 7,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 7,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 8,
+     "manhattan": 6
+    }
+   ]
+  },
+  {
+   "seed": 10066,
+   "success": true,
+   "steps": 2,
+   "bot_n": 2,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "end",
+     "step": 2,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10067,
+   "success": false,
+   "steps": 64,
+   "bot_n": 4,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 2,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 5,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 5,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10068,
+   "success": true,
+   "steps": 23,
+   "bot_n": 3,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 23,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10069,
+   "success": false,
+   "steps": 64,
+   "bot_n": 4,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 6,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 5,
+     "manhattan": 5,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 2,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 2,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 3,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10070,
+   "success": false,
+   "steps": 64,
+   "bot_n": 7,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 7,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 10,
+     "manhattan": 8
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 9,
+     "manhattan": 8,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 10,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 9,
+     "manhattan": 5,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 7,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 6,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 7,
+     "manhattan": 3
+    }
+   ]
+  },
+  {
+   "seed": 10071,
+   "success": true,
+   "steps": 44,
+   "bot_n": 5,
+   "helps": 2,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 5,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 44,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10072,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 7,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 6,
+     "manhattan": 5,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 6,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 5,
+     "manhattan": 5,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 7,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 9,
+     "manhattan": 5
+    }
+   ]
+  },
+  {
+   "seed": 10073,
+   "success": true,
+   "steps": 5,
+   "bot_n": 5,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 5
+    },
+    {
+     "at": "end",
+     "step": 5,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10074,
+   "success": false,
+   "steps": 64,
+   "bot_n": 3,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 2,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 4,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 5,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10075,
+   "success": false,
+   "steps": 64,
+   "bot_n": 2,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 10,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 9,
+     "manhattan": 7,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 8,
+     "manhattan": 7,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 5,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10076,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 6,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 5,
+     "manhattan": 5,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 5,
+     "manhattan": 4,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 5,
+     "manhattan": 4
+    }
+   ]
+  },
+  {
+   "seed": 10077,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 4,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 11,
+     "manhattan": 8
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 10,
+     "manhattan": 8,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 10,
+     "manhattan": 8
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 9,
+     "manhattan": 8,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 11,
+     "manhattan": 8
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 10,
+     "manhattan": 8,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 10,
+     "manhattan": 8
+    }
+   ]
+  },
+  {
+   "seed": 10078,
+   "success": true,
+   "steps": 21,
+   "bot_n": 3,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 21,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10079,
+   "success": false,
+   "steps": 64,
+   "bot_n": 3,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 4,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 3,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 8,
+     "manhattan": 7,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 12,
+     "manhattan": 9
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 11,
+     "manhattan": 9,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 12,
+     "manhattan": 6
+    }
+   ]
+  },
+  {
+   "seed": 10080,
+   "success": false,
+   "steps": 64,
+   "bot_n": 9,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 2,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 11,
+     "manhattan": 8
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 10,
+     "manhattan": 8,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 5,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 2,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10081,
+   "success": true,
+   "steps": 2,
+   "bot_n": 2,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "end",
+     "step": 2,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10082,
+   "success": false,
+   "steps": 64,
+   "bot_n": 9,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 9,
+     "manhattan": 6
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 9,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 8,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 8,
+     "manhattan": 7,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 4,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10083,
+   "success": true,
+   "steps": 22,
+   "bot_n": 5,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 1,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 22,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10084,
+   "success": true,
+   "steps": 3,
+   "bot_n": 2,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "end",
+     "step": 3,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10085,
+   "success": true,
+   "steps": 21,
+   "bot_n": 4,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 4,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 21,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10086,
+   "success": false,
+   "steps": 64,
+   "bot_n": 8,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 4,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 12,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 11,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 11,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 12,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 12,
+     "manhattan": 8
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 11,
+     "manhattan": 8,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 6,
+     "manhattan": 5
+    }
+   ]
+  },
+  {
+   "seed": 10087,
+   "success": true,
+   "steps": 63,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 5
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 63,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10088,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 4,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 3,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 4,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 3,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 4,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10089,
+   "success": false,
+   "steps": 64,
+   "bot_n": 3,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 4,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 2,
+     "manhattan": 2
+    }
+   ]
+  },
+  {
+   "seed": 10090,
+   "success": true,
+   "steps": 43,
+   "bot_n": 7,
+   "helps": 2,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 7,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 8,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 7,
+     "manhattan": 4,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 43,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10091,
+   "success": false,
+   "steps": 64,
+   "bot_n": 5,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 5,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 4,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 6,
+     "manhattan": 4
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 5,
+     "manhattan": 4,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 4,
+     "manhattan": 3
+    }
+   ]
+  },
+  {
+   "seed": 10092,
+   "success": true,
+   "steps": 7,
+   "bot_n": 7,
+   "helps": 0,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": true,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 7,
+     "manhattan": 7
+    },
+    {
+     "at": "end",
+     "step": 7,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10093,
+   "success": true,
+   "steps": 43,
+   "bot_n": 3,
+   "helps": 2,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 43,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10094,
+   "success": false,
+   "steps": 64,
+   "bot_n": 9,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 6,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 8,
+     "manhattan": 7,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 7,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 8,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 7,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 8,
+     "manhattan": 6,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 7,
+     "manhattan": 6
+    }
+   ]
+  },
+  {
+   "seed": 10095,
+   "success": false,
+   "steps": 64,
+   "bot_n": 3,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 5,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 4,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 2,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 4,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 3,
+     "manhattan": 2,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 7,
+     "manhattan": 5
+    }
+   ]
+  },
+  {
+   "seed": 10096,
+   "success": false,
+   "steps": 64,
+   "bot_n": 2,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 2,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 7,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 6,
+     "manhattan": 3,
+     "help_action": "turn right"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 7,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 6,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 6,
+     "manhattan": 2
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 5,
+     "manhattan": 2,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 3,
+     "manhattan": 3
+    }
+   ]
+  },
+  {
+   "seed": 10097,
+   "success": true,
+   "steps": 61,
+   "bot_n": 3,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": false,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 2
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 4,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 3,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 1,
+     "manhattan": 1
+    },
+    {
+     "at": "end",
+     "step": 61,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10098,
+   "success": true,
+   "steps": 23,
+   "bot_n": 6,
+   "helps": 1,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 1,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 6,
+     "manhattan": 6
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 2,
+     "manhattan": 3,
+     "help_action": "turn left"
+    },
+    {
+     "at": "end",
+     "step": 23,
+     "bot_left": 0,
+     "manhattan": 1
+    }
+   ]
+  },
+  {
+   "seed": 10099,
+   "success": false,
+   "steps": 64,
+   "bot_n": 3,
+   "helps": 3,
+   "help_skipped": 0,
+   "visible_at_start": true,
+   "min_manhattan": 3,
+   "no_help_success": false,
+   "marks": [
+    {
+     "at": "start",
+     "step": 0,
+     "bot_left": 3,
+     "manhattan": 3
+    },
+    {
+     "at": "before_help_20",
+     "step": 20,
+     "bot_left": 9,
+     "manhattan": 7
+    },
+    {
+     "at": "after_help_20",
+     "step": 21,
+     "bot_left": 8,
+     "manhattan": 7,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_40",
+     "step": 40,
+     "bot_left": 8,
+     "manhattan": 6
+    },
+    {
+     "at": "after_help_40",
+     "step": 41,
+     "bot_left": 7,
+     "manhattan": 6,
+     "help_action": "turn left"
+    },
+    {
+     "at": "before_help_60",
+     "step": 60,
+     "bot_left": 6,
+     "manhattan": 5
+    },
+    {
+     "at": "after_help_60",
+     "step": 61,
+     "bot_left": 5,
+     "manhattan": 5,
+     "help_action": "turn right"
+    },
+    {
+     "at": "end",
+     "step": 64,
+     "bot_left": 3,
+     "manhattan": 3
+    }
+   ]
+  }
+ ]
+}
