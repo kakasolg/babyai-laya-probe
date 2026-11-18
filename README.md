@@ -2,8 +2,6 @@
 
 한국어: [README.ko.md](README.ko.md) — the original working README with every stage and command.
 
-> **Draft (2026-11-19).** Numbers are copied from the committed reports and were checked against them. LID's numbers in [Prior work](#prior-work) were read from the paper (arXiv:2202.01771v4).
-
 A small, controlled study of one question: **how far can you hand step-by-step decisions to a small "choice" model, and how much of the remaining gap is closed by a few lines of code around it?**
 
 The test bed is [BabyAI](https://minigrid.farama.org/environments/babyai/) (MiniGrid 3.2.0), single-room levels. The model is [Laya](https://huggingface.co/convaiinnovations/laya) — an encoder-only model (ModernBERT-large with a multiple-choice head, about 421M parameters) that scores a fixed list of options instead of generating text — fine-tuned on expert-bot demonstrations.
@@ -88,9 +86,11 @@ GoToLocal, same task description, development seeds. Success alone → with the 
 | Gemini Decision 1, image | 67 | 280 (142) |
 | Gemini Decision 1, text + image | 30 | 201 (58) |
 | Cloudflare clef-flash, local | 47 | 282 (131) |
-| Apple Foundation Models, on-device (100 rooms) | 12 | — (see `reports/stage13.md`; rules for a model that returns no scores are on branch `mac/stage15`) |
+| Apple Foundation Models, on-device (100 rooms) | 12 | 85 (30) |
 
 These are reference lines from one task description that was written for one of the models; they are not a fair ranking of the models. Image input did not help in this setting.
+
+Apple Foundation Models returns an answer but no scores, so "the best action not yet tried" is not available. For that line the same rule is applied by asking again with the already-tried actions removed from the options, together with removing "forward" when the cell ahead is blocked (`reports/stage15.md`, setting A3, first 100 development seeds; 0 rooms broken). A separate step-level check (stage 15c) asked the model to write a short reason before the action: forward into a blocked cell fell from 87.2 % to 30.9 % of blocked steps, but agreement with the expert fell from 62.5 % to 57.2 %, and some written reasons were made up.
 
 ### Smaller findings
 

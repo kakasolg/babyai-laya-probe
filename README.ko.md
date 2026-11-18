@@ -118,7 +118,8 @@ $PY -m probe.laya_dryrun data/gotolocal_train.jsonl        # Laya 형식 검사�
 14. ([win]) 규칙 변형 비교 V0 ~ V7(학습 없음, 있는 체크포인트 여덟 개) — **`reports/stage14.md`**, 선언 `reports/stage14_prereg.md`, `python -m probe.stage14 run --task gotolocal|putnext --ckpt <이름>`.
    규칙 정의는 `probe/stage14.py`의 `Rule` 클래스 하나. 판 전체 기억(V3 직전만 → 15.7 · 40.7판 손해)이 일을 하고, 순위는 "빨리"에, 비우기는 약한 모델에서 크다. 가림은 사실상 없음. 망가뜨린 판은 V7(ε 무작위)만.
    - 작은 CNN 덧붙임([cloud], CPU, 같은 `Rule`) — `reports/stage14_cnn.md`, `tools/small_policy/cnn_rules.py`.
-15. (진행 중, [mac]) AFM 하네스 — 브랜치 `mac/stage15`.
+15. [mac] AFM 하네스(점수 없는 모델에 바깥 규칙) — `reports/stage15.md`, 선언 `reports/stage15_prereg.md`, `probe/stage15.py`.
+   15b(개발용 앞 100판): 규칙 없음 12 → A1 막힌 전진 빼기 51 · A2 다시 묻기 80 · A3 둘 다 85판(2배 안 30), 망가뜨린 판 0. 15c(걸음 단위): 근거 먼저 쓰게 하면 막힌 걸음 forward 87.2 → 30.9 %, 봇 일치는 62.5 → 57.2 %.
 
 번호 없는 정리 문서:
 - 네 과제 정리(GoToLocal · PickupDist · 물건 16개 · 옮겨 놓기, 커밋된 숫자만) — **`reports/summary_four_tasks.md`** ([cloud] 작성, [win] 숫자 대조). 예전 README의 11번.
