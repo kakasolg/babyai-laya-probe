@@ -113,6 +113,7 @@ Apple Foundation Models returns an answer but no scores, so "the best action not
 ### Smaller findings
 
 - **One move of help** (`reports/help_test.md`): on the 23 rooms the fine-tuned model fails, inserting the expert's next action once rescues 6; inserting the best of the three actions rescues 16. Help works when it moves the agent to a place the model can continue from, not when it is merely "the right direction".
+- **The answer format is part of the result** (`reports/stage15.md` §5): the on-device model chooses `forward` on 87.2 % of the steps where the cell ahead is blocked. Adding one field to the answer format — a short reason before the action, same model, same task description, same 1,567 steps — takes that to 30.9 %, and agreement with the expert on those steps from 9.6 % to 54.2 %. Overall agreement nonetheless **falls** (62.5 % → 57.2 %), sensitivity to the order of the options nearly doubles and each call is three times slower. The reasons are often wrong: of 76 steps that still chose `forward` into a wall, 62 named the wall or "directly ahead" in the reason first. Behaviour changes with the frame, not because the stated reason is correct. Measured at step level only; whether closed-loop success rises or falls has not been run.
 - **Numerical precision** (`reports/precision_check.json`): bf16 and fp32 inference pick a different top action on 1–2 of 1,625 steps, all near-ties, and change one room out of 300. Read any result that passes or fails a threshold by one or two rooms accordingly.
 
 ## Prior work
